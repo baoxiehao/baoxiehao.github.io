@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[浩然也空的博客]]></title>
+  <subtitle><![CDATA[淡静良觉之地]]></subtitle>
+  <link href="/atom.xml" rel="self"/>
+  <link href="http://baoxiehao.com/"/>
+  <updated>2014-08-19T05:51:38.093Z</updated>
+  <id>http://baoxiehao.com/</id>
+  
+  <author>
+    <name><![CDATA[浩然也空]]></name>
+    <email><![CDATA[baoxiehao@qq.com]]></email>
+  </author>
+  
+  <generator uri="http://zespia.tw/hexo/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[GoAgent翻墙记]]></title>
+    <link href="http://baoxiehao.com/2014/08/19/GoAgent%E7%BF%BB%E5%A2%99%E8%AE%B0/"/>
+    <id>http://baoxiehao.com/2014/08/19/GoAgent翻墙记/</id>
+    <published>2014-08-19T05:10:38.000Z</published>
+    <updated>2014-08-19T05:50:49.000Z</updated>
+    <content type="html"><![CDATA[<p>三步走：申请AppId；安装GoAgent；安装代理软件</p>
+<a id="more"></a>
+
+<h2 id="申请Google_AppId">申请<a href="http://appengine.google.com" target="_blank" rel="external">Google AppId</a></h2>
+<p>很简单，步骤略</p>
+<h2 id="安装GoAgent依赖库">安装GoAgent依赖库</h2>
+<p>执行终端命令：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">ruby</span> -<span class="keyword">e</span> <span class="string">"$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"</span></div><div class="line">brew install libevent</div><div class="line">sudo easy_install pip</div><div class="line">sudo ARCHFLAGS=-Wno-error=unused-<span class="keyword">command</span>-<span class="built_in">line</span>-<span class="keyword">argument</span>-hard-error-in-future pip install cython</div><div class="line">sudo ARCHFLAGS=-Wno-error=unused-<span class="keyword">command</span>-<span class="built_in">line</span>-<span class="keyword">argument</span>-hard-error-in-future pip install greenlet</div><div class="line">sudo pip install geven</div><div class="line">sudo ARCHFLAGS=-Wno-error=unused-<span class="keyword">command</span>-<span class="built_in">line</span>-<span class="keyword">argument</span>-hard-error-in-future easy_install pycrypto</div></pre></td></tr></table></figure>
+
+<h2 id="安装GoAgent（翻墙）">安装GoAgent（翻墙）</h2>
+<p>【1】下载<a href="http://code.google.com/p/goagent/" target="_blank" rel="external">goagent</a><br>【2】解压后修改<strong>local/proxy.ini</strong>文件中的<strong>appid</strong>值为申请的个人<strong>appid</strong>，若希望使用<strong>google dns server</strong>，则修改<strong>[dns]</strong>节中的<strong>enabled</strong>值为<strong>1</strong><br>【3】进入<strong>server</strong>目录，执行终端命令『sudo python uploader.zip』</p>
+<h2 id="安装SwitchySharp（代理设置）">安装SwitchySharp（代理设置）</h2>
+<h3 id="安装SwitchySharp">安装<a href="https://chrome.google.com/webstore/detail/proxy-switchysharp/dpplabbmogkhghncfbfdeeokoefdjegm" target="_blank" rel="external">SwitchySharp</a></h3>
+<p>该扩展插件是针对Chrome浏览器来进行代理自动切换，其他浏览器用户可以参考<a href="https://code.google.com/p/goagent/wiki/InstallGuide" target="_blank" rel="external">GoAgent部署教程</a></p>
+<h3 id="设置SwitchySharp">设置<a href="https://code.google.com/p/switchysharp/wiki/SwitchySharp_GFW_List_2" target="_blank" rel="external">SwitchySharp</a></h3>
+<p>【1】下载设置<a href="http://code.google.com/p/switchysharp/downloads/detail?name=X_GFWList.bak" target="_blank" rel="external">备份文件</a></p>
+<p>【2】在Chrome浏览器中选择SwitchySharp图标，选择『选项』进入配置页面，在『导入/导出』页选择『从文件恢复』，选择如上的备份文件，在『情景模式』页选择『导入PAC文件』，选择<strong>goagent/local/proxy.pac</strong>文件，然后点击『保存』</p>
+<p>【3】在Chrome浏览器中选择SwitchySharp图标，选择『自动切换模式』</p>
+<p>【4】进入SwithySharp配置页面，在『切换规则』页选择『立即更新列表』</p>
+<h2 id="开始翻墙">开始翻墙</h2>
+<p>进入<strong>goagent/local</strong>目录，执行终端命令『sudo python proxy.py』即可。</p>
+]]></content>
+    <summary type="html"><![CDATA[<p>三步走：申请AppId；安装GoAgent；安装代理软件</p>
+]]></summary>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Mac OS 入门]]></title>
+    <link href="http://baoxiehao.com/2014/08/10/Mac%20OS%E5%85%A5%E9%97%A8/"/>
+    <id>http://baoxiehao.com/2014/08/10/Mac OS入门/</id>
+    <published>2014-08-10T03:20:26.000Z</published>
+    <updated>2014-08-16T04:58:15.000Z</updated>
+    <content type="html"><![CDATA[<p>8月5号晚上下单2014新款13.3寸 Macbook Pro Retina（MGX72），8月8号到手，卖家包装非常不给力，幸好只是包装的一角挤压了，本本无恙。想来刚接触新的系统一定是非常不习惯的，虽然Windows系统用起来也不是很爽，但是毕竟用久了，一些常用的工具需要快速找到替代品。于是，就有了这篇关于Mac入门的文章，主要介绍系统基础工具以及一些进阶神器，边用边写，慢慢更新吧。</p>
+<a id="more"></a>
+
+<h2 id="Mac_OS_装机必备">Mac OS 装机必备</h2>
+<p>刚到手Mac的时候，就连输入法的切换键都不知道，切换输入中英文是相当的痛苦。于是，想想还是先把装机必备的一些东东先搞定吧，另外稍微熟悉下系统操作。以下罗列的不一定全是需要安装的软件，也可能是系统自带的一些工具。</p>
+<ol>
+<li>系统偏好设置 —— 触控板：熟悉系统基本多点触控操作，系统自带了每个操作对应的手势视频，相当酷炫和便利。</li>
+<li>安装配置Jitouch：扩展更多的多点触控手势，比如浏览器中的上下标签切换，当前标签关闭，窗口最大化以及当前应用关闭等常用操作，不过每个人的配置不同，这里就先不贴出自用的配置。</li>
+<li>百度输入法：系统自带的输入法相当不习惯，不能逗号切换下一页的词语选择，也不能一键切换中英文，更关键的是，手机上一直用百度输入法，实在好用，Mac上也有百度输入法，不用没有理由。只是，已发现一个小bug是在QQ聊天窗口中输入文字的时候，当前行的文本有可能会上下跃动。</li>
+<li>LilyView：超好用的图片浏览器，自带的iPhoto不错，只是所有的图片都是要先导入（要复制占空间啊有木有）才方便浏览，而系统自带的图片查看器也实在用不习惯。LilyView在安装的时候会提示你是否要设置为默认图片浏览器，直接确认并勾选图片格式即可。在浏览的时候，可以双指左右滑动切换上下张图片，还可以双击图片进入全屏浏览模式，而且可以手势缩放和移动，非常给力。</li>
+<li>Sublime Text 3：编辑神器，没有之一。</li>
+<li>Alfred：比系统自带Spotlight更为强大的系统工具，可以快速打开应用，快速搜索文件名称（甚至文件内容），快速执行网络搜索等，而在付费版中，还有更高级的工作流功能。</li>
+</ol>
+<h2 id="Mac_OS开发工具">Mac OS开发工具</h2>
+<p>用Mac做开发的话，首先不可少的一定是命令行工具，其次才是其他的开发软件或者套件。</p>
+<p>【1】<strong>brew</strong> —— 和<strong>Ubuntu</strong>的<strong>apt-get</strong>一样，自动搜索安装应用，简单方便。</p>
+<p>安装：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl -LsSf http://github.com/mxcl/homebrew/tarball/master | <span class="built_in">sudo</span> tar xvz -C/usr/local --strip <span class="number">1</span></div></pre></td></tr></table></figure>
+
+<p>使用：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ brew install wget</div><div class="line">$ brew uninstall wget</div><div class="line">$ brew search wget</div></pre></td></tr></table></figure>
+
+<p>【2】<a href="iterm2.com">iTerm2</a> —— 比系统自带Terminal强大太多。</p>
+<p>【3】配置Sublime Text 3</p>
+<p>下载<a href="https://sublime.wbond.net/Package%20Control.sublime-package" target="_blank" rel="external">Package Control.sublime-package</a>，然后选择菜单栏<strong>Sublime Text——Preferences——Browse Packages</strong>，将下载文件放入刚打开的文件夹中。重启后就可以选择菜单栏<strong>Tools——Command Palette</strong>（或者快捷键<strong>Shift+Command+P</strong>），输入<strong>Install Package</strong>进行插件安装。</p>
+<p>【4】安装Python插件</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">sudo</span> easy_install requests</div><div class="line">$ <span class="built_in">sudo</span> easy_install BeautifulSoup</div></pre></td></tr></table></figure>
+
+]]></content>
+    <summary type="html"><![CDATA[<p>8月5号晚上下单2014新款13.3寸 Macbook Pro Retina（MGX72），8月8号到手，卖家包装非常不给力，幸好只是包装的一角挤压了，本本无恙。想来刚接触新的系统一定是非常不习惯的，虽然Windows系统用起来也不是很爽，但是毕竟用久了，一些常用的工具需要快速找到替代品。于是，就有了这篇关于Mac入门的文章，主要介绍系统基础工具以及一些进阶神器，边用边写，慢慢更新吧。</p>
+]]></summary>
+    
+      <category term="Mac" scheme="http://baoxiehao.com/tags/Mac/"/>
+    
+      <category term="操作系统" scheme="http://baoxiehao.com/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Android Log]]></title>
+    <link href="http://baoxiehao.com/2014/06/12/android%20log/"/>
+    <id>http://baoxiehao.com/2014/06/12/android log/</id>
+    <published>2014-06-12T12:47:13.000Z</published>
+    <updated>2014-06-13T02:27:38.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="Android_Log的普遍问题">Android Log的普遍问题</h2>
+<hr>
+<p>看过很多<strong>Android</strong>原生应用或者第三方应用的<strong>log</strong>记录都是相当的不规范，导致在控制台查看某个应用或者某个<strong>tag</strong>的<strong>log</strong>输出是相当痛苦的事情。虽然你可以用<strong>grep</strong>命令来过滤指定的<strong>log</strong>，但是你记得住自己的应用有多少个<strong>log tag</strong>吗？本文就来谈谈如何通过简单的两步走，实现应用<strong>log</strong>的规范精致输出。</p>
+<a id="more"></a>
+
+<h2 id="一种简单解决方案">一种简单解决方案</h2>
+<hr>
+<p><strong>Android</strong>的<strong>log</strong>级别大部分都是<strong>D</strong>，少数是<strong>I/W/E</strong>或者<strong>V</strong>。于是，其实可以写个<strong>Logger</strong>的工具类，里面包含了应用所有用到的<strong>log tag</strong>，然后在其他需要<strong>log</strong>的类中声明私有静态字符串变量<strong>TAG</strong>时直接引用<strong>Logger</strong>中声明的<strong>log tag</strong>，这样在一个地方统一管理<strong>log tag</strong>，规范且不易疏漏和出错。<strong>Logger</strong>中的<strong>log tag</strong>包含统一的规则，比如你的应用是<strong>Calendar</strong>，那么你的<strong>log tag</strong>大致就可以写成：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String TAG_TEST = <span class="string">"Cal:D:Test"</span>;</div><div class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String TAG_UI = <span class="string">"Cal:D:Ui"</span>;</div><div class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String TAG_MODEL = <span class="string">"Cal:D:Model"</span>;</div></pre></td></tr></table></figure>
+
+<p>而需要用到<strong>log</strong>的类中的<strong>TAG</strong>变量就可以直接引用以上<strong>log tag</strong>：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String TAG = Logger.TAG_UI;</div></pre></td></tr></table></figure>
+
+<p>于是，你在过滤你的应用<strong>log</strong>时就可以直接输入如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">logcat-color | grep <span class="string">"Cal:[V|D]"</span></div></pre></td></tr></table></figure>
+
+<p>其中，<a href="https://github.com/marshall/logcat-color" target="_blank" rel="external">logcat-color</a>是<strong>adb logcat</strong>的替代命令——多彩颜色显示、可配置性高。</p>
+<h2 id="进一步小扩展">进一步小扩展</h2>
+<hr>
+<p>另外还有一个需要考虑的<strong>log</strong>问题是，有一些<strong>log</strong>在开发调试的时候可以极大方便地观测程序运行状态和定位程序问题，但是如果在对外的发布版本中如果也输出，一般是比较恼人的，而且如果<strong>log</strong>过于频繁,容易冲掉其他应用的<strong>log</strong>。大部分应用采用的解决方式是在代码中声明一个<strong>DEBUG</strong>开关，在开发的时候设置为<strong>true</strong>，在发布的时候重新设置为<strong>false</strong>。但是，有时候，你是会忘记这件事情的，而且更糟糕的是，当你关闭了开关之后，如果程序出现问题了，你还得重新安装打开了<strong>DEBUG</strong>开关的应用版本，然后才能重新抓取<strong>log</strong>，最后根据<strong>log</strong>定位问题。</p>
+<p>其实，可以通过<strong>adb</strong>命令来动态开关<strong>log tag</strong>，需要的时候开启就能输出指定的<strong>log</strong>，默认是关闭的：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">adb shell setprop log.tag.Cal:V VERBOSE</div><div class="line">adb shell setprop log.tag.Cal:V ASSERT</div></pre></td></tr></table></figure>
+
+<p>其中，第一个命令是将<strong>Cal:V</strong>的<strong>log tag</strong>开启，第二个命令是将其关闭（因为一般不会用到<strong>ASSERT</strong>级别的<strong>log</strong>，所以就相当于关闭了）。</p>
+<p>因此，我们可以将需要动态开关的<strong>log tag</strong>都声明为<strong>Cal:V</strong>开头的，然后在输出<strong>log</strong>之前进行判断：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String TAG_VERBOSE = <span class="string">"Cal:V"</span>;</div><div class="line"></div><div class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">isLoggable</span>(String tag) {</div><div class="line">    <span class="keyword">if</span> (tag.contains(TAG_VERBOSE)) {</div><div class="line">        <span class="keyword">return</span> Log.isLoggable(TAG_VERBOSE, Log.VERBOSE);</div><div class="line">    } <span class="keyword">else</span> {</div><div class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">    }</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">d</span>(String tag, String msg) {</div><div class="line">    <span class="keyword">if</span> (isLoggable(tag)) {</div><div class="line">        android.util.Log.d(tag, msg);</div><div class="line">    }</div><div class="line">}</div></pre></td></tr></table></figure>
+
+<h2 id="美好Log生活">美好Log生活</h2>
+<p>现在，只要遵循<strong>log</strong>前缀规则还有<strong>log</strong>开关判断，就可以动态开关并输出精美的应用<strong>log</strong>了，生活顿时美好了许多。</p>
+]]></content>
+    <summary type="html"><![CDATA[<h2 id="Android_Log的普遍问题">Android Log的普遍问题</h2>
+<hr>
+<p>看过很多<strong>Android</strong>原生应用或者第三方应用的<strong>log</strong>记录都是相当的不规范，导致在控制台查看某个应用或者某个<strong>tag</strong>的<strong>log</strong>输出是相当痛苦的事情。虽然你可以用<strong>grep</strong>命令来过滤指定的<strong>log</strong>，但是你记得住自己的应用有多少个<strong>log tag</strong>吗？本文就来谈谈如何通过简单的两步走，实现应用<strong>log</strong>的规范精致输出。</p>
+]]></summary>
+    
+      <category term="Android" scheme="http://baoxiehao.com/tags/Android/"/>
+    
+      <category term="技术" scheme="http://baoxiehao.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Android DrawerLayout]]></title>
+    <link href="http://baoxiehao.com/2014/05/23/android%20drawerlayout/"/>
+    <id>http://baoxiehao.com/2014/05/23/android drawerlayout/</id>
+    <published>2014-05-23T10:49:20.000Z</published>
+    <updated>2014-05-24T12:12:06.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="前言">前言</h2>
+<hr>
+<p>在<strong>2013 google IO</strong>当天，Android团队更新了<a href="https://github.com/danielesegato/android-support-library-archive" target="_blank" rel="external"><strong>Android Support Library</strong></a>，在新版本<strong>V13</strong>中新加入了几个比较重要的功能：</p>
+<ul>
+<li>添加<strong>DrawerLayout</strong>控件，支持创建<strong>Navigation Drawer</strong>模式。可以设置从左边划出菜单或者右边，也可以左右菜单同时存在。</li>
+<li>添加<strong>SlidingPaneLayout</strong>控件来支持各种屏幕上的摘要、详情界面模式。比如<strong>Gmail</strong>邮件列表和单个邮件详情界面。当在手机上显示的时候，邮件列表和详情界面分别为两个界面；当在平板上显示的时候，则为一个界面。</li>
+<li>添加<strong>ActionBarDrawerToggle</strong>工具类，方便把<strong>DrawerLayout</strong>和<strong>ActionBar</strong>功能结合起来。</li>
+</ul>
+<a id="more"></a>
+
+<p><br><br></p>
+<h2 id="DrawerLayout">DrawerLayout</h2>
+<hr>
+<h3 id="创建DrawerLayout">创建DrawerLayout</h3>
+<p>在需要抽屉菜单的界面，用<strong>DrawerLayout</strong>作为界面根控件。在<strong>DrawerLayout</strong>里第一个View为当前界面主内容；第二个和第三个View为抽屉菜单内容。如果当前界面只需要一个抽屉菜单，则第三个View可以省略。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">android.support.v4.widget.DrawerLayout</span></span></div><div class="line">    <span class="attribute">xmlns:android</span>=<span class="value">"http://schemas.android.com/apk/res/android"</span></div><div class="line">    <span class="attribute">android:id</span>=<span class="value">"@+id/drawer_layout"</span></div><div class="line">    <span class="attribute">android:layout_width</span>=<span class="value">"match_parent"</span></div><div class="line">    <span class="attribute">android:layout_height</span>=<span class="value">"match_parent"</span>&gt;</div><div class="line">    <span class="comment">&lt;!-- The main content view --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">FrameLayout</span></span></div><div class="line">        <span class="attribute">android:id</span>=<span class="value">"@+id/content_frame"</span></div><div class="line">        <span class="attribute">android:layout_width</span>=<span class="value">"match_parent"</span></div><div class="line">        <span class="attribute">android:layout_height</span>=<span class="value">"match_parent"</span> /&gt;</div><div class="line">    <span class="comment">&lt;!-- The navigation drawer --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">ScrollView</span> <span class="attribute">android:id</span>=<span class="value">"@+id/left_drawer"</span></span></div><div class="line">        <span class="attribute">android:layout_width</span>=<span class="value">"240dp"</span></div><div class="line">        <span class="attribute">android:layout_height</span>=<span class="value">"match_parent"</span></div><div class="line">        <span class="attribute">android:layout_gravity</span>=<span class="value">"start"</span> /&gt;</div><div class="line"><span class="tag">&lt;/<span class="title">android.support.v4.widget.DrawerLayout</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<p>注意：</p>
+<ol>
+<li>界面主内容的View必须是<strong>DrawerLayout</strong>的第一个子View，原因在于XML布局文件中的View顺序为Android系统中的z-ordering顺序，而抽屉必须出现在内容之上。</li>
+<li>界面主内容的View宽度和高度要设置为和<strong>DrawerLayout</strong>一样，原因在于当抽屉菜单不可见的时候，界面内容代表整个界面UI。</li>
+<li>抽屉菜单（上面的<strong>ScrollView</strong>）必须使用<strong>android:layout_gravity=”start”</strong>（当在LTR语言运行时菜单出现在左侧，而RTL语言运行时菜单出现在右侧)。</li>
+<li>抽屉菜单的宽度应该不超过屏幕宽度，这样用户可以在菜单打开的时候看到部分内容界面。</li>
+</ol>
+<p><br><br></p>
+<h3 id="初始化DrawerLayout">初始化DrawerLayout</h3>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">initDrawLayout</span>() {</div><div class="line">    mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);</div><div class="line">    mDrawerLayout.setDrawerListener(<span class="keyword">new</span> DrawerListener() {</div><div class="line">        <span class="annotation">@Override</span></div><div class="line">        <span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onDrawerClosed</span>(View view) {</div><div class="line">        }</div><div class="line"></div><div class="line">        <span class="annotation">@Override</span></div><div class="line">        <span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onDrawerOpened</span>(View view) {</div><div class="line">        }</div><div class="line"></div><div class="line">        <span class="annotation">@Override</span></div><div class="line">        <span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onDrawerSlide</span>(View view, <span class="keyword">float</span> slideOffset) {</div><div class="line">        }</div><div class="line"></div><div class="line">        <span class="annotation">@Override</span></div><div class="line">        <span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onDrawerStateChanged</span>(<span class="keyword">int</span> state) {</div><div class="line">        }</div><div class="line">    });</div><div class="line">}</div></pre></td></tr></table></figure>
+
+<p><br><br></p>
+<h3 id="开关DrawerLayout">开关DrawerLayout</h3>
+<p>在用<strong>DrawerLayout</strong>实现侧滑菜单后，一般情况下就不需要额外显示菜单了，也就是可以把原先的菜单响应事件处理为显示侧滑菜单。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="annotation">@Override</span></div><div class="line"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">onPrepareOptionsMenu</span>(Menu menu) {</div><div class="line">    <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">}</div><div class="line"></div><div class="line"><span class="annotation">@Override</span></div><div class="line"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">onKeyUp</span>(<span class="keyword">int</span> keyCode, KeyEvent event) {</div><div class="line">    <span class="keyword">if</span> (KeyEvent.KEYCODE_MENU == keyCode && !event.isLongPress()) {</div><div class="line">        toggleDrawerLayout();</div><div class="line">    }</div><div class="line">    <span class="keyword">return</span> <span class="keyword">super</span>.onKeyUp(keyCode, event);</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">toggleDrawerLayout</span>() {</div><div class="line">    <span class="keyword">if</span> (mDrawerLayout != <span class="keyword">null</span>) {</div><div class="line">        <span class="keyword">if</span> (mDrawerLayout.isDrawerOpen(Gravity.START)) {</div><div class="line">            mDrawerLayout.closeDrawers();</div><div class="line">        } <span class="keyword">else</span> {</div><div class="line">            mDrawerLayout.openDrawer(Gravity.START);</div><div class="line">        }</div><div class="line">    }</div><div class="line">}</div></pre></td></tr></table></figure>
+
+<p><br><br></p>
+<h3 id="响应DrawerLayout点击">响应DrawerLayout点击</h3>
+<p>因为<strong>DrawerLayout</strong>中可以放置任意的View，所以响应事件就参照原有的<strong>findViewById</strong>加上<strong>setOnClickListener</strong>即可。当然，如果闲<strong>findViewById</strong>太繁琐，那么可以看看<a href="http://baoxiehao.com/2014/05/16/android%20easyadapter/" target="_blank" rel="external"><strong>Android EasyAdapter</strong></a>是否符合你的胃口。</p>
+<p><br><br></p>
+<h2 id="注意事项">注意事项</h2>
+<hr>
+<p><strong>[1]</strong> 如果在源码编译中引用<strong>jar包</strong>需要在项目的<strong>Android.mk</strong>中添加：</p>
+<figure class="highlight mk"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="constant">LOCAL_STATIC_JAVA_LIBRARIES</span> += android-support-v13</div><div class="line"><span class="constant">LOCAL_PREBUILT_STATIC_JAVA_LIBRARIES</span> += android-support-v13:libs/android-support-v13.jar</div></pre></td></tr></table></figure>
+
+<p><strong>[2]</strong> 如果使用了代码混淆，并且编译提示android support相关的warning的话，要在proguard.flags文件中添加：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">-dontwarn android.support.<span class="keyword">*</span><span class="keyword">*</span></div></pre></td></tr></table></figure>
+
+]]></content>
+    <summary type="html"><![CDATA[<h2 id="前言">前言</h2>
+<hr>
+<p>在<strong>2013 google IO</strong>当天，Android团队更新了<a href="https://github.com/danielesegato/android-support-library-archive" target="_blank" rel="external"><strong>Android Support Library</strong></a>，在新版本<strong>V13</strong>中新加入了几个比较重要的功能：</p>
+<ul>
+<li>添加<strong>DrawerLayout</strong>控件，支持创建<strong>Navigation Drawer</strong>模式。可以设置从左边划出菜单或者右边，也可以左右菜单同时存在。</li>
+<li>添加<strong>SlidingPaneLayout</strong>控件来支持各种屏幕上的摘要、详情界面模式。比如<strong>Gmail</strong>邮件列表和单个邮件详情界面。当在手机上显示的时候，邮件列表和详情界面分别为两个界面；当在平板上显示的时候，则为一个界面。</li>
+<li>添加<strong>ActionBarDrawerToggle</strong>工具类，方便把<strong>DrawerLayout</strong>和<strong>ActionBar</strong>功能结合起来。</li>
+</ul>
+]]></summary>
+    
+      <category term="Android" scheme="http://baoxiehao.com/tags/Android/"/>
+    
+      <category term="技术" scheme="http://baoxiehao.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Hexo博客优化]]></title>
+    <link href="http://baoxiehao.com/2014/05/17/Hexo%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96/"/>
+    <id>http://baoxiehao.com/2014/05/17/Hexo博客优化/</id>
+    <published>2014-05-17T02:06:30.000Z</published>
+    <updated>2014-08-10T05:02:25.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="MarkDown编辑器">MarkDown编辑器</h2>
+<hr>
+<p>最低要求：所见所得，云端同步。</p>
+<ul>
+<li><a href="https://www.zybuluo.com/" target="_blank" rel="external"><strong>Cmd Markdown编辑器</strong></a> —— 本来期待很高，也非常好用，但是反复提示邮箱没有验证，暂时放弃了。</li>
+<li><a href="https://stackedit.io/" target="_blank" rel="external"><strong>StackEdit</strong></a> —— 功能基本符合，可以用Google Drive同步，只是预览效果和Hexo最终效果还是有差异，比如代码段的效果，可能是Hexo的代码效果还没配置好。</li>
+<li><a href="http://dillinger.io/" target="_blank" rel="external"><strong>Dillinger</strong></a> —— 暂未使用，但是目测还不错，不过貌似网络访问速度比较缓慢。</li>
+<li><a href="http://maxiang.info/" target="_blank" rel="external"><strong>马克印象</strong></a> —— Evernote官方出品，值得一试。</li>
+</ul>
+<a id="more"></a>
+
+<p><br><br></p>
+<h2 id="优化内容">优化内容</h2>
+<hr>
+<h3 id="Freemind主题"><strong>Freemind主题</strong></h3>
+<p><strong>[1]</strong> <a href="https://github.com/wzpan/hexo-theme-freemind/" target="_blank" rel="external"><strong>下载主题</strong></a>，在<strong>hexo</strong>根目录打开<strong>Git Bash</strong>：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ git clone https://github.com/wzpan/hexo-theme-freemind.git themes/freemind</div><div class="line">$ npm install hexo-tag-bootstrap --save</div></pre></td></tr></table></figure>
+
+<p><strong>[2]</strong> <strong>应用主题</strong>，编辑根目录<strong>_config.yml</strong>文件：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">theme</span>: <span class="string">freemind</span></div></pre></td></tr></table></figure>
+
+<p><strong>[3]</strong> 配置<strong>导航菜单</strong></p>
+<p>编辑主题下的<strong>_config.yml</strong>文件（其中的<strong>icon</strong>可以在<a href="http://fortawesome.github.io/Font-Awesome/icons/" target="_blank" rel="external"><strong>Font Awesome Icons</strong></a>上找到）：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">menu:</div><div class="line">  -<span class="ruby"> <span class="symbol">title:</span> 归档</span></div><div class="line">    url: archives</div><div class="line">    intro: 文章归档</div><div class="line">    icon: fa fa-archive</div><div class="line">  -<span class="ruby"> <span class="symbol">title:</span> 分类</span></div><div class="line">    url: categories</div><div class="line">    intro: 文章分类</div><div class="line">    icon: fa fa-folder</div><div class="line">  -<span class="ruby"> <span class="symbol">title:</span> 标签</span></div><div class="line">    url: tags</div><div class="line">    intro: 所有标签</div><div class="line">    icon: fa fa-tags</div><div class="line">  -<span class="ruby"> <span class="symbol">title:</span> 关于</span></div><div class="line">    url: about</div><div class="line">    intro: 我的足迹</div><div class="line">    icon: fa fa-user</div></pre></td></tr></table></figure>
+
+<p>生成对应的导航页面（<strong>freemind</strong>主题默认已经有<strong>archives</strong>页面，还差<strong>categories</strong>、<strong>tags</strong>和<strong>about</strong>页面）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo new page <span class="string">"categorires"</span></div><div class="line">hexo new page <span class="string">"tags"</span></div><div class="line">hexo new page <span class="string">"about"</span></div></pre></td></tr></table></figure>
+
+<p>在<strong>hexo\source\</strong>下会生成对应的<strong>categories</strong>、<strong>tags</strong>和<strong>about</strong>目录，编辑里面的<strong>index.md</strong>文件对应各个页面的实际内容：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">title: 分类</div><div class="line">layout: categories</div><div class="line"><span class="header">date: 2014-05-17 23:21:34</span></div><div class="line">---</div></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">title: 标签</div><div class="line">layout: tags</div><div class="line"><span class="header">date: 2014-05-17 23:22:55</span></div><div class="line">---</div></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">title: 关于我</div><div class="line">layout: about</div><div class="line"><span class="header">date: 2014-05-17 10:37:46</span></div><div class="line">---</div></pre></td></tr></table></figure>
+
+<p><strong>[4]</strong> 更多<strong>文章属性</strong></p>
+<ul>
+<li><strong>description</strong> - 在文章顶部显示内容介绍</li>
+<li><strong>feature</strong> - 在文章列表页面显示概要图片</li>
+<li><strong>toc</strong> - 在文章起始处显示文章内容目录</li>
+</ul>
+<p>例如：</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">title: Tag Plugins</div><div class="line">date: 2014-03-16 10:17:16</div><div class="line">tags: plugins</div><div class="line">categories: Docs</div><div class="line">description: Introduce tag plugins in freemind.</div><div class="line">feature: images/tag-plugins/plugins.jpg</div><div class="line">toc: true</div></pre></td></tr></table></figure>
+
+<p><br><br></p>
+<h3 id="页面结构">页面结构</h3>
+<p><strong>[1]</strong> <strong>主页文章显示摘要</strong></p>
+<p>编辑<strong>md文件</strong>的时候，在要作为摘要的文字后面添加<strong>&lt;!—more—&gt;</strong>即可。</p>
+<p><strong>[2]</strong> 安装<strong>sitemap</strong>和<strong>rss</strong>：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ npm <span class="operator"><span class="keyword">install</span> hexo-generator-sitemap <span class="comment">--save</span></span></div><div class="line">$ npm <span class="keyword">install</span> hexo-generator-feed <span class="comment">--save</span></div></pre></td></tr></table></figure>
+
+<p>激活配置：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Plugins:</div><div class="line">  -<span class="ruby"> hexo-generator-feed</span></div><div class="line">  -<span class="ruby"> hexo-generator-sitemap</span></div></pre></td></tr></table></figure>
+
+<p><br><br></p>
+<h3 id="网站插件">网站插件</h3>
+<p><strong>[1]</strong> <strong>Hexo插件</strong> <a href="https://github.com/hexojs/hexo-livereload" target="_blank" rel="external"><strong>Live Reload</strong></a></p>
+<p><strong>Hexo</strong>允许在发布之前在<a href="http://localhost:4000" target="_blank" rel="external">本地浏览器</a>进行调试预览，但是如果每次修改都需要反复执行“<strong>$ hexo g &amp;&amp; hexo s</strong>”估计也很崩溃。<strong>Live Reload</strong>给力的地方在于它会自动完成上述步骤，要预览的时候直接<strong>F5</strong>刷新浏览器即可看到修改后的网页效果。当然，如果有时候修改后无法刷新出来的话，那就“<strong>$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</strong>”重新来过。</p>
+<p><strong>[2]</strong> <strong>流量分析</strong> <a href="http://www.google.com/analytics/" target="_blank" rel="external"><strong>Google Analytics</strong></a></p>
+<p>注册<strong>Google Analytics</strong>账号后，获取<strong>跟踪ID</strong>和<strong>跟踪代码</strong>。</p>
+<p>在主题的<strong>_config.yml</strong>中添加获得的<strong>跟踪ID</strong>：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">google_analytics:</div><div class="line">  enable: <span class="literal">true</span></div><div class="line">  <span class="keyword">id</span>: UA-<span class="number">51276891</span>-<span class="number">1</span></div><div class="line">  site: baoxiehao<span class="variable">.com</span></div></pre></td></tr></table></figure>
+
+<p>在主题<strong>/layout/_partial/after_footer.ejs</strong>的最后添加获得的<strong>跟踪代码</strong>。</p>
+<p><strong>[3]</strong>  <strong>流量分析</strong> <a href="http://tongji.baidu.com" target="_blank" rel="external"><strong>百度统计</strong></a></p>
+<p>虽然有了<strong>Google Analytics</strong>，但是时不时地被墙总是一件让人很惆怅的事情。于是，还是加下百度统计吧。</p>
+<p>首先，在主题的<strong>_config.yml</strong>文件中添加：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">baidu_tongji</span>: <span class="string">true</span></div></pre></td></tr></table></figure>
+
+<p>然后，在主题的<strong>/layout/_partial/</strong>目录下新建文件<strong>baidu_tongji.ejs</strong>：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="vbscript">&lt;% <span class="keyword">if</span> (theme.baidu_tongji){ %&gt;</span></div><div class="line">#你的百度统计代码</div><div class="line"><span class="vbscript">&lt;% } %&gt;</span></div></pre></td></tr></table></figure>
+
+<p>最后，在主题的<strong>/layout/_partial/head.ejs</strong>文件末尾添加：</p>
+<figure class="highlight ejs"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="variable">%-</span> partial(<span class="string">'baidu_tongji'</span>) <span class="variable">%&gt;</span></div></pre></td></tr></table></figure>
+
+<p><strong>[4]</strong> <strong>社会化评论</strong> <a href="http://duoshuo.com/" target="_blank" rel="external"><strong>多说</strong></a></p>
+<p>首先上多说官网注册账号，然后在主题<strong>/layout/_partial/</strong>下新建文件<a href="http://jimliu.net/2013/09/08/%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/" target="_blank" rel="external"><strong>duoshuo.ejs</strong></a>，内容如下：</p>
+<figure class="highlight ejs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- Duoshuo Comment BEGIN --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ds-thread"</span> <span class="attribute">data-title</span>=<span class="value">"&lt;%= item.title %&gt;"</span> <span class="attribute">data-url</span>=<span class="value">"&lt;%- item.permalink %&gt;"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span></div><div class="line"><span class="keyword">var</span> duoshuoQuery = {short_name:<span class="string">"your-duoshuo-name"</span>};</div><div class="line">(<span class="function"><span class="keyword">function</span><span class="params">()</span> </span>{</div><div class="line">    <span class="keyword">var</span> ds = <span class="built_in">document</span>.createElement(<span class="string">'script'</span>);</div><div class="line">    ds.type = <span class="string">'text/javascript'</span>;ds.async = <span class="literal">true</span>;</div><div class="line">    ds.src = <span class="string">'http://static.duoshuo.com/embed.js'</span>;</div><div class="line">    ds.charset = <span class="string">'UTF-8'</span>;</div><div class="line">    (<span class="built_in">document</span>.getElementsByTagName(<span class="string">'head'</span>)[<span class="number">0</span>]</div><div class="line">    || <span class="built_in">document</span>.getElementsByTagName(<span class="string">'body'</span>)[<span class="number">0</span>]).appendChild(ds);</div><div class="line">})();</div><div class="line"><span class="tag">&lt;/<span class="title">script</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- Duoshuo Comment END --&gt;</span></div></pre></td></tr></table></figure>
+
+<p>基本上就是在多说网站上拿到的通用代码，在第二行上加入了<strong>data-title</strong>和<strong>data-url</strong>，用来给多说传一些参数。<br><strong>data-url</strong>这个参数可以让多个域名上的文章评论共享，只要同一篇文章的<strong>data-url</strong>固定就可以。例如<strong>blog.baoxiehao.com</strong>和<strong>baoxiehao.com</strong>上文章的<strong>data-url</strong>都是<strong><a href="http://baoxiehao.com/xxx" target="_blank" rel="external">http://baoxiehao.com/xxx</a></strong>，这样两个域名就可以共享评论了。一定要<strong>注意</strong>第四行的<strong>your-duoshuo_name</strong>是自己多说代码独有的，不要照抄。</p>
+<p>接下来在layout/post.ejs下面，加入一行：</p>
+<figure class="highlight ejs"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;%- <span class="keyword">partial</span>(<span class="string">'_partial/duoshuo'</span>, {item: page, index: <span class="keyword">false</span>}) %&gt;</div></pre></td></tr></table></figure>
+
+<p>就能在文章页面看到评论框了。</p>
+<p>如果想在其他页面，例如<strong>关于页面</strong>也看到评论的话，对<strong>layout/page.ejs</strong>如法炮制即可。<br>而如果想在博客首页底部也看到评论的话，编辑<strong>freemind/layout/layout.ejs</strong>，在<strong>_partial/after_footer</strong>之前添加<strong>duoshuo</strong>代码（但是，这样有个问题是文章页面会有2个评论框，还没更好的方法，所以暂时先不加首页评论了）：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">  <span class="vbscript">&lt;%- partial(<span class="comment">'_partial/duoshuo', {item: page, index: false}) %&gt;</span></span></div><div class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span> <span class="comment">&lt;!-- container-narrow --&gt;</span></div><div class="line">  <span class="vbscript">&lt;%- partial(<span class="comment">'_partial/after_footer') %&gt;</span></span></div></pre></td></tr></table></figure>
+
+<p><strong>[5]</strong> <a href="https://github.com/gyk001/hexo-qiniu-sync" target="_blank" rel="external"><strong>七牛同步</strong></a></p>
+<p>印象中<strong>Github Pages</strong>是有100M左右的空间大小限制的，如果有更多的图片需要同步，建议选择可以外链的<strong>七牛同步</strong>。在官网注册账号后，新建一个图片空间，然后下载<a href="http://docs.qiniutek.com/v3/tools/qrsync/" target="_blank" rel="external"><strong>qrsync</strong></a>同步本地的图片到七牛，需要时直接在<strong>md文件</strong>中引用。</p>
+<p>新建配置文件（比如名为<strong>conf.json</strong>）：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">{</div><div class="line">  "<span class="attribute">access_key</span>": <span class="value"><span class="string">"Please apply your access key here"</span></span>,</div><div class="line">  "<span class="attribute">secret_key</span>": <span class="value"><span class="string">"Dont send your secret key to anyone"</span></span>,</div><div class="line">  "<span class="attribute">bucket</span>": <span class="value"><span class="string">"Bucket name on qiniu resource storage"</span></span>,</div><div class="line">  "<span class="attribute">sync_dir</span>": <span class="value"><span class="string">"Local directory to upload"</span></span>,</div><div class="line">  "<span class="attribute">debug_level</span>": <span class="value"><span class="number">1</span></span></div><div class="line">}</div></pre></td></tr></table></figure>
+
+<p>同步命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ qrsync.exe /path/to/your-conf.json</div></pre></td></tr></table></figure>
+
+<p><strong>[6]</strong> <a href="http://open.weibo.com/widgets?cat=wb" target="_blank" rel="external"><strong>新浪微博挂件</strong></a></p>
+<p>在主题<strong>/layout/_widget/</strong>下新建文件<strong>weibo.ejs</strong>，文件内容就是生成的微博挂件代码。然后在主题的<strong>_config.yml</strong>文件中添加配置：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">widget<span class="variable">s:</span></div><div class="line">  - weibo</div></pre></td></tr></table></figure>
+
+<p><br><br></p>
+<h3 id="FAQ">FAQ</h3>
+<ol>
+<li>主题的样式无法应用 —— 尝试执行命令<strong>$ hexo clean</strong>后重新部署。</li>
+<li>部署后显示中文乱码 —— 尝试将出现乱码的md文件用<strong>UTF-8</strong>重新编码后保存，然后执行<strong>$ hexo clean</strong>重新部署。</li>
+<li>升级<strong>Hexo</strong>后执行<strong>$ hexo s</strong>提示<strong>HexoError</strong>错误 —— 修改<strong>themes/freemind/languages/default.yml</strong>中包含空格的配置项，重新用双引号包裹包含空格的配置值就可以啦。</li>
+</ol>
+]]></content>
+    <summary type="html"><![CDATA[<h2 id="MarkDown编辑器">MarkDown编辑器</h2>
+<hr>
+<p>最低要求：所见所得，云端同步。</p>
+<ul>
+<li><a href="https://www.zybuluo.com/" target="_blank" rel="external"><strong>Cmd Markdown编辑器</strong></a> —— 本来期待很高，也非常好用，但是反复提示邮箱没有验证，暂时放弃了。</li>
+<li><a href="https://stackedit.io/" target="_blank" rel="external"><strong>StackEdit</strong></a> —— 功能基本符合，可以用Google Drive同步，只是预览效果和Hexo最终效果还是有差异，比如代码段的效果，可能是Hexo的代码效果还没配置好。</li>
+<li><a href="http://dillinger.io/" target="_blank" rel="external"><strong>Dillinger</strong></a> —— 暂未使用，但是目测还不错，不过貌似网络访问速度比较缓慢。</li>
+<li><a href="http://maxiang.info/" target="_blank" rel="external"><strong>马克印象</strong></a> —— Evernote官方出品，值得一试。</li>
+</ul>
+]]></summary>
+    
+      <category term="Hexo" scheme="http://baoxiehao.com/tags/Hexo/"/>
+    
+      <category term="博客" scheme="http://baoxiehao.com/categories/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Android EasyAdapter]]></title>
+    <link href="http://baoxiehao.com/2014/05/16/android%20easyadapter/"/>
+    <id>http://baoxiehao.com/2014/05/16/android easyadapter/</id>
+    <published>2014-05-16T11:55:23.000Z</published>
+    <updated>2014-05-23T10:51:24.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="EasyAdapter的安装">EasyAdapter的安装</h2>
+<hr>
+<p><strong>[1]</strong> <a href="#1"><strong>Github地址</strong></a> 和 <a href="#2"><strong>Jar包下载地址</strong></a>。</p>
+<p><strong>[2]</strong> 如果在源码编译中引用<strong>jar包</strong>需要在项目的<strong>Android.mk</strong>中添加：</p>
+<figure class="highlight mk"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="constant">LOCAL_STATIC_JAVA_LIBRARIES</span> += easy-adapter</div><div class="line"><span class="constant">LOCAL_PREBUILT_STATIC_JAVA_LIBRARIES</span> += easy-adapter:libs/easyadapter-1.0.1.jar</div></pre></td></tr></table></figure>
+
+<p><strong>[3]</strong> 如果使用了代码混淆，一定要在proguard.flags文件中去掉对easy-adapter代码包的混淆：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">-keep <span class="keyword">public</span> <span class="keyword">class</span> uk.co.ribot.easyadapter.** {</div><div class="line">    <span class="keyword">public</span> <span class="keyword">protected</span> *;</div><div class="line">}</div></pre></td></tr></table></figure>
+
+<a id="more"></a>
+
+<p><br></p>
+<h2 id="EasyAdapter的使用">EasyAdapter的使用</h2>
+<hr>
+<h3 id="使用EasyAdapter之前">使用EasyAdapter之前</h3>
+<p>自定义一个BaseAdapter，包含了下面繁琐的模板代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">TopicDetailAdapter</span> <span class="keyword">extends</span> <span class="title">BaseAdapter</span> </span>{</div><div class="line">    <span class="annotation">@Override</span></div><div class="line">    <span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getCount</span>() {</div><div class="line">        <span class="keyword">return</span> mEventList != <span class="keyword">null</span> ? mEventList.size() : <span class="number">0</span>;</div><div class="line">    }</div><div class="line">    <span class="annotation">@Override</span></div><div class="line">    <span class="keyword">public</span> Object <span class="title">getItem</span>(<span class="keyword">int</span> position) {</div><div class="line">        <span class="keyword">return</span> mEventList.get(position);</div><div class="line">    }</div><div class="line">    <span class="annotation">@Override</span></div><div class="line">    <span class="keyword">public</span> <span class="keyword">long</span> <span class="title">getItemId</span>(<span class="keyword">int</span> position) {</div><div class="line">        <span class="keyword">return</span> position;</div><div class="line">    }</div><div class="line">    <span class="annotation">@Override</span></div><div class="line">    <span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isEnabled</span>(<span class="keyword">int</span> position) {</div><div class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">    }</div><div class="line">    <span class="annotation">@Override</span></div><div class="line">    <span class="keyword">public</span> View <span class="title">getView</span>(<span class="keyword">int</span> position, View convertView, ViewGroup parent) {</div><div class="line">        ViewHolder holder = <span class="keyword">null</span>;</div><div class="line">        <span class="keyword">if</span> (convertView == <span class="keyword">null</span>) {</div><div class="line">            convertView = LayoutInflater.from(mActivity).inflate(</div><div class="line">                    R.layout.event_online_item, <span class="keyword">null</span>);</div><div class="line">            holder = <span class="keyword">new</span> ViewHolder(convertView);</div><div class="line">            convertView.setTag(holder);</div><div class="line">        } <span class="keyword">else</span> {</div><div class="line">            holder = (ViewHolder) convertView.getTag();</div><div class="line">        }</div><div class="line">        <span class="keyword">final</span> EventSchema event = mEventList.get(position);</div><div class="line">        holder.mHeaderText.setText(R.string.topic_event_list_header_label);</div><div class="line">        holder.mHeaderText.setVisibility(position == <span class="number">0</span> ? View.VISIBLE : View.GONE);</div><div class="line">        holder.mPrimaryText.setText(event.title);</div><div class="line">        holder.mSecondaryText.setText(MonthUtils.getEventTimeString(mActivity, event,</div><div class="line">                Time.getCurrentTimezone()));</div><div class="line">        String url = event.getEventIconUrl();</div><div class="line">        <span class="keyword">if</span> (!TextUtils.isEmpty(url)) {</div><div class="line">            holder.mOnlineImage.setVisibility(View.VISIBLE);</div><div class="line">            holder.mOnlineImage.setImageUrl(url, R.drawable.loading, R.drawable.loading);</div><div class="line">        } <span class="keyword">else</span> {</div><div class="line">            holder.mOnlineImage.setVisibility(View.GONE);</div><div class="line">        }</div><div class="line">        <span class="keyword">return</span> convertView;</div><div class="line">    }</div><div class="line">    <span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">ViewHolder</span> </span>{</div><div class="line">        <span class="keyword">public</span> TextView mHeaderText;</div><div class="line">        <span class="keyword">public</span> ViewGroup mRowGroup;</div><div class="line">        <span class="keyword">public</span> TextView mPrimaryText;</div><div class="line">        <span class="keyword">public</span> TextView mSecondaryText;</div><div class="line">        <span class="keyword">public</span> OnlineImageView mOnlineImage;</div><div class="line">        <span class="keyword">public</span> <span class="title">ViewHolder</span>(View view) {</div><div class="line">            mHeaderText = (TextView) view.findViewById(R.id.header);</div><div class="line">            mRowGroup = (ViewGroup) view.findViewById(R.id.row);</div><div class="line">            mPrimaryText = (TextView) view.findViewById(R.id.primary);</div><div class="line">            mSecondaryText = (TextView) view.findViewById(R.id.secondary);</div><div class="line">            mOnlineImage = (OnlineImageView) view.findViewById(R.id.online_image);</div><div class="line">        }</div><div class="line">    }</div><div class="line">}</div></pre></td></tr></table></figure>
+
+<p>利用自定义的BaseAdapter继承类填充List数据：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">getListView().setAdapter(<span class="keyword">new</span> TopicDetailAdapter());</div></pre></td></tr></table></figure>
+
+<p><br></p>
+<h3 id="使用EasyAdapter之后">使用EasyAdapter之后</h3>
+<p>继承自ItemViewHolder<t>关联数据和视图：</t></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TopicItemViewHolder</span> <span class="keyword">extends</span> <span class="title">ItemViewHolder</span>&lt;<span class="title">EventSchema</span>&gt; </span>{</div><div class="line">    <span class="annotation">@ViewId</span>(R.id.header)</div><div class="line">    TextView mHeaderText;</div><div class="line">    <span class="annotation">@ViewId</span>(R.id.row)</div><div class="line">    ViewGroup mRowGroup;</div><div class="line">    <span class="annotation">@ViewId</span>(R.id.primary)</div><div class="line">    TextView mPrimaryText;</div><div class="line">    <span class="annotation">@ViewId</span>(R.id.secondary)</div><div class="line">    TextView mSecondaryText;</div><div class="line">    <span class="annotation">@ViewId</span>(R.id.online_image)</div><div class="line">    OnlineImageView mOnlineImage;</div><div class="line">    <span class="keyword">public</span> <span class="title">TopicItemViewHolder</span>(View view) {</div><div class="line">        <span class="keyword">super</span>(view);</div><div class="line">    }</div><div class="line">    <span class="annotation">@Override</span></div><div class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onSetValues</span>(EventSchema event, PositionInfo posInfo) {</div><div class="line">        mHeaderText.setText(R.string.topic_event_list_header_label);</div><div class="line">        mHeaderText.setVisibility(posInfo.isFirst() ? View.VISIBLE : View.GONE);</div><div class="line">        mPrimaryText.setText(event.title);</div><div class="line">        mSecondaryText.setText(MonthUtils.getEventTimeString(getContext(), event,</div><div class="line">                Time.getCurrentTimezone()));</div><div class="line">        String url = event.getEventIconUrl();</div><div class="line">        <span class="keyword">if</span> (!TextUtils.isEmpty(url)) {</div><div class="line">            mOnlineImage.setVisibility(View.VISIBLE);</div><div class="line">            mOnlineImage.setImageUrl(url, R.drawable.loading, R.drawable.loading);</div><div class="line">        } <span class="keyword">else</span> {</div><div class="line">            mOnlineImage.setVisibility(View.GONE);</div><div class="line">        }</div><div class="line">    }</div><div class="line">}</div></pre></td></tr></table></figure>
+
+<p>利用EasyAdapter<t>模板类直接填充List数据：</t></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">getListView().setAdapter(<span class="keyword">new</span> EasyAdapter&lt;EventSchema&gt;(getContext(), TopicItemViewHolder.class, mEventList);</div></pre></td></tr></table></figure>
+
+]]></content>
+    <summary type="html"><![CDATA[<h2 id="EasyAdapter的安装">EasyAdapter的安装</h2>
+<hr>
+<p><strong>[1]</strong> <a href="#1"><strong>Github地址</strong></a> 和 <a href="#2"><strong>Jar包下载地址</strong></a>。</p>
+<p><strong>[2]</strong> 如果在源码编译中引用<strong>jar包</strong>需要在项目的<strong>Android.mk</strong>中添加：</p>
+<figure class="highlight mk"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="constant">LOCAL_STATIC_JAVA_LIBRARIES</span> += easy-adapter</div><div class="line"><span class="constant">LOCAL_PREBUILT_STATIC_JAVA_LIBRARIES</span> += easy-adapter:libs/easyadapter-1.0.1.jar</div></pre></td></tr></table></figure>
+
+<p><strong>[3]</strong> 如果使用了代码混淆，一定要在proguard.flags文件中去掉对easy-adapter代码包的混淆：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">-keep <span class="keyword">public</span> <span class="keyword">class</span> uk.co.ribot.easyadapter.** {</div><div class="line">    <span class="keyword">public</span> <span class="keyword">protected</span> *;</div><div class="line">}</div></pre></td></tr></table></figure>
+
+]]></summary>
+    
+      <category term="Android" scheme="http://baoxiehao.com/tags/Android/"/>
+    
+      <category term="技术" scheme="http://baoxiehao.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Hexo博客首文]]></title>
+    <link href="http://baoxiehao.com/2014/05/13/Hexo%E5%8D%9A%E5%AE%A2%E9%A6%96%E6%96%87/"/>
+    <id>http://baoxiehao.com/2014/05/13/Hexo博客首文/</id>
+    <published>2014-05-13T12:55:50.000Z</published>
+    <updated>2014-08-10T05:00:31.000Z</updated>
+    <content type="html"><![CDATA[<blockquote>
+<p><a href="http://hexo.io" target="_blank" rel="external">Hexo</a>博客很有逼格! 参考<a href="http://hexo.io/docs" target="_blank" rel="external">Hexo文档</a>学习更多。</p>
+</blockquote>
+<h2 id="搭建步骤">搭建步骤</h2>
+<hr>
+<p><strong>[1]</strong> 进入<a href="http://www.godaddy.com/" target="_blank" rel="external">Godadday</a>首页（注册登录）后搜索想要的域名并购买，网络上可以搜索到Godaddy优惠券（最好选择支持<strong>支付宝</strong>支付的更加便捷）。博主花费了50多刀注册了5年的个人域名。</p>
+<p><strong>[2]</strong> 进入<a href="http://www.dnspod.cn/" target="_blank" rel="external">DNSpod</a>首页（注册登录）后点击“添加域名”，记录生成的2个DNS服务器。</p>
+<a id="more"></a>
+
+<p><img src="/imgs/dnspod.jpg" alt=""><br><img src="/imgs/dnspod-server-name.jpg" alt=""></p>
+<p><strong>[3]</strong> <strong>重新登录</strong><a href="http://www.godaddy.com/" target="_blank" rel="external">Godaddy</a>，在<strong>Domain</strong>页面<strong>Launch</strong>刚刚注册的域名地址，然后添加刚刚在<a href="http://www.dnspod.cn/" target="_blank" rel="external">DNSpod</a>生成的2个DNS服务器。<br><img src="/imgs/godaddy.jpg" alt=""><br><img src="/imgs/godaddy-server-name.jpg" alt=""></p>
+<p><strong>[4]</strong> 回到<a href="http://www.dnspod.cn/" target="_blank" rel="external">DNSpod</a>，点击在<a href="http://www.godaddy.com/" target="_blank" rel="external">Godaddy</a>注册的个人域名，添加2个记录，其<strong>主机记录</strong>分别是<strong>@</strong>和<strong>www</strong>（这样个人域名前有没有加<strong>www</strong>应该都可以访问到），<strong>记录类型</strong>选择<strong>CNAME</strong>，<strong>记录值</strong>都选择下一个步骤在<a href="https://github.com/" target="_blank" rel="external">Github</a>上创建的<strong>Github Pages</strong>链接地址（<a href="baoxiehao.github.io">博主Github Pages</a>）。<br><img src="/imgs/dnspod-hosts.jpg" alt=""></p>
+<p><strong>[5]</strong> 进入<a href="baoxiehao.github.io">Github</a>首页（注册登录），在右上角<strong>+</strong>处选择<strong>New Repository</strong>新建Github Pages对应的仓库项目，项目名称<strong>一定</strong>是要和Github的<strong>个人账户名字</strong>相同！输入完成后，点击<strong>Create Repository</strong>完成创建（博主是因为已经创建过了所以提示已经存在）。<br><img src="/imgs/github-new-repo.jpg" alt=""><br><img src="/imgs/github-new-repo-addr.jpg" alt=""></p>
+<p><strong>[6]</strong> <strong>Github Pages</strong>项目创建完成后，需要在项目中新建一个<strong>CNAME</strong>的文件，文件内容是刚刚在<a href="http://www.godaddy.com/" target="_blank" rel="external">Godaddy</a>注册的个人域名地址。方便起见可以在项目详情右下角点击<strong>Add a README</strong>，然后修改文件名称和文件内容，最后在右下角点击<strong>Commit new file</strong>即可。<br><img src="/imgs/github-cname.jpg" alt=""><br><img src="/imgs/github-cname-text.jpg" alt=""><br><img src="/imgs/github-cname-commit.jpg" alt=""></p>
+<p><strong>[7]</strong> <a href="https://help.github.com/articles/generating-ssh-keys" target="_blank" rel="external"><strong>配置SSH KEY</strong></a></p>
+<p><img src="/imgs/ssh-keygen.jpg" alt=""><br><img src="/imgs/ssh-github.jpg" alt=""></p>
+<p><strong>[8]</strong> 安装<a href="http://nodejs.org/" target="_blank" rel="external">Node.js</a>和<a href="http://git-scm.com/" target="_blank" rel="external">Git</a>。</p>
+<p><strong>[9]</strong> 安装<a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ npm install -g hexo</div><div class="line">$ mkdir ~/hexo</div><div class="line">$ <span class="built_in">cd</span> hexo</div><div class="line">$ hexo init</div><div class="line">$ npm install</div></pre></td></tr></table></figure>
+
+<p><strong>[10]</strong> <strong>hexo</strong>安装完成后，修改<strong>hexo</strong>根目录下的配置文件<strong>_config.yml</strong>：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  <span class="class"><span class="keyword">type</span>: <span class="title">github</span></span></div><div class="line">  repository: https:<span class="comment">//github.com/baoxiehao/baoxiehao.github.io.git</span></div></pre></td></tr></table></figure>
+
+<p><br></p>
+<h2 id="编写博文">编写博文</h2>
+<hr>
+<p><strong>折腾了这么久，终于可以创建属于你自己的个人博客文章了，心里是不是有点小激动呢！</strong></p>
+<p><strong>[1]</strong> <strong>新建博客</strong>，在开始菜单启动<strong>Git Bash</strong>（会在当前目录下创建<strong>folder-name</strong>的文件夹作为博客目录，可以用百度云之类进行云同步）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo init folder-name</div></pre></td></tr></table></figure>
+
+<p><strong>[2]</strong> <strong>新建文章</strong>（会在hexo目录下的source/_post新建名为<strong>title-name.md</strong>的文件，用<strong>Sublime Text</strong>（任意你喜欢的编辑器，当然我喜欢<strong>Sublime</strong>）打开就可以用<a href="http://wowubuntu.com/markdown/" target="_blank" rel="external">MarkDown</a>语法写文章了：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new title-name</div></pre></td></tr></table></figure>
+
+<p><strong>[3]</strong> <strong>预览文章</strong>，文章写完后在<a href="http://localhost:4000" target="_blank" rel="external">本地</a>即可预览博客文章：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server (或者 hexo s)</div></pre></td></tr></table></figure>
+
+<p><strong>[4]</strong> <strong>发布文章</strong>，预览没有问题，就可以发布到<strong>Github Pages</strong>上面了：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo generate (或者 hexo g)</div><div class="line">$ hexo deploy (或者 hexo d)</div></pre></td></tr></table></figure>
+
+<p>或者一个命令一步到位：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo g <span class="operator">-d</span></div></pre></td></tr></table></figure>
+
+<p><strong>[5]</strong> 最后根据提示信息，输入<strong>Github</strong>账号密码，等待若干秒就大功告成了：</p>
+<p><img src="/imgs/github-push.jpg" alt=""></p>
+<p><br><br></p>
+<h2 id="更换电脑注意事项">更换电脑注意事项</h2>
+<p>更换电脑编写博文的话，首先要将原电脑上的<strong>ssh key</strong>拷贝到新电脑上，然后执行命令添加<strong>ssh key</strong>。在<strong>hexo</strong>根目录<strong>Git Bash</strong>执行命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ ssh-agent bash</div><div class="line">$ ssh-add /c/User/Thinkpad/.ssh/id_rsa</div><div class="line">$ ssh-add <span class="operator">-l</span></div></pre></td></tr></table></figure>
+
+<p>如果执行<strong>hexo deploy</strong>的时候提示：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">fatal: <span class="string">'github'</span> does not appear to be a git repository</div><div class="line">fatal: Could not <span class="built_in">read</span> from remote repository</div></pre></td></tr></table></figure>
+
+<p>那么删除<strong>hexo</strong>根目录下的<strong>.deploy</strong>目录重新<strong>hexo g</strong>试试。</p>
+<p><br><br></p>
+<h2 id="参考链接">参考链接</h2>
+<hr>
+<ol>
+<li><a href="http://cnfeat.com/2014/05/10/2014-05-11-how-to-build-a-blog/" target="_blank" rel="external">如何搭建一个独立博客——简明Github Pages与Hexo教程</a></li>
+<li><a href="http://code.wileam.com/build-a-hexo-blog-and-optimize/" target="_blank" rel="external">hexo搭建静态博客以及优化</a></li>
+<li><a href="http://jingyan.baidu.com/article/358570f6198a9ece4724fcf7.html" target="_blank" rel="external">Godaddy域名使用DNSPod做DNS解析图文教程</a></li>
+<li><a href="http://bbs.baoxianwangluo.com/thread-167961-1-1.html" target="_blank" rel="external">怎样在Dnspod添加CNAME记录解析</a></li>
+<li><a href="https://github.com/tommy351/hexo/issues/67" target="_blank" rel="external"><strong>Hexo deploy</strong>发布不成功</a></li>
+</ol>
+]]></content>
+    <summary type="html"><![CDATA[<blockquote>
+<p><a href="http://hexo.io" target="_blank" rel="external">Hexo</a>博客很有逼格! 参考<a href="http://hexo.io/docs" target="_blank" rel="external">Hexo文档</a>学习更多。</p>
+</blockquote>
+<h2 id="搭建步骤">搭建步骤</h2>
+<hr>
+<p><strong>[1]</strong> 进入<a href="http://www.godaddy.com/" target="_blank" rel="external">Godadday</a>首页（注册登录）后搜索想要的域名并购买，网络上可以搜索到Godaddy优惠券（最好选择支持<strong>支付宝</strong>支付的更加便捷）。博主花费了50多刀注册了5年的个人域名。</p>
+<p><strong>[2]</strong> 进入<a href="http://www.dnspod.cn/" target="_blank" rel="external">DNSpod</a>首页（注册登录）后点击“添加域名”，记录生成的2个DNS服务器。</p>
+]]></summary>
+    
+      <category term="Hexo" scheme="http://baoxiehao.com/tags/Hexo/"/>
+    
+      <category term="博客" scheme="http://baoxiehao.com/categories/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
+  
+</feed>

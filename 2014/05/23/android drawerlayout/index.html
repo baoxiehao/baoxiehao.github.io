@@ -1,0 +1,330 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Android DrawerLayout | 浩然也空的博客</title>
+  <meta name="author" content="浩然也空">
+  
+  <meta name="description" content="每周一篇文章，每年一次总结。">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Android DrawerLayout"/>
+  <meta property="og:site_name" content="浩然也空的博客"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  
+    <link rel="alternative" href="/atom.xml" title="浩然也空的博客" type="application/atom+xml">
+  
+  
+    <link href="/favicon.png" rel="icon">
+  
+
+  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', '[object Object]']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+
+ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+  
+
+</head>
+
+ <body>
+  <nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+	  <a class="navbar-brand" href="/">浩然也空的博客</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="所有归档">
+			  <i class="fa fa-archive"></i>归档
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="所有分类">
+			  <i class="fa fa-folder"></i>分类
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="所有标签">
+			  <i class="fa fa-tags"></i>标签
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="我的足迹">
+			  <i class="fa fa-user"></i>关于
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+  	<div class="content">
+    	 
+
+
+	
+		<div class="page-header">		
+			<h1> Android DrawerLayout</h1>
+		</div>		
+	
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div class="col-md-9">
+	
+
+			
+
+	<!-- content -->
+	<div class="mypage">		
+	    <h2 id="前言">前言</h2>
+<hr>
+<p>在<strong>2013 google IO</strong>当天，Android团队更新了<a href="https://github.com/danielesegato/android-support-library-archive" target="_blank" rel="external"><strong>Android Support Library</strong></a>，在新版本<strong>V13</strong>中新加入了几个比较重要的功能：</p>
+<ul>
+<li>添加<strong>DrawerLayout</strong>控件，支持创建<strong>Navigation Drawer</strong>模式。可以设置从左边划出菜单或者右边，也可以左右菜单同时存在。</li>
+<li>添加<strong>SlidingPaneLayout</strong>控件来支持各种屏幕上的摘要、详情界面模式。比如<strong>Gmail</strong>邮件列表和单个邮件详情界面。当在手机上显示的时候，邮件列表和详情界面分别为两个界面；当在平板上显示的时候，则为一个界面。</li>
+<li>添加<strong>ActionBarDrawerToggle</strong>工具类，方便把<strong>DrawerLayout</strong>和<strong>ActionBar</strong>功能结合起来。</li>
+</ul>
+<a id="more"></a>
+
+<p><br><br></p>
+<h2 id="DrawerLayout">DrawerLayout</h2>
+<hr>
+<h3 id="创建DrawerLayout">创建DrawerLayout</h3>
+<p>在需要抽屉菜单的界面，用<strong>DrawerLayout</strong>作为界面根控件。在<strong>DrawerLayout</strong>里第一个View为当前界面主内容；第二个和第三个View为抽屉菜单内容。如果当前界面只需要一个抽屉菜单，则第三个View可以省略。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">android.support.v4.widget.DrawerLayout</span></span></div><div class="line">    <span class="attribute">xmlns:android</span>=<span class="value">"http://schemas.android.com/apk/res/android"</span></div><div class="line">    <span class="attribute">android:id</span>=<span class="value">"@+id/drawer_layout"</span></div><div class="line">    <span class="attribute">android:layout_width</span>=<span class="value">"match_parent"</span></div><div class="line">    <span class="attribute">android:layout_height</span>=<span class="value">"match_parent"</span>&gt;</div><div class="line">    <span class="comment">&lt;!-- The main content view --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">FrameLayout</span></span></div><div class="line">        <span class="attribute">android:id</span>=<span class="value">"@+id/content_frame"</span></div><div class="line">        <span class="attribute">android:layout_width</span>=<span class="value">"match_parent"</span></div><div class="line">        <span class="attribute">android:layout_height</span>=<span class="value">"match_parent"</span> /&gt;</div><div class="line">    <span class="comment">&lt;!-- The navigation drawer --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">ScrollView</span> <span class="attribute">android:id</span>=<span class="value">"@+id/left_drawer"</span></span></div><div class="line">        <span class="attribute">android:layout_width</span>=<span class="value">"240dp"</span></div><div class="line">        <span class="attribute">android:layout_height</span>=<span class="value">"match_parent"</span></div><div class="line">        <span class="attribute">android:layout_gravity</span>=<span class="value">"start"</span> /&gt;</div><div class="line"><span class="tag">&lt;/<span class="title">android.support.v4.widget.DrawerLayout</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<p>注意：</p>
+<ol>
+<li>界面主内容的View必须是<strong>DrawerLayout</strong>的第一个子View，原因在于XML布局文件中的View顺序为Android系统中的z-ordering顺序，而抽屉必须出现在内容之上。</li>
+<li>界面主内容的View宽度和高度要设置为和<strong>DrawerLayout</strong>一样，原因在于当抽屉菜单不可见的时候，界面内容代表整个界面UI。</li>
+<li>抽屉菜单（上面的<strong>ScrollView</strong>）必须使用<strong>android:layout_gravity=”start”</strong>（当在LTR语言运行时菜单出现在左侧，而RTL语言运行时菜单出现在右侧)。</li>
+<li>抽屉菜单的宽度应该不超过屏幕宽度，这样用户可以在菜单打开的时候看到部分内容界面。</li>
+</ol>
+<p><br><br></p>
+<h3 id="初始化DrawerLayout">初始化DrawerLayout</h3>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">initDrawLayout</span>() {</div><div class="line">    mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);</div><div class="line">    mDrawerLayout.setDrawerListener(<span class="keyword">new</span> DrawerListener() {</div><div class="line">        <span class="annotation">@Override</span></div><div class="line">        <span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onDrawerClosed</span>(View view) {</div><div class="line">        }</div><div class="line"></div><div class="line">        <span class="annotation">@Override</span></div><div class="line">        <span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onDrawerOpened</span>(View view) {</div><div class="line">        }</div><div class="line"></div><div class="line">        <span class="annotation">@Override</span></div><div class="line">        <span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onDrawerSlide</span>(View view, <span class="keyword">float</span> slideOffset) {</div><div class="line">        }</div><div class="line"></div><div class="line">        <span class="annotation">@Override</span></div><div class="line">        <span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onDrawerStateChanged</span>(<span class="keyword">int</span> state) {</div><div class="line">        }</div><div class="line">    });</div><div class="line">}</div></pre></td></tr></table></figure>
+
+<p><br><br></p>
+<h3 id="开关DrawerLayout">开关DrawerLayout</h3>
+<p>在用<strong>DrawerLayout</strong>实现侧滑菜单后，一般情况下就不需要额外显示菜单了，也就是可以把原先的菜单响应事件处理为显示侧滑菜单。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="annotation">@Override</span></div><div class="line"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">onPrepareOptionsMenu</span>(Menu menu) {</div><div class="line">    <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">}</div><div class="line"></div><div class="line"><span class="annotation">@Override</span></div><div class="line"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">onKeyUp</span>(<span class="keyword">int</span> keyCode, KeyEvent event) {</div><div class="line">    <span class="keyword">if</span> (KeyEvent.KEYCODE_MENU == keyCode && !event.isLongPress()) {</div><div class="line">        toggleDrawerLayout();</div><div class="line">    }</div><div class="line">    <span class="keyword">return</span> <span class="keyword">super</span>.onKeyUp(keyCode, event);</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">toggleDrawerLayout</span>() {</div><div class="line">    <span class="keyword">if</span> (mDrawerLayout != <span class="keyword">null</span>) {</div><div class="line">        <span class="keyword">if</span> (mDrawerLayout.isDrawerOpen(Gravity.START)) {</div><div class="line">            mDrawerLayout.closeDrawers();</div><div class="line">        } <span class="keyword">else</span> {</div><div class="line">            mDrawerLayout.openDrawer(Gravity.START);</div><div class="line">        }</div><div class="line">    }</div><div class="line">}</div></pre></td></tr></table></figure>
+
+<p><br><br></p>
+<h3 id="响应DrawerLayout点击">响应DrawerLayout点击</h3>
+<p>因为<strong>DrawerLayout</strong>中可以放置任意的View，所以响应事件就参照原有的<strong>findViewById</strong>加上<strong>setOnClickListener</strong>即可。当然，如果闲<strong>findViewById</strong>太繁琐，那么可以看看<a href="http://baoxiehao.com/2014/05/16/android%20easyadapter/" target="_blank" rel="external"><strong>Android EasyAdapter</strong></a>是否符合你的胃口。</p>
+<p><br><br></p>
+<h2 id="注意事项">注意事项</h2>
+<hr>
+<p><strong>[1]</strong> 如果在源码编译中引用<strong>jar包</strong>需要在项目的<strong>Android.mk</strong>中添加：</p>
+<figure class="highlight mk"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="constant">LOCAL_STATIC_JAVA_LIBRARIES</span> += android-support-v13</div><div class="line"><span class="constant">LOCAL_PREBUILT_STATIC_JAVA_LIBRARIES</span> += android-support-v13:libs/android-support-v13.jar</div></pre></td></tr></table></figure>
+
+<p><strong>[2]</strong> 如果使用了代码混淆，并且编译提示android support相关的warning的话，要在proguard.flags文件中添加：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">-dontwarn android.support.<span class="keyword">*</span><span class="keyword">*</span></div></pre></td></tr></table></figure>
+
+	  
+	</div>
+
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+				
+    	<li class="prev"><a href="/2014/06/12/android log/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+  		
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
+
+		
+		   <li class="next"><a href="/2014/05/17/Hexo博客优化/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
+</ul>
+</div>
+
+    </center>
+	</div>
+	
+	<!-- comment -->
+	
+<section id="comment">
+  <h2 class="title">留言</h2>
+
+  
+</section>
+
+	
+	</div> <!-- col-md-9/col-md-12 -->
+	
+	
+		<div class="col-md-3"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2014 5月 23 
+	</div>
+	
+
+	<!-- categories -->
+    
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
+          
+  <li>
+    <li><a href="/categories/技术/">技术<span>3</span></a></li>
+  </li>
+
+    </ul>
+	</div>
+	
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/Android/">Android<span>3</span></a></li>
+    </ul>
+	</div>
+		
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	   <a data-toggle="collapse" data-target="#toc"><i class="fa fa-bars"></i></a>
+	   <div id="toc" class="toc collapse in">
+			<ol class="toc-article"><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#前言"><span class="toc-article-text">前言</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#DrawerLayout"><span class="toc-article-text">DrawerLayout</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#创建DrawerLayout"><span class="toc-article-text">创建DrawerLayout</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#初始化DrawerLayout"><span class="toc-article-text">初始化DrawerLayout</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#开关DrawerLayout"><span class="toc-article-text">开关DrawerLayout</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#响应DrawerLayout点击"><span class="toc-article-text">响应DrawerLayout点击</span></a></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#注意事项"><span class="toc-article-text">注意事项</span></a></li></ol>
+		</div>
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	
+
+</div><!-- row -->
+
+
+<!-- Duoshuo Comment BEGIN -->
+<div class="ds-thread" data-title="Android DrawerLayout" data-url="http://baoxiehao.com/2014/05/23/android drawerlayout/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"baoxiehao"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+<!-- Duoshuo Comment END -->
+
+
+	</div>
+  </div>
+  <div class="container-narrow">
+  <footer> <p>
+  &copy; 2014 浩然也空
+  
+      with help from <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+</p> </footer>
+  <!-- Duoshuo Comment BEGIN -->
+<div class="ds-thread" data-title="Android DrawerLayout" data-url="http://baoxiehao.com/2014/05/23/android drawerlayout/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"baoxiehao"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+<!-- Duoshuo Comment END -->
+
+</div> <!-- container-narrow -->
+  
+<a id="gotop" href="#">
+  <span>▲</span>
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-51276891-1', 'baoxiehao.com');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+   </html>

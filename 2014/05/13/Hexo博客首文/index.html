@@ -1,0 +1,348 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hexo博客首文 | 浩然也空的博客</title>
+  <meta name="author" content="浩然也空">
+  
+  <meta name="description" content="每周一篇文章，每年一次总结。">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Hexo博客首文"/>
+  <meta property="og:site_name" content="浩然也空的博客"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  
+    <link rel="alternative" href="/atom.xml" title="浩然也空的博客" type="application/atom+xml">
+  
+  
+    <link href="/favicon.png" rel="icon">
+  
+
+  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', '[object Object]']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+
+ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+  
+
+</head>
+
+ <body>
+  <nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+	  <a class="navbar-brand" href="/">浩然也空的博客</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="所有归档">
+			  <i class="fa fa-archive"></i>归档
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="所有分类">
+			  <i class="fa fa-folder"></i>分类
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="所有标签">
+			  <i class="fa fa-tags"></i>标签
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="我的足迹">
+			  <i class="fa fa-user"></i>关于
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+  	<div class="content">
+    	 
+
+
+	
+		<div class="page-header">		
+			<h1> Hexo博客首文</h1>
+		</div>		
+	
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div class="col-md-9">
+	
+
+			
+
+	<!-- content -->
+	<div class="mypage">		
+	    <blockquote>
+<p><a href="http://hexo.io" target="_blank" rel="external">Hexo</a>博客很有逼格! 参考<a href="http://hexo.io/docs" target="_blank" rel="external">Hexo文档</a>学习更多。</p>
+</blockquote>
+<h2 id="搭建步骤">搭建步骤</h2>
+<hr>
+<p><strong>[1]</strong> 进入<a href="http://www.godaddy.com/" target="_blank" rel="external">Godadday</a>首页（注册登录）后搜索想要的域名并购买，网络上可以搜索到Godaddy优惠券（最好选择支持<strong>支付宝</strong>支付的更加便捷）。博主花费了50多刀注册了5年的个人域名。</p>
+<p><strong>[2]</strong> 进入<a href="http://www.dnspod.cn/" target="_blank" rel="external">DNSpod</a>首页（注册登录）后点击“添加域名”，记录生成的2个DNS服务器。</p>
+<a id="more"></a>
+
+<p><img src="/imgs/dnspod.jpg" alt=""><br><img src="/imgs/dnspod-server-name.jpg" alt=""></p>
+<p><strong>[3]</strong> <strong>重新登录</strong><a href="http://www.godaddy.com/" target="_blank" rel="external">Godaddy</a>，在<strong>Domain</strong>页面<strong>Launch</strong>刚刚注册的域名地址，然后添加刚刚在<a href="http://www.dnspod.cn/" target="_blank" rel="external">DNSpod</a>生成的2个DNS服务器。<br><img src="/imgs/godaddy.jpg" alt=""><br><img src="/imgs/godaddy-server-name.jpg" alt=""></p>
+<p><strong>[4]</strong> 回到<a href="http://www.dnspod.cn/" target="_blank" rel="external">DNSpod</a>，点击在<a href="http://www.godaddy.com/" target="_blank" rel="external">Godaddy</a>注册的个人域名，添加2个记录，其<strong>主机记录</strong>分别是<strong>@</strong>和<strong>www</strong>（这样个人域名前有没有加<strong>www</strong>应该都可以访问到），<strong>记录类型</strong>选择<strong>CNAME</strong>，<strong>记录值</strong>都选择下一个步骤在<a href="https://github.com/" target="_blank" rel="external">Github</a>上创建的<strong>Github Pages</strong>链接地址（<a href="baoxiehao.github.io">博主Github Pages</a>）。<br><img src="/imgs/dnspod-hosts.jpg" alt=""></p>
+<p><strong>[5]</strong> 进入<a href="baoxiehao.github.io">Github</a>首页（注册登录），在右上角<strong>+</strong>处选择<strong>New Repository</strong>新建Github Pages对应的仓库项目，项目名称<strong>一定</strong>是要和Github的<strong>个人账户名字</strong>相同！输入完成后，点击<strong>Create Repository</strong>完成创建（博主是因为已经创建过了所以提示已经存在）。<br><img src="/imgs/github-new-repo.jpg" alt=""><br><img src="/imgs/github-new-repo-addr.jpg" alt=""></p>
+<p><strong>[6]</strong> <strong>Github Pages</strong>项目创建完成后，需要在项目中新建一个<strong>CNAME</strong>的文件，文件内容是刚刚在<a href="http://www.godaddy.com/" target="_blank" rel="external">Godaddy</a>注册的个人域名地址。方便起见可以在项目详情右下角点击<strong>Add a README</strong>，然后修改文件名称和文件内容，最后在右下角点击<strong>Commit new file</strong>即可。<br><img src="/imgs/github-cname.jpg" alt=""><br><img src="/imgs/github-cname-text.jpg" alt=""><br><img src="/imgs/github-cname-commit.jpg" alt=""></p>
+<p><strong>[7]</strong> <a href="https://help.github.com/articles/generating-ssh-keys" target="_blank" rel="external"><strong>配置SSH KEY</strong></a></p>
+<p><img src="/imgs/ssh-keygen.jpg" alt=""><br><img src="/imgs/ssh-github.jpg" alt=""></p>
+<p><strong>[8]</strong> 安装<a href="http://nodejs.org/" target="_blank" rel="external">Node.js</a>和<a href="http://git-scm.com/" target="_blank" rel="external">Git</a>。</p>
+<p><strong>[9]</strong> 安装<a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ npm install -g hexo</div><div class="line">$ mkdir ~/hexo</div><div class="line">$ <span class="built_in">cd</span> hexo</div><div class="line">$ hexo init</div><div class="line">$ npm install</div></pre></td></tr></table></figure>
+
+<p><strong>[10]</strong> <strong>hexo</strong>安装完成后，修改<strong>hexo</strong>根目录下的配置文件<strong>_config.yml</strong>：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  <span class="class"><span class="keyword">type</span>: <span class="title">github</span></span></div><div class="line">  repository: https:<span class="comment">//github.com/baoxiehao/baoxiehao.github.io.git</span></div></pre></td></tr></table></figure>
+
+<p><br></p>
+<h2 id="编写博文">编写博文</h2>
+<hr>
+<p><strong>折腾了这么久，终于可以创建属于你自己的个人博客文章了，心里是不是有点小激动呢！</strong></p>
+<p><strong>[1]</strong> <strong>新建博客</strong>，在开始菜单启动<strong>Git Bash</strong>（会在当前目录下创建<strong>folder-name</strong>的文件夹作为博客目录，可以用百度云之类进行云同步）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo init folder-name</div></pre></td></tr></table></figure>
+
+<p><strong>[2]</strong> <strong>新建文章</strong>（会在hexo目录下的source/_post新建名为<strong>title-name.md</strong>的文件，用<strong>Sublime Text</strong>（任意你喜欢的编辑器，当然我喜欢<strong>Sublime</strong>）打开就可以用<a href="http://wowubuntu.com/markdown/" target="_blank" rel="external">MarkDown</a>语法写文章了：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new title-name</div></pre></td></tr></table></figure>
+
+<p><strong>[3]</strong> <strong>预览文章</strong>，文章写完后在<a href="http://localhost:4000" target="_blank" rel="external">本地</a>即可预览博客文章：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server (或者 hexo s)</div></pre></td></tr></table></figure>
+
+<p><strong>[4]</strong> <strong>发布文章</strong>，预览没有问题，就可以发布到<strong>Github Pages</strong>上面了：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo generate (或者 hexo g)</div><div class="line">$ hexo deploy (或者 hexo d)</div></pre></td></tr></table></figure>
+
+<p>或者一个命令一步到位：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo g <span class="operator">-d</span></div></pre></td></tr></table></figure>
+
+<p><strong>[5]</strong> 最后根据提示信息，输入<strong>Github</strong>账号密码，等待若干秒就大功告成了：</p>
+<p><img src="/imgs/github-push.jpg" alt=""></p>
+<p><br><br></p>
+<h2 id="更换电脑注意事项">更换电脑注意事项</h2>
+<p>更换电脑编写博文的话，首先要将原电脑上的<strong>ssh key</strong>拷贝到新电脑上，然后执行命令添加<strong>ssh key</strong>。在<strong>hexo</strong>根目录<strong>Git Bash</strong>执行命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ ssh-agent bash</div><div class="line">$ ssh-add /c/User/Thinkpad/.ssh/id_rsa</div><div class="line">$ ssh-add <span class="operator">-l</span></div></pre></td></tr></table></figure>
+
+<p>如果执行<strong>hexo deploy</strong>的时候提示：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">fatal: <span class="string">'github'</span> does not appear to be a git repository</div><div class="line">fatal: Could not <span class="built_in">read</span> from remote repository</div></pre></td></tr></table></figure>
+
+<p>那么删除<strong>hexo</strong>根目录下的<strong>.deploy</strong>目录重新<strong>hexo g</strong>试试。</p>
+<p><br><br></p>
+<h2 id="参考链接">参考链接</h2>
+<hr>
+<ol>
+<li><a href="http://cnfeat.com/2014/05/10/2014-05-11-how-to-build-a-blog/" target="_blank" rel="external">如何搭建一个独立博客——简明Github Pages与Hexo教程</a></li>
+<li><a href="http://code.wileam.com/build-a-hexo-blog-and-optimize/" target="_blank" rel="external">hexo搭建静态博客以及优化</a></li>
+<li><a href="http://jingyan.baidu.com/article/358570f6198a9ece4724fcf7.html" target="_blank" rel="external">Godaddy域名使用DNSPod做DNS解析图文教程</a></li>
+<li><a href="http://bbs.baoxianwangluo.com/thread-167961-1-1.html" target="_blank" rel="external">怎样在Dnspod添加CNAME记录解析</a></li>
+<li><a href="https://github.com/tommy351/hexo/issues/67" target="_blank" rel="external"><strong>Hexo deploy</strong>发布不成功</a></li>
+</ol>
+	  
+	</div>
+
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+				
+    	<li class="prev"><a href="/2014/05/16/android easyadapter/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+  		
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
+
+		
+          <li class="next disabled"><a>下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>
+        
+	
+</ul>
+</div>
+
+    </center>
+	</div>
+	
+	<!-- comment -->
+	
+<section id="comment">
+  <h2 class="title">留言</h2>
+
+  
+</section>
+
+	
+	</div> <!-- col-md-9/col-md-12 -->
+	
+	
+		<div class="col-md-3"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2014 5月 13 
+	</div>
+	
+
+	<!-- categories -->
+    
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
+          
+  <li>
+    <li><a href="/categories/博客/">博客<span>2</span></a></li>
+  </li>
+
+    </ul>
+	</div>
+	
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/Hexo/">Hexo<span>2</span></a></li>
+    </ul>
+	</div>
+		
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	   <a data-toggle="collapse" data-target="#toc"><i class="fa fa-bars"></i></a>
+	   <div id="toc" class="toc collapse in">
+			<ol class="toc-article"><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#搭建步骤"><span class="toc-article-text">搭建步骤</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#编写博文"><span class="toc-article-text">编写博文</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#更换电脑注意事项"><span class="toc-article-text">更换电脑注意事项</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#参考链接"><span class="toc-article-text">参考链接</span></a></li></ol>
+		</div>
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	
+
+</div><!-- row -->
+
+
+<!-- Duoshuo Comment BEGIN -->
+<div class="ds-thread" data-title="Hexo博客首文" data-url="http://baoxiehao.com/2014/05/13/Hexo博客首文/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"baoxiehao"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+<!-- Duoshuo Comment END -->
+
+
+	</div>
+  </div>
+  <div class="container-narrow">
+  <footer> <p>
+  &copy; 2014 浩然也空
+  
+      with help from <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+</p> </footer>
+  <!-- Duoshuo Comment BEGIN -->
+<div class="ds-thread" data-title="Hexo博客首文" data-url="http://baoxiehao.com/2014/05/13/Hexo博客首文/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"baoxiehao"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+<!-- Duoshuo Comment END -->
+
+</div> <!-- container-narrow -->
+  
+<a id="gotop" href="#">
+  <span>▲</span>
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-51276891-1', 'baoxiehao.com');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+   </html>

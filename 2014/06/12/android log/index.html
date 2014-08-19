@@ -1,0 +1,309 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Android Log | 浩然也空的博客</title>
+  <meta name="author" content="浩然也空">
+  
+  <meta name="description" content="每周一篇文章，每年一次总结。">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Android Log"/>
+  <meta property="og:site_name" content="浩然也空的博客"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  
+    <link rel="alternative" href="/atom.xml" title="浩然也空的博客" type="application/atom+xml">
+  
+  
+    <link href="/favicon.png" rel="icon">
+  
+
+  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', '[object Object]']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+
+ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+  
+
+</head>
+
+ <body>
+  <nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+	  <a class="navbar-brand" href="/">浩然也空的博客</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="所有归档">
+			  <i class="fa fa-archive"></i>归档
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="所有分类">
+			  <i class="fa fa-folder"></i>分类
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="所有标签">
+			  <i class="fa fa-tags"></i>标签
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="我的足迹">
+			  <i class="fa fa-user"></i>关于
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+  	<div class="content">
+    	 
+
+
+	
+		<div class="page-header">		
+			<h1> Android Log</h1>
+		</div>		
+	
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div class="col-md-9">
+	
+
+			
+
+	<!-- content -->
+	<div class="mypage">		
+	    <h2 id="Android_Log的普遍问题">Android Log的普遍问题</h2>
+<hr>
+<p>看过很多<strong>Android</strong>原生应用或者第三方应用的<strong>log</strong>记录都是相当的不规范，导致在控制台查看某个应用或者某个<strong>tag</strong>的<strong>log</strong>输出是相当痛苦的事情。虽然你可以用<strong>grep</strong>命令来过滤指定的<strong>log</strong>，但是你记得住自己的应用有多少个<strong>log tag</strong>吗？本文就来谈谈如何通过简单的两步走，实现应用<strong>log</strong>的规范精致输出。</p>
+<a id="more"></a>
+
+<h2 id="一种简单解决方案">一种简单解决方案</h2>
+<hr>
+<p><strong>Android</strong>的<strong>log</strong>级别大部分都是<strong>D</strong>，少数是<strong>I/W/E</strong>或者<strong>V</strong>。于是，其实可以写个<strong>Logger</strong>的工具类，里面包含了应用所有用到的<strong>log tag</strong>，然后在其他需要<strong>log</strong>的类中声明私有静态字符串变量<strong>TAG</strong>时直接引用<strong>Logger</strong>中声明的<strong>log tag</strong>，这样在一个地方统一管理<strong>log tag</strong>，规范且不易疏漏和出错。<strong>Logger</strong>中的<strong>log tag</strong>包含统一的规则，比如你的应用是<strong>Calendar</strong>，那么你的<strong>log tag</strong>大致就可以写成：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String TAG_TEST = <span class="string">"Cal:D:Test"</span>;</div><div class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String TAG_UI = <span class="string">"Cal:D:Ui"</span>;</div><div class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String TAG_MODEL = <span class="string">"Cal:D:Model"</span>;</div></pre></td></tr></table></figure>
+
+<p>而需要用到<strong>log</strong>的类中的<strong>TAG</strong>变量就可以直接引用以上<strong>log tag</strong>：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String TAG = Logger.TAG_UI;</div></pre></td></tr></table></figure>
+
+<p>于是，你在过滤你的应用<strong>log</strong>时就可以直接输入如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">logcat-color | grep <span class="string">"Cal:[V|D]"</span></div></pre></td></tr></table></figure>
+
+<p>其中，<a href="https://github.com/marshall/logcat-color" target="_blank" rel="external">logcat-color</a>是<strong>adb logcat</strong>的替代命令——多彩颜色显示、可配置性高。</p>
+<h2 id="进一步小扩展">进一步小扩展</h2>
+<hr>
+<p>另外还有一个需要考虑的<strong>log</strong>问题是，有一些<strong>log</strong>在开发调试的时候可以极大方便地观测程序运行状态和定位程序问题，但是如果在对外的发布版本中如果也输出，一般是比较恼人的，而且如果<strong>log</strong>过于频繁,容易冲掉其他应用的<strong>log</strong>。大部分应用采用的解决方式是在代码中声明一个<strong>DEBUG</strong>开关，在开发的时候设置为<strong>true</strong>，在发布的时候重新设置为<strong>false</strong>。但是，有时候，你是会忘记这件事情的，而且更糟糕的是，当你关闭了开关之后，如果程序出现问题了，你还得重新安装打开了<strong>DEBUG</strong>开关的应用版本，然后才能重新抓取<strong>log</strong>，最后根据<strong>log</strong>定位问题。</p>
+<p>其实，可以通过<strong>adb</strong>命令来动态开关<strong>log tag</strong>，需要的时候开启就能输出指定的<strong>log</strong>，默认是关闭的：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">adb shell setprop log.tag.Cal:V VERBOSE</div><div class="line">adb shell setprop log.tag.Cal:V ASSERT</div></pre></td></tr></table></figure>
+
+<p>其中，第一个命令是将<strong>Cal:V</strong>的<strong>log tag</strong>开启，第二个命令是将其关闭（因为一般不会用到<strong>ASSERT</strong>级别的<strong>log</strong>，所以就相当于关闭了）。</p>
+<p>因此，我们可以将需要动态开关的<strong>log tag</strong>都声明为<strong>Cal:V</strong>开头的，然后在输出<strong>log</strong>之前进行判断：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String TAG_VERBOSE = <span class="string">"Cal:V"</span>;</div><div class="line"></div><div class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">isLoggable</span>(String tag) {</div><div class="line">    <span class="keyword">if</span> (tag.contains(TAG_VERBOSE)) {</div><div class="line">        <span class="keyword">return</span> Log.isLoggable(TAG_VERBOSE, Log.VERBOSE);</div><div class="line">    } <span class="keyword">else</span> {</div><div class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">    }</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">d</span>(String tag, String msg) {</div><div class="line">    <span class="keyword">if</span> (isLoggable(tag)) {</div><div class="line">        android.util.Log.d(tag, msg);</div><div class="line">    }</div><div class="line">}</div></pre></td></tr></table></figure>
+
+<h2 id="美好Log生活">美好Log生活</h2>
+<p>现在，只要遵循<strong>log</strong>前缀规则还有<strong>log</strong>开关判断，就可以动态开关并输出精美的应用<strong>log</strong>了，生活顿时美好了许多。</p>
+	  
+	</div>
+
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+				
+    	<li class="prev"><a href="/2014/08/10/Mac OS入门/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+  		
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
+
+		
+		   <li class="next"><a href="/2014/05/23/android drawerlayout/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
+</ul>
+</div>
+
+    </center>
+	</div>
+	
+	<!-- comment -->
+	
+<section id="comment">
+  <h2 class="title">留言</h2>
+
+  
+</section>
+
+	
+	</div> <!-- col-md-9/col-md-12 -->
+	
+	
+		<div class="col-md-3"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2014 6月 12 
+	</div>
+	
+
+	<!-- categories -->
+    
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
+          
+  <li>
+    <li><a href="/categories/技术/">技术<span>3</span></a></li>
+  </li>
+
+    </ul>
+	</div>
+	
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/Android/">Android<span>3</span></a></li>
+    </ul>
+	</div>
+		
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	
+
+</div><!-- row -->
+
+
+<!-- Duoshuo Comment BEGIN -->
+<div class="ds-thread" data-title="Android Log" data-url="http://baoxiehao.com/2014/06/12/android log/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"baoxiehao"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+<!-- Duoshuo Comment END -->
+
+
+	</div>
+  </div>
+  <div class="container-narrow">
+  <footer> <p>
+  &copy; 2014 浩然也空
+  
+      with help from <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+</p> </footer>
+  <!-- Duoshuo Comment BEGIN -->
+<div class="ds-thread" data-title="Android Log" data-url="http://baoxiehao.com/2014/06/12/android log/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"baoxiehao"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+<!-- Duoshuo Comment END -->
+
+</div> <!-- container-narrow -->
+  
+<a id="gotop" href="#">
+  <span>▲</span>
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-51276891-1', 'baoxiehao.com');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+   </html>

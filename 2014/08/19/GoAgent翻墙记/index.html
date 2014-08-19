@@ -1,0 +1,282 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>GoAgent翻墙记 | 浩然也空的博客</title>
+  <meta name="author" content="浩然也空">
+  
+  <meta name="description" content="每周一篇文章，每年一次总结。">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="GoAgent翻墙记"/>
+  <meta property="og:site_name" content="浩然也空的博客"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  
+    <link rel="alternative" href="/atom.xml" title="浩然也空的博客" type="application/atom+xml">
+  
+  
+    <link href="/favicon.png" rel="icon">
+  
+
+  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', '[object Object]']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+
+ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+  
+
+</head>
+
+ <body>
+  <nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+	  <a class="navbar-brand" href="/">浩然也空的博客</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="所有归档">
+			  <i class="fa fa-archive"></i>归档
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="所有分类">
+			  <i class="fa fa-folder"></i>分类
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="所有标签">
+			  <i class="fa fa-tags"></i>标签
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="我的足迹">
+			  <i class="fa fa-user"></i>关于
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+  	<div class="content">
+    	 
+
+
+	
+		<div class="page-header">		
+			<h1> GoAgent翻墙记</h1>
+		</div>		
+	
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div class="col-md-9">
+	
+
+			
+
+	<!-- content -->
+	<div class="mypage">		
+	    <p>三步走：申请AppId；安装GoAgent；安装代理软件</p>
+<a id="more"></a>
+
+<h2 id="申请Google_AppId">申请<a href="http://appengine.google.com" target="_blank" rel="external">Google AppId</a></h2>
+<p>很简单，步骤略</p>
+<h2 id="安装GoAgent依赖库">安装GoAgent依赖库</h2>
+<p>执行终端命令：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">ruby</span> -<span class="keyword">e</span> <span class="string">"$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"</span></div><div class="line">brew install libevent</div><div class="line">sudo easy_install pip</div><div class="line">sudo ARCHFLAGS=-Wno-error=unused-<span class="keyword">command</span>-<span class="built_in">line</span>-<span class="keyword">argument</span>-hard-error-in-future pip install cython</div><div class="line">sudo ARCHFLAGS=-Wno-error=unused-<span class="keyword">command</span>-<span class="built_in">line</span>-<span class="keyword">argument</span>-hard-error-in-future pip install greenlet</div><div class="line">sudo pip install geven</div><div class="line">sudo ARCHFLAGS=-Wno-error=unused-<span class="keyword">command</span>-<span class="built_in">line</span>-<span class="keyword">argument</span>-hard-error-in-future easy_install pycrypto</div></pre></td></tr></table></figure>
+
+<h2 id="安装GoAgent（翻墙）">安装GoAgent（翻墙）</h2>
+<p>【1】下载<a href="http://code.google.com/p/goagent/" target="_blank" rel="external">goagent</a><br>【2】解压后修改<strong>local/proxy.ini</strong>文件中的<strong>appid</strong>值为申请的个人<strong>appid</strong>，若希望使用<strong>google dns server</strong>，则修改<strong>[dns]</strong>节中的<strong>enabled</strong>值为<strong>1</strong><br>【3】进入<strong>server</strong>目录，执行终端命令『sudo python uploader.zip』</p>
+<h2 id="安装SwitchySharp（代理设置）">安装SwitchySharp（代理设置）</h2>
+<h3 id="安装SwitchySharp">安装<a href="https://chrome.google.com/webstore/detail/proxy-switchysharp/dpplabbmogkhghncfbfdeeokoefdjegm" target="_blank" rel="external">SwitchySharp</a></h3>
+<p>该扩展插件是针对Chrome浏览器来进行代理自动切换，其他浏览器用户可以参考<a href="https://code.google.com/p/goagent/wiki/InstallGuide" target="_blank" rel="external">GoAgent部署教程</a></p>
+<h3 id="设置SwitchySharp">设置<a href="https://code.google.com/p/switchysharp/wiki/SwitchySharp_GFW_List_2" target="_blank" rel="external">SwitchySharp</a></h3>
+<p>【1】下载设置<a href="http://code.google.com/p/switchysharp/downloads/detail?name=X_GFWList.bak" target="_blank" rel="external">备份文件</a></p>
+<p>【2】在Chrome浏览器中选择SwitchySharp图标，选择『选项』进入配置页面，在『导入/导出』页选择『从文件恢复』，选择如上的备份文件，在『情景模式』页选择『导入PAC文件』，选择<strong>goagent/local/proxy.pac</strong>文件，然后点击『保存』</p>
+<p>【3】在Chrome浏览器中选择SwitchySharp图标，选择『自动切换模式』</p>
+<p>【4】进入SwithySharp配置页面，在『切换规则』页选择『立即更新列表』</p>
+<h2 id="开始翻墙">开始翻墙</h2>
+<p>进入<strong>goagent/local</strong>目录，执行终端命令『sudo python proxy.py』即可。</p>
+	  
+	</div>
+
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+		
+          <li class="prev disabled"><a><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+        
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
+
+		
+		   <li class="next"><a href="/2014/08/10/Mac OS入门/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
+</ul>
+</div>
+
+    </center>
+	</div>
+	
+	<!-- comment -->
+	
+<section id="comment">
+  <h2 class="title">留言</h2>
+
+  
+</section>
+
+	
+	</div> <!-- col-md-9/col-md-12 -->
+	
+	
+		<div class="col-md-3"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2014 8月 19 
+	</div>
+	
+
+	<!-- categories -->
+    
+
+	<!-- tags -->
+		
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	
+
+</div><!-- row -->
+
+
+<!-- Duoshuo Comment BEGIN -->
+<div class="ds-thread" data-title="GoAgent翻墙记" data-url="http://baoxiehao.com/2014/08/19/GoAgent翻墙记/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"baoxiehao"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+<!-- Duoshuo Comment END -->
+
+
+	</div>
+  </div>
+  <div class="container-narrow">
+  <footer> <p>
+  &copy; 2014 浩然也空
+  
+      with help from <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+</p> </footer>
+  <!-- Duoshuo Comment BEGIN -->
+<div class="ds-thread" data-title="GoAgent翻墙记" data-url="http://baoxiehao.com/2014/08/19/GoAgent翻墙记/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"baoxiehao"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+<!-- Duoshuo Comment END -->
+
+</div> <!-- container-narrow -->
+  
+<a id="gotop" href="#">
+  <span>▲</span>
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-51276891-1', 'baoxiehao.com');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+   </html>

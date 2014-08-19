@@ -1,0 +1,395 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hexo博客优化 | 浩然也空的博客</title>
+  <meta name="author" content="浩然也空">
+  
+  <meta name="description" content="每周一篇文章，每年一次总结。">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Hexo博客优化"/>
+  <meta property="og:site_name" content="浩然也空的博客"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  
+    <link rel="alternative" href="/atom.xml" title="浩然也空的博客" type="application/atom+xml">
+  
+  
+    <link href="/favicon.png" rel="icon">
+  
+
+  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', '[object Object]']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+
+ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+  
+
+</head>
+
+ <body>
+  <nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+	  <a class="navbar-brand" href="/">浩然也空的博客</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="所有归档">
+			  <i class="fa fa-archive"></i>归档
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="所有分类">
+			  <i class="fa fa-folder"></i>分类
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="所有标签">
+			  <i class="fa fa-tags"></i>标签
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="我的足迹">
+			  <i class="fa fa-user"></i>关于
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+  	<div class="content">
+    	 
+
+
+	
+		<div class="page-header">		
+			<h1> Hexo博客优化</h1>
+		</div>		
+	
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div class="col-md-9">
+	
+
+			
+
+	<!-- content -->
+	<div class="mypage">		
+	    <h2 id="MarkDown编辑器">MarkDown编辑器</h2>
+<hr>
+<p>最低要求：所见所得，云端同步。</p>
+<ul>
+<li><a href="https://www.zybuluo.com/" target="_blank" rel="external"><strong>Cmd Markdown编辑器</strong></a> —— 本来期待很高，也非常好用，但是反复提示邮箱没有验证，暂时放弃了。</li>
+<li><a href="https://stackedit.io/" target="_blank" rel="external"><strong>StackEdit</strong></a> —— 功能基本符合，可以用Google Drive同步，只是预览效果和Hexo最终效果还是有差异，比如代码段的效果，可能是Hexo的代码效果还没配置好。</li>
+<li><a href="http://dillinger.io/" target="_blank" rel="external"><strong>Dillinger</strong></a> —— 暂未使用，但是目测还不错，不过貌似网络访问速度比较缓慢。</li>
+<li><a href="http://maxiang.info/" target="_blank" rel="external"><strong>马克印象</strong></a> —— Evernote官方出品，值得一试。</li>
+</ul>
+<a id="more"></a>
+
+<p><br><br></p>
+<h2 id="优化内容">优化内容</h2>
+<hr>
+<h3 id="Freemind主题"><strong>Freemind主题</strong></h3>
+<p><strong>[1]</strong> <a href="https://github.com/wzpan/hexo-theme-freemind/" target="_blank" rel="external"><strong>下载主题</strong></a>，在<strong>hexo</strong>根目录打开<strong>Git Bash</strong>：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ git clone https://github.com/wzpan/hexo-theme-freemind.git themes/freemind</div><div class="line">$ npm install hexo-tag-bootstrap --save</div></pre></td></tr></table></figure>
+
+<p><strong>[2]</strong> <strong>应用主题</strong>，编辑根目录<strong>_config.yml</strong>文件：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">theme</span>: <span class="string">freemind</span></div></pre></td></tr></table></figure>
+
+<p><strong>[3]</strong> 配置<strong>导航菜单</strong></p>
+<p>编辑主题下的<strong>_config.yml</strong>文件（其中的<strong>icon</strong>可以在<a href="http://fortawesome.github.io/Font-Awesome/icons/" target="_blank" rel="external"><strong>Font Awesome Icons</strong></a>上找到）：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">menu:</div><div class="line">  -<span class="ruby"> <span class="symbol">title:</span> 归档</span></div><div class="line">    url: archives</div><div class="line">    intro: 文章归档</div><div class="line">    icon: fa fa-archive</div><div class="line">  -<span class="ruby"> <span class="symbol">title:</span> 分类</span></div><div class="line">    url: categories</div><div class="line">    intro: 文章分类</div><div class="line">    icon: fa fa-folder</div><div class="line">  -<span class="ruby"> <span class="symbol">title:</span> 标签</span></div><div class="line">    url: tags</div><div class="line">    intro: 所有标签</div><div class="line">    icon: fa fa-tags</div><div class="line">  -<span class="ruby"> <span class="symbol">title:</span> 关于</span></div><div class="line">    url: about</div><div class="line">    intro: 我的足迹</div><div class="line">    icon: fa fa-user</div></pre></td></tr></table></figure>
+
+<p>生成对应的导航页面（<strong>freemind</strong>主题默认已经有<strong>archives</strong>页面，还差<strong>categories</strong>、<strong>tags</strong>和<strong>about</strong>页面）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo new page <span class="string">"categorires"</span></div><div class="line">hexo new page <span class="string">"tags"</span></div><div class="line">hexo new page <span class="string">"about"</span></div></pre></td></tr></table></figure>
+
+<p>在<strong>hexo\source\</strong>下会生成对应的<strong>categories</strong>、<strong>tags</strong>和<strong>about</strong>目录，编辑里面的<strong>index.md</strong>文件对应各个页面的实际内容：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">title: 分类</div><div class="line">layout: categories</div><div class="line"><span class="header">date: 2014-05-17 23:21:34</span></div><div class="line">---</div></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">title: 标签</div><div class="line">layout: tags</div><div class="line"><span class="header">date: 2014-05-17 23:22:55</span></div><div class="line">---</div></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">title: 关于我</div><div class="line">layout: about</div><div class="line"><span class="header">date: 2014-05-17 10:37:46</span></div><div class="line">---</div></pre></td></tr></table></figure>
+
+<p><strong>[4]</strong> 更多<strong>文章属性</strong></p>
+<ul>
+<li><strong>description</strong> - 在文章顶部显示内容介绍</li>
+<li><strong>feature</strong> - 在文章列表页面显示概要图片</li>
+<li><strong>toc</strong> - 在文章起始处显示文章内容目录</li>
+</ul>
+<p>例如：</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">title: Tag Plugins</div><div class="line">date: 2014-03-16 10:17:16</div><div class="line">tags: plugins</div><div class="line">categories: Docs</div><div class="line">description: Introduce tag plugins in freemind.</div><div class="line">feature: images/tag-plugins/plugins.jpg</div><div class="line">toc: true</div></pre></td></tr></table></figure>
+
+<p><br><br></p>
+<h3 id="页面结构">页面结构</h3>
+<p><strong>[1]</strong> <strong>主页文章显示摘要</strong></p>
+<p>编辑<strong>md文件</strong>的时候，在要作为摘要的文字后面添加<strong>&lt;!—more—&gt;</strong>即可。</p>
+<p><strong>[2]</strong> 安装<strong>sitemap</strong>和<strong>rss</strong>：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ npm <span class="operator"><span class="keyword">install</span> hexo-generator-sitemap <span class="comment">--save</span></span></div><div class="line">$ npm <span class="keyword">install</span> hexo-generator-feed <span class="comment">--save</span></div></pre></td></tr></table></figure>
+
+<p>激活配置：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Plugins:</div><div class="line">  -<span class="ruby"> hexo-generator-feed</span></div><div class="line">  -<span class="ruby"> hexo-generator-sitemap</span></div></pre></td></tr></table></figure>
+
+<p><br><br></p>
+<h3 id="网站插件">网站插件</h3>
+<p><strong>[1]</strong> <strong>Hexo插件</strong> <a href="https://github.com/hexojs/hexo-livereload" target="_blank" rel="external"><strong>Live Reload</strong></a></p>
+<p><strong>Hexo</strong>允许在发布之前在<a href="http://localhost:4000" target="_blank" rel="external">本地浏览器</a>进行调试预览，但是如果每次修改都需要反复执行“<strong>$ hexo g &amp;&amp; hexo s</strong>”估计也很崩溃。<strong>Live Reload</strong>给力的地方在于它会自动完成上述步骤，要预览的时候直接<strong>F5</strong>刷新浏览器即可看到修改后的网页效果。当然，如果有时候修改后无法刷新出来的话，那就“<strong>$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</strong>”重新来过。</p>
+<p><strong>[2]</strong> <strong>流量分析</strong> <a href="http://www.google.com/analytics/" target="_blank" rel="external"><strong>Google Analytics</strong></a></p>
+<p>注册<strong>Google Analytics</strong>账号后，获取<strong>跟踪ID</strong>和<strong>跟踪代码</strong>。</p>
+<p>在主题的<strong>_config.yml</strong>中添加获得的<strong>跟踪ID</strong>：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">google_analytics:</div><div class="line">  enable: <span class="literal">true</span></div><div class="line">  <span class="keyword">id</span>: UA-<span class="number">51276891</span>-<span class="number">1</span></div><div class="line">  site: baoxiehao<span class="variable">.com</span></div></pre></td></tr></table></figure>
+
+<p>在主题<strong>/layout/_partial/after_footer.ejs</strong>的最后添加获得的<strong>跟踪代码</strong>。</p>
+<p><strong>[3]</strong>  <strong>流量分析</strong> <a href="http://tongji.baidu.com" target="_blank" rel="external"><strong>百度统计</strong></a></p>
+<p>虽然有了<strong>Google Analytics</strong>，但是时不时地被墙总是一件让人很惆怅的事情。于是，还是加下百度统计吧。</p>
+<p>首先，在主题的<strong>_config.yml</strong>文件中添加：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">baidu_tongji</span>: <span class="string">true</span></div></pre></td></tr></table></figure>
+
+<p>然后，在主题的<strong>/layout/_partial/</strong>目录下新建文件<strong>baidu_tongji.ejs</strong>：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="vbscript">&lt;% <span class="keyword">if</span> (theme.baidu_tongji){ %&gt;</span></div><div class="line">#你的百度统计代码</div><div class="line"><span class="vbscript">&lt;% } %&gt;</span></div></pre></td></tr></table></figure>
+
+<p>最后，在主题的<strong>/layout/_partial/head.ejs</strong>文件末尾添加：</p>
+<figure class="highlight ejs"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="variable">%-</span> partial(<span class="string">'baidu_tongji'</span>) <span class="variable">%&gt;</span></div></pre></td></tr></table></figure>
+
+<p><strong>[4]</strong> <strong>社会化评论</strong> <a href="http://duoshuo.com/" target="_blank" rel="external"><strong>多说</strong></a></p>
+<p>首先上多说官网注册账号，然后在主题<strong>/layout/_partial/</strong>下新建文件<a href="http://jimliu.net/2013/09/08/%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/" target="_blank" rel="external"><strong>duoshuo.ejs</strong></a>，内容如下：</p>
+<figure class="highlight ejs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- Duoshuo Comment BEGIN --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ds-thread"</span> <span class="attribute">data-title</span>=<span class="value">"&lt;%= item.title %&gt;"</span> <span class="attribute">data-url</span>=<span class="value">"&lt;%- item.permalink %&gt;"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span></div><div class="line"><span class="keyword">var</span> duoshuoQuery = {short_name:<span class="string">"your-duoshuo-name"</span>};</div><div class="line">(<span class="function"><span class="keyword">function</span><span class="params">()</span> </span>{</div><div class="line">    <span class="keyword">var</span> ds = <span class="built_in">document</span>.createElement(<span class="string">'script'</span>);</div><div class="line">    ds.type = <span class="string">'text/javascript'</span>;ds.async = <span class="literal">true</span>;</div><div class="line">    ds.src = <span class="string">'http://static.duoshuo.com/embed.js'</span>;</div><div class="line">    ds.charset = <span class="string">'UTF-8'</span>;</div><div class="line">    (<span class="built_in">document</span>.getElementsByTagName(<span class="string">'head'</span>)[<span class="number">0</span>]</div><div class="line">    || <span class="built_in">document</span>.getElementsByTagName(<span class="string">'body'</span>)[<span class="number">0</span>]).appendChild(ds);</div><div class="line">})();</div><div class="line"><span class="tag">&lt;/<span class="title">script</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- Duoshuo Comment END --&gt;</span></div></pre></td></tr></table></figure>
+
+<p>基本上就是在多说网站上拿到的通用代码，在第二行上加入了<strong>data-title</strong>和<strong>data-url</strong>，用来给多说传一些参数。<br><strong>data-url</strong>这个参数可以让多个域名上的文章评论共享，只要同一篇文章的<strong>data-url</strong>固定就可以。例如<strong>blog.baoxiehao.com</strong>和<strong>baoxiehao.com</strong>上文章的<strong>data-url</strong>都是<strong><a href="http://baoxiehao.com/xxx" target="_blank" rel="external">http://baoxiehao.com/xxx</a></strong>，这样两个域名就可以共享评论了。一定要<strong>注意</strong>第四行的<strong>your-duoshuo_name</strong>是自己多说代码独有的，不要照抄。</p>
+<p>接下来在layout/post.ejs下面，加入一行：</p>
+<figure class="highlight ejs"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;%- <span class="keyword">partial</span>(<span class="string">'_partial/duoshuo'</span>, {item: page, index: <span class="keyword">false</span>}) %&gt;</div></pre></td></tr></table></figure>
+
+<p>就能在文章页面看到评论框了。</p>
+<p>如果想在其他页面，例如<strong>关于页面</strong>也看到评论的话，对<strong>layout/page.ejs</strong>如法炮制即可。<br>而如果想在博客首页底部也看到评论的话，编辑<strong>freemind/layout/layout.ejs</strong>，在<strong>_partial/after_footer</strong>之前添加<strong>duoshuo</strong>代码（但是，这样有个问题是文章页面会有2个评论框，还没更好的方法，所以暂时先不加首页评论了）：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">  <span class="vbscript">&lt;%- partial(<span class="comment">'_partial/duoshuo', {item: page, index: false}) %&gt;</span></span></div><div class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span> <span class="comment">&lt;!-- container-narrow --&gt;</span></div><div class="line">  <span class="vbscript">&lt;%- partial(<span class="comment">'_partial/after_footer') %&gt;</span></span></div></pre></td></tr></table></figure>
+
+<p><strong>[5]</strong> <a href="https://github.com/gyk001/hexo-qiniu-sync" target="_blank" rel="external"><strong>七牛同步</strong></a></p>
+<p>印象中<strong>Github Pages</strong>是有100M左右的空间大小限制的，如果有更多的图片需要同步，建议选择可以外链的<strong>七牛同步</strong>。在官网注册账号后，新建一个图片空间，然后下载<a href="http://docs.qiniutek.com/v3/tools/qrsync/" target="_blank" rel="external"><strong>qrsync</strong></a>同步本地的图片到七牛，需要时直接在<strong>md文件</strong>中引用。</p>
+<p>新建配置文件（比如名为<strong>conf.json</strong>）：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">{</div><div class="line">  "<span class="attribute">access_key</span>": <span class="value"><span class="string">"Please apply your access key here"</span></span>,</div><div class="line">  "<span class="attribute">secret_key</span>": <span class="value"><span class="string">"Dont send your secret key to anyone"</span></span>,</div><div class="line">  "<span class="attribute">bucket</span>": <span class="value"><span class="string">"Bucket name on qiniu resource storage"</span></span>,</div><div class="line">  "<span class="attribute">sync_dir</span>": <span class="value"><span class="string">"Local directory to upload"</span></span>,</div><div class="line">  "<span class="attribute">debug_level</span>": <span class="value"><span class="number">1</span></span></div><div class="line">}</div></pre></td></tr></table></figure>
+
+<p>同步命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ qrsync.exe /path/to/your-conf.json</div></pre></td></tr></table></figure>
+
+<p><strong>[6]</strong> <a href="http://open.weibo.com/widgets?cat=wb" target="_blank" rel="external"><strong>新浪微博挂件</strong></a></p>
+<p>在主题<strong>/layout/_widget/</strong>下新建文件<strong>weibo.ejs</strong>，文件内容就是生成的微博挂件代码。然后在主题的<strong>_config.yml</strong>文件中添加配置：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">widget<span class="variable">s:</span></div><div class="line">  - weibo</div></pre></td></tr></table></figure>
+
+<p><br><br></p>
+<h3 id="FAQ">FAQ</h3>
+<ol>
+<li>主题的样式无法应用 —— 尝试执行命令<strong>$ hexo clean</strong>后重新部署。</li>
+<li>部署后显示中文乱码 —— 尝试将出现乱码的md文件用<strong>UTF-8</strong>重新编码后保存，然后执行<strong>$ hexo clean</strong>重新部署。</li>
+<li>升级<strong>Hexo</strong>后执行<strong>$ hexo s</strong>提示<strong>HexoError</strong>错误 —— 修改<strong>themes/freemind/languages/default.yml</strong>中包含空格的配置项，重新用双引号包裹包含空格的配置值就可以啦。</li>
+</ol>
+	  
+	</div>
+
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+				
+    	<li class="prev"><a href="/2014/05/23/android drawerlayout/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+  		
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
+
+		
+		   <li class="next"><a href="/2014/05/16/android easyadapter/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
+</ul>
+</div>
+
+    </center>
+	</div>
+	
+	<!-- comment -->
+	
+<section id="comment">
+  <h2 class="title">留言</h2>
+
+  
+</section>
+
+	
+	</div> <!-- col-md-9/col-md-12 -->
+	
+	
+		<div class="col-md-3"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2014 5月 17 
+	</div>
+	
+
+	<!-- categories -->
+    
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
+          
+  <li>
+    <li><a href="/categories/博客/">博客<span>2</span></a></li>
+  </li>
+
+    </ul>
+	</div>
+	
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/Hexo/">Hexo<span>2</span></a></li>
+    </ul>
+	</div>
+		
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	   <a data-toggle="collapse" data-target="#toc"><i class="fa fa-bars"></i></a>
+	   <div id="toc" class="toc collapse in">
+			<ol class="toc-article"><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#MarkDown编辑器"><span class="toc-article-text">MarkDown编辑器</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#优化内容"><span class="toc-article-text">优化内容</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Freemind主题"><span class="toc-article-text">Freemind主题</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#页面结构"><span class="toc-article-text">页面结构</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#网站插件"><span class="toc-article-text">网站插件</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#FAQ"><span class="toc-article-text">FAQ</span></a></li></ol></li></ol>
+		</div>
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	
+
+</div><!-- row -->
+
+
+<!-- Duoshuo Comment BEGIN -->
+<div class="ds-thread" data-title="Hexo博客优化" data-url="http://baoxiehao.com/2014/05/17/Hexo博客优化/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"baoxiehao"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+<!-- Duoshuo Comment END -->
+
+
+	</div>
+  </div>
+  <div class="container-narrow">
+  <footer> <p>
+  &copy; 2014 浩然也空
+  
+      with help from <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+</p> </footer>
+  <!-- Duoshuo Comment BEGIN -->
+<div class="ds-thread" data-title="Hexo博客优化" data-url="http://baoxiehao.com/2014/05/17/Hexo博客优化/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"baoxiehao"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+<!-- Duoshuo Comment END -->
+
+</div> <!-- container-narrow -->
+  
+<a id="gotop" href="#">
+  <span>▲</span>
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-51276891-1', 'baoxiehao.com');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+   </html>
