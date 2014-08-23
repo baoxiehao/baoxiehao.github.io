@@ -133,10 +133,9 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 <h3 id="安装SwitchySharp">安装<a href="https://chrome.google.com/webstore/detail/proxy-switchysharp/dpplabbmogkhghncfbfdeeokoefdjegm" target="_blank" rel="external">SwitchySharp</a></h3>
 <p>该扩展插件是针对Chrome浏览器来进行代理自动切换，其他浏览器用户可以参考<a href="https://code.google.com/p/goagent/wiki/InstallGuide" target="_blank" rel="external">GoAgent部署教程</a></p>
 <h3 id="设置SwitchySharp">设置<a href="https://code.google.com/p/switchysharp/wiki/SwitchySharp_GFW_List_2" target="_blank" rel="external">SwitchySharp</a></h3>
-<p>【1】下载设置<a href="http://code.google.com/p/switchysharp/downloads/detail?name=X_GFWList.bak" target="_blank" rel="external">备份文件</a></p>
-<p>【2】在Chrome浏览器中选择SwitchySharp图标，选择『选项』进入配置页面，在『导入/导出』页选择『从文件恢复』，选择如上的备份文件，在『情景模式』页选择『导入PAC文件』，选择<strong>goagent/local/proxy.pac</strong>文件，然后点击『保存』</p>
-<p>【3】在Chrome浏览器中选择SwitchySharp图标，选择『自动切换模式』</p>
-<p>【4】进入SwithySharp配置页面，在『切换规则』页选择『立即更新列表』</p>
+<p>如上图，在Chrome浏览器中点击SwitchySharp图标，选择『选项』进入配置页面，在『情景模式』页中『新建情景模式』并取名（图中为『HOME』），选择『手动配置』，其中『HTTP代理』填入『127.0.0.1』，端口填入『8087』，勾选『对所有协议均使用相同的代理服务器』，然后保存关闭，最后，在在Chrome浏览器中点击SwitchySharp图标，选择以上创建的『情景模式』（图中为『HOME』）。</p>
+<p><img src="imgs/switchy-sharp-cfg.png" alt=""></p>
+<p><img src="imgs/switchy-sharp-on.png" alt=""></p>
 <h2 id="开始翻墙">开始翻墙</h2>
 <p>进入<strong>goagent/local</strong>目录，执行终端命令『sudo python proxy.py』，开始你的翻墙之旅吧~</p>
 <p>如果提示错误『Address already in use』，那么执行命令：<br>```sh<br>$ sudo lsof -i:8087<br>$ kill goagent-pid   (goagent-pid指的是上一个命令罗列出的pid列)</p>
