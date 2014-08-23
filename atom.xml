@@ -4,7 +4,7 @@
   <subtitle><![CDATA[淡静良觉之地]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://baoxiehao.com/"/>
-  <updated>2014-08-23T08:54:19.585Z</updated>
+  <updated>2014-08-23T09:03:23.471Z</updated>
   <id>http://baoxiehao.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://baoxiehao.com/2014/08/20/Alfred-Workflow-with-Python/"/>
     <id>http://baoxiehao.com/2014/08/20/Alfred-Workflow-with-Python/</id>
     <published>2014-08-20T01:07:34.000Z</published>
-    <updated>2014-08-23T08:10:13.000Z</updated>
+    <updated>2014-08-23T09:03:17.000Z</updated>
     <content type="html"><![CDATA[<h2 id="简介">简介</h2>
 <p><strong>Alfred</strong>作为<strong>Mac</strong>下排名第一的应用，功能极其强大，可以快速的搜索本地程序、使用搜索引擎搜索、查询词典、发送邮件、查找文件、剪贴板 管理、音乐控制等等功能。特别是<strong>V2</strong>版本新增了<strong>Workflow</strong>功能，全球各地的开发者为其创造了数百个workflow插件，更是极大地扩展和丰富了它的威力。</p>
 <h2 id="基础篇">基础篇</h2>
@@ -65,7 +65,7 @@
 <p>好了，看完Alfred的基础功能介绍，是不是瞬间那些Windows上的那些应用快速启动程序弱爆了？那下面就让我们看看有了<strong>Workflow</strong>之后还可以做什么？</p>
 ]]></summary>
     
-      <category term="Alfred Python Geek" scheme="http://baoxiehao.com/tags/Alfred-Python-Geek/"/>
+      <category term="Alfred, Python, Geek" scheme="http://baoxiehao.com/tags/Alfred,-Python,-Geek/"/>
     
       <category term="工具" scheme="http://baoxiehao.com/categories/%E5%B7%A5%E5%85%B7/"/>
     
