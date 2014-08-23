@@ -4,7 +4,7 @@
   <subtitle><![CDATA[淡静良觉之地]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://baoxiehao.com/"/>
-  <updated>2014-08-23T07:19:07.334Z</updated>
+  <updated>2014-08-23T07:22:43.150Z</updated>
   <id>http://baoxiehao.com/</id>
   
   <author>
@@ -76,7 +76,7 @@
     <link href="http://baoxiehao.com/2014/08/19/GoAgent%E7%BF%BB%E5%A2%99%E8%AE%B0/"/>
     <id>http://baoxiehao.com/2014/08/19/GoAgent翻墙记/</id>
     <published>2014-08-19T05:10:38.000Z</published>
-    <updated>2014-08-23T07:15:31.000Z</updated>
+    <updated>2014-08-23T07:22:38.000Z</updated>
     <content type="html"><![CDATA[<p>三步走：申请AppId；安装GoAgent；安装代理软件</p>
 <a id="more"></a>
 
@@ -97,7 +97,9 @@
 <p><img src="imgs/switchy-sharp-on.png" alt=""></p>
 <h2 id="开始翻墙">开始翻墙</h2>
 <p>进入<strong>goagent/local</strong>目录，执行终端命令『sudo python proxy.py』，开始你的翻墙之旅吧~</p>
-<p>如果提示错误『Address already in use』，那么执行命令：<br>```sh<br>$ sudo lsof -i:8087<br>$ kill goagent-pid   (goagent-pid指的是上一个命令罗列出的pid列)</p>
+<p>如果提示错误『Address already in use』，那么执行命令：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">sudo</span> lsof -i:<span class="number">8087</span></div><div class="line">$ kill goagent-pid   (goagent-pid指的是上一个命令罗列出的pid列)</div></pre></td></tr></table></figure>
+
 ]]></content>
     <summary type="html"><![CDATA[<p>三步走：申请AppId；安装GoAgent；安装代理软件</p>
 ]]></summary>
