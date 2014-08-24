@@ -4,7 +4,7 @@
   <subtitle><![CDATA[淡静良觉之地]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://baoxiehao.com/"/>
-  <updated>2014-08-24T12:08:13.932Z</updated>
+  <updated>2014-08-24T13:55:13.885Z</updated>
   <id>http://baoxiehao.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://baoxiehao.com/2014/08/20/Alfred-Workflow%E5%88%9D%E8%AF%86/"/>
     <id>http://baoxiehao.com/2014/08/20/Alfred-Workflow初识/</id>
     <published>2014-08-20T01:07:34.000Z</published>
-    <updated>2014-08-24T12:06:05.000Z</updated>
+    <updated>2014-08-24T13:06:23.000Z</updated>
     <content type="html"><![CDATA[<h2 id="简介">简介</h2>
 <p><strong>Alfred</strong>作为<strong>Mac</strong>下排名第一的应用，功能极其强大，可以快速的搜索本地程序、使用搜索引擎搜索、查询词典、发送邮件、查找文件、剪贴板 管理、音乐控制等等功能。特别是<strong>V2</strong>版本新增了<strong>Workflow</strong>功能，全球各地的开发者为其创造了数百个workflow插件，更是极大地扩展和丰富了它的威力。</p>
 <h2 id="基础篇">基础篇</h2>
@@ -285,7 +285,7 @@
     <link href="http://baoxiehao.com/2014/05/17/Hexo%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96/"/>
     <id>http://baoxiehao.com/2014/05/17/Hexo博客优化/</id>
     <published>2014-05-17T02:06:30.000Z</published>
-    <updated>2014-08-10T05:02:25.000Z</updated>
+    <updated>2014-08-24T13:05:31.000Z</updated>
     <content type="html"><![CDATA[<h2 id="MarkDown编辑器">MarkDown编辑器</h2>
 <hr>
 <p>最低要求：所见所得，云端同步。</p>
@@ -333,6 +333,10 @@
 </ul>
 <p>例如：</p>
 <figure class="highlight md"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">title: Tag Plugins</div><div class="line">date: 2014-03-16 10:17:16</div><div class="line">tags: plugins</div><div class="line">categories: Docs</div><div class="line">description: Introduce tag plugins in freemind.</div><div class="line">feature: images/tag-plugins/plugins.jpg</div><div class="line">toc: true</div></pre></td></tr></table></figure>
+
+<p><strong>[5]</strong> 配置图片大小</p>
+<p>默认图片大小是自适应的，有可能会很大，造成页面显示不美观，可以在<strong>/themes/freemind/source/css/style.css</strong>中找到<strong>img</strong>节增加最大宽度限制：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">img</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">max-width</span>:<span class="value"> <span class="number">97.5%</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">15px</span> auto</span></span>;</div><div class="line">  <span class="rule"><span class="attribute">display</span>:<span class="value"> block</span></span>;</div><div class="line">  <span class="rule"><span class="attribute">width</span>:<span class="value"> auto</span></span>;</div><div class="line">  <span class="rule"><span class="attribute">height</span>:<span class="value"> auto</span></span>;</div><div class="line">  <span class="rule"><span class="attribute">max-width</span>:<span class="value"> <span class="number">60%</span></span></span>;</div><div class="line"><span class="rule">}</span></div></pre></td></tr></table></figure>
 
 <p><br><br></p>
 <h3 id="页面结构">页面结构</h3>

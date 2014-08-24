@@ -84,6 +84,12 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 		  </li>
 		  
 		  <li>
+			<a href="/gallery" title="那些照片">
+			  <i class="fa fa-user"></i>画廊
+			</a>
+		  </li>
+		  
+		  <li>
 			<a href="/about" title="我的足迹">
 			  <i class="fa fa-user"></i>关于
 			</a>
@@ -165,6 +171,10 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 </ul>
 <p>例如：</p>
 <figure class="highlight md"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">title: Tag Plugins</div><div class="line">date: 2014-03-16 10:17:16</div><div class="line">tags: plugins</div><div class="line">categories: Docs</div><div class="line">description: Introduce tag plugins in freemind.</div><div class="line">feature: images/tag-plugins/plugins.jpg</div><div class="line">toc: true</div></pre></td></tr></table></figure>
+
+<p><strong>[5]</strong> 配置图片大小</p>
+<p>默认图片大小是自适应的，有可能会很大，造成页面显示不美观，可以在<strong>/themes/freemind/source/css/style.css</strong>中找到<strong>img</strong>节增加最大宽度限制：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">img</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">max-width</span>:<span class="value"> <span class="number">97.5%</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">15px</span> auto</span></span>;</div><div class="line">  <span class="rule"><span class="attribute">display</span>:<span class="value"> block</span></span>;</div><div class="line">  <span class="rule"><span class="attribute">width</span>:<span class="value"> auto</span></span>;</div><div class="line">  <span class="rule"><span class="attribute">height</span>:<span class="value"> auto</span></span>;</div><div class="line">  <span class="rule"><span class="attribute">max-width</span>:<span class="value"> <span class="number">60%</span></span></span>;</div><div class="line"><span class="rule">}</span></div></pre></td></tr></table></figure>
 
 <p><br><br></p>
 <h3 id="页面结构">页面结构</h3>
