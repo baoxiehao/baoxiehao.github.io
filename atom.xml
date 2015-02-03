@@ -4,7 +4,7 @@
   <subtitle><![CDATA[淡静良觉之地]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://baoxiehao.com/"/>
-  <updated>2015-02-03T06:19:50.970Z</updated>
+  <updated>2015-02-03T06:37:28.153Z</updated>
   <id>http://baoxiehao.com/</id>
   
   <author>
@@ -217,29 +217,6 @@ When using an RGBa <span class="keyword">or</span> HSLa value <span class="keywo
       <category term="CSS" scheme="http://baoxiehao.com/tags/CSS/"/>
     
       <category term="技术" scheme="http://baoxiehao.com/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[好文聚沙成塔]]></title>
-    <link href="http://baoxiehao.com/2015/02/01/%E5%A5%BD%E6%96%87%E8%81%9A%E6%B2%99%E6%88%90%E5%A1%94/"/>
-    <id>http://baoxiehao.com/2015/02/01/好文聚沙成塔/</id>
-    <published>2015-02-01T12:42:44.000Z</published>
-    <updated>2015-02-03T06:18:59.000Z</updated>
-    <content type="html"><![CDATA[<a id="more"></a>
-
-<h1 id="技术类">技术类</h1>
-<p><a href="http://get.jobdeer.com/744.get" target="_blank" rel="external">如何写好技术简历 —— 实例、模板及工具</a><br><a href="http://fabiensanglard.net/git_code_review/index.php" target="_blank" rel="external">Git源码赏析三篇（综述、由来、结构）</a><br><a href="http://blog.jobbole.com/66227/" target="_blank" rel="external">jQuery之父：每天都写点代码</a><br><a href="http://codecondo.com/coding-challenges/" target="_blank" rel="external">14个帮你锻炼脑思维的代码编程挑战网站</a><br><a href="http://overapi.com/" target="_blank" rel="external">在线API查询大全</a></p>
-<h2 id="Web">Web</h2>
-<p><a href="http://learn.shayhowe.com/html-css/" target="_blank" rel="external">Learn to Code HTML &amp; CSS</a><br><a href="http://leaverou.github.io/prefixfree/" target="_blank" rel="external">-prefix-free Break free from CSS prefix hell</a><br><a href="http://www.cnblogs.com/lhb25/" target="_blank" rel="external">梦想天空</a><br><a href="http://www.cnblogs.com/lhb25/p/node-js-tutorials-for-beginners.html" target="_blank" rel="external">最佳的 Node.js 学习教程和资料书籍</a><br><a href="http://fex.baidu.com/blog/2014/05/build-performance-monitor-in-7-days/" target="_blank" rel="external">7天打造前端性能监控系统</a></p>
-<h2 id="Lisp">Lisp</h2>
-<p><a href="http://www.quicklisp.org/beta/" target="_blank" rel="external">Quicklisp</a><br><a href="http://8arrow.org/caveman/" target="_blank" rel="external">Caveman 2: The real web framework</a></p>
-<h2 id="Erlang">Erlang</h2>
-<p><a href="http://learnyousomeerlang.com/contents" target="_blank" rel="external">Learn You Some Erlang</a><br><a href="http://www.erlang.se/doc/programming_rules.shtml" target="_blank" rel="external">Programming Rules</a><br><a href="http://erlide.org/" target="_blank" rel="external">Erlang IDE</a><br><a href="http://ignatov.github.io/intellij-erlang/" target="_blank" rel="external">Erlang IntelliJ</a><br><a href="http://www.cnblogs.com/me-sa/category/304370.html" target="_blank" rel="external">Erlang Blog</a><br><a href="http://ferd.ca/" target="_blank" rel="external">Erlang Blog</a><br><a href="http://erldocs.com" target="_blank" rel="external">Erlang Doc</a><br><a href="http://erlangcentral.org/wiki/index.php/" target="_blank" rel="external">Erlang Wiki</a></p>
-<h1 id="设计类">设计类</h1>
-<p><a href="http://ksmx.me/blog/2014/05/02/usability-and-user-experience-design-websites/" target="_blank" rel="external">用户体验和产品设计网站精选（私家收藏分享）- 康上明学</a></p>
-]]></content>
-    
     
   </entry>
   
@@ -931,6 +908,29 @@ As previously mentioned, different browsers render elements <span class="operato
       <category term="CSS" scheme="http://baoxiehao.com/tags/CSS/"/>
     
       <category term="技术" scheme="http://baoxiehao.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[好文聚沙成塔]]></title>
+    <link href="http://baoxiehao.com/2015/01/01/%E5%A5%BD%E6%96%87%E8%81%9A%E6%B2%99%E6%88%90%E5%A1%94/"/>
+    <id>http://baoxiehao.com/2015/01/01/好文聚沙成塔/</id>
+    <published>2015-01-01T12:42:44.000Z</published>
+    <updated>2015-02-03T06:37:22.000Z</updated>
+    <content type="html"><![CDATA[<a id="more"></a>
+
+<h1 id="技术类">技术类</h1>
+<p><a href="http://get.jobdeer.com/744.get" target="_blank" rel="external">如何写好技术简历 —— 实例、模板及工具</a><br><a href="http://fabiensanglard.net/git_code_review/index.php" target="_blank" rel="external">Git源码赏析三篇（综述、由来、结构）</a><br><a href="http://blog.jobbole.com/66227/" target="_blank" rel="external">jQuery之父：每天都写点代码</a><br><a href="http://codecondo.com/coding-challenges/" target="_blank" rel="external">14个帮你锻炼脑思维的代码编程挑战网站</a><br><a href="http://overapi.com/" target="_blank" rel="external">在线API查询大全</a></p>
+<h2 id="Web">Web</h2>
+<p><a href="http://learn.shayhowe.com/html-css/" target="_blank" rel="external">Learn to Code HTML &amp; CSS</a><br><a href="http://leaverou.github.io/prefixfree/" target="_blank" rel="external">-prefix-free Break free from CSS prefix hell</a><br><a href="http://www.cnblogs.com/lhb25/" target="_blank" rel="external">梦想天空</a><br><a href="http://www.cnblogs.com/lhb25/p/node-js-tutorials-for-beginners.html" target="_blank" rel="external">最佳的 Node.js 学习教程和资料书籍</a><br><a href="http://fex.baidu.com/blog/2014/05/build-performance-monitor-in-7-days/" target="_blank" rel="external">7天打造前端性能监控系统</a></p>
+<h2 id="Lisp">Lisp</h2>
+<p><a href="http://www.quicklisp.org/beta/" target="_blank" rel="external">Quicklisp</a><br><a href="http://8arrow.org/caveman/" target="_blank" rel="external">Caveman 2: The real web framework</a></p>
+<h2 id="Erlang">Erlang</h2>
+<p><a href="http://learnyousomeerlang.com/contents" target="_blank" rel="external">Learn You Some Erlang</a><br><a href="http://www.erlang.se/doc/programming_rules.shtml" target="_blank" rel="external">Programming Rules</a><br><a href="http://erlide.org/" target="_blank" rel="external">Erlang IDE</a><br><a href="http://ignatov.github.io/intellij-erlang/" target="_blank" rel="external">Erlang IntelliJ</a><br><a href="http://www.cnblogs.com/me-sa/category/304370.html" target="_blank" rel="external">Erlang Blog</a><br><a href="http://ferd.ca/" target="_blank" rel="external">Erlang Blog</a><br><a href="http://erldocs.com" target="_blank" rel="external">Erlang Doc</a><br><a href="http://erlangcentral.org/wiki/index.php/" target="_blank" rel="external">Erlang Wiki</a></p>
+<h1 id="设计类">设计类</h1>
+<p><a href="http://ksmx.me/blog/2014/05/02/usability-and-user-experience-design-websites/" target="_blank" rel="external">用户体验和产品设计网站精选（私家收藏分享）- 康上明学</a></p>
+]]></content>
+    
     
   </entry>
   
