@@ -1,0 +1,374 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Learn to Code HTML &amp; CSS | 浩然也空的博客</title>
+  <meta name="author" content="浩然也空">
+  
+  <meta name="description" content="每周一篇文章，每年一次总结。">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Learn to Code HTML &amp; CSS"/>
+  <meta property="og:site_name" content="浩然也空的博客"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  
+    <link rel="alternative" href="/atom.xml" title="浩然也空的博客" type="application/atom+xml">
+  
+  
+    <link href="/favicon.png" rel="icon">
+  
+
+  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', '[object Object]']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+
+ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+  
+
+</head>
+
+ <body>
+  <nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+	  <a class="navbar-brand" href="/">浩然也空的博客</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="所有归档">
+			  <i class="fa fa-archive"></i>归档
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="所有分类">
+			  <i class="fa fa-folder"></i>分类
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="所有标签">
+			  <i class="fa fa-tags"></i>标签
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/gallery" title="那些照片">
+			  <i class="fa fa-picture-a"></i>画廊
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="我的足迹">
+			  <i class="fa fa-user"></i>关于
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+  	<div class="content">
+    	 
+
+
+	
+		<div class="page-header">		
+			<h1> Learn to Code HTML &amp; CSS</h1>
+		</div>		
+	
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div class="col-md-9">
+	
+
+			
+
+	<!-- content -->
+	<div class="mypage">		
+	    <h1 id="Lesson_8:_Creating_Lists"><a href="http://learn.shayhowe.com/html-css/creating-lists/" target="_blank" rel="external">Lesson 8: Creating Lists</a></h1>
+<a id="more"></a>
+
+<p>When we want to use a list on a website, HTML provides three different types to choose from: <strong>unordered</strong>, <strong>ordered</strong>, and <strong>description</strong> lists. Choosing which type of list to use—or whether to use a list at all—comes down to the content and the most semantically appropriate option for displaying that content.</p>
+<p>In addition to the three different types of lists available within HTML, there are multiple ways to style these lists with CSS. For example, we can choose what type of marker to use on a list. The marker could be square, round, numeric, alphabetical, or perhaps nonexistent. Also, we can decide if a list should be displayed vertically or horizontally. All of these choices play significant roles in the styling of our web pages.</p>
+<h2 id="Unordered_Lists">Unordered Lists</h2>
+<p>An unordered list is simply a list of related items whose order does not matter. Creating an unordered list in HTML is accomplished using the unordered list block-level element, <code>&lt;ul</code>&gt;. Each item within an unordered list is individually marked up using the list item element, <code>&lt;li</code>&gt;.</p>
+<p>By default, most browsers add a vertical margin and left padding to the <code>&lt;ul</code>&gt; element and precede each <code>&lt;li</code>&gt; element with a solid dot. This solid dot is called the list item marker, and it can be changed using CSS.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">ul</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">li</span>&gt;</span>Orange<span class="tag">&lt;/<span class="title">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">li</span>&gt;</span>Green<span class="tag">&lt;/<span class="title">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">li</span>&gt;</span>Blue<span class="tag">&lt;/<span class="title">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">ul</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<h2 id="Ordered_Lists">Ordered Lists</h2>
+<p>The ordered list element, <code>&lt;ol</code>&gt;, works very much like the unordered list element; individual list items are created in the same manner. The main difference between an ordered list and an unordered list is that with an ordered list, the order in which items are presented is important. Because the order matters, instead of using a dot as the default list item marker, an ordered list uses numbers.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">ol</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">li</span>&gt;</span>Head north on N Halsted St<span class="tag">&lt;/<span class="title">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">li</span>&gt;</span>Turn right on W Diversey Pkwy<span class="tag">&lt;/<span class="title">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">li</span>&gt;</span>Turn left on N Orchard St<span class="tag">&lt;/<span class="title">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">ol</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<p>Ordered lists also have unique attributes available to them including <strong>start</strong> and <strong>reversed</strong>.</p>
+<h3 id="Start_Attribute">Start Attribute</h3>
+<p>The start attribute defines the number from which an ordered list should start. By default, ordered lists start at 1. However, there may be cases where a list should start at 30 or another number. When we use the start attribute on the <code>&lt;ol</code>&gt; element, we can identify exactly which number an ordered list should begin counting from. The start attribute accepts only <strong>integer</strong> values, even though ordered lists may use different numbering systems, such as roman numerals.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">ol</span> <span class="attribute">start</span>=<span class="value">"30"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">li</span>&gt;</span>Head north on N Halsted St<span class="tag">&lt;/<span class="title">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">li</span>&gt;</span>Turn right on W Diversey Pkwy<span class="tag">&lt;/<span class="title">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">li</span>&gt;</span>Turn left on N Orchard St<span class="tag">&lt;/<span class="title">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">ol</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<h3 id="Reversed_Attribute">Reversed Attribute</h3>
+<p>The reversed attribute, when used on the <code>&lt;ol</code>&gt; element, allows a list to appear in reverse order. An ordered list of five items numbered 1 to 5 may be reversed and ordered from 5 to 1. The reversed attribute is a <strong>Boolean</strong> attribute, and as such it doesn’t accept any value. </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">ol</span> <span class="attribute">reversed</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">li</span>&gt;</span>Head north on N Halsted St<span class="tag">&lt;/<span class="title">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">li</span>&gt;</span>Turn right on W Diversey Pkwy<span class="tag">&lt;/<span class="title">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">li</span>&gt;</span>Turn left on N Orchard St<span class="tag">&lt;/<span class="title">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">ol</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<h3 id="Value_Attribute">Value Attribute</h3>
+<p>The value attribute may be used on an individual <code>&lt;li</code>&gt; element within an ordered list to change its value within the list. The number of any list item appearing below a list item with a value attribute will be recalculated accordingly.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">ol</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">li</span>&gt;</span>Head north on N Halsted St<span class="tag">&lt;/<span class="title">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">li</span> <span class="attribute">value</span>=<span class="value">"9"</span>&gt;</span>Turn right on W Diversey Pkwy<span class="tag">&lt;/<span class="title">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">li</span>&gt;</span>Turn left on N Orchard St<span class="tag">&lt;/<span class="title">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">ol</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<h2 id="Description_Lists">Description Lists</h2>
+<p>Another type of list seen online (but not as often as unordered or ordered lists) is the description list. Description lists are used to outline multiple terms and their descriptions, as in a glossary, for example.</p>
+<p>Creating a description list in HTML is accomplished using the description list block-level element, <code>&lt;dl</code>&gt;. Instead of using a <code>&lt;li</code>&gt; element to mark up list items, the description list requires two block-level elements: the <strong>description term</strong> element, <code>&lt;dt</code>&gt;, and the <strong>description element</strong>, <code>&lt;dd</code>&gt;.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">dl</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">dt</span>&gt;</span>study<span class="tag">&lt;/<span class="title">dt</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">dd</span>&gt;</span>The devotion of time and attention to acquiring knowledge on an academic subject, especially by means of books<span class="tag">&lt;/<span class="title">dd</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">dt</span>&gt;</span>design<span class="tag">&lt;/<span class="title">dt</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">dd</span>&gt;</span>A plan or drawing produced to show the look and function or workings of a building, garment, or other object before it is built or made<span class="tag">&lt;/<span class="title">dd</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">dd</span>&gt;</span>Purpose, planning, or intention that exists or is thought to exist behind an action, fact, or material object<span class="tag">&lt;/<span class="title">dd</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">dt</span>&gt;</span>business<span class="tag">&lt;/<span class="title">dt</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">dt</span>&gt;</span>work<span class="tag">&lt;/<span class="title">dt</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">dd</span>&gt;</span>A person's regular occupation, profession, or trade<span class="tag">&lt;/<span class="title">dd</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">dl</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<h2 id="Nesting_Lists">Nesting Lists</h2>
+<p>One feature that makes lists extremely powerful is their ability to be nested. Every list may be placed within another list; they can be nested continually. But the potential to nest lists indefinitely doesn’t provide free rein to do so. Lists should still be reserved specifically for where they hold the most semantic value.</p>
+<p>One trick with nesting lists is to know where to begin and end each list and list item. Speaking specifically about unordered and ordered lists, as that is where most nesting will occur, the only element that may reside directly within the <code>&lt;ul</code>&gt; and <code>&lt;ol</code>&gt; elements is the <code>&lt;li</code>&gt; element. To repeat, the only element we can place as a direct child of the <code>&lt;ul</code>&gt; and <code>&lt;ol</code>&gt; elements is the <code>&lt;li</code>&gt; element. That said, once inside the <code>&lt;li</code>&gt; element, the standard set of elements may be added, including any <code>&lt;ul</code>&gt; or <code>&lt;ol</code>&gt; elements.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">ol</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">li</span>&gt;</span>Walk the dog<span class="tag">&lt;/<span class="title">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">li</span>&gt;</span>Fold laundry<span class="tag">&lt;/<span class="title">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">li</span>&gt;</span></div><div class="line">    Go to the grocery and buy:</div><div class="line">    <span class="tag">&lt;<span class="title">ul</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="title">li</span>&gt;</span>Milk<span class="tag">&lt;/<span class="title">li</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="title">li</span>&gt;</span>Bread<span class="tag">&lt;/<span class="title">li</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="title">li</span>&gt;</span>Cheese<span class="tag">&lt;/<span class="title">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="title">ul</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="title">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">li</span>&gt;</span>Mow the lawn<span class="tag">&lt;/<span class="title">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">li</span>&gt;</span>Make dinner<span class="tag">&lt;/<span class="title">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">ol</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<h2 id="List_Item_Styling">List Item Styling</h2>
+<p>Unordered and ordered lists use list item markers by default. For unordered lists these are typically solid dots, while ordered lists typically use numbers. <a href="http://www.smashingmagazine.com/2009/12/11/styling-html-lists-with-css-techniques-and-resources/" target="_blank" rel="external">With CSS</a> the style and position of these list item markers may be adjusted.</p>
+<h3 id="List_Style_Type_Property">List Style Type Property</h3>
+<p>The list-style-type property is used to set the content of a list item marker. The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type" target="_blank" rel="external">available values</a> <strong>range from squares and decimal numbers all the way to Armenian numbering</strong>, and the style may be placed on either the <code>&lt;ul</code>&gt;, <code>&lt;ol</code>&gt;, or <code>&lt;li</code>&gt; elements within CSS.</p>
+<p>Any list-style-type property value can be added to <strong>either unordered or ordered</strong> lists. With this in mind, it is possible to use a numeric list item marker on an unordered list and a nonnumeric marker on an ordered list.</p>
+<h3 id="Using_an_Image_as_a_List_Item_Marker">Using an Image as a List Item Marker</h3>
+<p>There may come a time when the default list-style-type property values are not enough, and we want to customize our own list item marker. Doing so is most commonly accomplished by placing a background image on each <code>&lt;li</code>&gt; element within a list.</p>
+<p>The process includes removing any default list-style-type property value and adding a background image and padding to the <code>&lt;li</code>&gt; element.</p>
+<p>In detail, the list-style-type property value of none will remove existing list item markers. The background property will identify a background image, along with its position and repeat value, if necessary. And the padding property will provide space to the left of the text for the background image.</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">li</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">background</span>:<span class="value"> <span class="function">url</span>(<span class="string">"arrow.png"</span>) <span class="number">0</span> <span class="number">50%</span> no-repeat</span></span>;</div><div class="line">  <span class="rule"><span class="attribute">list-style-type</span>:<span class="value"> none</span></span>;</div><div class="line">  <span class="rule"><span class="attribute">padding-left</span>:<span class="value"> <span class="number">12px</span></span></span>;</div><div class="line"><span class="rule">}</span></div></pre></td></tr></table></figure>
+
+<h3 id="List_Style_Position_Property">List Style Position Property</h3>
+<p>By default the list item marker is to the left of the content within the <code>&lt;li</code>&gt; element. This list style positioning is described as outside, meaning all of the content will appear directly to the right, outside of the list item marker. Using the list-style-position property, we can change the default value of <strong>outside</strong> to <strong>inside</strong> or <strong>inherit</strong>.</p>
+<h3 id="Shorthand_List_Style_Property">Shorthand List Style Property</h3>
+<p>The list style properties discussed thus far, list-style-type and list-style-position, can be combined into one shorthand <strong>list-style</strong> property value. When using the list-style property, we can use <strong>one or all</strong> list style property values at a time.</p>
+<h2 id="Horizontally_Displaying_List">Horizontally Displaying List</h2>
+<p>Occasionally we may want to display lists horizontally rather than vertically. Perhaps we want to divide a list into multiple columns, to build a navigational list, or to put a few list items in a single row. Depending on the content and desired appearance, there are a few different ways to display lists as a single line, such as by making the display property value of <code>&lt;li</code>&gt; elements <strong>inline</strong> or <strong>inline-block</strong> or by <strong>floating</strong> them.</p>
+<h3 id="Displaying_List">Displaying List</h3>
+<p>The quickest way to display a list on a single line is to give the <code>&lt;li</code>&gt; elements a display property value of inline or inline-block. Doing so places all the <code>&lt;li</code>&gt; elements within a single line, with a single space between each list item. When changing the display property value to inline or inline-block, the list item marker, be it a bullet, number, or other style, is removed.</p>
+<p>More often than not, we’ll use the <strong>inline-block</strong> property value rather than the inline property value. The inline-block property value allows us to easily add vertical margins and other spacing to the <code>&lt;li</code>&gt; elements, whereas the inline property value does not.</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">li</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">display</span>:<span class="value"> inline-block</span></span>;</div><div class="line">  <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">0</span> <span class="number">10px</span></span></span>;</div><div class="line"><span class="rule">}</span></div></pre></td></tr></table></figure>
+
+<h3 id="Floating_List">Floating List</h3>
+<p>￼Changing the display property value to inline or inline-block is quick; however, it removes the list item marker. <strong>If the list item marker is needed, floating each <code>&lt;li</code>&gt; element is a better option than changing the display property</strong>. </p>
+<p>Setting all <code>&lt;li</code>&gt; elements’ float property to left will horizontally align all <code>&lt;li</code>&gt; elements directly next to each other without any space between them. When we float each <code>&lt;li</code>&gt; element, the list item marker is displayed by default and will actually sit on top of the <code>&lt;li</code>&gt; element next to it. To prevent the list item marker from being displayed on top of other <code>&lt;li</code>&gt; elements, a horizontal margin or padding should be added.</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">li</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">float</span>:<span class="value"> left</span></span>;</div><div class="line">  <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">0</span> <span class="number">20px</span></span></span>;</div><div class="line"><span class="rule">}</span></div></pre></td></tr></table></figure>
+
+<p>As when floating any element, this breaks the flow of the page. We must remember to clear our floats—most commonly with the clearfix technique—and return the page back to its normal flow.</p>
+<h3 id="Navigational_List_Example">Navigational List Example</h3>
+<p>We’ll often develop, and find, navigation menus using unordered lists. These lists are commonly laid out as horizontal lists, using either of the two techniques previously mentioned. Here is an example of a horizontal navigation menu marked up using an unordered list with <code>&lt;li</code>&gt; elements displayed as inline-block elements.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">nav</span> <span class="attribute">class</span>=<span class="value">"navigation"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">ul</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Profile<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span><span class="comment">&lt;!--</span></div><div class="line">    --&gt;<span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Settings<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span><span class="comment">&lt;!--</span></div><div class="line">    --&gt;<span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Notifications<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span><span class="comment">&lt;!--</span></div><div class="line">    --&gt;<span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Logout<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="title">ul</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">nav</span>&gt;</span></div></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="class">.navigation</span> <span class="tag">ul</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">font</span>:<span class="value"> bold <span class="number">11px</span> <span class="string">"Helvetica Neue"</span>, Helvetica, Arial, sans-serif</span></span>;</div><div class="line">  <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">0</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">0</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">text-transform</span>:<span class="value"> uppercase</span></span>;</div><div class="line"><span class="rule">}</span></div><div class="line"><span class="class">.navigation</span> <span class="tag">li</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">display</span>:<span class="value"> inline-block</span></span>;</div><div class="line"><span class="rule">}</span></div><div class="line"><span class="class">.navigation</span> <span class="tag">a</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">background</span>:<span class="value"> <span class="hexcolor">#395870</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">background</span>:<span class="value"> <span class="function">linear-gradient</span>(<span class="hexcolor">#49708f</span>, <span class="hexcolor">#293f50</span>)</span></span>;</div><div class="line">  <span class="rule"><span class="attribute">border-right</span>:<span class="value"> <span class="number">1px</span> solid <span class="function">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, .<span class="number">3</span>)</span></span>;</div><div class="line">  <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#fff</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">12px</span> <span class="number">20px</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">text-decoration</span>:<span class="value"> none</span></span>;</div><div class="line"><span class="rule">}</span></div><div class="line"><span class="class">.navigation</span> <span class="tag">a</span><span class="pseudo">:hover</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">background</span>:<span class="value"> <span class="hexcolor">#314b60</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">box-shadow</span>:<span class="value"> inset <span class="number">0</span> <span class="number">0</span> <span class="number">10px</span> <span class="number">1px</span> <span class="function">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, .<span class="number">3</span>)</span></span>;</div><div class="line"><span class="rule">}</span></div><div class="line"><span class="class">.navigation</span> <span class="tag">li</span><span class="pseudo">:first-child</span> <span class="tag">a</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">border-radius</span>:<span class="value"> <span class="number">4px</span> <span class="number">0</span> <span class="number">0</span> <span class="number">4px</span></span></span>;</div><div class="line"><span class="rule">}</span></div><div class="line"><span class="class">.navigation</span> <span class="tag">li</span><span class="pseudo">:last-child</span> <span class="tag">a</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">border-right</span>:<span class="value"> <span class="number">0</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">border-radius</span>:<span class="value"> <span class="number">0</span> <span class="number">4px</span> <span class="number">4px</span> <span class="number">0</span></span></span>;</div><div class="line"><span class="rule">}</span></div></pre></td></tr></table></figure>
+
+<h2 id="Summary">Summary</h2>
+<p>Lists are used quite commonly in HTML, often in places that might not be obvious or apparent. The key is to use them as semantically as possible and to leverage them where they best fit.</p>
+<p>Let’s recap. Within this lesson we covered the following:</p>
+<ul>
+<li>How to create <strong>unordered</strong>, <strong>ordered</strong>, and <strong>description</strong> lists</li>
+<li>How to properly <strong>nest lists</strong> inside of other lists</li>
+<li>How to change the <strong>list item marker</strong> style and position</li>
+<li>How to use a <strong>background image instead of a list item marker</strong></li>
+<li>How to <strong>horizontally display or float lists</strong></li>
+</ul>
+	  
+	</div>
+
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+		
+          <li class="prev disabled"><a><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+        
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
+
+		
+		   <li class="next"><a href="/2015/02/02/Learn to Code HTML & CSS 7/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
+</ul>
+</div>
+
+    </center>
+	</div>
+	
+	<!-- comment -->
+	
+<section id="comment">
+  <h2 class="title">留言</h2>
+
+  
+</section>
+
+	
+	</div> <!-- col-md-9/col-md-12 -->
+	
+	
+		<div class="col-md-3"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2015 2月 3 
+	</div>
+	
+
+	<!-- categories -->
+    
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
+          
+  <li>
+    <li><a href="/categories/技术/">技术<span>11</span></a></li>
+  </li>
+
+    </ul>
+	</div>
+	
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/HTML/">HTML<span>8</span></a></li> <li><a href="/tags/CSS/">CSS<span>8</span></a></li>
+    </ul>
+	</div>
+		
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	   <a data-toggle="collapse" data-target="#toc"><i class="fa fa-bars"></i></a>
+	   <div id="toc" class="toc collapse in">
+			<ol class="toc-article"><li class="toc-article-item toc-article-level-1"><a class="toc-article-link" href="#Lesson_8:_Creating_Lists"><span class="toc-article-text">Lesson 8: Creating Lists</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Unordered_Lists"><span class="toc-article-text">Unordered Lists</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Ordered_Lists"><span class="toc-article-text">Ordered Lists</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Start_Attribute"><span class="toc-article-text">Start Attribute</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Reversed_Attribute"><span class="toc-article-text">Reversed Attribute</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Value_Attribute"><span class="toc-article-text">Value Attribute</span></a></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Description_Lists"><span class="toc-article-text">Description Lists</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Nesting_Lists"><span class="toc-article-text">Nesting Lists</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#List_Item_Styling"><span class="toc-article-text">List Item Styling</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#List_Style_Type_Property"><span class="toc-article-text">List Style Type Property</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Using_an_Image_as_a_List_Item_Marker"><span class="toc-article-text">Using an Image as a List Item Marker</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#List_Style_Position_Property"><span class="toc-article-text">List Style Position Property</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Shorthand_List_Style_Property"><span class="toc-article-text">Shorthand List Style Property</span></a></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Horizontally_Displaying_List"><span class="toc-article-text">Horizontally Displaying List</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Displaying_List"><span class="toc-article-text">Displaying List</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Floating_List"><span class="toc-article-text">Floating List</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Navigational_List_Example"><span class="toc-article-text">Navigational List Example</span></a></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Summary"><span class="toc-article-text">Summary</span></a></li></ol></li></ol>
+		</div>
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	
+
+</div><!-- row -->
+
+
+<!-- Duoshuo Comment BEGIN -->
+<div class="ds-thread" data-title="Learn to Code HTML &amp; CSS" data-url="http://baoxiehao.com/2015/02/03/Learn to Code HTML & CSS 8/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"baoxiehao"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+<!-- Duoshuo Comment END -->
+
+
+	</div>
+  </div>
+  <div class="container-narrow">
+  <footer> <p>
+  &copy; 2015 浩然也空
+  
+      with help from <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+</p> </footer>
+  <!-- Duoshuo Comment BEGIN -->
+<div class="ds-thread" data-title="Learn to Code HTML &amp; CSS" data-url="http://baoxiehao.com/2015/02/03/Learn to Code HTML & CSS 8/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"baoxiehao"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+<!-- Duoshuo Comment END -->
+
+</div> <!-- container-narrow -->
+  
+<a id="gotop" href="#">
+  <span>▲</span>
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-51276891-1', 'baoxiehao.com');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+   </html>

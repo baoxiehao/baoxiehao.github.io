@@ -1,0 +1,389 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Learn to Code HTML &amp; CSS | 浩然也空的博客</title>
+  <meta name="author" content="浩然也空">
+  
+  <meta name="description" content="每周一篇文章，每年一次总结。">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Learn to Code HTML &amp; CSS"/>
+  <meta property="og:site_name" content="浩然也空的博客"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  
+    <link rel="alternative" href="/atom.xml" title="浩然也空的博客" type="application/atom+xml">
+  
+  
+    <link href="/favicon.png" rel="icon">
+  
+
+  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', '[object Object]']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+
+ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+  
+
+</head>
+
+ <body>
+  <nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+	  <a class="navbar-brand" href="/">浩然也空的博客</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="所有归档">
+			  <i class="fa fa-archive"></i>归档
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="所有分类">
+			  <i class="fa fa-folder"></i>分类
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="所有标签">
+			  <i class="fa fa-tags"></i>标签
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/gallery" title="那些照片">
+			  <i class="fa fa-picture-a"></i>画廊
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="我的足迹">
+			  <i class="fa fa-user"></i>关于
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+  	<div class="content">
+    	 
+
+
+	
+		<div class="page-header">		
+			<h1> Learn to Code HTML &amp; CSS</h1>
+		</div>		
+	
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div class="col-md-9">
+	
+
+			
+
+	<!-- content -->
+	<div class="mypage">		
+	    <h1 id="Lesson_4:_Opening_the_Box_Model"><a href="http://learn.shayhowe.com/html-css/opening-the-box-model/" target="_blank" rel="external">Lesson 4: Opening the Box Model</a></h1>
+<a id="more"></a>
+
+<h2 id="How_Are_Elements_Displayed?">How Are Elements Displayed?</h2>
+<p>Before jumping into the box model, it helps to understand how elements are displayed. In Lesson 2 we covered the difference between block-level and inline-level elements. To quickly recap, block-level elements occupy any available width, regardless of their content, and begin on a new line. Inline-level elements occupy only the width their content requires and line up on the same line, one after the other. Block-level elements are generally used for larger pieces of content, such as headings and structural elements. Inline-level elements are generally used for smaller pieces of content, such as a few words selected to be bold or italicized.</p>
+<h3 id="Display">Display</h3>
+<p>Exactly how elements are displayed—as block-level elements, inline elements, or something else—is determined by the display property. Every element has a default display property value; however, as with all other property values, that value may be overwritten. There are quite a few values for the display property, but the most common are <strong>block</strong>, <strong>inline</strong>, <strong>inline-block</strong>, and <strong>none</strong>.</p>
+<p>Things get interesting with the <strong>inline-block</strong> value. Using this value will allow an element to behave as a block-level element, accepting all box model properties (which we’ll cover soon). However, the element will be displayed in line with other elements, and it will not begin on a new line by default.</p>
+<p>Using a value of <strong>none</strong> will completely hide an element and render the page as if that element doesn’t exist. Any elements nested within this element will also be hidden.</p>
+<pre><code>The Space Between Inline-Block Elements
+
+One important distinction <span class="operator">with</span> inline-block elements is that they are <span class="operator">not</span> always touching, <span class="operator">or</span> displayed directly against <span class="constant">one</span> another. Usually <span class="operator">a</span> small <span class="constant">space</span> will exist between <span class="constant">two</span> inline-block elements. This <span class="constant">space</span>, though perhaps annoying, is <span class="keyword">normal</span>. We’ll discuss why this <span class="constant">space</span> exists <span class="operator">and</span> how <span class="built_in">to</span> remove <span class="keyword">it</span> <span class="operator">in</span> <span class="operator">the</span> next lesson.
+</code></pre><h2 id="Working_with_the_Box_Model">Working with the Box Model</h2>
+<p>Every element is a rectangular box, and there are several properties that determine the size of that box. The core of the box is defined by the width and height of an element, which may be determined by the display property, by the contents of the element, or by specified width and height properties. padding and then border expand the dimensions of the box outward from the element’s width and height. Lastly, any margin we have specified will follow the border.</p>
+<p>Each part of the box model corresponds to a CSS property: <strong>width</strong>, <strong>height</strong>, <strong>padding</strong>, <strong>border</strong>, and <strong>margin</strong>.</p>
+<p>By default the box model is additive; thus to determine the actual size of a box we need to take into account padding, borders, and margins for all four sides of the box. Our width not only includes the width property value, but also the size of the left and right padding, left and right borders, and left and right margins.</p>
+<h3 id="Width_&amp;_Height">Width &amp; Height</h3>
+<p>The default width of an element depends on its display value. Block-level elements have a default width of 100%, consuming the entire horizontal space available. Inline and inline-block elements expand and contract horizontally to accommodate their content. Inline-level elements cannot have a fixed size, thus the width and height properties are only relevant to non-inline elements.</p>
+<p>The default height of an element is determined by its content. An element will expand and contract vertically as necessary to accommodate its content.</p>
+<pre><code>Sizing <span class="keyword">Inline</span>-Level Elements
+
+Please keep <span class="keyword">in</span> mind that <span class="keyword">inline</span>-level elements will <span class="keyword">not</span> accept the width <span class="keyword">and</span> height properties <span class="keyword">or</span> any values tied <span class="keyword">to</span> them. <span class="keyword">Block</span> <span class="keyword">and</span> <span class="keyword">inline</span>-<span class="keyword">block</span> elements will, however, accept the width <span class="keyword">and</span> height properties <span class="keyword">and</span> their corresponding values.
+</code></pre><h3 id="Margin_&amp;_Padding">Margin &amp; Padding</h3>
+<p>Depending on the element, browsers may apply default margins and padding to an element to help with legibility and clarity. We will generally see this with text-based elements. The default margins and padding for these elements may differ from browser to browser and element to element. In Lesson 1 we discussed using a <a href="http://learn.shayhowe.com/html-css/building-your-first-web-page/#using-css-resets" target="_blank" rel="external">CSS reset</a> to tone all of these default values down to zero. Doing so allows us to work from the ground up and to specify our own values.</p>
+<p>One oddity with the margin property is that <strong>vertical margins, top and bottom, are not accepted by inline-level elements</strong>. These vertical margins are, however, accepted by block-level and inline-block elements.</p>
+<p>The padding property, unlike the margin property, works vertically on inline-level elements. This <strong>vertical padding may blend into the line above or below</strong> the given element, but it will be displayed.</p>
+<pre><code>Margin &amp; Padding <span class="keyword">on</span> <span class="keyword">Inline</span>-Level Elements
+
+<span class="keyword">Inline</span>-level elements are affected a bit differently than <span class="keyword">block</span> <span class="keyword">and</span> <span class="keyword">inline</span>-<span class="keyword">block</span> elements when it comes <span class="keyword">to</span> margins <span class="keyword">and</span> padding. Margins only work horizontally—left <span class="keyword">and</span> right—<span class="keyword">on</span> <span class="keyword">inline</span>-level elements. Padding works <span class="keyword">on</span> all four sides <span class="keyword">of</span> <span class="keyword">inline</span>-level elements; however, the vertical padding—the top <span class="keyword">and</span> bottom—may bleed <span class="keyword">into</span> the lines above <span class="keyword">and</span> below an element.
+
+Margins <span class="keyword">and</span> padding work like normal <span class="keyword">for</span> <span class="keyword">block</span> <span class="keyword">and</span> <span class="keyword">inline</span>-<span class="keyword">block</span> elements.
+</code></pre><h3 id="Margin_&amp;_Padding_Declarations">Margin &amp; Padding Declarations</h3>
+<p>The margin and padding properties come in both longhand and shorthand form. </p>
+<p>When using the shorthand margin property to set the same value for all four sides of an element, we specify one value:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">div</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">20px</span></span></span>;</div><div class="line"><span class="rule">}</span></div></pre></td></tr></table></figure>
+
+<p>When placing margins of 10 pixels on the <strong>top and bottom</strong> of a <code>&lt;div</code>&gt; and margins of 20 pixels on the <strong>left and right</strong>:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">div</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">10px</span> <span class="number">20px</span></span></span>;</div><div class="line"><span class="rule">}</span></div></pre></td></tr></table></figure>
+
+<p>When placing margins of 10 pixels on the <strong>top</strong> of a <code>&lt;div</code>&gt;, 20 pixels on the <strong>right</strong>, 0 pixels on the <strong>bottom</strong>, and 15 pixels on the <strong>left</strong>:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">div</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">10px</span> <span class="number">20px</span> <span class="number">0</span> <span class="number">15px</span></span></span>;</div><div class="line"><span class="rule">}</span></div></pre></td></tr></table></figure>
+
+<p>When we wish to identify only one margin or padding value, it is best to use the longhand properties.</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">div</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">margin-top</span>:<span class="value"> <span class="number">10px</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">padding-left</span>:<span class="value"> <span class="number">6px</span></span></span>;</div><div class="line"><span class="rule">}</span></div></pre></td></tr></table></figure>
+
+<pre><code>Margin &amp; Padding Colors
+
+The margin <span class="operator">and</span> padding properties are completely transparent <span class="operator">and</span> <span class="built_in">do</span> <span class="operator">not</span> accept <span class="keyword">any</span> color values. Being transparent, though, they show <span class="operator">the</span> background colors <span class="operator">of</span> <span class="built_in">relative</span> elements. For margins, we see <span class="operator">the</span> background color <span class="operator">of</span> <span class="operator">the</span> parent <span class="keyword">element</span>, <span class="operator">and</span> <span class="keyword">for</span> padding, we see <span class="operator">the</span> background color <span class="operator">of</span> <span class="operator">the</span> <span class="keyword">element</span> <span class="operator">the</span> padding is applied <span class="built_in">to</span>.
+</code></pre><h3 id="Borders">Borders</h3>
+<p>Borders fall between the padding and margin, providing an outline around an element. The border property requires three values: <strong>width</strong>, <strong>style</strong>, and <strong>color</strong>. Shorthand values for the border property are stated in that order—width, style, color. In longhand, these three values can be broken up into the <strong>border-width</strong>, <strong>border-style</strong>, and <strong>border-color</strong> properties. These longhand properties are useful for changing, or overwriting, a single border value.</p>
+<p>Borders can have different <a href="http://www.quackit.com/html/codes/html_borders.cfm" target="_blank" rel="external">appearances</a>. The most common style values are <strong>solid</strong>, <strong>double</strong>, <strong>dashed</strong>, <strong>dotted</strong>, and <strong>none</strong>, but there are several others to choose from.</p>
+<h4 id="Individual_Border_Sides">Individual Border Sides</h4>
+<p>If we want, we can make a border appear only on the bottom of an element:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">div</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">border-bottom</span>:<span class="value"> <span class="number">6px</span> solid <span class="hexcolor">#949599</span></span></span>;</div><div class="line"><span class="rule">}</span></div></pre></td></tr></table></figure>
+
+<p>Additionally, styles for individual border sides may be controlled at an even finer level. For example, if we wish to change only the width of the bottom border we can use the following code:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">div</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">border-bottom-width</span>:<span class="value"> <span class="number">12px</span></span></span>;</div><div class="line"><span class="rule">}</span></div></pre></td></tr></table></figure>
+
+<h4 id="Border_Radius">Border Radius</h4>
+<p>The border-radius property accepts length units, including <strong>percentages</strong> and <strong>pixels</strong>, that identify the radius by which the corners of an element are to be rounded. A single value will round all four corners of an element equally; two values will round the <strong>top-left/bottom-right</strong> and <strong>top-right/bottom-left</strong> corners in that order; four values will round the <strong>top-left, top-right, bottom-right, and bottom-left</strong> corners in that order.</p>
+<p>The border-radius property may also be broken out into longhand properties that allow us to change the radius of individual corners of an element. For example, to change the top-right corner radius of a <code>&lt;div</code>&gt;, the <strong>border-top-right-radius</strong> property can be used.</p>
+<h3 id="Box_Sizing">Box Sizing</h3>
+<p>Until now the box model has been an additive design. If you set the width of an element to 400 pixels and then add 20 pixels of padding and a border of 10 pixels on every side, the actual full width of the element becomes 460 pixels. Remember, we need to add the width, padding, and border property values together to get the actual, full width of an element.</p>
+<p>The box model may, however, be changed to support different calculations. CSS3 introduced the box-sizing property, which allows us to change exactly how the box model works and how an element’s size is calculated. The property accepts three primary values—<strong>content-box</strong>, <strong>padding-box</strong>, and <strong>border-box</strong>—each of which has a slightly different impact on how the box size is calculated.</p>
+<h4 id="Content_Box">Content Box</h4>
+<p>The content-box value is the default value, leaving the box model as an additive design. If we don’t use the box-sizing property, this will be the <strong>default value</strong> for all elements.</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">div</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">-webkit-box-sizing</span>:<span class="value"> content-box</span></span>;</div><div class="line">     <span class="rule"><span class="attribute">-moz-box-sizing</span>:<span class="value"> content-box</span></span>;</div><div class="line">          <span class="rule"><span class="attribute">box-sizing</span>:<span class="value"> content-box</span></span>;</div><div class="line"><span class="rule">}</span></div></pre></td></tr></table></figure>
+
+<p>Browser-Specific Properties &amp; Values</p>
+<pre><code>What are all those hyphens <span class="keyword">and</span> letters <span class="function_start"><span class="keyword">on</span></span> <span class="keyword">the</span> box-sizing <span class="keyword">property</span>?
+
+As CSS3 was introduced, browsers gradually began <span class="keyword">to</span> support different properties <span class="keyword">and</span> values, including <span class="keyword">the</span> box-sizing <span class="keyword">property</span>, <span class="keyword">by</span> way <span class="keyword">of</span> vendor prefixes. As parts <span class="keyword">of</span> <span class="keyword">the</span> CSS3 specification are finalized <span class="keyword">and</span> new browser versions are released, these vendor prefixes become less <span class="keyword">and</span> less relevant. As <span class="property">time</span> goes <span class="function_start"><span class="keyword">on</span></span>, vendor prefixes are unlikely <span class="keyword">to</span> be a problem; however, they still provide support <span class="keyword">for</span> <span class="keyword">some</span> <span class="keyword">of</span> <span class="keyword">the</span> older browsers <span class="keyword">that</span> leveraged them. We may <span class="command">run</span> across them <span class="keyword">from</span> <span class="property">time</span> <span class="keyword">to</span> <span class="property">time</span>, <span class="keyword">and</span> we may even want <span class="keyword">to</span> use them should we wish <span class="keyword">to</span> support older browsers.
+
+For <span class="keyword">reference</span>, <span class="keyword">the</span> most common vendor prefixes are outlined here:
+
+Mozilla Firefox: -moz-
+Microsoft Internet Explorer: -ms-
+Webkit (Google Chrome <span class="keyword">and</span> Apple Safari): -webkit-
+</code></pre><h4 id="Padding_Box">Padding Box</h4>
+<p>The padding-box value alters the box model by <strong>including any padding</strong> property values within the width and height of an element. When using the padding-box value, if an element has a width of 400 pixels and a padding of 20 pixels around every side, the actual width will remain 400 pixels.</p>
+<h4 id="Border_Box">Border Box</h4>
+<p>Lastly, the border-box value alters the box model so that <strong>any border or padding</strong> property values are included within the width and height of an element. When using the border-box value, if an element has a width of 400 pixels, a padding of 20 pixels around every side, and a border of 10 pixels around every side, the actual width will remain 400 pixels.</p>
+<h4 id="Picking_a_Box_Size">Picking a Box Size</h4>
+<p>Generally speaking, the best box-sizing value to use is <strong>border-box</strong>. The border-box value makes our math much, much easier. If we want an element to be 400 pixels wide, it is, and it will remain 400 pixels wide no matter what padding or border values we add to it.</p>
+<p>The only drawback to using the box-sizing property is that as part of the CSS3 specification, it isn’t supported in every browser; it especially lacks support in older browsers.</p>
+<h3 id="The_Universal_Selector">The Universal Selector</h3>
+<p>In the first step of this exercise we were introduced to the universal selector. In CSS the asterisk, *, is the universal selector, which selects every element. Rather than listing every single element imaginable, we can use the asterisk as a catch-all to select all elements for us.</p>
+<p>The :before and :after pseudo-elements also mentioned in this step are elements that can be dynamically generated with CSS. We’re not going to be using these elements within our project; however, when using the universal selector it’s a good practice to also include these pseudo-elements in case they should ever appear.</p>
+<h2 id="Summary">Summary</h2>
+<p>Learning all the different parts of the box model is no small feat. These concepts, although briefly introduced, take quite a bit of time to fully master, and we’re on the right path toward doing so.</p>
+<p>In brief, within this lesson we talked about the following:</p>
+<ul>
+<li>How different elements are displayed</li>
+<li>What the <strong>box model</strong> is and why it’s important</li>
+<li>How to change the <strong>size</strong>, including the height and width, of elements</li>
+<li>How to add <strong>margin</strong>, <strong>padding</strong>, and <strong>borders</strong> to elements</li>
+<li>How to change the box sizing of elements and the effects this has on the box model</li>
+</ul>
+	  
+	</div>
+
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+				
+    	<li class="prev"><a href="/2015/01/31/Learn to Code HTML & CSS 5/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+  		
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
+
+		
+		   <li class="next"><a href="/2015/01/29/Learn to Code HTML & CSS 3/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
+</ul>
+</div>
+
+    </center>
+	</div>
+	
+	<!-- comment -->
+	
+<section id="comment">
+  <h2 class="title">留言</h2>
+
+  
+</section>
+
+	
+	</div> <!-- col-md-9/col-md-12 -->
+	
+	
+		<div class="col-md-3"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2015 1月 30 
+	</div>
+	
+
+	<!-- categories -->
+    
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
+          
+  <li>
+    <li><a href="/categories/技术/">技术<span>11</span></a></li>
+  </li>
+
+    </ul>
+	</div>
+	
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/HTML/">HTML<span>8</span></a></li> <li><a href="/tags/CSS/">CSS<span>8</span></a></li>
+    </ul>
+	</div>
+		
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	   <a data-toggle="collapse" data-target="#toc"><i class="fa fa-bars"></i></a>
+	   <div id="toc" class="toc collapse in">
+			<ol class="toc-article"><li class="toc-article-item toc-article-level-1"><a class="toc-article-link" href="#Lesson_4:_Opening_the_Box_Model"><span class="toc-article-text">Lesson 4: Opening the Box Model</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#How_Are_Elements_Displayed?"><span class="toc-article-text">How Are Elements Displayed?</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Display"><span class="toc-article-text">Display</span></a></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Working_with_the_Box_Model"><span class="toc-article-text">Working with the Box Model</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Width_&_Height"><span class="toc-article-text">Width & Height</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Margin_&_Padding"><span class="toc-article-text">Margin & Padding</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Margin_&_Padding_Declarations"><span class="toc-article-text">Margin & Padding Declarations</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Borders"><span class="toc-article-text">Borders</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#Individual_Border_Sides"><span class="toc-article-text">Individual Border Sides</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#Border_Radius"><span class="toc-article-text">Border Radius</span></a></li></ol></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Box_Sizing"><span class="toc-article-text">Box Sizing</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#Content_Box"><span class="toc-article-text">Content Box</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#Padding_Box"><span class="toc-article-text">Padding Box</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#Border_Box"><span class="toc-article-text">Border Box</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#Picking_a_Box_Size"><span class="toc-article-text">Picking a Box Size</span></a></li></ol></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#The_Universal_Selector"><span class="toc-article-text">The Universal Selector</span></a></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Summary"><span class="toc-article-text">Summary</span></a></li></ol></li></ol>
+		</div>
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	
+
+</div><!-- row -->
+
+
+<!-- Duoshuo Comment BEGIN -->
+<div class="ds-thread" data-title="Learn to Code HTML &amp; CSS" data-url="http://baoxiehao.com/2015/01/30/Learn to Code HTML & CSS 4/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"baoxiehao"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+<!-- Duoshuo Comment END -->
+
+
+	</div>
+  </div>
+  <div class="container-narrow">
+  <footer> <p>
+  &copy; 2015 浩然也空
+  
+      with help from <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+</p> </footer>
+  <!-- Duoshuo Comment BEGIN -->
+<div class="ds-thread" data-title="Learn to Code HTML &amp; CSS" data-url="http://baoxiehao.com/2015/01/30/Learn to Code HTML & CSS 4/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"baoxiehao"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+<!-- Duoshuo Comment END -->
+
+</div> <!-- container-narrow -->
+  
+<a id="gotop" href="#">
+  <span>▲</span>
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-51276891-1', 'baoxiehao.com');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+   </html>

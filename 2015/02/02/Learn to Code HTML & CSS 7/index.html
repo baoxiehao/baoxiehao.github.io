@@ -1,0 +1,378 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Learn to Code HTML &amp; CSS | 浩然也空的博客</title>
+  <meta name="author" content="浩然也空">
+  
+  <meta name="description" content="每周一篇文章，每年一次总结。">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Learn to Code HTML &amp; CSS"/>
+  <meta property="og:site_name" content="浩然也空的博客"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  
+    <link rel="alternative" href="/atom.xml" title="浩然也空的博客" type="application/atom+xml">
+  
+  
+    <link href="/favicon.png" rel="icon">
+  
+
+  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', '[object Object]']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+
+ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+  
+
+</head>
+
+ <body>
+  <nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+	  <a class="navbar-brand" href="/">浩然也空的博客</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="所有归档">
+			  <i class="fa fa-archive"></i>归档
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="所有分类">
+			  <i class="fa fa-folder"></i>分类
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="所有标签">
+			  <i class="fa fa-tags"></i>标签
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/gallery" title="那些照片">
+			  <i class="fa fa-picture-a"></i>画廊
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="我的足迹">
+			  <i class="fa fa-user"></i>关于
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+  	<div class="content">
+    	 
+
+
+	
+		<div class="page-header">		
+			<h1> Learn to Code HTML &amp; CSS</h1>
+		</div>		
+	
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div class="col-md-9">
+	
+
+			
+
+	<!-- content -->
+	<div class="mypage">		
+	    <h1 id="Lesson_7:_Setting_Backgrounds_&amp;_Gradients"><a href="http://learn.shayhowe.com/html-css/setting-backgrounds-and-gradients/" target="_blank" rel="external">Lesson 7: Setting Backgrounds &amp; Gradients</a></h1>
+<a id="more"></a>
+
+<p>Backgrounds have a significant impact on the design of a website. They help create a site’s look and feel, establish groupings, and assign priority, and they have a considerable influence on a website’s usability.</p>
+<p>Within CSS, element backgrounds can be a <strong>solid color</strong>, an <strong>image</strong>, a <strong>gradient</strong>, or a <strong>combination</strong> of these. As we decide how to implement these backgrounds, we should keep in mind that every background contributes to the overall appearance of our website.</p>
+<h2 id="Adding_a_Background_Color">Adding a Background Color</h2>
+<p>The quickest way to add a background to an element is to add a single-color background using the <strong>background</strong> or <strong>background-color</strong> property. The background property accepts colors and images in shorthand form, while the background-color property is used strictly for setting solid background colors.</p>
+<pre><code>Transparent Backgrounds
+
+When using an RGBa <span class="keyword">or</span> HSLa value <span class="keyword">as</span> a transparent background color, <span class="keyword">it</span>’s a good idea <span class="keyword">to</span> provide a fallback color, too, because <span class="keyword">not</span> all browsers recognize RGBa <span class="keyword">or</span> HSLa values. And when a browser comes across a value <span class="keyword">it</span> doesn’t recognize, <span class="keyword">it</span> will ignore <span class="keyword">it</span>. Fortunately, there <span class="keyword">is</span> an easy way <span class="keyword">to</span> provide a fallback background.
+
+<span class="keyword">div</span> {
+  background-color: <span class="comment">#b2b2b2;</span>
+  background-color: rgba(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">.3</span>);
+}
+</code></pre><h2 id="Adding_a_Background_Image">Adding a Background Image</h2>
+<p>Besides adding a background color to an element, we can also add a background image. Background images work similarly to background colors; however, they offer a few additional properties to finesse the images. As before, we can use the background property with a shorthand value, or we can use the <strong>background-image</strong> property outright. No matter which property we use, there must be an image source identified using a <strong>url()</strong> function.</p>
+<h3 id="Background_Repeat">Background Repeat</h3>
+<p>By default, a background image will repeat indefinitely, both vertically and horizontally, unless otherwise specified. The <strong>background-repeat</strong> property may be used to change the direction in which a background image is repeated, if repeated at all.</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">div</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">background-image</span>:<span class="value"> <span class="function">url</span>(<span class="string">"alert.png"</span>)</span></span>;</div><div class="line">  <span class="rule"><span class="attribute">background-repeat</span>:<span class="value"> no-repeat</span></span>;</div><div class="line"><span class="rule">}</span></div></pre></td></tr></table></figure>
+
+<p>The background-repeat property accepts four different values: <strong>repeat</strong>, <strong>repeat-x</strong>, <strong>repeat-y</strong>, and <strong>no-repeat</strong>. The repeat value is the default value and will repeat a background image both vertically and horizontally.</p>
+<h3 id="Background_Position">Background Position</h3>
+<p>By default, background images are positioned at the left top corner of an element. However, by using the <strong>background-position</strong> property, we can control exactly where the background image is placed relative to that corner.</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">div</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">background-image</span>:<span class="value"> <span class="function">url</span>(<span class="string">"alert.png"</span>)</span></span>;</div><div class="line">  <span class="rule"><span class="attribute">background-position</span>:<span class="value"> <span class="number">20px</span> <span class="number">10px</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">background-repeat</span>:<span class="value"> no-repeat</span></span>;</div><div class="line"><span class="rule">}</span></div></pre></td></tr></table></figure>
+
+<p>The background-position property requires two values: a horizontal offset (the first value) and a vertical offset (the second value). If only one value is specified, that value is used for both the horizontal offset and the vertical offset will default to 50%.</p>
+<h3 id="Shorthand_Background_Image_Values">Shorthand Background Image Values</h3>
+<p>The background-color, background-image, background-position, and background-repeat properties may be rolled up into a shorthand value for the background property alone. The order of these properties as a shorthand background property value may vary, however it commonly falls as <strong>background-color</strong>, <strong>background-image</strong>, <strong>background-position</strong>, and then <strong>background-repeat</strong>.</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">div</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">background</span>:<span class="value"> <span class="hexcolor">#b2b2b2</span> <span class="function">url</span>(<span class="string">"alert.png"</span>) <span class="number">20px</span> <span class="number">10px</span> no-repeat</span></span>;</div><div class="line"><span class="rule">}</span></div></pre></td></tr></table></figure>
+
+<h2 id="Designing_Gradient_Backgrounds">Designing Gradient Backgrounds</h2>
+<p>Gradient backgrounds were introduced with CSS3, and designers and front-end developers everywhere rejoiced. Although gradient backgrounds do not work in legacy browsers, they are supported by all modern browsers.</p>
+<p>Within CSS, gradient backgrounds are treated as background images. We can create a gradient using the background or background-image properties, just like a regular background image. The property value for a gradient background varies depending on what type of gradient we’d like, <strong>linear</strong> or <strong>radial</strong>.</p>
+<h3 id="Linear_Gradient_Background">Linear Gradient Background</h3>
+<p>For years designers and developers have been cutting up gradient image files, created using image-processing software, and using them as linear gradient backgrounds on elements. The process worked, but it took a while to implement and was very inflexible. Fortunately those days are gone, and <a href="http://dev.opera.com/articles/css3-linear-gradients/" target="_blank" rel="external">linear gradient backgrounds</a> can now be specified within CSS.</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">div</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">background</span>:<span class="value"> <span class="hexcolor">#466368</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">background</span>:<span class="value"> <span class="function">-webkit-linear-gradient</span>(<span class="hexcolor">#648880</span>, <span class="hexcolor">#293f50</span>)</span></span>;</div><div class="line">  <span class="rule"><span class="attribute">background</span>:<span class="value">    <span class="function">-moz-linear-gradient</span>(<span class="hexcolor">#648880</span>, <span class="hexcolor">#293f50</span>)</span></span>;</div><div class="line">  <span class="rule"><span class="attribute">background</span>:<span class="value">         <span class="function">linear-gradient</span>(<span class="hexcolor">#648880</span>, <span class="hexcolor">#293f50</span>)</span></span>;</div><div class="line"><span class="rule">}</span></div></pre></td></tr></table></figure>
+
+<h4 id="Changing_the_Direction_of_a_Gradient_Background">Changing the Direction of a Gradient Background</h4>
+<p>By default, linear gradient backgrounds move from the top to the bottom of an element, transitioning smoothly between the first color value and the second. This direction, however, may be changed with the use of <strong>keywords</strong> or a <strong>degree value</strong> stated before any color values.</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">div</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">background</span>:<span class="value"> <span class="hexcolor">#466368</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">background</span>:<span class="value"> <span class="function">linear-gradient</span>(to right bottom, <span class="hexcolor">#648880</span>, <span class="hexcolor">#293f50</span>)</span></span>;</div><div class="line"><span class="rule">}</span></div></pre></td></tr></table></figure>
+
+<p>When we use a diagonal gradient on an element that isn’t exactly square, the background gradient will not proceed directly from one corner to the other. Instead, the gradient will identify the absolute center of the element, place anchors in the perpendicular corners from where it should progress, and then move to the general direction of the corner stated within the value. These corners the gradient moves towards are called “magic corners,” as they are not absolute. Eric Meyer has done a wonderful job of outlining this syntax in his article “<a href="http://meyerweb.com/eric/thoughts/2012/04/26/lineargradient-keywords/" target="_blank" rel="external">Linear Gradient Keywords</a>”.</p>
+<h4 id="Radial_Gradient_Background">Radial Gradient Background</h4>
+<p>While the linear gradient is perfect for a gradient moving from one direction to another, often the need for a radial gradient arises. Radial background gradients work just like linear gradients and share many of the same values.</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">div</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">background</span>:<span class="value"> <span class="hexcolor">#466368</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">background</span>:<span class="value"> <span class="function">radial-gradient</span>(<span class="hexcolor">#648880</span>, <span class="hexcolor">#293f50</span>)</span></span>;</div><div class="line"><span class="rule">}</span></div></pre></td></tr></table></figure>
+
+<p>Radial gradients work from the inside to the outside of an element. Thus, the first color identified within the radial-gradient() function will sit in the absolute center of the element, and the second color will sit on the outside of an element. The browser will then create the transition between the two colors.</p>
+<p>One of the primary differences between radial gradients and linear gradients is that radial gradients can be quite complex, with values for <strong>location</strong>, <strong>size</strong>, <strong>radius</strong>, and so forth. We’ll cover the basics, but please feel free to delve further into <a href="http://dev.opera.com/articles/css3-radial-gradients/" target="_blank" rel="external">radial gradients</a>, as they provide much more power than is outlined here.</p>
+<h4 id="CSS3_Gradient_Background_Generator">CSS3 Gradient Background Generator</h4>
+<p>Working with CSS3 gradients by hand can be quite difficult at times, especially if you are new to them. Fortunately, a few <a href="http://ie.microsoft.com/testdrive/graphics/cssgradientbackgroundmaker/default.html" target="_blank" rel="external">CSS3 gradient generators</a> have popped up. Each generator works a little differently, and some provide more options than others. If you’re interested, I recommend doing some research to find the right generator for your needs.</p>
+<h4 id="Gradient_Color_Stops">Gradient Color Stops</h4>
+<p>At a minimum, gradient backgrounds will transition from one color to another; however, we may add <strong>multiple colors</strong> to a gradient and have the browser transition between all of them. To do this we’ll add color stops to the given gradient function, with commas separating each color stop from the next.</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">div</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">background</span>:<span class="value"> <span class="hexcolor">#648880</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">background</span>:<span class="value"> <span class="function">linear-gradient</span>(to right, <span class="hexcolor">#f6f1d3</span>, <span class="hexcolor">#648880</span>, <span class="hexcolor">#293f50</span>)</span></span>;</div><div class="line"><span class="rule">}</span></div></pre></td></tr></table></figure>
+
+<p>By default, the browser will position every color stop an equal distance from the next and will transition between them accordingly. If more control over how colors are positioned is desired, a location along the gradient may be identified for each color stop. The location should be declared as a length value and should fall after the color value. Unless specified otherwise, the first color stop will be positioned at 0%, and the last color stop will be positioned at 100%.</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">div</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">background</span>:<span class="value"> <span class="hexcolor">#648880</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">background</span>:<span class="value"> <span class="function">linear-gradient</span>(to right, <span class="hexcolor">#f6f1d3</span>, <span class="hexcolor">#648880</span> <span class="number">85%</span>, <span class="hexcolor">#293f50</span>)</span></span>;</div><div class="line"><span class="rule">}</span></div></pre></td></tr></table></figure>
+
+<h2 id="Using_Multiple_Background_Images">Using Multiple Background Images</h2>
+<p>For the longest time, elements were allowed to have only one background image at a time, which created quite a few constraints when designing a page. Fortunately, with CSS3, we can now use more than one background image on an element by comma-separating multiple background values within a background or background-image property. The background image value that comes first will be the foremost background image, and the background image that’s listed last will be the rearmost background image. </p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"> <span class="tag">div</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">background</span>:<span class="value">  <span class="function">url</span>(<span class="string">"foreground.png"</span>) <span class="number">0</span> <span class="number">0</span> no-repeat, <span class="function">url</span>(<span class="string">"middle-ground.png"</span>) <span class="number">0</span> <span class="number">0</span> no-repeat, <span class="function">url</span>(<span class="string">"background.png"</span>) <span class="number">0</span> <span class="number">0</span> no-repeat</span></span>;</div><div class="line"><span class="rule">}</span></div></pre></td></tr></table></figure>
+
+<h2 id="Exploring_New_Background_Properties">Exploring New Background Properties</h2>
+<p>Along with gradient backgrounds and multiple background images, CSS3 also introduced three new CSS properties: <strong>background-size</strong>, <strong>background-clip</strong>, and <strong>background-origin</strong>.</p>
+<p>The background-size property allows us to change the size of a background image, while the background-clip and background-origin properties allow us to control where a background image is cropped and where a background image is contained within the element (inside the border or inside the padding, for example).</p>
+<h3 id="CSS3_Background_Size">CSS3 Background Size</h3>
+<p>The background-size property allows us to specify a size for a background image. The property accepts a few different values, including length and keyword values.</p>
+<p>When using length values, we can specify a width and a height value by using two space-separated values. The first value will set the width of the background image, while the second value will set the height of the background image. If a second value isn’t identified after the width, the height value will be automatically set to preserve the aspect ratio of the background image. The keyword value <strong>auto</strong> may be used as either the width or height value to preserve the aspect ratio of the background image.</p>
+<p> It’s important to note that <strong>percentage</strong> values are <strong>in relation to the element’s size</strong>, not the background image’s original size.</p>
+<h3 id="Cover_&amp;_Contain_Keyword_Values">Cover &amp; Contain Keyword Values</h3>
+<p>In addition to length background-size property values, there are also <strong>cover</strong> and <strong>contain</strong> keyword values available to the background-size property.</p>
+<p>The <strong>cover</strong> keyword value specifies that the background image will be resized to completely cover an element’s width and height. The background <strong>image’s original aspect ratio will be preserved</strong>, yet the image will stretch or shrink as necessary to cover the entire element. Often when using the cover keyword value, part of the background image is cut off in order for the image to occupy the full available space of the element.</p>
+<p>The <strong>contain</strong> keyword value, on the other hand, specifies that the background image will be resized to reside entirely contained within an element’s width and height. In doing so the background <strong>image’s original aspect ratio will be preserved</strong>, but the image will stretch or shrink as necessary to remain within the width and height of the element. <strong>In contrast with the cover keyword value, the contain keyword value will always show the full background image</strong>; however, oftentimes it will not occupy the full available space of the element.</p>
+<p>Both the cover and contain keyword values <strong>may result in slightly distorted</strong> background images, particularly when the images are stretched beyond their original dimensions. We’ll want to keep an eye out for this when using these values, to make sure the resulting styles are satisfactory.</p>
+<h3 id="CSS3_Background_Clip_&amp;_Background_Origin">CSS3 Background Clip &amp; Background Origin</h3>
+<p>The <strong>background-clip</strong> property specifies the surface area a background image will cover, and the <strong>background-origin</strong> property specifies where the background-position should originate. The introduction of these two new properties corresponds with the introduction of three new keyword values: <strong>border-box</strong>, <strong>padding-box</strong>, and <strong>content-box</strong>. Each of these three values may be used for the background-clip and background-origin properties.</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">div</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">background</span>:<span class="value"> <span class="function">url</span>(<span class="string">"shay.jpg"</span>) <span class="number">0</span> <span class="number">0</span> no-repeat</span></span>;</div><div class="line">  <span class="rule"><span class="attribute">background-clip</span>:<span class="value"> padding-box</span></span>;</div><div class="line">  <span class="rule"><span class="attribute">background-origin</span>:<span class="value"> border-box</span></span>;</div><div class="line"><span class="rule">}</span></div></pre></td></tr></table></figure>
+
+<h2 id="Summary">Summary</h2>
+<p>Adding backgrounds and gradients to our pages allows us to bring color to the forefront of our designs. These features also help to define how content is grouped and to improve the layout of our pages as a whole.</p>
+<p>To review, this lesson covered the following:</p>
+<ul>
+<li>How to add <strong>background colors and images</strong> to elements</li>
+<li><strong>CSS gradients</strong>, both linear and radial, and how to customize them</li>
+<li>How to apply <strong>multiple background images</strong> to a single element</li>
+<li>New CSS3 properties that allow us to change the <strong>size</strong>, <strong>surface area</strong>, and <strong>origin</strong> of background images</li>
+</ul>
+	  
+	</div>
+
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+				
+    	<li class="prev"><a href="/2015/02/03/Learn to Code HTML & CSS 8/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+  		
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
+
+		
+		   <li class="next"><a href="/2015/02/01/好文聚沙成塔/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
+</ul>
+</div>
+
+    </center>
+	</div>
+	
+	<!-- comment -->
+	
+<section id="comment">
+  <h2 class="title">留言</h2>
+
+  
+</section>
+
+	
+	</div> <!-- col-md-9/col-md-12 -->
+	
+	
+		<div class="col-md-3"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2015 2月 2 
+	</div>
+	
+
+	<!-- categories -->
+    
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
+          
+  <li>
+    <li><a href="/categories/技术/">技术<span>11</span></a></li>
+  </li>
+
+    </ul>
+	</div>
+	
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/HTML/">HTML<span>8</span></a></li> <li><a href="/tags/CSS/">CSS<span>8</span></a></li>
+    </ul>
+	</div>
+		
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	   <a data-toggle="collapse" data-target="#toc"><i class="fa fa-bars"></i></a>
+	   <div id="toc" class="toc collapse in">
+			<ol class="toc-article"><li class="toc-article-item toc-article-level-1"><a class="toc-article-link" href="#Lesson_7:_Setting_Backgrounds_&_Gradients"><span class="toc-article-text">Lesson 7: Setting Backgrounds & Gradients</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Adding_a_Background_Color"><span class="toc-article-text">Adding a Background Color</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Adding_a_Background_Image"><span class="toc-article-text">Adding a Background Image</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Background_Repeat"><span class="toc-article-text">Background Repeat</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Background_Position"><span class="toc-article-text">Background Position</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Shorthand_Background_Image_Values"><span class="toc-article-text">Shorthand Background Image Values</span></a></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Designing_Gradient_Backgrounds"><span class="toc-article-text">Designing Gradient Backgrounds</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Linear_Gradient_Background"><span class="toc-article-text">Linear Gradient Background</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#Changing_the_Direction_of_a_Gradient_Background"><span class="toc-article-text">Changing the Direction of a Gradient Background</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#Radial_Gradient_Background"><span class="toc-article-text">Radial Gradient Background</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#CSS3_Gradient_Background_Generator"><span class="toc-article-text">CSS3 Gradient Background Generator</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#Gradient_Color_Stops"><span class="toc-article-text">Gradient Color Stops</span></a></li></ol></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Using_Multiple_Background_Images"><span class="toc-article-text">Using Multiple Background Images</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Exploring_New_Background_Properties"><span class="toc-article-text">Exploring New Background Properties</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#CSS3_Background_Size"><span class="toc-article-text">CSS3 Background Size</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Cover_&_Contain_Keyword_Values"><span class="toc-article-text">Cover & Contain Keyword Values</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#CSS3_Background_Clip_&_Background_Origin"><span class="toc-article-text">CSS3 Background Clip & Background Origin</span></a></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Summary"><span class="toc-article-text">Summary</span></a></li></ol></li></ol>
+		</div>
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	
+
+</div><!-- row -->
+
+
+<!-- Duoshuo Comment BEGIN -->
+<div class="ds-thread" data-title="Learn to Code HTML &amp; CSS" data-url="http://baoxiehao.com/2015/02/02/Learn to Code HTML & CSS 7/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"baoxiehao"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+<!-- Duoshuo Comment END -->
+
+
+	</div>
+  </div>
+  <div class="container-narrow">
+  <footer> <p>
+  &copy; 2015 浩然也空
+  
+      with help from <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+</p> </footer>
+  <!-- Duoshuo Comment BEGIN -->
+<div class="ds-thread" data-title="Learn to Code HTML &amp; CSS" data-url="http://baoxiehao.com/2015/02/02/Learn to Code HTML & CSS 7/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"baoxiehao"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+<!-- Duoshuo Comment END -->
+
+</div> <!-- container-narrow -->
+  
+<a id="gotop" href="#">
+  <span>▲</span>
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-51276891-1', 'baoxiehao.com');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+   </html>

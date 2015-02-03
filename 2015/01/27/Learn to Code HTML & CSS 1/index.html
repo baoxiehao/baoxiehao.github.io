@@ -1,0 +1,386 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Learn to Code HTML &amp; CSS | 浩然也空的博客</title>
+  <meta name="author" content="浩然也空">
+  
+  <meta name="description" content="每周一篇文章，每年一次总结。">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Learn to Code HTML &amp; CSS"/>
+  <meta property="og:site_name" content="浩然也空的博客"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  
+    <link rel="alternative" href="/atom.xml" title="浩然也空的博客" type="application/atom+xml">
+  
+  
+    <link href="/favicon.png" rel="icon">
+  
+
+  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', '[object Object]']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+
+ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+  
+
+</head>
+
+ <body>
+  <nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+	  <a class="navbar-brand" href="/">浩然也空的博客</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="所有归档">
+			  <i class="fa fa-archive"></i>归档
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="所有分类">
+			  <i class="fa fa-folder"></i>分类
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="所有标签">
+			  <i class="fa fa-tags"></i>标签
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/gallery" title="那些照片">
+			  <i class="fa fa-picture-a"></i>画廊
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="我的足迹">
+			  <i class="fa fa-user"></i>关于
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+  	<div class="content">
+    	 
+
+
+	
+		<div class="page-header">		
+			<h1> Learn to Code HTML &amp; CSS</h1>
+		</div>		
+	
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div class="col-md-9">
+	
+
+			
+
+	<!-- content -->
+	<div class="mypage">		
+	    <h1 id="Lesson_1:_Building_Your_First_Web_Page"><a href="http://learn.shayhowe.com/html-css/building-your-first-web-page/" target="_blank" rel="external">Lesson 1: Building Your First Web Page</a></h1>
+<a id="more"></a>
+
+<h2 id="What_Are_HTML_&amp;_CSS?">What Are HTML &amp; CSS?</h2>
+<p>HTML, HyperText Markup Language, gives content structure and meaning by defining that content as, for example, headings, paragraphs, or images. CSS, or Cascading Style Sheets, is a presentation language created to style the appearance of content—using, for example, fonts or colors.</p>
+<p>The two languages—HTML and CSS—are independent of one another and should remain that way. CSS should not be written inside of an HTML document and vice versa. As a rule, HTML will always represent content, and CSS will always represent the appearance of that content.</p>
+<h2 id="Understanding_Common_HTML_Terms">Understanding Common HTML Terms</h2>
+<p>The three common HTML terms you should begin with are <strong>elements</strong>, <strong>tags</strong>, and <strong>attributes</strong>.</p>
+<h3 id="Elements">Elements</h3>
+<p>Elements are designators that define the structure and content of objects within a page. Some of the more frequently used elements include multiple levels of headings (identified as h1 through h6 elements) and paragraphs (identified as the <code>&lt;p</code>&gt; element); the list goes on to include the <code>&lt;a</code>&gt;, &lt;<code>div</code>&gt;, <code>&lt;span</code>&gt;, <code>&lt;strong</code>&gt;, and <code>&lt;em</code>&gt; elements, and many more.</p>
+<p>Thus, an element will look like the following:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">a</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<h3 id="Tags">Tags</h3>
+<p>The use of less-than and greater-than angle brackets surrounding an element creates what is known as a tag. Tags most commonly occur in pairs of opening and closing tags.</p>
+<p>So, anchor tags will look a bit like this:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">a</span>&gt;</span>...<span class="tag">&lt;/<span class="title">a</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<h3 id="Attributes">Attributes</h3>
+<p>Attributes are properties used to provide additional information about an element. The most common attributes include the <strong>id</strong> attribute, which identifies an element; the <strong>class</strong> attribute, which classifies an element; the <strong>src</strong> attribute, which specifies a source for embeddable content; and the <strong>href</strong> attribute, which provides a hyperlink reference to a linked resource.</p>
+<p>For example, an <code>&lt;a</code>&gt; element including an href attribute would look like the following:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"http://shayhowe.com/"</span>&gt;</span>Shay Howe<span class="tag">&lt;/<span class="title">a</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<h2 id="Setting_Up_the_HTML_Document_Structure">Setting Up the HTML Document Structure</h2>
+<p>All HTML documents have a required structure that includes the following declaration and elements: <code>&lt;!DOCTYPE html</code>&gt;, <code>&lt;html</code>&gt;, <code>&lt;head</code>&gt;, and <code>&lt;body</code>&gt;.</p>
+<p>All of the visible content within the web page will fall within the <code>&lt;body</code>&gt; element. A breakdown of a typical HTML document structure looks like this:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="doctype">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="title">html</span> <span class="attribute">lang</span>=<span class="value">"en"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">meta</span> <span class="attribute">charset</span>=<span class="value">"utf-8"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">title</span>&gt;</span>Hello World<span class="tag">&lt;/<span class="title">title</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="title">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">h1</span>&gt;</span>Hello World<span class="tag">&lt;/<span class="title">h1</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">p</span>&gt;</span>This is a web page.<span class="tag">&lt;/<span class="title">p</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="title">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">html</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<h3 id="Code_Validation">Code Validation</h3>
+<p>No matter how careful we are when writing our code, we will inevitably make mistakes. Thankfully, when writing HTML and CSS we have validators to check our work. The W3C has built both <a href="http://validator.w3.org/" target="_blank" rel="external">HTML</a> and <a href="http://jigsaw.w3.org/css-validator/" target="_blank" rel="external">CSS</a> validators that will scan code for mistakes. Validating our code not only helps it render properly across all browsers, but also helps teach us the best practices for writing code.</p>
+<h2 id="Understanding_Common_CSS_Terms">Understanding Common CSS Terms</h2>
+<p>In addition to HTML terms, there are a few common CSS terms you will want to familiarize yourself with. These terms include <strong>selectors</strong>, <strong>properties</strong>, and <strong>values</strong>. As with the HTML terminology, the more you work with CSS, the more these terms will become second nature.</p>
+<h3 id="Selectors">Selectors</h3>
+<p>As elements are added to a web page, they may be styled using CSS. A selector designates exactly which element or elements within our HTML to target and apply styles (such as color, size, and position) to. Selectors may include a combination of different qualifiers to select unique elements, all depending on how specific we wish to be.</p>
+<p>Selectors generally target an <strong>attribute value</strong>, such as an id or class value, or target the <strong>type of element</strong>, such as <code>&lt;h1</code>&gt; or <code>&lt;p</code>&gt;.</p>
+<h3 id="Properties">Properties</h3>
+<p>Once an element is selected, a property determines the styles that will be applied to that element. Property names fall after a selector, within the curly brackets, {}, and immediately preceding a colon.</p>
+<h3 id="Values">Values</h3>
+<p>So far we’ve selected an element with a selector and determined what style we’d like to apply with a property. Now we can determine the behavior of that property with a value. Values can be identified as the text between the colon and semicolon.</p>
+<h2 id="Working_with_Selectors">Working with Selectors</h2>
+<p>Selectors, as previously mentioned, indicate which HTML elements are being styled. It is important to fully understand how to use selectors and how they can be leveraged. The first step is to become familiar with the different types of selectors. We’ll start with the most common selectors: <strong>type</strong>, <strong>class</strong>, and <strong>ID</strong> selectors.</p>
+<h3 id="Type_Selectors">Type Selectors</h3>
+<p>Type selectors target elements by their element type. For example, should we wish to target all division elements, <code>&lt;div</code>&gt;, we would use a type selector of div.</p>
+<p>HTML</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">div</span>&gt;</span>...<span class="tag">&lt;/<span class="title">div</span>&gt;</span>          </div><div class="line"><span class="tag">&lt;<span class="title">div</span>&gt;</span>...<span class="tag">&lt;/<span class="title">div</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<p>CSS</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">div { ... }</div></pre></td></tr></table></figure>
+
+<h3 id="Class_Selectors">Class Selectors</h3>
+<p>Class selectors allow us to select an element based on the element’s class attribute value. Class selectors are a little more specific than type selectors, as they select a particular group of elements rather than all elements of one type.</p>
+<p>Class selectors allow us to apply the same styles to different elements at once by using the same class attribute value across multiple elements.</p>
+<p>Within CSS, classes are denoted by a leading period, <strong>.</strong>, followed by the class attribute value.</p>
+<p>HTML</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"awesome"</span>&gt;</span>...<span class="tag">&lt;/<span class="title">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="title">p</span> <span class="attribute">class</span>=<span class="value">"awesome"</span>&gt;</span>...<span class="tag">&lt;/<span class="title">p</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<p>CSS</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">.awesome { ... }</div></pre></td></tr></table></figure>
+
+<h3 id="ID_Selectors">ID Selectors</h3>
+<p>ID selectors are even more precise than class selectors, as they target only one unique element at a time. Just as class selectors use an element’s class attribute value as the selector, ID selectors use an element’s id attribute value as a selector.</p>
+<p>Regardless of which type of element they appear on, id attribute values can only be used <strong>once per page</strong>. If used they should be reserved for significant elements.</p>
+<p>HTML</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"shayhowe"</span>&gt;</span>...<span class="tag">&lt;/<span class="title">div</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<p>CSS</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">#shayhowe { ... }</div></pre></td></tr></table></figure>
+
+<h3 id="Additional_Selectors">Additional Selectors</h3>
+<p>Selectors are extremely powerful, and the selectors outlined here are the most common selectors we’ll come across. These selectors are also only the beginning. Many more <a href="http://learn.shayhowe.com/advanced-html-css/complex-selectors/" target="_blank" rel="external">advanced selectors</a> exist and are readily available. When you feel comfortable with these selectors, don’t be afraid to look into some of the more advanced selectors.</p>
+<h2 id="Referencing_CSS">Referencing CSS</h2>
+<p>In order to get our CSS talking to our HTML, we need to reference our CSS file within our HTML. The best practice for referencing our CSS is to include all of our styles in a single external style sheet, which is referenced from within the <code>&lt;head</code>&gt; element of our HTML document. Using a single external style sheet allows us to use the same styles across an entire website and quickly make changes sitewide.</p>
+<p>Consider the following example of an HTML document <code>&lt;head</code>&gt; element that references a single external style sheet.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">link</span> <span class="attribute">rel</span>=<span class="value">"stylesheet"</span> <span class="attribute">href</span>=<span class="value">"main.css"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">head</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<h2 id="Using_CSS_Resets">Using CSS Resets</h2>
+<p>Every web browser has its own default styles for different elements. How Google Chrome renders headings, paragraphs, lists, and so forth may be different from how Internet Explorer does. To ensure cross-browser compatibility, CSS resets have become widely used.</p>
+<p>There are a bunch of different resets available to use, all of which have their own fortes. One of the most popular resets is <a href="http://meyerweb.com/eric/tools/css/reset/" target="_blank" rel="external">Eric Meyer’s reset</a>, which has been adapted to include styles for the new HTML5 elements.</p>
+<p>If you are feeling a bit more adventurous, there is also Normalize.css, created by Nicolas Gallagher. <a href="http://necolas.github.io/normalize.css/" target="_blank" rel="external">Normalize.css</a> focuses not on using a hard reset for all common elements, but instead on setting common styles for these elements. It requires a stronger understanding of CSS, as well as awareness of what you’d like your styles to be.</p>
+<pre><code>Cross-Browser Compatibility &amp; Testing
+
+As previously mentioned, different browsers render elements <span class="operator">in</span> different ways. It’s important <span class="built_in">to</span> recognize <span class="operator">the</span> <span class="built_in">value</span> <span class="operator">in</span> cross-browser compatibility <span class="operator">and</span> testing. Websites don’t need <span class="built_in">to</span> look exactly <span class="operator">the</span> same <span class="operator">in</span> every browser, but they should be <span class="built_in">close</span>. Which browsers you wish <span class="built_in">to</span> support, <span class="operator">and</span> <span class="built_in">to</span> what degree, is <span class="operator">a</span> decision you will need <span class="built_in">to</span> make based <span class="command"><span class="keyword">on</span> <span class="title">what</span> <span class="title">is</span> <span class="title">best</span> <span class="title">for</span> <span class="title">your</span> <span class="title">website</span>.</span>
+</code></pre><h2 id="Summary">Summary</h2>
+<p>So far, so good! We’ve taken a few big steps in this lesson.</p>
+<p>Just think, you now know the basics of HTML and CSS. As we continue and you spend more time writing HTML and CSS, you’ll become much more comfortable with the two languages.</p>
+<p>To recap, so far we’ve covered the following:</p>
+<ul>
+<li>The <strong>difference</strong> between HTML and CSS</li>
+<li>Getting acquainted with <strong>HTML elements, tags, and attributes</strong></li>
+<li>Setting up the structure of your first web page</li>
+<li>Getting acquainted with CSS selectors, properties, and values</li>
+<li>Working with <strong>CSS selectors</strong></li>
+<li><strong>Referencing CSS</strong> in your HTML</li>
+<li>The value of <strong>CSS resets</strong></li>
+</ul>
+	  
+	</div>
+
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+				
+    	<li class="prev"><a href="/2015/01/28/Learn to Code HTML & CSS 2/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+  		
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
+
+		
+		   <li class="next"><a href="/2014/08/20/Alfred-Workflow初识/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
+</ul>
+</div>
+
+    </center>
+	</div>
+	
+	<!-- comment -->
+	
+<section id="comment">
+  <h2 class="title">留言</h2>
+
+  
+</section>
+
+	
+	</div> <!-- col-md-9/col-md-12 -->
+	
+	
+		<div class="col-md-3"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2015 1月 27 
+	</div>
+	
+
+	<!-- categories -->
+    
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
+          
+  <li>
+    <li><a href="/categories/技术/">技术<span>11</span></a></li>
+  </li>
+
+    </ul>
+	</div>
+	
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/HTML/">HTML<span>8</span></a></li> <li><a href="/tags/CSS/">CSS<span>8</span></a></li>
+    </ul>
+	</div>
+		
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	   <a data-toggle="collapse" data-target="#toc"><i class="fa fa-bars"></i></a>
+	   <div id="toc" class="toc collapse in">
+			<ol class="toc-article"><li class="toc-article-item toc-article-level-1"><a class="toc-article-link" href="#Lesson_1:_Building_Your_First_Web_Page"><span class="toc-article-text">Lesson 1: Building Your First Web Page</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#What_Are_HTML_&_CSS?"><span class="toc-article-text">What Are HTML & CSS?</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Understanding_Common_HTML_Terms"><span class="toc-article-text">Understanding Common HTML Terms</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Elements"><span class="toc-article-text">Elements</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Tags"><span class="toc-article-text">Tags</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Attributes"><span class="toc-article-text">Attributes</span></a></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Setting_Up_the_HTML_Document_Structure"><span class="toc-article-text">Setting Up the HTML Document Structure</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Code_Validation"><span class="toc-article-text">Code Validation</span></a></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Understanding_Common_CSS_Terms"><span class="toc-article-text">Understanding Common CSS Terms</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Selectors"><span class="toc-article-text">Selectors</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Properties"><span class="toc-article-text">Properties</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Values"><span class="toc-article-text">Values</span></a></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Working_with_Selectors"><span class="toc-article-text">Working with Selectors</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Type_Selectors"><span class="toc-article-text">Type Selectors</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Class_Selectors"><span class="toc-article-text">Class Selectors</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#ID_Selectors"><span class="toc-article-text">ID Selectors</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Additional_Selectors"><span class="toc-article-text">Additional Selectors</span></a></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Referencing_CSS"><span class="toc-article-text">Referencing CSS</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Using_CSS_Resets"><span class="toc-article-text">Using CSS Resets</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Summary"><span class="toc-article-text">Summary</span></a></li></ol></li></ol>
+		</div>
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	
+
+</div><!-- row -->
+
+
+<!-- Duoshuo Comment BEGIN -->
+<div class="ds-thread" data-title="Learn to Code HTML &amp; CSS" data-url="http://baoxiehao.com/2015/01/27/Learn to Code HTML & CSS 1/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"baoxiehao"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+<!-- Duoshuo Comment END -->
+
+
+	</div>
+  </div>
+  <div class="container-narrow">
+  <footer> <p>
+  &copy; 2015 浩然也空
+  
+      with help from <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+</p> </footer>
+  <!-- Duoshuo Comment BEGIN -->
+<div class="ds-thread" data-title="Learn to Code HTML &amp; CSS" data-url="http://baoxiehao.com/2015/01/27/Learn to Code HTML & CSS 1/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"baoxiehao"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+<!-- Duoshuo Comment END -->
+
+</div> <!-- container-narrow -->
+  
+<a id="gotop" href="#">
+  <span>▲</span>
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-51276891-1', 'baoxiehao.com');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+   </html>

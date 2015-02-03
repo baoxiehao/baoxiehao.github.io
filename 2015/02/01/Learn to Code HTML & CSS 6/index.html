@@ -1,0 +1,417 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Learn to Code HTML &amp; CSS | 浩然也空的博客</title>
+  <meta name="author" content="浩然也空">
+  
+  <meta name="description" content="每周一篇文章，每年一次总结。">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Learn to Code HTML &amp; CSS"/>
+  <meta property="og:site_name" content="浩然也空的博客"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  
+    <link rel="alternative" href="/atom.xml" title="浩然也空的博客" type="application/atom+xml">
+  
+  
+    <link href="/favicon.png" rel="icon">
+  
+
+  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', '[object Object]']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+
+ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+  
+
+</head>
+
+ <body>
+  <nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+	  <a class="navbar-brand" href="/">浩然也空的博客</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="所有归档">
+			  <i class="fa fa-archive"></i>归档
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="所有分类">
+			  <i class="fa fa-folder"></i>分类
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="所有标签">
+			  <i class="fa fa-tags"></i>标签
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/gallery" title="那些照片">
+			  <i class="fa fa-picture-a"></i>画廊
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="我的足迹">
+			  <i class="fa fa-user"></i>关于
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+  	<div class="content">
+    	 
+
+
+	
+		<div class="page-header">		
+			<h1> Learn to Code HTML &amp; CSS</h1>
+		</div>		
+	
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div class="col-md-9">
+	
+
+			
+
+	<!-- content -->
+	<div class="mypage">		
+	    <h1 id="Lesson_6:_Working_with_Typography"><a href="http://learn.shayhowe.com/html-css/working-with-typography/" target="_blank" rel="external">Lesson 6: Working with Typography</a></h1>
+<a id="more"></a>
+
+<p>The field of <a href="http://webtypography.net/" target="_blank" rel="external">web typography</a> has grown substantially over time. There are a couple of different reasons for its rise in popularity; one widely acknowledged reason is the development of a system for embedding our own web fonts on a website.</p>
+<pre><code>Typeface vs. Font
+
+The terms “typeface” <span class="keyword">and</span> “font” are often interchanged, causing confusion. Here <span class="keyword">is</span> a breakdown <span class="keyword">of</span> exactly what each term means. A typeface <span class="keyword">is</span> what we see. It <span class="keyword">is</span> <span class="keyword">the</span> artistic impression <span class="keyword">of</span> how <span class="type">text</span> looks, feels, <span class="keyword">and</span> reads. A font <span class="keyword">is</span> a <span class="type">file</span> <span class="keyword">that</span> <span class="keyword">contains</span> a typeface. Using a font <span class="function_start"><span class="keyword">on</span></span> a computer allows <span class="keyword">the</span> computer <span class="keyword">to</span> access <span class="keyword">the</span> typeface. One way <span class="keyword">to</span> help clarify <span class="keyword">the</span> difference <span class="keyword">between</span> a typeface <span class="keyword">and</span> a font <span class="keyword">is</span> <span class="keyword">to</span> compare them <span class="keyword">to</span> a song <span class="keyword">and</span> an MP3.
+</code></pre><h2 id="Adding_Color_to_Text">Adding Color to Text</h2>
+<p>Typically one of the first decisions we’ll make when building a website is choosing the <strong>primary typeface</strong> and <strong>text color</strong> to be used. While there are a number of other properties that can be changed—size, weight, and so on—the typeface and text color generally have the largest impact on the look and legibility of a page.</p>
+<h2 id="Changing_Font_Properties">Changing Font Properties</h2>
+<p>CSS offers a lot of different properties for editing the look and feel of text on a page. These properties fit into two categories: <strong>font-based</strong> properties and <strong>text-based</strong> properties. Most of these properties will be prefaced with either font-<em> or text-</em>.</p>
+<h3 id="Font_Family">Font Family</h3>
+<p>The font-family property is used to declare which font—as well as which fallback or substitute fonts—should be used to display text. The value of the font-family property contains multiple font names, all comma separated.</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">body</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">font-family</span>:<span class="value"> <span class="string">"Helvetica Neue"</span>, Helvetica, Arial, sans-serif</span></span>;</div><div class="line"><span class="rule">}</span></div></pre></td></tr></table></figure>
+
+<h3 id="Font_Size">Font Size</h3>
+<p>The font-size property provides the ability to set the size of text using common length values, including pixels, em units, percentages, points, or font-size keywords.</p>
+<h3 id="Font_Style">Font Style</h3>
+<p>To change text to italics, or to prevent text from being italicized, we’ll use the font-style property. The font-style property accepts four keyword values: <strong>normal</strong>, <strong>italic</strong>, <strong>oblique</strong>, and <strong>inherit</strong>. Of these four, the most commonly used are italic (sets text to italic) and normal (returns text to its normal style).</p>
+<h3 id="Font_Variant">Font Variant</h3>
+<p>It doesn’t happen often, but occasionally text will need to be set in small capitals, also known as small caps. For this specific case we’ll use the font-variant property. The font-variant property accepts three values: <strong>normal</strong>, <strong>small-caps</strong>, and <strong>inherit</strong>.</p>
+<h3 id="Font_Weight">Font Weight</h3>
+<p>Occasionally, we’ll want to style text as bold or to change the specific weight of a typeface. For these cases we’ll use the font-weight property. The font-weight property accepts either keyword or numeric values.</p>
+<p>Keyword values include <strong>normal</strong>, <strong>bold</strong>, <strong>bolder</strong>, <strong>lighter</strong>, and <strong>inherit</strong>. Of these keyword values, it is recommended to primarily use normal and bold to change text from normal to bold and vice versa. Rather than using the keyword values bolder or lighter, it’s better to use a numeric value for more specific control.</p>
+<p>The numeric values 100, 200, 300, 400, 500, 600, 700, 800, and 900 pertain specifically to typefaces that have multiple weights. The order of these weights starts with the thinnest weight, 100, and scales up to the thickest weight, 900. For reference, the keyword value of normal maps to <strong>400</strong> and the keyword bold maps to <strong>700</strong>.</p>
+<pre><code>Typeface Weights
+
+Before <span class="keyword">using</span> <span class="operator">a</span> <span class="keyword">numeric</span> <span class="built_in">value</span>, we need <span class="built_in">to</span> check <span class="operator">and</span> see whether <span class="operator">the</span> typeface we are <span class="keyword">using</span> comes <span class="operator">in</span> <span class="operator">the</span> weight we’d like <span class="built_in">to</span> use. Attempting <span class="built_in">to</span> use <span class="operator">a</span> weight that’s <span class="operator">not</span> available <span class="keyword">for</span> <span class="operator">a</span> given typeface will cause those styles <span class="built_in">to</span> default <span class="built_in">to</span> <span class="operator">the</span> closest <span class="built_in">value</span>.
+</code></pre><h3 id="Line_Height">Line Height</h3>
+<p>Line height, the distance between two lines of text (often referred to as leading) is declared using the line-height property. The line-height property accepts all general length values, which we covered in Lesson 3, “Getting to Know CSS.”</p>
+<p>The best practice for legibility is to set the line-height to around one and a half times our font-size property value. This could be quickly accomplished by setting the line-height to <strong>150%</strong>, or just <strong>1.5</strong>. However, if we’re working with a baseline grid, having a little more control over our line-height using pixels may be preferable.</p>
+<p>Line height may also be used to vertically center a single line of text within an element. Using the same property value for the line-height and height properties will vertically center the text:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="class">.btn</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">22px</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">line-height</span>:<span class="value"> <span class="number">22px</span></span></span>;</div><div class="line"><span class="rule">}</span></div></pre></td></tr></table></figure>
+
+<p>This technique may be seen with buttons, alert messages, and other single-line text blocks.</p>
+<h3 id="Shorthand_Font_Properties">Shorthand Font Properties</h3>
+<p>All of the font-based properties listed earlier may be combined and rolled into one font property and shorthand value. The font property can accept multiple font-based property values. The order of these property values should be as follows, from left to right: <strong>font-style</strong>, <strong>font-variant</strong>, <strong>font-weight</strong>, <strong>font-size</strong>, <strong>line-height</strong>, and <strong>font-family</strong>.</p>
+<p>As a shorthand value, these property values are listed from left to right without the use of commas (except for font names, as the font-family property value uses commas). <strong>A forward slash, /, separator is needed between the font-size and line-height property values</strong>.</p>
+<p>When using this shorthand value, every property value is optional except the font-size and font-family property values. That said, we can include <strong>only the font-size and font-family</strong> property values in the shorthand value if we wish.</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">html</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">font</span>:<span class="value"> italic small-caps bold <span class="number">14px</span>/<span class="number">22px</span> <span class="string">"Helvetica Neue"</span>, Helvetica, Arial, sans-serif</span></span>;</div><div class="line"><span class="rule">}</span></div></pre></td></tr></table></figure>
+
+<h2 id="Applying_Text_Properties">Applying Text Properties</h2>
+<p>Knowing how to set the family, size, style, variant, weight, and line height of a font is only half the battle. Additionally we can decide how to <strong>align</strong>, <strong>decorate</strong>, <strong>indent</strong>, <strong>transform</strong>, and <strong>space</strong> text.</p>
+<h3 id="Text_Align">Text Align</h3>
+<p>Aligning text is an important part of building a rhythm and flow on a page; we do this using the text-align property. The text-align property has five values: <strong>left</strong>, <strong>right</strong>, <strong>center</strong>, <strong>justify</strong>, and <strong>inherit</strong>.</p>
+<h3 id="Text_Decoration">Text Decoration</h3>
+<p>The text-decoration property provides a handful of ways to spruce up text. It accepts the keyword values of <strong>none</strong>, <strong>underline</strong>, <strong>overline</strong>, <strong>line-through</strong>, and <strong>inherit</strong>. Use of the text-decoration property varies, but the most popular use is to underline links, which is a default browser style. Multiple text-decoration values may be applied to an element at once by space-separating each keyword within the value.</p>
+<h3 id="Text_Indent">Text Indent</h3>
+<p>The text-indent property can be used to indent the first line of text within an element, as is commonly seen in printed publications. All common length values are available for this property, including pixels, points, percentages, and so on. Positive values will indent text inward, while negative values will indent text outward.</p>
+<h3 id="Text_Shadow">Text Shadow</h3>
+<p>The text-shadow property allows us to add a shadow or multiple shadows to text. The property generally takes four values, all listed one after the other from left to right. The first three values are lengths, and the last value is a color: <strong>horizontal offset</strong>, <strong>vertical offset</strong>, <strong>blur radius</strong>, and <strong>shadow color</strong>. Using negative length values for the horizontal and vertical offsets allows us to move shadows toward the left and the top.</p>
+<p>Multiple text shadows can also be chained together using comma-separated values, adding more than one shadow to the text. Using numerous shadows allows us to place them above and below the text, or in any variation we desire.</p>
+<pre><code>Box Shadow
+
+The <span class="keyword">text</span>-shadow property places <span class="operator">a</span> shadow specifically <span class="command"><span class="keyword">on</span> <span class="title">the</span> <span class="title">text</span> <span class="title">of</span> <span class="title">an</span> <span class="title">element</span>. <span class="title">If</span> <span class="title">we</span>’<span class="title">d</span> <span class="title">like</span> <span class="title">to</span> <span class="title">place</span> <span class="title">a</span> <span class="title">shadow</span> <span class="title">on</span> <span class="title">the</span> <span class="title">element</span> <span class="title">as</span> <span class="title">a</span> <span class="title">whole</span>, <span class="title">we</span> <span class="title">can</span> <span class="title">use</span> <span class="title">the</span> <span class="title">box-shadow</span> <span class="title">property</span>. <span class="title">The</span> <span class="title">box-shadow</span> <span class="title">property</span> <span class="title">works</span> <span class="title">just</span> <span class="title">like</span> <span class="title">the</span> <span class="title">text-shadow</span> <span class="title">property</span>, <span class="title">accepting</span> <span class="title">values</span> <span class="title">for</span> <span class="title">horizontal</span> <span class="title">and</span> <span class="title">vertical</span> <span class="title">offsets</span>, <span class="title">a</span> <span class="title">blur</span>, <span class="title">and</span> <span class="title">a</span> <span class="title">color</span>.</span>
+
+The box-shadow property also accepts <span class="operator">an</span> optional <span class="keyword">fourth</span> <span class="built_in">length</span> <span class="built_in">value</span>, <span class="keyword">before</span> <span class="operator">the</span> color <span class="built_in">value</span>, <span class="keyword">for</span> <span class="operator">the</span> **spread** <span class="operator">of</span> <span class="operator">a</span> shadow. As <span class="operator">a</span> positive <span class="built_in">length</span> <span class="built_in">value</span>, <span class="operator">the</span> spread will expand <span class="operator">the</span> shadow larger than <span class="operator">the</span> size <span class="operator">of</span> <span class="operator">the</span> <span class="keyword">element</span> <span class="keyword">it</span>’s applied <span class="built_in">to</span>, <span class="operator">and</span> <span class="keyword">as</span> <span class="operator">a</span> negative <span class="built_in">length</span> <span class="built_in">value</span> <span class="operator">the</span> spread will shrink <span class="operator">the</span> shadow <span class="built_in">to</span> be smaller than <span class="operator">the</span> size <span class="operator">of</span> <span class="operator">the</span> <span class="keyword">element</span> <span class="keyword">it</span>’s applied <span class="built_in">to</span>.
+
+Lastly, <span class="operator">the</span> box-shadow property may <span class="built_in">include</span> <span class="operator">an</span> optional **inset** <span class="built_in">value</span> <span class="keyword">at</span> <span class="operator">the</span> beginning <span class="operator">of</span> <span class="operator">the</span> <span class="built_in">value</span> <span class="built_in">to</span> place <span class="operator">the</span> shadow inside <span class="operator">an</span> <span class="keyword">element</span> <span class="keyword">as</span> opposed <span class="built_in">to</span> outside <span class="operator">the</span> <span class="keyword">element</span>.
+</code></pre><h3 id="Text_Transform">Text Transform</h3>
+<p>Similar to the font-variant property, there is the text-transform property. While the font-variant property looks for an alternate variant of a typeface, the text-transform property will change the text inline without the need for an alternate typeface. The text-transform property accepts five values: <strong>none</strong>, <strong>capitalize</strong>, <strong>uppercase</strong>, <strong>lowercase</strong>, and <strong>inherit</strong>.</p>
+<h3 id="Letter_Spacing">Letter Spacing</h3>
+<p>Using the letter-spacing property, we can adjust the space (or tracking) between the letters on a page. A <strong>positive length</strong> value will push letters farther apart from one another, while a <strong>negative length</strong> value will pull letters closer together. The keyword value <strong>none</strong> will return the space between letters back to its normal size.</p>
+<p>Using a <strong>relative length</strong> value with the letter-spacing property will help ensure that we maintain the correct spacing between letters as the font-size of the text is changed. It is, however, always a good idea to double-check our work.</p>
+<h3 id="Word_Spacing">Word Spacing</h3>
+<p>Much like the letter-spacing property, we can also adjust the space between words within an element using the word-spacing property. The word-spacing property accepts the same length values and keywords as the letter-spacing property.</p>
+<h2 id="Using_Web-Safe_Fonts">Using Web-Safe Fonts</h2>
+<p>By default there are a few fonts that are pre-installed on every computer, tablet, smart-phone, or other web-browsing-capable device. Because they’ve been installed on every device, we can use these fonts freely within our websites, knowing that no matter what device is browsing our site, the font will render properly. These fonts have become known as “web-safe fonts.” There are only a handful of them, and the safest of the web-safe fonts are listed here:</p>
+<ul>
+<li>Arial</li>
+<li>Courier New, Courier</li>
+<li>Garamond</li>
+<li>GeorgiaLucida Sans</li>
+<li>Lucida Grande, Lucida</li>
+<li>Palatino Linotype</li>
+<li>Tahoma</li>
+<li>Times New Roman, Times</li>
+<li>Trebuchet</li>
+<li>Verdana</li>
+</ul>
+<h2 id="Embedding_Web_Fonts">Embedding Web Fonts</h2>
+<p>We also have the ability to upload fonts to a server and include them on a website via the CSS @font-face at-rule. This capability has done wonders for online typography. Now, more than ever, typography is coming to life online.</p>
+<p>Embedding our own web fonts looks a bit like the following CSS. First, we use the @font-face at-rule to identify our font’s name, via the font-family property, as well as the source of our font (the path to the font file containing our chosen font), via the src property. From there we are able to use this font by including its name within any font-family property value.</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="at_rule">@<span class="keyword">font-face</span></span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">font-family</span>:<span class="value"> <span class="string">"Lobster"</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">src</span>:<span class="value"> <span class="function">local</span>(<span class="string">"Lobster"</span>), <span class="function">url</span>(<span class="string">"lobster.woff"</span>) <span class="function">format</span>(<span class="string">"woff"</span>)</span></span>;</div><div class="line"><span class="rule">}</span></div><div class="line"><span class="tag">body</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">font-family</span>:<span class="value"> <span class="string">"Lobster"</span>, <span class="string">"Comic Sans"</span>, cursive</span></span>;</div><div class="line"><span class="rule">}</span></div></pre></td></tr></table></figure>
+
+<p>Having the ability to embed any typeface on a website does not mean we legally have the authority to do so. Typefaces are works of art, and posting them on our server may allow others to easily steal them. The authority to use a typeface depends on the licensing we’ve been warranted.</p>
+<p>Fortunately, the value of using new typefaces online has been recognized, and companies have begun developing ways to license and include new fonts on websites. Some of these companies, like <a href="https://typekit.com/" target="_blank" rel="external">Typekit</a> and <a href="http://fontdeck.com/" target="_blank" rel="external">Fontdeck</a>, work off a subscription model for licensing fonts, while others, like <a href="https://www.google.com/fonts" target="_blank" rel="external">Google Fonts</a>, license the fonts for free. Before uploading any fonts, let’s make sure we have permission to do so.</p>
+<h2 id="Including_Citations_&amp;_Quotes">Including Citations &amp; Quotes</h2>
+<p>Writing online sometimes involves citing different sources or quotations. All of the different citation and quotation cases can be covered semantically in HTML using the <code>&lt;cite</code>&gt;, <code>&lt;q</code>&gt;, and <code>&lt;blockquote</code>&gt; elements. Because they are usually distinguished from regular text in appearance, we’ll discuss them here in the typography lesson.</p>
+<p>Knowing when to use which element and attribute to properly mark up citations and quotes takes a bit of practice. In general, follow these rules:</p>
+<ul>
+<li><code>&lt;cite</code>&gt;: Used to reference a creative work, author, or resource</li>
+<li><code>&lt;q</code>&gt;: Used for short, inline quotations</li>
+<li><code>&lt;blockquote</code>&gt;: Used for longer external quotations</li>
+</ul>
+<h3 id="Citing_a_Creative_Work">Citing a Creative Work</h3>
+<p>The <code>&lt;cite</code>&gt; inline element is used in HTML to specifically cite a creative work; the element must include either the title of the work, the author’s name, or a URL reference to the work. By default, content wrapped within the <code>&lt;cite</code>&gt; element will appear in italics within the browser. For additional reference, it helps to include a hyperlink to the original source of the citation when relevant.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">p</span>&gt;</span></div><div class="line">    The book <span class="tag">&lt;<span class="title">cite</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"http://www.amazon.com/Steve-Jobs-Walter-Isaacson/dp/1451648537"</span>&gt;</span>Steve Jobs<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">cite</span>&gt;</span> is truly inspirational.</div><div class="line"><span class="tag">&lt;/<span class="title">p</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<h3 id="Dialogue_&amp;_Prose_Quotation">Dialogue &amp; Prose Quotation</h3>
+<p>Quite often, dialogue or prose is quoted inline, within other text. For this purpose, the <code>&lt;q</code>&gt; (or quote) inline element should be applied. The <code>&lt;q</code>&gt; element semantically indicates quoted dialogue or prose and shouldn’t be used for any other purposes.</p>
+<p>By default, the browser will insert the proper quotation marks for us and will even change the quotation marks based on the language identified within the lang global attribute.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">p</span>&gt;</span></div><div class="line">    Steve Jobs once said, <span class="tag">&lt;<span class="title">q</span>&gt;</span>One home run is much better than two doubles.<span class="tag">&lt;/<span class="title">q</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">p</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<h3 id="Dialogue_&amp;_Prose_Citation">Dialogue &amp; Prose Citation</h3>
+<p>An optional attribute to include on the <code>&lt;q</code>&gt; element is the cite attribute. The cite attribute acts as a citation reference to the quote in the form of a URL. This attribute doesn’t alter the appearance of the element; it simply adds value for screen readers and other devices. Because the attribute isn’t viewable within the browser, it’s also helpful to provide a hyperlink to this source next to the actual quotation.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">p</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"http://www.businessweek.com/magazine/content/06_06/b3970001.htm"</span>&gt;</span>Steve Jobs<span class="tag">&lt;/<span class="title">a</span>&gt;</span> once said, <span class="tag">&lt;<span class="title">q</span> <span class="attribute">cite</span>=<span class="value">"http://www.businessweek.com/magazine/content/06_06/b3970001.htm"</span>&gt;</span>One home run is much better than two doubles.<span class="tag">&lt;/<span class="title">q</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">p</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<h3 id="External_Quotation">External Quotation</h3>
+<p>To quote a large block of text that comes from an external source and spans several lines, we’ll use the <code>&lt;blockquote</code>&gt; element. The <code>&lt;blockquote</code>&gt; is a <strong>block-level</strong> element that may have other block-level elements nested inside it, including headings and paragraphs.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">blockquote</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">p</span>&gt;</span></div><div class="line">        &#8220;In most people&#8217;s vocabularies, design is a veneer. It&#8217;s interior decorating. It&#8217;s the fabric of the curtains, of the sofa. But to me, nothing could be further from the meaning of design. Design is the fundamental soul of a human-made creation that ends up expressing itself in successive outer layers of the product.&#8221;</div><div class="line">    <span class="tag">&lt;/<span class="title">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">blockquote</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<h3 id="External_Citation">External Citation</h3>
+<p>Longer quotes used within the <code>&lt;blockquote</code>&gt; element will often include a citation. This citation may comprise both the cite attribute and the <code>&lt;cite</code>&gt; element.</p>
+<p>The cite attribute can be included on the <code>&lt;blockquote</code>&gt; element—in the same way that it was used on the <q> element earlier—to provide a citation reference to the quote in the form of a URL. The <code>&lt;cite</code>&gt; element then can fall after the actual quote itself to specify the original source of the quote, if relevant.</q></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">blockquote</span> <span class="attribute">cite</span>=<span class="value">"http://money.cnn.com/magazines/fortune/fortune_archive/2000/01/24/272277/index.htm"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">p</span>&gt;</span></div><div class="line">        &#8220;In most people&#8217;s vocabularies, design is a veneer. It&#8217;s interior decorating. It&#8217;s the fabric of the curtains, of the sofa. But to me, nothing could be further from the meaning of design. Design is the fundamental soul of a human-made creation that ends up expressing itself in successive outer layers of the product.&#8221;</div><div class="line">    <span class="tag">&lt;/<span class="title">p</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">p</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="title">cite</span>&gt;</span>&#8212; Steve Jobs in <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"http://money.cnn.com/ magazines/fortune/fortune_archive/2000/01/24/272277/index.htm"</span>&gt;</span> Fortune Magazine<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">cite</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="title">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">blockquote</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<h2 id="Summary">Summary</h2>
+<p>Learning how to style text is exciting, as our content can begin to convey some emotion. We can also start to play around with the hierarchy of our content, making our website more legible and digestible.</p>
+<p>To quickly recap, within this lesson we discussed the following:</p>
+<ul>
+<li>Adding <strong>color</strong> to our text to enhance it</li>
+<li>Applying <strong>font-based</strong> properties, including font-family, font-size, font-style, font-weight, and more</li>
+<li>Applying <strong>text-based</strong> properties, including text-align, text-decoration, text-indent, text-shadow, and more</li>
+<li>The history behind web-safe <strong>fonts</strong> and how to embed our own web fonts<br>How to properly mark up <strong>citations</strong> and <strong>quotations</strong></li>
+</ul>
+	  
+	</div>
+
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+				
+    	<li class="prev"><a href="/2015/02/01/好文聚沙成塔/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+  		
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
+
+		
+		   <li class="next"><a href="/2015/01/31/Learn to Code HTML & CSS 5/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
+</ul>
+</div>
+
+    </center>
+	</div>
+	
+	<!-- comment -->
+	
+<section id="comment">
+  <h2 class="title">留言</h2>
+
+  
+</section>
+
+	
+	</div> <!-- col-md-9/col-md-12 -->
+	
+	
+		<div class="col-md-3"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2015 2月 1 
+	</div>
+	
+
+	<!-- categories -->
+    
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
+          
+  <li>
+    <li><a href="/categories/技术/">技术<span>11</span></a></li>
+  </li>
+
+    </ul>
+	</div>
+	
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/HTML/">HTML<span>8</span></a></li> <li><a href="/tags/CSS/">CSS<span>8</span></a></li>
+    </ul>
+	</div>
+		
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	   <a data-toggle="collapse" data-target="#toc"><i class="fa fa-bars"></i></a>
+	   <div id="toc" class="toc collapse in">
+			<ol class="toc-article"><li class="toc-article-item toc-article-level-1"><a class="toc-article-link" href="#Lesson_6:_Working_with_Typography"><span class="toc-article-text">Lesson 6: Working with Typography</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Adding_Color_to_Text"><span class="toc-article-text">Adding Color to Text</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Changing_Font_Properties"><span class="toc-article-text">Changing Font Properties</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Font_Family"><span class="toc-article-text">Font Family</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Font_Size"><span class="toc-article-text">Font Size</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Font_Style"><span class="toc-article-text">Font Style</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Font_Variant"><span class="toc-article-text">Font Variant</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Font_Weight"><span class="toc-article-text">Font Weight</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Line_Height"><span class="toc-article-text">Line Height</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Shorthand_Font_Properties"><span class="toc-article-text">Shorthand Font Properties</span></a></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Applying_Text_Properties"><span class="toc-article-text">Applying Text Properties</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Text_Align"><span class="toc-article-text">Text Align</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Text_Decoration"><span class="toc-article-text">Text Decoration</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Text_Indent"><span class="toc-article-text">Text Indent</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Text_Shadow"><span class="toc-article-text">Text Shadow</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Text_Transform"><span class="toc-article-text">Text Transform</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Letter_Spacing"><span class="toc-article-text">Letter Spacing</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Word_Spacing"><span class="toc-article-text">Word Spacing</span></a></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Using_Web-Safe_Fonts"><span class="toc-article-text">Using Web-Safe Fonts</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Embedding_Web_Fonts"><span class="toc-article-text">Embedding Web Fonts</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Including_Citations_&_Quotes"><span class="toc-article-text">Including Citations & Quotes</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Citing_a_Creative_Work"><span class="toc-article-text">Citing a Creative Work</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Dialogue_&_Prose_Quotation"><span class="toc-article-text">Dialogue & Prose Quotation</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Dialogue_&_Prose_Citation"><span class="toc-article-text">Dialogue & Prose Citation</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#External_Quotation"><span class="toc-article-text">External Quotation</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#External_Citation"><span class="toc-article-text">External Citation</span></a></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Summary"><span class="toc-article-text">Summary</span></a></li></ol></li></ol>
+		</div>
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	
+
+</div><!-- row -->
+
+
+<!-- Duoshuo Comment BEGIN -->
+<div class="ds-thread" data-title="Learn to Code HTML &amp; CSS" data-url="http://baoxiehao.com/2015/02/01/Learn to Code HTML & CSS 6/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"baoxiehao"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+<!-- Duoshuo Comment END -->
+
+
+	</div>
+  </div>
+  <div class="container-narrow">
+  <footer> <p>
+  &copy; 2015 浩然也空
+  
+      with help from <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+</p> </footer>
+  <!-- Duoshuo Comment BEGIN -->
+<div class="ds-thread" data-title="Learn to Code HTML &amp; CSS" data-url="http://baoxiehao.com/2015/02/01/Learn to Code HTML & CSS 6/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"baoxiehao"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+<!-- Duoshuo Comment END -->
+
+</div> <!-- container-narrow -->
+  
+<a id="gotop" href="#">
+  <span>▲</span>
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-51276891-1', 'baoxiehao.com');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+   </html>

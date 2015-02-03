@@ -1,0 +1,396 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Learn to Code HTML &amp; CSS | 浩然也空的博客</title>
+  <meta name="author" content="浩然也空">
+  
+  <meta name="description" content="每周一篇文章，每年一次总结。">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Learn to Code HTML &amp; CSS"/>
+  <meta property="og:site_name" content="浩然也空的博客"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  
+    <link rel="alternative" href="/atom.xml" title="浩然也空的博客" type="application/atom+xml">
+  
+  
+    <link href="/favicon.png" rel="icon">
+  
+
+  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', '[object Object]']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+
+ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+  
+
+</head>
+
+ <body>
+  <nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+	  <a class="navbar-brand" href="/">浩然也空的博客</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="所有归档">
+			  <i class="fa fa-archive"></i>归档
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="所有分类">
+			  <i class="fa fa-folder"></i>分类
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="所有标签">
+			  <i class="fa fa-tags"></i>标签
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/gallery" title="那些照片">
+			  <i class="fa fa-picture-a"></i>画廊
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="我的足迹">
+			  <i class="fa fa-user"></i>关于
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+  	<div class="content">
+    	 
+
+
+	
+		<div class="page-header">		
+			<h1> Learn to Code HTML &amp; CSS</h1>
+		</div>		
+	
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div class="col-md-9">
+	
+
+			
+
+	<!-- content -->
+	<div class="mypage">		
+	    <h1 id="Lesson_2:_Getting_to_Know_HTML"><a href="http://learn.shayhowe.com/html-css/getting-to-know-html/" target="_blank" rel="external">Lesson 2: Getting to Know HTML</a></h1>
+<a id="more"></a>
+
+<p>In order to start building websites, we need to learn a little about which HTML elements are best used to display different types of content. It’s also important to understand how elements are visually displayed on a web page, as well as what different elements mean semantically.</p>
+<h2 id="Semantics_Overview">Semantics Overview</h2>
+<p>So what exactly are semantics? Semantics within HTML is the practice of giving content on the page meaning and structure by using the proper element. Semantic code describes the value of content on a page, regardless of the style or appearance of that content.</p>
+<h2 id="Identifying_Divisions_&amp;_Spans">Identifying Divisions &amp; Spans</h2>
+<p>Divisions, or <code>&lt;div</code>&gt;s, and <code>&lt;span</code>&gt;s are HTML elements that act as containers solely for styling purposes. As generic containers, they do not come with any overarching meaning or semantic value. Paragraphs are semantic in that content wrapped within a <code>&lt;p</code>&gt; element is known and understood as a paragraph. <code>&lt;div</code>&gt;s and <code>&lt;span</code>&gt;s do not hold any such meaning and are simply containers.</p>
+<pre><code><span class="keyword">Block</span> vs. <span class="keyword">Inline</span> Elements
+
+Most elements are either <span class="keyword">block</span>- <span class="keyword">or</span> <span class="keyword">inline</span>-level elements. What’s the difference?
+
+<span class="keyword">Block</span>-level elements <span class="keyword">begin</span> <span class="keyword">on</span> a <span class="keyword">new</span> line, stacking one <span class="keyword">on</span> top <span class="keyword">of</span> the other, <span class="keyword">and</span> occupy any available width. <span class="keyword">Block</span>-level elements may be <span class="keyword">nested</span> inside one another <span class="keyword">and</span> may wrap <span class="keyword">inline</span>-level elements. We’ll most commonly see <span class="keyword">block</span>-level elements used <span class="keyword">for</span> larger pieces <span class="keyword">of</span> content, such <span class="keyword">as</span> paragraphs.
+
+<span class="keyword">Inline</span>-level elements <span class="keyword">do</span> <span class="keyword">not</span> <span class="keyword">begin</span> <span class="keyword">on</span> a <span class="keyword">new</span> line. They fall <span class="keyword">into</span> the normal flow <span class="keyword">of</span> a document, lining up one after the other, <span class="keyword">and</span> only maintain the width <span class="keyword">of</span> their content. <span class="keyword">Inline</span>-level elements may be <span class="keyword">nested</span> inside one another; however, they cannot wrap <span class="keyword">block</span>-level elements. We’ll usually see <span class="keyword">inline</span>-level elements <span class="keyword">with</span> smaller pieces <span class="keyword">of</span> content, such <span class="keyword">as</span> a few words.
+</code></pre><h3 id="Divisions_&amp;_Spans_Elements">Divisions &amp; Spans Elements</h3>
+<p>Both <code>&lt;div</code>&gt;s and <code>&lt;span</code>&gt;s, however, are extremely valuable when building a website in that they give us the ability to apply targeted styles to a contained set of content.</p>
+<p>A <code>&lt;div</code>&gt; is a block-level element that is commonly used to identify large groupings of content, and which helps to build a web page’s layout and design. A <code>&lt;span</code>&gt;, on the other hand, is an inline-level element commonly used to identify smaller groupings of text within a block-level element.</p>
+<p>We’ll commonly see <code>&lt;div</code>&gt;s and <code>&lt;span</code>&gt;s with class or id attributes for styling purposes. Choosing a class or id attribute value, or name, requires a bit of care. We want to choose a value that refers to the <strong>content</strong> of an element, not necessarily the appearance of an element.</p>
+<pre><code>Comments within HTML &amp; CSS
+
+HTML comments start with <span class="comment">&lt;!-- and end with --&gt;</span>. CSS comments start with /* and end with */.
+</code></pre><h2 id="Using_Text-Based_Elements">Using Text-Based Elements</h2>
+<p>We’ll focus on the more popular elements, including <strong>headings</strong>, <strong>paragraphs</strong>, <strong>bold text</strong> to show importance, and <strong>italics</strong> for emphasis.</p>
+<h3 id="Headings">Headings</h3>
+<p>Headings are block-level elements, and they come in six different rankings, <code>&lt;h1</code>&gt; through <code>&lt;h6</code>&gt;. Headings help to quickly break up content and establish hierarchy, and they are key identifiers for users reading a page.</p>
+<h3 id="Paragraphs">Paragraphs</h3>
+<p>Headings are often followed by supporting paragraphs. Paragraphs are defined using the <code>&lt;p</code>&gt; block-level element. Paragraphs can appear one after the other, adding information to a page as desired.</p>
+<h3 id="Bold_Text_with_Strong">Bold Text with Strong</h3>
+<p>To make text bold and place a strong importance on it, we’ll use the <code>&lt;strong</code>&gt; inline-level element. There are two elements that will bold text for us: the <code>&lt;strong</code>&gt; and <code>&lt;b</code>&gt; elements. It is important to understand the <strong>semantic difference</strong> between the two.</p>
+<p>The <code>&lt;strong</code>&gt; element is semantically used to give <strong>strong importance</strong> to text, and is thus the most popular option for bolding text. The <code>&lt;b</code>&gt; element, on the other hand, semantically means to <strong>stylistically offset</strong> text, which isn’t always the best choice for text deserving prominent attention.</p>
+<h3 id="Italicize_Text_with_Emphasis">Italicize Text with Emphasis</h3>
+<p>To italicize text, thereby placing emphasis on it, we’ll use the <code>&lt;em</code>&gt; inline-level element. As with the elements for bold text, there are two different elements that will italicize text, each with a slightly different semantic meaning.</p>
+<p>The <code>&lt;em</code>&gt; element is used semantically to place a <strong>stressed emphasis</strong> on text; it is thus the most popular option for italicizing text. The other option, the <code>&lt;i</code>&gt; element, is used semantically to convey text in an <strong>alternative voice</strong> or tone, almost as if it were placed in quotation marks.</p>
+<h2 id="Building_Structure">Building Structure</h2>
+<p>For the longest time the structure of a web page was built using divisions. The problem was that divisions provide no semantic value, and it was fairly difficult to determine the intention of these divisions. Fortunately HTML5 introduced new structurally based elements, including the <strong><code>&lt;header</code>&gt;</strong>, <strong><code>&lt;nav</code>&gt;</strong>, <strong><code>&lt;article</code>&gt;</strong>, <strong><code>&lt;section</code>&gt;</strong>, <strong><code>&lt;aside</code>&gt;</strong>, and <strong><code>&lt;footer</code>&gt;</strong> elements.</p>
+<p>All of these new elements are intended to give meaning to the organization of our pages and improve our structural semantics. They are all <strong>block-level</strong> elements and do not have any implied position or style. Additionally, all of these elements may be used multiple times per page, so long as each use reflects the proper semantic meaning.</p>
+<h3 id="Header">Header</h3>
+<p>The <code>&lt;header</code>&gt; element, like it sounds, is used to identify the top of a page, article, section, or other segment of a page. In general, the <code>&lt;header</code>&gt; element may include a heading, introductory text, and even navigation.</p>
+<pre><code>&lt;header&gt; vs. &lt;head&gt; vs. &lt;h1&gt; through &lt;h6&gt; Elements
+
+It is easy <span class="built_in">to</span> confuse <span class="operator">the</span> &lt;header&gt; <span class="keyword">element</span> <span class="operator">with</span> <span class="operator">the</span> &lt;head&gt; <span class="keyword">element</span> <span class="operator">or</span> <span class="operator">the</span> heading elements, &lt;h1&gt; through &lt;h6&gt;. They all have different semantic meanings <span class="operator">and</span> should be used according <span class="built_in">to</span> their meanings. For reference…
+
+The &lt;header&gt; <span class="keyword">element</span> is <span class="operator">a</span> structural <span class="keyword">element</span> that outlines <span class="operator">the</span> heading <span class="operator">of</span> <span class="operator">a</span> segment <span class="operator">of</span> <span class="operator">a</span> page. It falls <span class="operator">within</span> <span class="operator">the</span> &lt;body&gt; <span class="keyword">element</span>.
+
+The &lt;head&gt; <span class="keyword">element</span> is <span class="operator">not</span> displayed <span class="command"><span class="keyword">on</span> <span class="title">a</span> <span class="title">page</span> <span class="title">and</span> <span class="title">is</span> <span class="title">used</span> <span class="title">to</span> <span class="title">outline</span> <span class="title">metadata</span>, <span class="title">including</span> <span class="title">the</span> <span class="title">document</span> <span class="title">title</span>, <span class="title">and</span> <span class="title">links</span> <span class="title">to</span> <span class="title">external</span> <span class="title">files</span>. <span class="title">It</span> <span class="title">falls</span> <span class="title">directly</span> <span class="title">within</span> <span class="title">the</span> &lt;<span class="title">html</span>&gt; <span class="title">element</span>.</span>
+
+Heading elements, &lt;h1&gt; through &lt;h6&gt;, are used <span class="built_in">to</span> designate multiple levels <span class="operator">of</span> <span class="keyword">text</span> headings throughout <span class="operator">a</span> page.
+</code></pre><h3 id="Navigation">Navigation</h3>
+<p>The <code>&lt;nav</code>&gt; element identifies a section of <strong>major navigational links</strong> on a page. The <code>&lt;nav</code>&gt; element should be reserved for primary navigation sections only, such as global navigation, a table of contents, previous/next links, or other noteworthy groups of navigational links.</p>
+<p>Most commonly, links included within the <code>&lt;nav</code>&gt; element will link to other pages <strong>within</strong> the same website or to parts of the same web page. Miscellaneous one-off links should not be wrapped within the <code>&lt;nav</code>&gt; element; they should use the anchor element, <code>&lt;a</code>&gt;, and the anchor element alone.</p>
+<h3 id="Article">Article</h3>
+<p>The <code>&lt;article</code>&gt; element is used to identify a section of independent, self-contained content that may be <strong>independently distributed or reused</strong>. We’ll often use the <code>&lt;article</code>&gt; element to mark up blog posts, newspaper articles, user-submitted content, and the like.</p>
+<p>When deciding whether to use the <code>&lt;article</code>&gt; element, we must determine if the content within the element could be replicated elsewhere without any confusion. If the content within the <code>&lt;article</code>&gt; element were removed from the context of the page and placed, for example, within an email or printed work, that content should still make sense.</p>
+<h3 id="Section">Section</h3>
+<p>The <code>&lt;section</code>&gt; element is used to identify a <strong>thematic grouping</strong> of content, which generally, but not always, includes a heading. The grouping of content within the <code>&lt;section</code>&gt; element may be generic in nature, but it’s useful to identify all of the content as related.</p>
+<p>The <code>&lt;section</code>&gt; element is commonly used to break up and provide hierarchy to a page.</p>
+<pre><code>Deciding Between &lt;article&gt;, &lt;section&gt;, <span class="operator">or</span> &lt;<span class="operator">div</span>&gt; Elements
+
+At times <span class="keyword">it</span> becomes fairly difficult <span class="built_in">to</span> decide which <span class="keyword">element</span>—&lt;article&gt;, &lt;section&gt;, <span class="operator">or</span> &lt;<span class="operator">div</span>&gt;—is <span class="operator">the</span> best <span class="keyword">element</span> <span class="keyword">for</span> <span class="operator">the</span> job based <span class="command"><span class="keyword">on</span> <span class="title">its</span> <span class="title">semantic</span> <span class="title">meaning</span>. <span class="title">The</span> <span class="title">trick</span> <span class="title">here</span>, <span class="title">as</span> <span class="title">with</span> <span class="title">every</span> <span class="title">semantic</span> <span class="title">decision</span>, <span class="title">is</span> <span class="title">to</span> <span class="title">look</span> <span class="title">at</span> <span class="title">the</span> <span class="title">content</span>.</span>
+
+Both <span class="operator">the</span> &lt;article&gt; <span class="operator">and</span> &lt;section&gt; elements contribute <span class="built_in">to</span> <span class="operator">a</span> document’s structure <span class="operator">and</span> help <span class="built_in">to</span> outline <span class="operator">a</span> document. If <span class="operator">the</span> content is being grouped solely <span class="keyword">for</span> styling purposes <span class="operator">and</span> doesn’t provide <span class="built_in">value</span> <span class="built_in">to</span> <span class="operator">the</span> outline <span class="operator">of</span> <span class="operator">a</span> document, use <span class="operator">the</span> &lt;<span class="operator">div</span>&gt; <span class="keyword">element</span>.
+
+If <span class="operator">the</span> content adds <span class="built_in">to</span> <span class="operator">the</span> document outline <span class="operator">and</span> <span class="keyword">it</span> can be independently redistributed <span class="operator">or</span> syndicated, use <span class="operator">the</span> &lt;article&gt; <span class="keyword">element</span>.
+
+If <span class="operator">the</span> content adds <span class="built_in">to</span> <span class="operator">the</span> document outline <span class="operator">and</span> represents <span class="operator">a</span> thematic group <span class="operator">of</span> content, use <span class="operator">the</span> &lt;section&gt; <span class="keyword">element</span>.
+</code></pre><h3 id="Aside">Aside</h3>
+<p>The <code>&lt;aside</code>&gt; element holds content, such as sidebars, inserts, or brief explanations, that is tangentially related to the content surrounding it. When used within an <article> element, for example, the <code>&lt;aside</code>&gt; element may identify content related to the author of the article.</article></p>
+<p>We may instinctively think of an <code>&lt;aside</code>&gt; element as an element that appears off to the left or right side of a page. We have to remember, though, that all of the structural elements, including the <code>&lt;aside</code>&gt; element, are <strong>block-level</strong> elements and as such will appear on a new line, occupying the full available width of the page or of the element they are nested within, also known as their parent element.</p>
+<h3 id="Footer">Footer</h3>
+<p>The <code>&lt;footer</code>&gt; element identifies the closing or end of a page, article, section, or other segment of a page. Generally the <code>&lt;footer</code>&gt; element is found at the bottom of its parent. Content within the <code>&lt;footer</code>&gt; element should be relative information and should not diverge from the document or section it is included within.</p>
+<pre><code>Encoding Special Characters
+
+Special characters include various punctuation marks, accented letters, <span class="keyword">and</span> symbols. <span class="keyword">When</span> typed directly into HTML, they can be misunderstood <span class="keyword">or</span> mistaken <span class="keyword">for</span> the wrong <span class="typename">character</span>; thus they need <span class="keyword">to</span> be encoded.
+
+Each encoded <span class="typename">character</span> will <span class="keyword">begin</span> <span class="keyword">with</span> an ampersand, &amp;, <span class="keyword">and</span> <span class="keyword">end</span> <span class="keyword">with</span> a semicolon, ;. What falls between the ampersand <span class="keyword">and</span> semicolon <span class="keyword">is</span> a <span class="typename">character</span>’s unique encoding, be it a name <span class="keyword">or</span> numeric encoding. <span class="keyword">For</span> reference, a long list <span class="keyword">of</span> <span class="typename">character</span> encodings may be found at [Copy Paste <span class="typename">Character</span>](http://copypastecharacter.com/).
+</code></pre><h2 id="Creating_Hyperlinks">Creating Hyperlinks</h2>
+<p>Along with text, one of the core components of the Internet is the hyperlink, which provides the ability to link from one web page or resource to another. Hyperlinks are established using the anchor, <code>&lt;a</code>&gt;, <strong>inline-level</strong> element. In order to create a link from one page (or resource) to another, the href attribute, known as a hyperlink reference, is required. The href attribute value identifies the destination of the link.</p>
+<pre><code>Wrapping Block-Level Elements <span class="operator">with</span> Anchors
+
+By nature <span class="operator">the</span> anchor <span class="keyword">element</span>, &lt;<span class="operator">a</span>&gt;, is <span class="operator">an</span> inline <span class="keyword">element</span>, <span class="operator">and</span>, according <span class="built_in">to</span> web standards, inline-level elements may <span class="operator">not</span> <span class="operator">wrap</span> block-level elements. With <span class="operator">the</span> introduction <span class="operator">of</span> HTML5, however, anchor elements specifically have permission <span class="built_in">to</span> <span class="operator">wrap</span> either block-, inline-, <span class="operator">or</span> <span class="keyword">any</span> other level elements. This is <span class="operator">a</span> break <span class="built_in">from</span> <span class="operator">the</span> standard convention, but <span class="keyword">it</span>’s permissible <span class="operator">in</span> order <span class="built_in">to</span> enable entire blocks <span class="operator">of</span> content <span class="command"><span class="keyword">on</span> <span class="title">a</span> <span class="title">page</span> <span class="title">to</span> <span class="title">become</span> <span class="title">links</span>.</span>
+</code></pre><h3 id="Linking_to_an_Email_Address">Linking to an Email Address</h3>
+<p>Occasionally we may want to create a hyperlink to our email address—for example, hyperlink text that says “Email Me,” which when clicked opens a user’s default email client and pre-populates part of an email. At a minimum the email address to which the email is being sent is populated; other information such as a subject line and body text may also be included.</p>
+<p>For example, a link to shay@awesome.com with the subject of “Reaching Out” and body text of “How are you” would require an href attribute value of mailto:shay@awesome.com?subject=Reaching%20Out&amp;body=How%20are%20you.</p>
+<h3 id="Opening_Links_in_a_New_Window">Opening Links in a New Window</h3>
+<p>One feature available with hyperlinks is the ability to determine where a link opens when clicked. Typically, links open in the same window from which they are clicked; however, links may also be opened in new windows.</p>
+<p>To open <a href="http://shayhowe.com/" target="_blank" rel="external">http://shayhowe.com/</a> in a new window, the code would look like this:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"http://shayhowe.com/"</span> <span class="attribute">target</span>=<span class="value">"_blank"</span>&gt;</span>Shay Howe<span class="tag">&lt;/<span class="title">a</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<h3 id="Linking_to_Parts_of_the_Same_Page">Linking to Parts of the Same Page</h3>
+<p>Periodically we’ll see hyperlinks that link to part of the same page the link appears on. A common example of these same-page links are “Back to top” links that return a user to the top of a page.</p>
+<p>We can create an on-page link by first setting an id attribute on the element we wish to link to, then using the value of that id attribute within an anchor element’s href attribute.</p>
+<p>Using the “Back to top” link as an example, our code for this same-page link would look like the following:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">body</span> <span class="attribute">id</span>=<span class="value">"top"</span>&gt;</span></div><div class="line">  ...</div><div class="line">  <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#top"</span>&gt;</span>Back to top<span class="tag">&lt;/<span class="title">a</span>&gt;</span></div><div class="line">  ...</div><div class="line"><span class="tag">&lt;/<span class="title">body</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<h2 id="Summary">Summary</h2>
+<p>Semantics, as discussed within this lesson, are essential for providing our HTML with structure and meaning. Moving forward we’ll periodically introduce new elements, all of which will come with their own semantic meaning. It is the meaning of all of these elements that will provide our content with the most value.</p>
+<p>Once again, in this lesson we covered the following:</p>
+<ul>
+<li>What semantics are and why they are important</li>
+<li><strong><div></div></strong>s and <strong><spans></spans></strong>s, and the difference between <strong>block- and inline-level elements</strong></li>
+<li>Which text-based elements best represent the content of a page</li>
+<li>The HTML5 structural elements and how to define the <strong>structure and organization</strong> of our content and page</li>
+<li>How to use <strong>hyperlinks</strong> to navigate between web pages or websites</li>
+</ul>
+	  
+	</div>
+
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+				
+    	<li class="prev"><a href="/2015/01/29/Learn to Code HTML & CSS 3/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+  		
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
+
+		
+		   <li class="next"><a href="/2015/01/27/Learn to Code HTML & CSS 1/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
+</ul>
+</div>
+
+    </center>
+	</div>
+	
+	<!-- comment -->
+	
+<section id="comment">
+  <h2 class="title">留言</h2>
+
+  
+</section>
+
+	
+	</div> <!-- col-md-9/col-md-12 -->
+	
+	
+		<div class="col-md-3"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2015 1月 28 
+	</div>
+	
+
+	<!-- categories -->
+    
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
+          
+  <li>
+    <li><a href="/categories/技术/">技术<span>11</span></a></li>
+  </li>
+
+    </ul>
+	</div>
+	
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/HTML/">HTML<span>8</span></a></li> <li><a href="/tags/CSS/">CSS<span>8</span></a></li>
+    </ul>
+	</div>
+		
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	   <a data-toggle="collapse" data-target="#toc"><i class="fa fa-bars"></i></a>
+	   <div id="toc" class="toc collapse in">
+			<ol class="toc-article"><li class="toc-article-item toc-article-level-1"><a class="toc-article-link" href="#Lesson_2:_Getting_to_Know_HTML"><span class="toc-article-text">Lesson 2: Getting to Know HTML</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Semantics_Overview"><span class="toc-article-text">Semantics Overview</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Identifying_Divisions_&_Spans"><span class="toc-article-text">Identifying Divisions & Spans</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Divisions_&_Spans_Elements"><span class="toc-article-text">Divisions & Spans Elements</span></a></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Using_Text-Based_Elements"><span class="toc-article-text">Using Text-Based Elements</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Headings"><span class="toc-article-text">Headings</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Paragraphs"><span class="toc-article-text">Paragraphs</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Bold_Text_with_Strong"><span class="toc-article-text">Bold Text with Strong</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Italicize_Text_with_Emphasis"><span class="toc-article-text">Italicize Text with Emphasis</span></a></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Building_Structure"><span class="toc-article-text">Building Structure</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Header"><span class="toc-article-text">Header</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Navigation"><span class="toc-article-text">Navigation</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Article"><span class="toc-article-text">Article</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Section"><span class="toc-article-text">Section</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Aside"><span class="toc-article-text">Aside</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Footer"><span class="toc-article-text">Footer</span></a></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Creating_Hyperlinks"><span class="toc-article-text">Creating Hyperlinks</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Linking_to_an_Email_Address"><span class="toc-article-text">Linking to an Email Address</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Opening_Links_in_a_New_Window"><span class="toc-article-text">Opening Links in a New Window</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Linking_to_Parts_of_the_Same_Page"><span class="toc-article-text">Linking to Parts of the Same Page</span></a></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Summary"><span class="toc-article-text">Summary</span></a></li></ol></li></ol>
+		</div>
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	
+
+</div><!-- row -->
+
+
+<!-- Duoshuo Comment BEGIN -->
+<div class="ds-thread" data-title="Learn to Code HTML &amp; CSS" data-url="http://baoxiehao.com/2015/01/28/Learn to Code HTML & CSS 2/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"baoxiehao"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+<!-- Duoshuo Comment END -->
+
+
+	</div>
+  </div>
+  <div class="container-narrow">
+  <footer> <p>
+  &copy; 2015 浩然也空
+  
+      with help from <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+</p> </footer>
+  <!-- Duoshuo Comment BEGIN -->
+<div class="ds-thread" data-title="Learn to Code HTML &amp; CSS" data-url="http://baoxiehao.com/2015/01/28/Learn to Code HTML & CSS 2/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"baoxiehao"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+<!-- Duoshuo Comment END -->
+
+</div> <!-- container-narrow -->
+  
+<a id="gotop" href="#">
+  <span>▲</span>
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-51276891-1', 'baoxiehao.com');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+   </html>
