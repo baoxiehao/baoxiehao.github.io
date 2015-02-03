@@ -4,7 +4,7 @@
   <subtitle><![CDATA[淡静良觉之地]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://baoxiehao.com/"/>
-  <updated>2015-02-03T06:37:28.153Z</updated>
+  <updated>2015-02-03T06:39:28.794Z</updated>
   <id>http://baoxiehao.com/</id>
   
   <author>
@@ -916,8 +916,9 @@ As previously mentioned, different browsers render elements <span class="operato
     <link href="http://baoxiehao.com/2015/01/01/%E5%A5%BD%E6%96%87%E8%81%9A%E6%B2%99%E6%88%90%E5%A1%94/"/>
     <id>http://baoxiehao.com/2015/01/01/好文聚沙成塔/</id>
     <published>2015-01-01T12:42:44.000Z</published>
-    <updated>2015-02-03T06:37:22.000Z</updated>
-    <content type="html"><![CDATA[<a id="more"></a>
+    <updated>2015-02-03T06:39:23.000Z</updated>
+    <content type="html"><![CDATA[<p>分享那些值得记录的好文章</p>
+<a id="more"></a>
 
 <h1 id="技术类">技术类</h1>
 <p><a href="http://get.jobdeer.com/744.get" target="_blank" rel="external">如何写好技术简历 —— 实例、模板及工具</a><br><a href="http://fabiensanglard.net/git_code_review/index.php" target="_blank" rel="external">Git源码赏析三篇（综述、由来、结构）</a><br><a href="http://blog.jobbole.com/66227/" target="_blank" rel="external">jQuery之父：每天都写点代码</a><br><a href="http://codecondo.com/coding-challenges/" target="_blank" rel="external">14个帮你锻炼脑思维的代码编程挑战网站</a><br><a href="http://overapi.com/" target="_blank" rel="external">在线API查询大全</a></p>
@@ -930,7 +931,8 @@ As previously mentioned, different browsers render elements <span class="operato
 <h1 id="设计类">设计类</h1>
 <p><a href="http://ksmx.me/blog/2014/05/02/usability-and-user-experience-design-websites/" target="_blank" rel="external">用户体验和产品设计网站精选（私家收藏分享）- 康上明学</a></p>
 ]]></content>
-    
+    <summary type="html"><![CDATA[<p>分享那些值得记录的好文章</p>
+]]></summary>
     
   </entry>
   
