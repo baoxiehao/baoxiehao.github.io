@@ -4,7 +4,7 @@
   <subtitle><![CDATA[淡静良觉之地]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://baoxiehao.com/"/>
-  <updated>2015-02-03T06:45:48.905Z</updated>
+  <updated>2015-02-06T14:29:17.771Z</updated>
   <id>http://baoxiehao.com/</id>
   
   <author>
@@ -15,11 +15,11 @@
   <generator uri="http://zespia.tw/hexo/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[Learn to Code HTML & CSS]]></title>
+    <title><![CDATA[Learn to Code HTML & CSS 08]]></title>
     <link href="http://baoxiehao.com/2015/02/03/Learn%20to%20Code%20HTML%20&%20CSS%208/"/>
     <id>http://baoxiehao.com/2015/02/03/Learn to Code HTML & CSS 8/</id>
     <published>2015-02-03T06:14:00.000Z</published>
-    <updated>2015-02-03T06:16:58.000Z</updated>
+    <updated>2015-02-06T14:28:48.000Z</updated>
     <content type="html"><![CDATA[<h1 id="Lesson_8:_Creating_Lists"><a href="http://learn.shayhowe.com/html-css/creating-lists/" target="_blank" rel="external">Lesson 8: Creating Lists</a></h1>
 <a id="more"></a>
 
@@ -116,11 +116,11 @@
   </entry>
   
   <entry>
-    <title><![CDATA[Learn to Code HTML & CSS]]></title>
+    <title><![CDATA[Learn to Code HTML & CSS 07]]></title>
     <link href="http://baoxiehao.com/2015/02/02/Learn%20to%20Code%20HTML%20&%20CSS%207/"/>
     <id>http://baoxiehao.com/2015/02/02/Learn to Code HTML & CSS 7/</id>
     <published>2015-02-02T06:14:00.000Z</published>
-    <updated>2015-02-03T06:17:58.000Z</updated>
+    <updated>2015-02-06T14:28:54.000Z</updated>
     <content type="html"><![CDATA[<h1 id="Lesson_7:_Setting_Backgrounds_&amp;_Gradients"><a href="http://learn.shayhowe.com/html-css/setting-backgrounds-and-gradients/" target="_blank" rel="external">Lesson 7: Setting Backgrounds &amp; Gradients</a></h1>
 <a id="more"></a>
 
@@ -221,11 +221,11 @@ When using an RGBa <span class="keyword">or</span> HSLa value <span class="keywo
   </entry>
   
   <entry>
-    <title><![CDATA[Learn to Code HTML & CSS]]></title>
+    <title><![CDATA[Learn to Code HTML & CSS 06]]></title>
     <link href="http://baoxiehao.com/2015/02/01/Learn%20to%20Code%20HTML%20&%20CSS%206/"/>
     <id>http://baoxiehao.com/2015/02/01/Learn to Code HTML & CSS 6/</id>
     <published>2015-02-01T06:14:00.000Z</published>
-    <updated>2015-02-03T06:17:57.000Z</updated>
+    <updated>2015-02-06T14:29:00.000Z</updated>
     <content type="html"><![CDATA[<h1 id="Lesson_6:_Working_with_Typography"><a href="http://learn.shayhowe.com/html-css/working-with-typography/" target="_blank" rel="external">Lesson 6: Working with Typography</a></h1>
 <a id="more"></a>
 
@@ -365,11 +365,11 @@ Lastly, <span class="operator">the</span> box-shadow property may <span class="b
   </entry>
   
   <entry>
-    <title><![CDATA[Learn to Code HTML & CSS]]></title>
+    <title><![CDATA[Learn to Code HTML & CSS 05]]></title>
     <link href="http://baoxiehao.com/2015/01/31/Learn%20to%20Code%20HTML%20&%20CSS%205/"/>
     <id>http://baoxiehao.com/2015/01/31/Learn to Code HTML & CSS 5/</id>
     <published>2015-01-31T06:14:00.000Z</published>
-    <updated>2015-02-03T06:18:07.000Z</updated>
+    <updated>2015-02-06T14:28:42.000Z</updated>
     <content type="html"><![CDATA[<h1 id="Lesson_5:_Positioning_Content"><a href="http://learn.shayhowe.com/html-css/positioning-content/" target="_blank" rel="external">Lesson 5: Positioning Content</a></h1>
 <a id="more"></a>
 
@@ -480,11 +480,11 @@ Lastly, <span class="operator">the</span> box-shadow property may <span class="b
   </entry>
   
   <entry>
-    <title><![CDATA[Learn to Code HTML & CSS]]></title>
+    <title><![CDATA[Learn to Code HTML & CSS 04]]></title>
     <link href="http://baoxiehao.com/2015/01/30/Learn%20to%20Code%20HTML%20&%20CSS%204/"/>
     <id>http://baoxiehao.com/2015/01/30/Learn to Code HTML & CSS 4/</id>
     <published>2015-01-30T06:14:00.000Z</published>
-    <updated>2015-02-03T06:18:11.000Z</updated>
+    <updated>2015-02-06T14:28:39.000Z</updated>
     <content type="html"><![CDATA[<h1 id="Lesson_4:_Opening_the_Box_Model"><a href="http://learn.shayhowe.com/html-css/opening-the-box-model/" target="_blank" rel="external">Lesson 4: Opening the Box Model</a></h1>
 <a id="more"></a>
 
@@ -596,11 +596,11 @@ Webkit (Google Chrome <span class="keyword">and</span> Apple Safari): -webkit-
   </entry>
   
   <entry>
-    <title><![CDATA[Learn to Code HTML & CSS]]></title>
+    <title><![CDATA[Learn to Code HTML & CSS 03]]></title>
     <link href="http://baoxiehao.com/2015/01/29/Learn%20to%20Code%20HTML%20&%20CSS%203/"/>
     <id>http://baoxiehao.com/2015/01/29/Learn to Code HTML & CSS 3/</id>
     <published>2015-01-29T06:14:00.000Z</published>
-    <updated>2015-02-03T06:18:18.000Z</updated>
+    <updated>2015-02-06T14:28:27.000Z</updated>
     <content type="html"><![CDATA[<h1 id="Lesson_3:_Getting_to_Know_CSS"><a href="http://learn.shayhowe.com/html-css/getting-to-know-css/" target="_blank" rel="external">Lesson 3: Getting to Know CSS</a></h1>
 <a id="more"></a>
 
@@ -676,11 +676,11 @@ Webkit (Google Chrome <span class="keyword">and</span> Apple Safari): -webkit-
   </entry>
   
   <entry>
-    <title><![CDATA[Learn to Code HTML & CSS]]></title>
+    <title><![CDATA[Learn to Code HTML & CSS 02]]></title>
     <link href="http://baoxiehao.com/2015/01/28/Learn%20to%20Code%20HTML%20&%20CSS%202/"/>
     <id>http://baoxiehao.com/2015/01/28/Learn to Code HTML & CSS 2/</id>
     <published>2015-01-28T06:14:00.000Z</published>
-    <updated>2015-02-03T06:18:22.000Z</updated>
+    <updated>2015-02-06T14:28:19.000Z</updated>
     <content type="html"><![CDATA[<h1 id="Lesson_2:_Getting_to_Know_HTML"><a href="http://learn.shayhowe.com/html-css/getting-to-know-html/" target="_blank" rel="external">Lesson 2: Getting to Know HTML</a></h1>
 <a id="more"></a>
 
@@ -799,11 +799,11 @@ By nature <span class="operator">the</span> anchor <span class="keyword">element
   </entry>
   
   <entry>
-    <title><![CDATA[Learn to Code HTML & CSS]]></title>
+    <title><![CDATA[Learn to Code HTML & CSS 01]]></title>
     <link href="http://baoxiehao.com/2015/01/27/Learn%20to%20Code%20HTML%20&%20CSS%201/"/>
     <id>http://baoxiehao.com/2015/01/27/Learn to Code HTML & CSS 1/</id>
     <published>2015-01-27T06:14:00.000Z</published>
-    <updated>2015-02-03T06:18:27.000Z</updated>
+    <updated>2015-02-06T14:28:23.000Z</updated>
     <content type="html"><![CDATA[<h1 id="Lesson_1:_Building_Your_First_Web_Page"><a href="http://learn.shayhowe.com/html-css/building-your-first-web-page/" target="_blank" rel="external">Lesson 1: Building Your First Web Page</a></h1>
 <a id="more"></a>
 
