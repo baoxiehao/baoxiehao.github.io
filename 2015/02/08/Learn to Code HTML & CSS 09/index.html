@@ -1,0 +1,388 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Learn to Code HTML &amp; CSS 09 | 浩然也空的博客</title>
+  <meta name="author" content="浩然也空">
+  
+  <meta name="description" content="每周一篇文章，每年一次总结。">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Learn to Code HTML &amp; CSS 09"/>
+  <meta property="og:site_name" content="浩然也空的博客"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  
+    <link rel="alternative" href="/atom.xml" title="浩然也空的博客" type="application/atom+xml">
+  
+  
+    <link href="/favicon.png" rel="icon">
+  
+
+  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', '[object Object]']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+
+ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+  
+
+</head>
+
+ <body>
+  <nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+	  <a class="navbar-brand" href="/">浩然也空的博客</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="所有归档">
+			  <i class="fa fa-archive"></i>归档
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="所有分类">
+			  <i class="fa fa-folder"></i>分类
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="所有标签">
+			  <i class="fa fa-tags"></i>标签
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/gallery" title="那些照片">
+			  <i class="fa fa-user"></i>画廊
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="我的足迹">
+			  <i class="fa fa-user"></i>关于
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+  	<div class="content">
+    	 
+
+
+	
+		<div class="page-header">		
+			<h1> Learn to Code HTML &amp; CSS 09</h1>
+		</div>		
+	
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div class="col-md-9">
+	
+
+			
+
+	<!-- content -->
+	<div class="mypage">		
+	    <h1 id="Lesson_9:_Adding_Media"><a href="http://learn.shayhowe.com/html-css/adding-media/" target="_blank" rel="external">Lesson 9: Adding Media</a></h1>
+<p><strong>Contents</strong></p>
+<ul>
+<li>The best ways to add images, audio clips, videos, and inline frames to a page</li>
+<li>Different ways to position images in different situations</li>
+<li>How to provide audio and video fallbacks for older browsers</li>
+<li>Common attributes available to audio clips and videos</li>
+<li>The seamless attribute, which allows us to make inline frames behave as if they are part of the page they are referenced from</li>
+<li>The semantic way to mark up self-contained content, including media</li>
+</ul>
+<a id="more"></a>
+
+<p>Today, we can freely use images, audio, video, and inline frames knowing that this content is supported across all major browsers.</p>
+<h2 id="Adding_Images">Adding Images</h2>
+<p>To add images to a page, we use the <code>&lt;img</code>&gt; inline element. The <code>&lt;img</code>&gt; element is a self-containing, or empty, element, which means that it doesn’t wrap any other content and it exists as a single tag. For the <code>&lt;img</code>&gt; element to work, a <strong>src</strong> attribute and value must be included to specify the source of the image. The src attribute value is a URL, typically relative to the server where a website is hosted.</p>
+<p>In conjunction with the src attribute, the <strong>alt</strong> (alternative text) attribute, which describes the contents of an image, should be applied. The alt attribute value is picked up by search engines and assistive technologies to help convey the purpose of an image. The alt text will be displayed in place of the image if for some reason the image is not available.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"dog.jpg"</span> <span class="attribute">alt</span>=<span class="value">"A black, brown, and white dog wearing a kerchief"</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<pre><code>Supported Image Formats
+
+Images come <span class="operator">in</span> <span class="operator">a</span> variety <span class="operator">of</span> different <span class="built_in">file</span> formats, <span class="operator">and</span> <span class="keyword">each</span> browser may support (<span class="operator">or</span> <span class="operator">not</span> support) different formats. By <span class="operator">and</span> large, <span class="operator">the</span> most commonly supported formats online are gif, jpg, <span class="operator">and</span> png images. Of these, <span class="operator">the</span> most widely used formats today are jpg <span class="operator">and</span> png. The jpg <span class="built_in">format</span> provides quality images <span class="operator">with</span> high color counts <span class="keyword">while</span> maintaining <span class="operator">a</span> decent <span class="built_in">file</span> size, ideal <span class="keyword">for</span> faster <span class="built_in">load</span> times. The png <span class="built_in">format</span> is great <span class="keyword">for</span> images <span class="operator">with</span> transparencies <span class="operator">or</span> low color counts. We most commonly see jpg images used <span class="keyword">for</span> photographs <span class="operator">and</span> png images used <span class="keyword">for</span> icons <span class="operator">or</span> background patterns.
+</code></pre><h3 id="Sizing_Images">Sizing Images</h3>
+<p>One option is to use the width and height attributes directly within the <code>&lt;img</code>&gt; tag in HTML. Additionally, images may be sized using the width and height properties in CSS. When both the HTML attributes and CSS properties are used, the CSS attributes will take precedence over the HTML attributes.</p>
+<p>Specifying either a width or height will cause the other dimension to adjust automatically to maintain the aspect ratio of the image. As an example, if we want an image to be 200 pixels tall but are less specifically concerned about how wide it is, we can set the height to 200 pixels, and the width of the image will adjust accordingly. Setting both a width and height will work also; however, doing so may break the aspect ratio of an image, causing it to appear distorted.</p>
+<p>While using the width and height attributes directly in HTML provides some semantic value by noting an image’s original size, it can be difficult to manage numerous images that all need to be the same size. In this event, <strong>it’s common practice to use CSS to resize the images</strong>.</p>
+<h3 id="Positioning_Images">Positioning Images</h3>
+<h4 id="Inline_Positioning_Images">Inline Positioning Images</h4>
+<p>The <code>&lt;img</code>&gt; element is by default an <strong>inline-level</strong> element. Adding an image without any styles to a page will position that image within the same line as the content that surrounds it. Additionally, the height of the line in which an image appears will be changed to match the height of the image, which can create large vertical gaps within that line.</p>
+<h4 id="Block_Positioning_Images">Block Positioning Images</h4>
+<p>Adding the display property to an image and setting its value to <strong>block</strong> forces the image to be a block-level element. This makes the image appear on its own line, allowing the surrounding content to be positioned above and below the image.</p>
+<h4 id="Positioning_Images_Flush_Left_or_Right">Positioning Images Flush Left or Right</h4>
+<p>Sometimes displaying an image as inline or block, or perhaps even inline-block, isn’t ideal. We may want the image to appear on the left or right side of its containing element, while all of the other content wraps around the image as necessary. To do this, we use the <strong>float</strong> property with a value of either left or right.</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">img</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">background</span>:<span class="value"> <span class="hexcolor">#eaeaed</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">border</span>:<span class="value"> <span class="number">1px</span> solid <span class="hexcolor">#9799a7</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">float</span>:<span class="value"> right</span></span>;</div><div class="line">  <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">8px</span> <span class="number">0</span> <span class="number">0</span> <span class="number">20px</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">4px</span></span></span>;</div><div class="line"><span class="rule">}</span></div></pre></td></tr></table></figure>
+
+<pre><code>When <span class="built_in">to</span> Use <span class="operator">an</span> Image Element vs. <span class="operator">a</span> Background Image
+
+There are <span class="constant">two</span> primary ways <span class="built_in">to</span> <span class="built_in">add</span> images <span class="built_in">to</span> <span class="operator">a</span> web page. One way, <span class="keyword">as</span> covered here, is <span class="built_in">to</span> use <span class="operator">the</span> &lt;img&gt; <span class="keyword">element</span> <span class="operator">within</span> HTML. Another way is <span class="built_in">to</span> use <span class="operator">the</span> background <span class="operator">or</span> background-image property <span class="operator">within</span> CSS <span class="built_in">to</span> assign <span class="operator">a</span> background image <span class="built_in">to</span> <span class="operator">an</span> <span class="keyword">element</span>. Either option will <span class="built_in">do</span> <span class="operator">the</span> job; however, they <span class="keyword">each</span> have specific use cases.
+
+The &lt;img&gt; <span class="keyword">element</span> <span class="operator">within</span> HTML is <span class="operator">the</span> preferred option when <span class="operator">the</span> image being used holds semantic <span class="built_in">value</span> <span class="operator">and</span> its content is relevant <span class="built_in">to</span> <span class="operator">the</span> content <span class="operator">of</span> <span class="operator">the</span> page.
+
+The background <span class="operator">or</span> background-image property <span class="operator">within</span> CSS is <span class="operator">the</span> preferred option when <span class="operator">the</span> image being used is part <span class="operator">of</span> <span class="operator">the</span> design <span class="operator">or</span> user interface <span class="operator">of</span> <span class="operator">the</span> page. As such, <span class="keyword">it</span>’s <span class="operator">not</span> directly relevant <span class="built_in">to</span> <span class="operator">the</span> content <span class="operator">of</span> <span class="operator">the</span> page.
+</code></pre><h2 id="Adding_Audio">Adding Audio</h2>
+<p>HTML5 provides a quick and easy way to add audio files to a website by way of the <code>&lt;audio</code>&gt; element. As with the <code>&lt;img</code>&gt; element, the <code>&lt;audio</code>&gt; element accepts a source URL specified by the <strong>src</strong> attribute. Unlike the <code>&lt;img</code>&gt; element, though, the <code>&lt;audio</code>&gt; element requires both opening and closing tags.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">audio</span> <span class="attribute">src</span>=<span class="value">"jazz.ogg"</span>&gt;</span><span class="tag">&lt;/<span class="title">audio</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<h3 id="Audio_Attributes">Audio Attributes</h3>
+<p>Several other attributes may accompany the src attribute on the <code>&lt;audio</code>&gt; element; the most popular include <strong>autoplay</strong>, <strong>controls</strong>, <strong>loop</strong>, and <strong>preload</strong>.</p>
+<p>The <strong>autoplay</strong>, <strong>controls</strong>, and <strong>loop</strong> attributes are all Boolean attributes. As Boolean attributes, they don’t require a stated value. Instead, when each is present on the <code>&lt;audio</code>&gt; element its value will be set to true, and the <code>&lt;audio</code>&gt; element will behave accordingly.</p>
+<p>If the <strong>autoplay</strong> Boolean attribute is present on the <code>&lt;audio</code>&gt; element, nothing will appear on the page, but the audio file will automatically play upon loading.</p>
+<p>To display the <code>&lt;audio</code>&gt; element on a page, the <strong>controls</strong> Boolean attribute is necessary. When it’s applied to the <code>&lt;audio</code>&gt; element, the controls Boolean attribute will display a browser’s default audio controls, including play and pause, seek, and volume controls.</p>
+<p>When present on the <code>&lt;audio</code>&gt; element, the <strong>loop</strong> Boolean attribute will cause an audio file to repeat continually, from beginning to end.</p>
+<p>Lastly, the <strong>preload</strong> attribute for the <code>&lt;audio</code>&gt; element helps identify what, if any, information about the audio file should be loaded before the clip is played. It accepts three values: <strong>none</strong>, <strong>auto</strong>, and <strong>metadata</strong>. The none value won’t preload any information about an audio file, while the auto value will preload all information about an audio file. The metadata value sits in between the none and auto values, as it will preload any available metadata information about an audio file, such as the clip’s length, but not all information.</p>
+<p>When the preload attribute isn’t present on the <code>&lt;audio</code>&gt; element, all information about an audio file is loaded, <strong>as if the value was set to auto</strong>. For this reason, using the preload attribute with a value of <strong>metadata</strong> or <strong>none</strong> is a good idea when an audio file is not essential to a page. It’ll help to conserve bandwidth and allow pages to load faster.</p>
+<h3 id="Audio_Fallbacks_&amp;_Multiple_Sources">Audio Fallbacks &amp; Multiple Sources</h3>
+<p>At the moment, different browsers support different audio file formats, the three most popular of which are <strong>ogg</strong>, <strong>mp3</strong>, and <strong>wav</strong>. For the best browser support we’ll need to use a handful of audio fallbacks, which will be included inside an <code>&lt;audio</code>&gt; element’s opening and closing tags.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">audio</span> <span class="attribute">controls</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">source</span> <span class="attribute">src</span>=<span class="value">"jazz.ogg"</span> <span class="attribute">type</span>=<span class="value">"audio/ogg"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">source</span> <span class="attribute">src</span>=<span class="value">"jazz.mp3"</span> <span class="attribute">type</span>=<span class="value">"audio/mpeg"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">source</span> <span class="attribute">src</span>=<span class="value">"jazz.wav"</span> <span class="attribute">type</span>=<span class="value">"audio/wav"</span>&gt;</span></div><div class="line">  Please <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"jazz.mp3"</span> <span class="attribute">download</span>&gt;</span>download<span class="tag">&lt;/<span class="title">a</span>&gt;</span> the audio file.</div><div class="line"><span class="tag">&lt;/<span class="title">audio</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<h2 id="Adding_Video">Adding Video</h2>
+<p>Adding <a href="http://dev.opera.com/articles/introduction-html5-video/" target="_blank" rel="external">video in HTML5</a> is very similar to adding audio. We use the <code>&lt;video</code>&gt; element in place of the <code>&lt;audio</code>&gt; element. All of the same attributes (<strong>src</strong>, <strong>autoplay</strong>, <strong>controls</strong>, <strong>loop</strong>, and <strong>preload</strong>) and fallbacks apply here, too.</p>
+<p>With the <code>&lt;audio</code>&gt; element, if the controls Boolean attribute isn’t specified the audio clip isn’t displayed. With videos, if the controls Boolean attribute is not specified the video will display. However, it is fairly difficult to view unless the autoplay Boolean attribute is also applied. In general, the best practice here is to include the controls Boolean attribute unless there is a good reason not to allow users to start, stop, or replay the video.</p>
+<h3 id="Poster_Attribute">Poster Attribute</h3>
+<p>One additional attribute available for the <code>&lt;video</code>&gt; element is the <strong>poster</strong> attribute. The poster attribute allows us to specify an image, in the form of a URL, to be shown before a video is played.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">video</span> <span class="attribute">src</span>=<span class="value">"earth.ogv"</span> <span class="attribute">controls</span> <span class="attribute">poster</span>=<span class="value">"earth-video-screenshot.jpg"</span>&gt;</span><span class="tag">&lt;/<span class="title">video</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<h3 id="Video_Fallbacks">Video Fallbacks</h3>
+<p>As with the <code>&lt;audio</code>&gt; element, video fallbacks are also necessary. The same markup format, with multiple <code>&lt;source</code>&gt; elements for each file type and a plain text fallback, also applies within the <code>&lt;video</code>&gt; element.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">video</span> <span class="attribute">controls</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">source</span> <span class="attribute">src</span>=<span class="value">"earth.ogv"</span> <span class="attribute">type</span>=<span class="value">"video/ogg"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">source</span> <span class="attribute">src</span>=<span class="value">"earth.mp4"</span> <span class="attribute">type</span>=<span class="value">"video/mp4"</span>&gt;</span></div><div class="line">  Please <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"earth.mp4"</span> <span class="attribute">download</span>&gt;</span>download<span class="tag">&lt;/<span class="title">a</span>&gt;</span> the video.</div><div class="line"><span class="tag">&lt;/<span class="title">video</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<h2 id="Adding_Inline_Frames">Adding Inline Frames</h2>
+<p>Another way to add content to a page is to embed another HTML page within the current page. This is done using an inline frame, or <code>&lt;iframe</code>&gt; element. The <code>&lt;iframe</code>&gt; element accepts the URL of another HTML page within the src attribute value; this causes the content from the embedded HTML page to be displayed on the current page.</p>
+<p>The <code>&lt;iframe</code>&gt; element has a few default styles, including an inset border and a width and height. These styles can be adjusted using the frameborder, width, and height HTML attributes or by using the <strong>border</strong>, <strong>width</strong>, and <strong>height</strong> CSS properties.</p>
+<h3 id="Seamless_Inline_Frames">Seamless Inline Frames</h3>
+<p>Pages referenced within the src attribute of an <code>&lt;iframe</code>&gt; element play by their own rules, as they do not inherit any styles or behaviors from the page they are referenced on.</p>
+<p>There will be times when we’ll want to change these behaviors, and the <strong>seamless</strong> Boolean attribute will allow us to do just that. When present on the <code>&lt;iframe</code>&gt; element, the seamless Boolean attribute allows styles from the page that includes an <code>&lt;iframe</code>&gt; element to be inherited by the page referenced within the <code>&lt;iframe</code>&gt; element. Additionally, the seamless Boolean attribute allows links clicked on a page referenced within an <code>&lt;iframe</code>&gt; element to be opened within the same window as the original page that includes the <code>&lt;iframe</code>&gt; element.</p>
+<h2 id="Semantically_Identifying_Figures_&amp;_Captions">Semantically Identifying Figures &amp; Captions</h2>
+<p>With HTML5 also came the introduction of the <code>&lt;figure</code>&gt; and <code>&lt;figcaption</code>&gt; elements. These <a href="http://html5doctor.com/the-figure-figcaption-elements/" target="_blank" rel="external">elements</a> were created to semantically mark up self-contained content or media, commonly with a caption. Before HTML5 this was frequently done using an ordered list. While an ordered list worked, the markup was not semantically correct.</p>
+<h3 id="Figure">Figure</h3>
+<p>The <code>&lt;figure</code>&gt; <strong>block-level</strong> element is used to identify and wrap self-contained content, often in the form of media. It may surround images, audio clips, videos, blocks of code, diagrams, illustrations, or other self-contained media. More than one item of self-contained content, such as multiple images or videos, may be contained within the <code>&lt;figure</code>&gt; element at a time. If the <code>&lt;figure</code>&gt; element is moved from the main portion of a page to another location (for example, the bottom of the page), it should not disrupt the content or legibility of the page.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">figure</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"dog.jpg"</span> <span class="attribute">alt</span>=<span class="value">"A black, brown, and white dog wearing a kerchief"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">figure</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<h3 id="Figure_Caption">Figure Caption</h3>
+<p>To add a caption or legend to the <code>&lt;figure</code>&gt; element, the <code>&lt;figcaption</code>&gt; element is used. The <code>&lt;figcaption</code>&gt; may appear at the top of, bottom of, or anywhere within the <code>&lt;figure</code>&gt; element; however, it may only appear once. When it’s used, the <code>&lt;figcaption</code>&gt; element will serve as the caption for all content within the <code>&lt;figure</code>&gt; element.</p>
+<p>Additionally, the <code>&lt;figcaption</code>&gt; element may replace an <code>&lt;img</code>&gt; element’s alt attribute if the content of the <code>&lt;figcaption</code>&gt; element provides a useful description of the visual content of the image.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">figure</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"dog.jpg"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">figcaption</span>&gt;</span>A beautiful black, brown, and white hound dog wearing kerchief.<span class="tag">&lt;/<span class="title">figcaption</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">figure</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<p>Not all forms of media need to be included within a <code>&lt;figure</code>&gt; element or include a <code>&lt;figcaption</code>&gt; element; only those that are self-contained and belong together as a group.</p>
+<h2 id="Summary">Summary</h2>
+<p>Alongside text, media is one of the largest parts of the web. Use of images, audio, and video has only grown over recent years, and it isn’t likely to slow down. Now we know how to incorporate these forms of media into our designs and how we can use them to enrich the content on our websites.</p>
+<p>Within this lesson we covered the following:</p>
+<ul>
+<li>The best ways to add <strong>images</strong>, <strong>audio</strong> clips, <strong>videos</strong>, and <strong>inline frames</strong> to a page</li>
+<li>Different ways to position images in different situations</li>
+<li>How to provide audio and video <strong>fallbacks</strong> for older browsers</li>
+<li>Common attributes available to audio clips and videos</li>
+<li>The <strong>seamless</strong> attribute, which allows us to make inline frames behave as if they are part of the page they are referenced from</li>
+<li>The semantic way to mark up <strong>self-contained content</strong>, including media</li>
+</ul>
+	  
+	</div>
+
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+				
+    	<li class="prev"><a href="/2015/02/08/Learn to Code HTML & CSS 10/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+  		
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
+
+		
+		   <li class="next"><a href="/2015/02/03/Learn to Code HTML & CSS 08/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
+</ul>
+</div>
+
+    </center>
+	</div>
+	
+	<!-- comment -->
+	
+<section id="comment">
+  <h2 class="title">留言</h2>
+
+  
+</section>
+
+	
+	</div> <!-- col-md-9/col-md-12 -->
+	
+	
+		<div class="col-md-3"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2015 2月 8 
+	</div>
+	
+
+	<!-- categories -->
+    
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
+          
+  <li>
+    <li><a href="/categories/技术/">技术<span>13</span></a></li>
+  </li>
+
+    </ul>
+	</div>
+	
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/HTML/">HTML<span>10</span></a></li> <li><a href="/tags/CSS/">CSS<span>10</span></a></li>
+    </ul>
+	</div>
+		
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	   <a data-toggle="collapse" data-target="#toc"><i class="fa fa-bars"></i></a>
+	   <div id="toc" class="toc collapse in">
+			<ol class="toc-article"><li class="toc-article-item toc-article-level-1"><a class="toc-article-link" href="#Lesson_9:_Adding_Media"><span class="toc-article-text">Lesson 9: Adding Media</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Adding_Images"><span class="toc-article-text">Adding Images</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Sizing_Images"><span class="toc-article-text">Sizing Images</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Positioning_Images"><span class="toc-article-text">Positioning Images</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#Inline_Positioning_Images"><span class="toc-article-text">Inline Positioning Images</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#Block_Positioning_Images"><span class="toc-article-text">Block Positioning Images</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#Positioning_Images_Flush_Left_or_Right"><span class="toc-article-text">Positioning Images Flush Left or Right</span></a></li></ol></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Adding_Audio"><span class="toc-article-text">Adding Audio</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Audio_Attributes"><span class="toc-article-text">Audio Attributes</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Audio_Fallbacks_&_Multiple_Sources"><span class="toc-article-text">Audio Fallbacks & Multiple Sources</span></a></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Adding_Video"><span class="toc-article-text">Adding Video</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Poster_Attribute"><span class="toc-article-text">Poster Attribute</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Video_Fallbacks"><span class="toc-article-text">Video Fallbacks</span></a></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Adding_Inline_Frames"><span class="toc-article-text">Adding Inline Frames</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Seamless_Inline_Frames"><span class="toc-article-text">Seamless Inline Frames</span></a></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Semantically_Identifying_Figures_&_Captions"><span class="toc-article-text">Semantically Identifying Figures & Captions</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Figure"><span class="toc-article-text">Figure</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Figure_Caption"><span class="toc-article-text">Figure Caption</span></a></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Summary"><span class="toc-article-text">Summary</span></a></li></ol></li></ol>
+		</div>
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	
+
+</div><!-- row -->
+
+
+<!-- Duoshuo Comment BEGIN -->
+<div class="ds-thread" data-title="Learn to Code HTML &amp; CSS 09" data-url="http://baoxiehao.com/2015/02/08/Learn to Code HTML & CSS 09/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"baoxiehao"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+<!-- Duoshuo Comment END -->
+
+
+	</div>
+  </div>
+  <div class="container-narrow">
+  <footer> <p>
+  &copy; 2015 浩然也空
+  
+      with help from <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+</p> </footer>
+  <!-- Duoshuo Comment BEGIN -->
+<div class="ds-thread" data-title="Learn to Code HTML &amp; CSS 09" data-url="http://baoxiehao.com/2015/02/08/Learn to Code HTML & CSS 09/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"baoxiehao"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+<!-- Duoshuo Comment END -->
+
+</div> <!-- container-narrow -->
+  
+<a id="gotop" href="#">
+  <span>▲</span>
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-51276891-1', 'baoxiehao.com');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+   </html>

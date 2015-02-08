@@ -1,0 +1,455 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Learn to Code HTML &amp; CSS 10 | 浩然也空的博客</title>
+  <meta name="author" content="浩然也空">
+  
+  <meta name="description" content="每周一篇文章，每年一次总结。">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Learn to Code HTML &amp; CSS 10"/>
+  <meta property="og:site_name" content="浩然也空的博客"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  
+    <link rel="alternative" href="/atom.xml" title="浩然也空的博客" type="application/atom+xml">
+  
+  
+    <link href="/favicon.png" rel="icon">
+  
+
+  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', '[object Object]']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+
+ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+  
+
+</head>
+
+ <body>
+  <nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+	  <a class="navbar-brand" href="/">浩然也空的博客</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="所有归档">
+			  <i class="fa fa-archive"></i>归档
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="所有分类">
+			  <i class="fa fa-folder"></i>分类
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="所有标签">
+			  <i class="fa fa-tags"></i>标签
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/gallery" title="那些照片">
+			  <i class="fa fa-user"></i>画廊
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="我的足迹">
+			  <i class="fa fa-user"></i>关于
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+  	<div class="content">
+    	 
+
+
+	
+		<div class="page-header">		
+			<h1> Learn to Code HTML &amp; CSS 10</h1>
+		</div>		
+	
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div class="col-md-9">
+	
+
+			
+
+	<!-- content -->
+	<div class="mypage">		
+	    <h1 id="Lesson_10:_Building_Forms"><a href="http://learn.shayhowe.com/html-css/building-forms/" target="_blank" rel="external">Lesson 10: Building Forms</a></h1>
+<p><strong>Contents</strong></p>
+<ul>
+<li>How to initialize a form</li>
+<li>Ways to obtain text-based information from users</li>
+<li>Different elements and methods for creating multiple choice options and menus</li>
+<li>Which elements and attributes are best used to submit a form’s data for processing</li>
+<li>How best to organize forms and give form controls structure and meaning</li>
+<li>A handful of attributes that help collect more qualified data</li>
+</ul>
+<a id="more"></a>
+
+<p>Forms are an essential part of the Internet, as they provide a way for websites to capture information from users and to process requests, and they offer controls for nearly every imaginable use of an application. Through controls or fields, forms can request a small amount of information—often a search query or a username and password—or a large amount of information—perhaps shipping and billing information or an entire job application.</p>
+<h2 id="Initializing_a_Form">Initializing a Form</h2>
+<p>To add a <a href="http://htmldog.com/guides/html/beginner/forms/" target="_blank" rel="external">form</a> to a page, we’ll use the <code>&lt;form</code>&gt; element. The <code>&lt;form</code>&gt; element identifies where on the page control elements will appear. Additionally, the <code>&lt;form</code>&gt; element will wrap all of the elements included within the form, much like a <code>&lt;div</code>&gt; element.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">form</span> <span class="attribute">action</span>=<span class="value">"/login"</span> <span class="attribute">method</span>=<span class="value">"post"</span>&gt;</span></div><div class="line">  ...</div><div class="line"><span class="tag">&lt;/<span class="title">form</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<p>A handful of different attributes can be applied to the <code>&lt;form</code>&gt; element, the most common of which are <strong>action</strong> and <strong>method</strong>. The action attribute contains the URL to which information included within the form will be sent for processing by the server. The method attribute is the HTTP method browsers should use to submit the form data. Both of these <code>&lt;form</code>&gt; attributes pertain to submitting and processing data.</p>
+<h2 id="Text_Fields_&amp;_Textareas">Text Fields &amp; Textareas</h2>
+<p>When it comes to gathering text input from users, there are a few different elements available for obtaining data within forms. Specifically, text fields and textareas are used for collecting text- or string-based data. This data may include passages of text content, passwords, telephone numbers, and other information.</p>
+<h3 id="Text_Fields">Text Fields</h3>
+<p>One of the primary elements used to obtain text from users is the <code>&lt;input</code>&gt; element. The <code>&lt;input</code>&gt; element uses the <strong>type</strong> attribute to define what type of information is to be captured within the control. The most popular type attribute value is <strong>text</strong>, which denotes a single line of text input.</p>
+<p>Along with setting a type attribute, it is best practice to give an <code>&lt;input</code>&gt; element a <strong>name</strong> attribute as well. The name attribute value is used as the name of the control and is submitted along with the input data to the server.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">name</span>=<span class="value">"username"</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<p>The <code>&lt;input</code>&gt; element is <strong>self-contained</strong>, meaning it uses only one tag and it does not wrap any other content. The value of the element is provided by its attributes and their corresponding values.</p>
+<p>Originally, the only two text-based type attribute values were <strong>text</strong> and <strong>password</strong> (for password inputs); however, HTML5 brought along a handful of <a href="http://diveinto.html5doctor.com/forms.html" target="_blank" rel="external">new type</a> attribute values.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"date"</span> <span class="attribute">name</span>=<span class="value">"birthday"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"time"</span> <span class="attribute">name</span>=<span class="value">"game-time"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"email"</span> <span class="attribute">name</span>=<span class="value">"email-address"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"url"</span> <span class="attribute">name</span>=<span class="value">"website"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"number"</span> <span class="attribute">name</span>=<span class="value">"cost"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"tel"</span> <span class="attribute">name</span>=<span class="value">"phone-number"</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<p>These values were added to provide clearer semantic meaning for inputs as well as to provide better controls for users. Should a browser not understand one of these HTML5 type attribute values, it will automatically fall back to the text attribute value. Below is a list of the new HTML5 input types.</p>
+<ul>
+<li>color</li>
+<li>date</li>
+<li>datetime</li>
+<li>email</li>
+<li>month</li>
+<li>number</li>
+<li>range</li>
+<li>search</li>
+<li>tel</li>
+<li>time</li>
+<li>url</li>
+<li>week</li>
+</ul>
+<h3 id="Textarea">Textarea</h3>
+<p>Another element that’s used to capture text-based data is the <code>&lt;textarea</code>&gt; element. The <code>&lt;textarea</code>&gt; element differs from the <code>&lt;input</code>&gt; element in that it can accept larger <strong>passages of text</strong> spanning multiple lines. The <code>&lt;textarea</code>&gt; element also has start and end tags that can wrap plain text. Because the <code>&lt;textarea</code>&gt; element only accepts one type of value, the type attribute doesn’t apply here, but the <strong>name</strong> attribute is still used.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">textarea</span> <span class="attribute">name</span>=<span class="value">"comment"</span>&gt;</span>Add your comment here<span class="tag">&lt;/<span class="title">textarea</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<p>The <code>&lt;textarea</code>&gt; element has two sizing attributes: <strong>cols</strong> for width in terms of the average character width and <strong>rows</strong> for height in terms of the number of lines of visible text. The size of a textarea, however, is more commonly identified using the <strong>width</strong> and <strong>height</strong> properties within CSS.</p>
+<h2 id="Multiple_Choice_Inputs_&amp;_Menus">Multiple Choice Inputs &amp; Menus</h2>
+<p>Apart from text-based input controls, HTML also allows users to select data using <strong>multiple choice</strong> and <strong>drop-down lists</strong>. There are a few different options and elements for these form controls, each of which has distinctive benefits.</p>
+<h3 id="Radio_Buttons">Radio Buttons</h3>
+<p>Radio buttons are an easy way to allow users to make a quick choice from a small list of options. Radio buttons permit users to select one option only, as opposed to multiple options.</p>
+<p>To create a radio button, the <code>&lt;input</code>&gt; element is used with a type attribute value of <strong>radio</strong>. Each radio button element should have the <strong>same name</strong> attribute value so that all of the buttons within a group correspond to one another. Also, we have to define the input value. Using the <strong>value</strong> attribute, we can set a specific value for each <code>&lt;input</code>&gt; element. Additionally, to preselect a radio button for users we can use the Boolean attribute <strong>checked</strong>.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"radio"</span> <span class="attribute">name</span>=<span class="value">"day"</span> <span class="attribute">value</span>=<span class="value">"Friday"</span> <span class="attribute">checked</span>&gt;</span> Friday</div><div class="line"><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"radio"</span> <span class="attribute">name</span>=<span class="value">"day"</span> <span class="attribute">value</span>=<span class="value">"Saturday"</span>&gt;</span> Saturday</div><div class="line"><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"radio"</span> <span class="attribute">name</span>=<span class="value">"day"</span> <span class="attribute">value</span>=<span class="value">"Sunday"</span>&gt;</span> Sunday</div></pre></td></tr></table></figure>
+
+<h3 id="Check_Boxes">Check Boxes</h3>
+<p>Check boxes are very similar to radio buttons. They use the same attributes and patterns, with the exception of <strong>checkbox</strong> as their type attribute value. The difference between the two is that check boxes allow users to select multiple values and tie them all to one control name, while radio buttons limit users to one value.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"checkbox"</span> <span class="attribute">name</span>=<span class="value">"day"</span> <span class="attribute">value</span>=<span class="value">"Friday"</span> <span class="attribute">checked</span>&gt;</span> Friday</div><div class="line"><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"checkbox"</span> <span class="attribute">name</span>=<span class="value">"day"</span> <span class="attribute">value</span>=<span class="value">"Saturday"</span>&gt;</span> Saturday</div><div class="line"><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"checkbox"</span> <span class="attribute">name</span>=<span class="value">"day"</span> <span class="attribute">value</span>=<span class="value">"Sunday"</span>&gt;</span> Sunday</div></pre></td></tr></table></figure>
+
+<h3 id="Drop-Down_Lists">Drop-Down Lists</h3>
+<p>Drop-down lists are a perfect way to provide users with a long list of options in a practical manner. To create a drop-down list we’ll use the <code>&lt;select</code>&gt; and <code>&lt;option</code>&gt; elements. The <code>&lt;select</code>&gt; element wraps all of the menu options, and each menu option is marked up using the <code>&lt;option</code>&gt; element.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">select</span> <span class="attribute">name</span>=<span class="value">"day"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">option</span> <span class="attribute">value</span>=<span class="value">"Friday"</span> <span class="attribute">selected</span>&gt;</span>Friday<span class="tag">&lt;/<span class="title">option</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">option</span> <span class="attribute">value</span>=<span class="value">"Saturday"</span>&gt;</span>Saturday<span class="tag">&lt;/<span class="title">option</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">option</span> <span class="attribute">value</span>=<span class="value">"Sunday"</span>&gt;</span>Sunday<span class="tag">&lt;/<span class="title">option</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">select</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<h3 id="Multiple_Selections">Multiple Selections</h3>
+<p>The Boolean attribute <strong>multiple</strong>, when added to the <code>&lt;select</code>&gt; element for a standard drop-down list, allows a user to choose more than one option from the list at a time. Additionally, using the <strong>selected</strong> Boolean attribute on more than one <code>&lt;option</code>&gt; element within the menu will <strong>preselect multiple</strong> options.</p>
+<p>The size of the <code>&lt;select</code>&gt; element can be controlled using CSS and should be adjusted appropriately to allow for multiple selections. It may be worthwhile to inform users that to choose multiple options they will need to hold down the <strong>Shift</strong> key while clicking to make their selections.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">select</span> <span class="attribute">name</span>=<span class="value">"day"</span> <span class="attribute">multiple</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">option</span> <span class="attribute">value</span>=<span class="value">"Friday"</span> <span class="attribute">selected</span>&gt;</span>Friday<span class="tag">&lt;/<span class="title">option</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">option</span> <span class="attribute">value</span>=<span class="value">"Saturday"</span>&gt;</span>Saturday<span class="tag">&lt;/<span class="title">option</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">option</span> <span class="attribute">value</span>=<span class="value">"Sunday"</span>&gt;</span>Sunday<span class="tag">&lt;/<span class="title">option</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">select</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<h2 id="Form_Buttons">Form Buttons</h2>
+<p>After a user inputs the requested information, buttons allow the user to put that information into action. Most commonly, a <strong>submit input</strong> or <strong>submit button</strong> is used to process the data.</p>
+<h3 id="Submit_Input">Submit Input</h3>
+<p>Users click the submit button to process data after filling out a form. The submit button is created using the <code>&lt;input</code>&gt; element with a <strong>type</strong> attribute value of <strong>submit</strong>. The <strong>value</strong> attribute is used to specify the text that appears within the button.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"submit"</span> <span class="attribute">name</span>=<span class="value">"submit"</span> <span class="attribute">value</span>=<span class="value">"Send"</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<h3 id="Submit_Button">Submit Button</h3>
+<p>As an <code>&lt;input</code>&gt; element, the submit button is self-contained and cannot wrap any other content. If more control over the structure and design of the input is desired—along with the ability to wrap other elements—the <code>&lt;button</code>&gt; element may be used.</p>
+<p>The <code>&lt;button</code>&gt; element performs the same way as the <code>&lt;input</code>&gt; element with the type attribute value of submit; however, it includes opening and closing tags, which may wrap other elements. By default, the <code>&lt;button</code>&gt; element acts as if it <strong>has a type attribute value of submit</strong>, so the type attribute and value may be omitted from the <code>&lt;button</code>&gt; element if you wish.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">button</span> <span class="attribute">name</span>=<span class="value">"submit"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">strong</span>&gt;</span>Send Us<span class="tag">&lt;/<span class="title">strong</span>&gt;</span> a Message</div><div class="line"><span class="tag">&lt;/<span class="title">button</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<h2 id="Other_Inputs">Other Inputs</h2>
+<p>Besides the applications we’ve just discussed, the <code>&lt;input</code>&gt; element has a few other use cases. These include passing hidden data and attaching files during form processing.</p>
+<h3 id="Hidden_Input">Hidden Input</h3>
+<p>Hidden inputs provide a way to pass data to the server without displaying it to users. Hidden inputs are typically used for tracking codes, keys, or other information that is not pertinent to the user but is helpful when processing the form. This information is not displayed on the page; however, it can be found by viewing the source code of a page. It should therefore not be used for sensitive or secure information.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"hidden"</span> <span class="attribute">name</span>=<span class="value">"tracking-code"</span> <span class="attribute">value</span>=<span class="value">"abc-123"</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<h3 id="File_Input">File Input</h3>
+<p>To allow users to add a file to a form, much like attaching a file to an email, use the file value for the type attribute.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"file"</span> <span class="attribute">name</span>=<span class="value">"file"</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<p>Unfortunately, styling an <code>&lt;input</code>&gt; element that has a type attribute value of file is a tough task with CSS. Each browser has its own default input style, and none provide much control to override the default styling. JavaScript and other solutions can be employed to allow for file input, but they are slightly more difficult to construct.</p>
+<h2 id="Organizing_Form_Elements">Organizing Form Elements</h2>
+<p>Knowing how to capture data with inputs is half the battle. Organizing form elements and controls in a usable manner is the other half. When interacting with forms, users need to understand what is being asked of them and how to provide the requested information.</p>
+<p>By using <strong>labels</strong>, <strong>fieldsets</strong>, and <strong>legends</strong>, we can better organize forms and guide users to properly complete them.</p>
+<h3 id="Label">Label</h3>
+<p>Labels provide captions or headings for form controls, unambiguously tying them together and creating an accessible form for all users and assistive technologies. Created using the <code>&lt;label</code>&gt; element, labels should include text that describes the inputs or controls they pertain to.</p>
+<p>Labels may include a <strong>for</strong> attribute. The value of the for attribute should be the same as the value of the <strong>id</strong> attribute on the form control the label corresponds to. <strong>Matching up the for and id attribute values ties the two elements together</strong>, allowing users to click on the <code>&lt;label</code>&gt; element to bring focus to the proper form control.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">label</span> <span class="attribute">for</span>=<span class="value">"username"</span>&gt;</span>Username<span class="tag">&lt;/<span class="title">label</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">name</span>=<span class="value">"username"</span> <span class="attribute">id</span>=<span class="value">"username"</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<p>If desired, the <code>&lt;label</code>&gt; element may wrap form controls, such as radio buttons or check boxes. Doing so allows omission of the for and id attributes.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">label</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"radio"</span> <span class="attribute">name</span>=<span class="value">"day"</span> <span class="attribute">value</span>=<span class="value">"Friday"</span> <span class="attribute">checked</span>&gt;</span> Friday</div><div class="line"><span class="tag">&lt;/<span class="title">label</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="title">label</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"radio"</span> <span class="attribute">name</span>=<span class="value">"day"</span> <span class="attribute">value</span>=<span class="value">"Saturday"</span>&gt;</span> Saturday</div><div class="line"><span class="tag">&lt;/<span class="title">label</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="title">label</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"radio"</span> <span class="attribute">name</span>=<span class="value">"day"</span> <span class="attribute">value</span>=<span class="value">"Sunday"</span>&gt;</span> Sunday</div><div class="line"><span class="tag">&lt;/<span class="title">label</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<h3 id="Fieldset">Fieldset</h3>
+<p>Fieldsets group form controls and labels into organized sections. Much like a <code>&lt;section</code>&gt; or other structural element, the <code>&lt;fieldset</code>&gt; is a <strong>block-level</strong> element that wraps related elements, specifically within a <code>&lt;form</code>&gt; element, for better organization. Fieldsets, by default, also include a <strong>border outline</strong>, which can be modified using CSS.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">fieldset</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">label</span>&gt;</span></div><div class="line">    Username</div><div class="line">    <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">name</span>=<span class="value">"username"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="title">label</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">label</span>&gt;</span></div><div class="line">    Password</div><div class="line">    <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">name</span>=<span class="value">"password"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="title">label</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">fieldset</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<h3 id="Legend">Legend</h3>
+<p>A legend provides a caption, or <strong>heading</strong>, for the <code>&lt;fieldset</code>&gt; element. The <code>&lt;legend</code>&gt; element wraps text describing the form controls that fall within the fieldset. The markup should include the <code>&lt;legend</code>&gt; element directly after the opening <code>&lt;fieldset</code>&gt; tag. On the page, the legend will appear within the top left part of the fieldset border.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">fieldset</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">legend</span>&gt;</span>Login<span class="tag">&lt;/<span class="title">legend</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">label</span>&gt;</span></div><div class="line">    Username</div><div class="line">    <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">name</span>=<span class="value">"username"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="title">label</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">label</span>&gt;</span></div><div class="line">    Password</div><div class="line">    <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">name</span>=<span class="value">"password"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="title">label</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">fieldset</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<h2 id="Form_&amp;_Input_Attributes">Form &amp; Input Attributes</h2>
+<p>To accommodate all of the different form, input, and control elements, there are a number of attributes and corresponding values. These attributes and values serve a handful of different functions, such as disabling controls and adding form validation. </p>
+<h3 id="Disabled">Disabled</h3>
+<p>The <strong>disabled</strong> Boolean attribute turns off an element or control so that it is not available for interaction or input. Elements that are disabled will not send any value to the server for form processing.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">label</span>&gt;</span></div><div class="line">  Username</div><div class="line">  <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">name</span>=<span class="value">"username"</span> <span class="attribute">disabled</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">label</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<h3 id="Placeholder">Placeholder</h3>
+<p>The placeholder HTML5 attribute provides a <strong>hint</strong> or tip within the form control of an <code>&lt;input</code>&gt; or <code>&lt;textarea</code>&gt; element that disappears once the control is clicked in or gains focus. This is used to give users further information on how the form input should be filled in, for example, the email address format to use.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">label</span>&gt;</span></div><div class="line">  Email Address</div><div class="line">  <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"email"</span> <span class="attribute">name</span>=<span class="value">"email-address"</span> <span class="attribute">placeholder</span>=<span class="value">"name@domain.com"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">label</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<p>The main difference between the <strong>placeholder</strong> and <strong>value</strong> attributes is that the value attribute value text stays in place when a control has focus unless a user manually deletes it. This is great for pre-populating data, such as personal information, for a user but not for providing suggestions.</p>
+<h3 id="Required">Required</h3>
+<p>The <strong>required</strong> HTML5 Boolean attribute enforces that an element or form control must contain a value upon being submitted to the server. Should an element or form control not have a value, an error message will be displayed requesting that the user complete the required field. Currently, error message styles are controlled by the browser and cannot be styled with CSS. Invalid elements and form controls, on the other hand, can be styled using the <strong>:optional</strong> and <strong>:required</strong> CSS pseudo-classes.</p>
+<p>Validation also occurs specific to a control’s type. For example, an <code>&lt;input</code>&gt; element with a type attribute value of email will require not only that a value exist within the control, but also that it is a valid email address.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">label</span>&gt;</span></div><div class="line">  Email Address</div><div class="line">  <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"email"</span> <span class="attribute">name</span>=<span class="value">"email-address"</span> <span class="attribute">required</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">label</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<h3 id="Additional_Attributes">Additional Attributes</h3>
+<p>Other form and form control attributes include, but are not limited to, the following. Please feel free to research these attributes as necessary.</p>
+<ul>
+<li>accept</li>
+<li>autocomplete</li>
+<li>autofocus</li>
+<li>formaction</li>
+<li>formenctype</li>
+<li>formmethod</li>
+<li>formnovalidate</li>
+<li>formtarget</li>
+<li>max</li>
+<li>maxlength</li>
+<li>min</li>
+<li>pattern</li>
+<li>readonly</li>
+<li>selectionDirection</li>
+<li>step</li>
+</ul>
+<h2 id="Login_Form_Example">Login Form Example</h2>
+<p>The following is an example of a complete login form that includes several different elements and attributes to illustrate what we’ve covered so far. These elements are then styled using CSS.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">form</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">fieldset</span> <span class="attribute">class</span>=<span class="value">"account-info"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">label</span>&gt;</span></div><div class="line">      Username</div><div class="line">      <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">name</span>=<span class="value">"username"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="title">label</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">label</span>&gt;</span></div><div class="line">      Password</div><div class="line">      <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"password"</span> <span class="attribute">name</span>=<span class="value">"password"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="title">label</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="title">fieldset</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">fieldset</span> <span class="attribute">class</span>=<span class="value">"account-action"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">input</span> <span class="attribute">class</span>=<span class="value">"btn"</span> <span class="attribute">type</span>=<span class="value">"submit"</span> <span class="attribute">name</span>=<span class="value">"submit"</span> <span class="attribute">value</span>=<span class="value">"Login"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">label</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"checkbox"</span> <span class="attribute">name</span>=<span class="value">"remember"</span>&gt;</span> Stay signed in</div><div class="line">    <span class="tag">&lt;/<span class="title">label</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="title">fieldset</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">form</span>&gt;</span></div></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div></pre></td><td class="code"><pre><div class="line">*,</div><div class="line">*<span class="pseudo">:before</span>,</div><div class="line">*<span class="pseudo">:after</span> <span class="rules">{</span></div><div class="line">   <span class="rule"><span class="attribute">box-sizing</span>:<span class="value"> border-box</span></span>;</div><div class="line"><span class="rule">}</span></div><div class="line"><span class="tag">form</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">border</span>:<span class="value"> <span class="number">1px</span> solid <span class="hexcolor">#c6c7cc</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">border-radius</span>:<span class="value"> <span class="number">5px</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">font</span>:<span class="value"> <span class="number">14px</span>/<span class="number">1.4</span> <span class="string">"Helvetica Neue"</span>, Helvetica, Arial, sans-serif</span></span>;</div><div class="line">  <span class="rule"><span class="attribute">overflow</span>:<span class="value"> hidden</span></span>;</div><div class="line">  <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">240px</span></span></span>;</div><div class="line"><span class="rule">}</span></div><div class="line"><span class="tag">fieldset</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">border</span>:<span class="value"> <span class="number">0</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">0</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">0</span></span></span>;</div><div class="line"><span class="rule">}</span></div><div class="line"><span class="tag">input</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">border-radius</span>:<span class="value"> <span class="number">5px</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">font</span>:<span class="value"> <span class="number">14px</span>/<span class="number">1.4</span> <span class="string">"Helvetica Neue"</span>, Helvetica, Arial, sans-serif</span></span>;</div><div class="line">  <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">0</span></span></span>;</div><div class="line"><span class="rule">}</span></div><div class="line"><span class="class">.account-info</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">20px</span> <span class="number">20px</span> <span class="number">0</span> <span class="number">20px</span></span></span>;</div><div class="line"><span class="rule">}</span></div><div class="line"><span class="class">.account-info</span> <span class="tag">label</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#395870</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">display</span>:<span class="value"> block</span></span>;</div><div class="line">  <span class="rule"><span class="attribute">font-weight</span>:<span class="value"> bold</span></span>;</div><div class="line">  <span class="rule"><span class="attribute">margin-bottom</span>:<span class="value"> <span class="number">20px</span></span></span>;</div><div class="line"><span class="rule">}</span></div><div class="line"><span class="class">.account-info</span> <span class="tag">input</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">background</span>:<span class="value"> <span class="hexcolor">#fff</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">border</span>:<span class="value"> <span class="number">1px</span> solid <span class="hexcolor">#c6c7cc</span></span></span>;</div><div class="line">   <span class="rule"><span class="attribute">box-shadow</span>:<span class="value"> inset <span class="number">0</span> <span class="number">1px</span> <span class="number">1px</span> <span class="function">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, .<span class="number">1</span>)</span></span>;</div><div class="line">  <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#636466</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">6px</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">margin-top</span>:<span class="value"> <span class="number">6px</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">100%</span></span></span>;</div><div class="line"><span class="rule">}</span></div><div class="line"><span class="class">.account-action</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">background</span>:<span class="value"> <span class="hexcolor">#f0f0f2</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">border-top</span>:<span class="value"> <span class="number">1px</span> solid <span class="hexcolor">#c6c7cc</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">20px</span></span></span>;</div><div class="line"><span class="rule">}</span></div><div class="line"><span class="class">.account-action</span> <span class="class">.btn</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">background</span>:<span class="value"> <span class="function">linear-gradient</span>(<span class="hexcolor">#49708f</span>, <span class="hexcolor">#293f50</span>)</span></span>;</div><div class="line">  <span class="rule"><span class="attribute">border</span>:<span class="value"> <span class="number">0</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#fff</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">cursor</span>:<span class="value"> pointer</span></span>;</div><div class="line">  <span class="rule"><span class="attribute">font-weight</span>:<span class="value"> bold</span></span>;</div><div class="line">  <span class="rule"><span class="attribute">float</span>:<span class="value"> left</span></span>;</div><div class="line">  <span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">8px</span> <span class="number">16px</span></span></span>;</div><div class="line"><span class="rule">}</span></div><div class="line"><span class="class">.account-action</span> <span class="tag">label</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#7c7c80</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">font-size</span>:<span class="value"> <span class="number">12px</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">float</span>:<span class="value"> left</span></span>;</div><div class="line">  <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">10px</span> <span class="number">0</span> <span class="number">0</span> <span class="number">20px</span></span></span>;</div><div class="line"><span class="rule">}</span></div></pre></td></tr></table></figure>
+
+<h2 id="Summary">Summary</h2>
+<p>Forms play a large role in how users interact with, provide information to, and take action on websites. We’ve taken all the right steps to learn not only how to mark up forms but also how to style them.</p>
+<p>To quickly recap, within this lesson we discussed the following:</p>
+<ul>
+<li>How to <strong>initialize a form</strong></li>
+<li>Ways to obtain <strong>text-based information</strong> from users</li>
+<li>Different elements and methods for creating <strong>multiple choice options and menus</strong></li>
+<li>Which elements and attributes are best used to <strong>submit</strong> a form’s data for processing</li>
+<li>How best to <strong>organize forms</strong> and give form controls structure and meaning</li>
+<li>A handful of attributes that help collect more qualified data</li>
+</ul>
+	  
+	</div>
+
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+		
+          <li class="prev disabled"><a><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+        
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
+
+		
+		   <li class="next"><a href="/2015/02/08/Learn to Code HTML & CSS 09/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
+</ul>
+</div>
+
+    </center>
+	</div>
+	
+	<!-- comment -->
+	
+<section id="comment">
+  <h2 class="title">留言</h2>
+
+  
+</section>
+
+	
+	</div> <!-- col-md-9/col-md-12 -->
+	
+	
+		<div class="col-md-3"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2015 2月 8 
+	</div>
+	
+
+	<!-- categories -->
+    
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
+          
+  <li>
+    <li><a href="/categories/技术/">技术<span>13</span></a></li>
+  </li>
+
+    </ul>
+	</div>
+	
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/HTML/">HTML<span>10</span></a></li> <li><a href="/tags/CSS/">CSS<span>10</span></a></li>
+    </ul>
+	</div>
+		
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	   <a data-toggle="collapse" data-target="#toc"><i class="fa fa-bars"></i></a>
+	   <div id="toc" class="toc collapse in">
+			<ol class="toc-article"><li class="toc-article-item toc-article-level-1"><a class="toc-article-link" href="#Lesson_10:_Building_Forms"><span class="toc-article-text">Lesson 10: Building Forms</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Initializing_a_Form"><span class="toc-article-text">Initializing a Form</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Text_Fields_&_Textareas"><span class="toc-article-text">Text Fields & Textareas</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Text_Fields"><span class="toc-article-text">Text Fields</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Textarea"><span class="toc-article-text">Textarea</span></a></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Multiple_Choice_Inputs_&_Menus"><span class="toc-article-text">Multiple Choice Inputs & Menus</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Radio_Buttons"><span class="toc-article-text">Radio Buttons</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Check_Boxes"><span class="toc-article-text">Check Boxes</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Drop-Down_Lists"><span class="toc-article-text">Drop-Down Lists</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Multiple_Selections"><span class="toc-article-text">Multiple Selections</span></a></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Form_Buttons"><span class="toc-article-text">Form Buttons</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Submit_Input"><span class="toc-article-text">Submit Input</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Submit_Button"><span class="toc-article-text">Submit Button</span></a></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Other_Inputs"><span class="toc-article-text">Other Inputs</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Hidden_Input"><span class="toc-article-text">Hidden Input</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#File_Input"><span class="toc-article-text">File Input</span></a></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Organizing_Form_Elements"><span class="toc-article-text">Organizing Form Elements</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Label"><span class="toc-article-text">Label</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Fieldset"><span class="toc-article-text">Fieldset</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Legend"><span class="toc-article-text">Legend</span></a></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Form_&_Input_Attributes"><span class="toc-article-text">Form & Input Attributes</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Disabled"><span class="toc-article-text">Disabled</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Placeholder"><span class="toc-article-text">Placeholder</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Required"><span class="toc-article-text">Required</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Additional_Attributes"><span class="toc-article-text">Additional Attributes</span></a></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Login_Form_Example"><span class="toc-article-text">Login Form Example</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Summary"><span class="toc-article-text">Summary</span></a></li></ol></li></ol>
+		</div>
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	
+
+</div><!-- row -->
+
+
+<!-- Duoshuo Comment BEGIN -->
+<div class="ds-thread" data-title="Learn to Code HTML &amp; CSS 10" data-url="http://baoxiehao.com/2015/02/08/Learn to Code HTML & CSS 10/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"baoxiehao"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+<!-- Duoshuo Comment END -->
+
+
+	</div>
+  </div>
+  <div class="container-narrow">
+  <footer> <p>
+  &copy; 2015 浩然也空
+  
+      with help from <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+</p> </footer>
+  <!-- Duoshuo Comment BEGIN -->
+<div class="ds-thread" data-title="Learn to Code HTML &amp; CSS 10" data-url="http://baoxiehao.com/2015/02/08/Learn to Code HTML & CSS 10/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"baoxiehao"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+<!-- Duoshuo Comment END -->
+
+</div> <!-- container-narrow -->
+  
+<a id="gotop" href="#">
+  <span>▲</span>
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-51276891-1', 'baoxiehao.com');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+   </html>
