@@ -4,7 +4,7 @@
   <subtitle><![CDATA[淡静良觉之地]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://baoxiehao.com/"/>
-  <updated>2015-02-06T14:29:17.771Z</updated>
+  <updated>2015-02-08T08:13:11.289Z</updated>
   <id>http://baoxiehao.com/</id>
   
   <author>
@@ -19,8 +19,16 @@
     <link href="http://baoxiehao.com/2015/02/03/Learn%20to%20Code%20HTML%20&%20CSS%208/"/>
     <id>http://baoxiehao.com/2015/02/03/Learn to Code HTML & CSS 8/</id>
     <published>2015-02-03T06:14:00.000Z</published>
-    <updated>2015-02-06T14:28:48.000Z</updated>
+    <updated>2015-02-08T08:04:35.000Z</updated>
     <content type="html"><![CDATA[<h1 id="Lesson_8:_Creating_Lists"><a href="http://learn.shayhowe.com/html-css/creating-lists/" target="_blank" rel="external">Lesson 8: Creating Lists</a></h1>
+<p><strong>Contents</strong></p>
+<ul>
+<li>How to create unordered, ordered, and description lists</li>
+<li>How to properly nest lists inside of other lists</li>
+<li>How to change the list item marker style and position</li>
+<li>How to use a background image instead of a list item marker</li>
+<li>How to horizontally display or float lists</li>
+</ul>
 <a id="more"></a>
 
 <p>When we want to use a list on a website, HTML provides three different types to choose from: <strong>unordered</strong>, <strong>ordered</strong>, and <strong>description</strong> lists. Choosing which type of list to use—or whether to use a list at all—comes down to the content and the most semantically appropriate option for displaying that content.</p>
@@ -105,6 +113,14 @@
 </ul>
 ]]></content>
     <summary type="html"><![CDATA[<h1 id="Lesson_8:_Creating_Lists"><a href="http://learn.shayhowe.com/html-css/creating-lists/" target="_blank" rel="external">Lesson 8: Creating Lists</a></h1>
+<p><strong>Contents</strong></p>
+<ul>
+<li>How to create unordered, ordered, and description lists</li>
+<li>How to properly nest lists inside of other lists</li>
+<li>How to change the list item marker style and position</li>
+<li>How to use a background image instead of a list item marker</li>
+<li>How to horizontally display or float lists</li>
+</ul>
 ]]></summary>
     
       <category term="HTML" scheme="http://baoxiehao.com/tags/HTML/"/>
@@ -120,8 +136,15 @@
     <link href="http://baoxiehao.com/2015/02/02/Learn%20to%20Code%20HTML%20&%20CSS%207/"/>
     <id>http://baoxiehao.com/2015/02/02/Learn to Code HTML & CSS 7/</id>
     <published>2015-02-02T06:14:00.000Z</published>
-    <updated>2015-02-06T14:28:54.000Z</updated>
+    <updated>2015-02-08T08:03:50.000Z</updated>
     <content type="html"><![CDATA[<h1 id="Lesson_7:_Setting_Backgrounds_&amp;_Gradients"><a href="http://learn.shayhowe.com/html-css/setting-backgrounds-and-gradients/" target="_blank" rel="external">Lesson 7: Setting Backgrounds &amp; Gradients</a></h1>
+<p><strong>Contents</strong></p>
+<ul>
+<li>How to add background colors and images to elements</li>
+<li><strong>CSS gradients</strong>, both linear and radial, and how to customize them</li>
+<li>How to apply multiple background images to a single element</li>
+<li>New CSS3 properties that allow us to change the size, surface area, and origin of background images</li>
+</ul>
 <a id="more"></a>
 
 <p>Backgrounds have a significant impact on the design of a website. They help create a site’s look and feel, establish groupings, and assign priority, and they have a considerable influence on a website’s usability.</p>
@@ -210,6 +233,13 @@ When using an RGBa <span class="keyword">or</span> HSLa value <span class="keywo
 </ul>
 ]]></content>
     <summary type="html"><![CDATA[<h1 id="Lesson_7:_Setting_Backgrounds_&amp;_Gradients"><a href="http://learn.shayhowe.com/html-css/setting-backgrounds-and-gradients/" target="_blank" rel="external">Lesson 7: Setting Backgrounds &amp; Gradients</a></h1>
+<p><strong>Contents</strong></p>
+<ul>
+<li>How to add background colors and images to elements</li>
+<li><strong>CSS gradients</strong>, both linear and radial, and how to customize them</li>
+<li>How to apply multiple background images to a single element</li>
+<li>New CSS3 properties that allow us to change the size, surface area, and origin of background images</li>
+</ul>
 ]]></summary>
     
       <category term="HTML" scheme="http://baoxiehao.com/tags/HTML/"/>
@@ -225,8 +255,15 @@ When using an RGBa <span class="keyword">or</span> HSLa value <span class="keywo
     <link href="http://baoxiehao.com/2015/02/01/Learn%20to%20Code%20HTML%20&%20CSS%206/"/>
     <id>http://baoxiehao.com/2015/02/01/Learn to Code HTML & CSS 6/</id>
     <published>2015-02-01T06:14:00.000Z</published>
-    <updated>2015-02-06T14:29:00.000Z</updated>
+    <updated>2015-02-08T08:03:17.000Z</updated>
     <content type="html"><![CDATA[<h1 id="Lesson_6:_Working_with_Typography"><a href="http://learn.shayhowe.com/html-css/working-with-typography/" target="_blank" rel="external">Lesson 6: Working with Typography</a></h1>
+<p><strong>Contents</strong></p>
+<ul>
+<li>Adding color to our text to enhance it</li>
+<li>Applying font-based properties, including font-family, font-size, font-style, font-weight, and more</li>
+<li>Applying text-based properties, including text-align, text-decoration, text-indent, text-shadow, and more</li>
+<li>The history behind web-safe fonts and how to embed our own web fonts<br>How to properly mark up citations and quotations</li>
+</ul>
 <a id="more"></a>
 
 <p>The field of <a href="http://webtypography.net/" target="_blank" rel="external">web typography</a> has grown substantially over time. There are a couple of different reasons for its rise in popularity; one widely acknowledged reason is the development of a system for embedding our own web fonts on a website.</p>
@@ -354,6 +391,13 @@ Lastly, <span class="operator">the</span> box-shadow property may <span class="b
 </ul>
 ]]></content>
     <summary type="html"><![CDATA[<h1 id="Lesson_6:_Working_with_Typography"><a href="http://learn.shayhowe.com/html-css/working-with-typography/" target="_blank" rel="external">Lesson 6: Working with Typography</a></h1>
+<p><strong>Contents</strong></p>
+<ul>
+<li>Adding color to our text to enhance it</li>
+<li>Applying font-based properties, including font-family, font-size, font-style, font-weight, and more</li>
+<li>Applying text-based properties, including text-align, text-decoration, text-indent, text-shadow, and more</li>
+<li>The history behind web-safe fonts and how to embed our own web fonts<br>How to properly mark up citations and quotations</li>
+</ul>
 ]]></summary>
     
       <category term="HTML" scheme="http://baoxiehao.com/tags/HTML/"/>
@@ -369,8 +413,16 @@ Lastly, <span class="operator">the</span> box-shadow property may <span class="b
     <link href="http://baoxiehao.com/2015/01/31/Learn%20to%20Code%20HTML%20&%20CSS%205/"/>
     <id>http://baoxiehao.com/2015/01/31/Learn to Code HTML & CSS 5/</id>
     <published>2015-01-31T06:14:00.000Z</published>
-    <updated>2015-02-06T14:28:42.000Z</updated>
+    <updated>2015-02-08T08:02:34.000Z</updated>
     <content type="html"><![CDATA[<h1 id="Lesson_5:_Positioning_Content"><a href="http://learn.shayhowe.com/html-css/positioning-content/" target="_blank" rel="external">Lesson 5: Positioning Content</a></h1>
+<p><strong>Contents</strong></p>
+<ul>
+<li>What floats are and how to use them to position content</li>
+<li>How to clear and contain floated elements</li>
+<li>How to position content with inline-block elements</li>
+<li>How to remove the white space between inline-block elements</li>
+<li>How to uniquely position content with relatively and absolutely positioned elements</li>
+</ul>
 <a id="more"></a>
 
 <p>One of the best things about CSS is that it gives us the ability to position content and elements on a page in nearly any imaginable way, bringing structure to our designs and helping make content more digestible.</p>
@@ -469,6 +521,14 @@ Lastly, <span class="operator">the</span> box-shadow property may <span class="b
 </ul>
 ]]></content>
     <summary type="html"><![CDATA[<h1 id="Lesson_5:_Positioning_Content"><a href="http://learn.shayhowe.com/html-css/positioning-content/" target="_blank" rel="external">Lesson 5: Positioning Content</a></h1>
+<p><strong>Contents</strong></p>
+<ul>
+<li>What floats are and how to use them to position content</li>
+<li>How to clear and contain floated elements</li>
+<li>How to position content with inline-block elements</li>
+<li>How to remove the white space between inline-block elements</li>
+<li>How to uniquely position content with relatively and absolutely positioned elements</li>
+</ul>
 ]]></summary>
     
       <category term="HTML" scheme="http://baoxiehao.com/tags/HTML/"/>
@@ -484,8 +544,16 @@ Lastly, <span class="operator">the</span> box-shadow property may <span class="b
     <link href="http://baoxiehao.com/2015/01/30/Learn%20to%20Code%20HTML%20&%20CSS%204/"/>
     <id>http://baoxiehao.com/2015/01/30/Learn to Code HTML & CSS 4/</id>
     <published>2015-01-30T06:14:00.000Z</published>
-    <updated>2015-02-06T14:28:39.000Z</updated>
+    <updated>2015-02-08T08:01:57.000Z</updated>
     <content type="html"><![CDATA[<h1 id="Lesson_4:_Opening_the_Box_Model"><a href="http://learn.shayhowe.com/html-css/opening-the-box-model/" target="_blank" rel="external">Lesson 4: Opening the Box Model</a></h1>
+<p><strong>Contents</strong></p>
+<ul>
+<li>How different elements are displayed</li>
+<li>What the box model is and why it’s important</li>
+<li>How to change the size, including the height and width, of elements</li>
+<li>How to add margin, padding, and borders to elements</li>
+<li>How to change the box sizing of elements and the effects this has on the box model</li>
+</ul>
 <a id="more"></a>
 
 <h2 id="How_Are_Elements_Displayed?">How Are Elements Displayed?</h2>
@@ -585,6 +653,14 @@ Webkit (Google Chrome <span class="keyword">and</span> Apple Safari): -webkit-
 </ul>
 ]]></content>
     <summary type="html"><![CDATA[<h1 id="Lesson_4:_Opening_the_Box_Model"><a href="http://learn.shayhowe.com/html-css/opening-the-box-model/" target="_blank" rel="external">Lesson 4: Opening the Box Model</a></h1>
+<p><strong>Contents</strong></p>
+<ul>
+<li>How different elements are displayed</li>
+<li>What the box model is and why it’s important</li>
+<li>How to change the size, including the height and width, of elements</li>
+<li>How to add margin, padding, and borders to elements</li>
+<li>How to change the box sizing of elements and the effects this has on the box model</li>
+</ul>
 ]]></summary>
     
       <category term="HTML" scheme="http://baoxiehao.com/tags/HTML/"/>
@@ -600,8 +676,17 @@ Webkit (Google Chrome <span class="keyword">and</span> Apple Safari): -webkit-
     <link href="http://baoxiehao.com/2015/01/29/Learn%20to%20Code%20HTML%20&%20CSS%203/"/>
     <id>http://baoxiehao.com/2015/01/29/Learn to Code HTML & CSS 3/</id>
     <published>2015-01-29T06:14:00.000Z</published>
-    <updated>2015-02-06T14:28:27.000Z</updated>
+    <updated>2015-02-08T08:01:09.000Z</updated>
     <content type="html"><![CDATA[<h1 id="Lesson_3:_Getting_to_Know_CSS"><a href="http://learn.shayhowe.com/html-css/getting-to-know-css/" target="_blank" rel="external">Lesson 3: Getting to Know CSS</a></h1>
+<p><strong>Contents</strong></p>
+<ul>
+<li>How style sheets cascade from the top to the bottom of a file</li>
+<li>What specificity is and how we can calculate it</li>
+<li>How to combine selectors to target specific elements or groups of elements</li>
+<li>How to use multiple classes on a single element to layer on different styles for more modular code</li>
+<li>The different color values available to use within CSS, including keyword, hexadecimal, RGB, and HSL values</li>
+<li>The different length values available to use within CSS, including pixels, percentages, and em units</li>
+</ul>
 <a id="more"></a>
 
 <p>First, it’s crucial to know exactly how styles are rendered. Specifically, we’ll need to know how different types of selectors work and how the order of those selectors can affect how our styles are rendered. We’ll also want to understand a few common property values that continually appear within CSS, particularly those that deal with color and length.</p>
@@ -665,6 +750,15 @@ Webkit (Google Chrome <span class="keyword">and</span> Apple Safari): -webkit-
 </ul>
 ]]></content>
     <summary type="html"><![CDATA[<h1 id="Lesson_3:_Getting_to_Know_CSS"><a href="http://learn.shayhowe.com/html-css/getting-to-know-css/" target="_blank" rel="external">Lesson 3: Getting to Know CSS</a></h1>
+<p><strong>Contents</strong></p>
+<ul>
+<li>How style sheets cascade from the top to the bottom of a file</li>
+<li>What specificity is and how we can calculate it</li>
+<li>How to combine selectors to target specific elements or groups of elements</li>
+<li>How to use multiple classes on a single element to layer on different styles for more modular code</li>
+<li>The different color values available to use within CSS, including keyword, hexadecimal, RGB, and HSL values</li>
+<li>The different length values available to use within CSS, including pixels, percentages, and em units</li>
+</ul>
 ]]></summary>
     
       <category term="HTML" scheme="http://baoxiehao.com/tags/HTML/"/>
@@ -680,8 +774,16 @@ Webkit (Google Chrome <span class="keyword">and</span> Apple Safari): -webkit-
     <link href="http://baoxiehao.com/2015/01/28/Learn%20to%20Code%20HTML%20&%20CSS%202/"/>
     <id>http://baoxiehao.com/2015/01/28/Learn to Code HTML & CSS 2/</id>
     <published>2015-01-28T06:14:00.000Z</published>
-    <updated>2015-02-06T14:28:19.000Z</updated>
+    <updated>2015-02-08T08:00:23.000Z</updated>
     <content type="html"><![CDATA[<h1 id="Lesson_2:_Getting_to_Know_HTML"><a href="http://learn.shayhowe.com/html-css/getting-to-know-html/" target="_blank" rel="external">Lesson 2: Getting to Know HTML</a></h1>
+<p><strong>Contents</strong></p>
+<ul>
+<li>What semantics are and why they are important</li>
+<li><code>&lt;div</code>&gt;s and <code>&lt;spans</code>&gt;s, and the difference between block- and inline-level elements</li>
+<li>Which text-based elements best represent the content of a page</li>
+<li>The HTML5 structural elements and how to define the structure and organization of our content and page</li>
+<li>How to use hyperlinks to navigate between web pages or websites</li>
+</ul>
 <a id="more"></a>
 
 <p>In order to start building websites, we need to learn a little about which HTML elements are best used to display different types of content. It’s also important to understand how elements are visually displayed on a web page, as well as what different elements mean semantically.</p>
@@ -781,13 +883,21 @@ By nature <span class="operator">the</span> anchor <span class="keyword">element
 <p>Once again, in this lesson we covered the following:</p>
 <ul>
 <li>What semantics are and why they are important</li>
-<li><strong><div></div></strong>s and <strong><spans></spans></strong>s, and the difference between <strong>block- and inline-level elements</strong></li>
+<li><strong><code>&lt;div</code>&gt;</strong>s and <strong><code>&lt;spans</code>&gt;</strong>s, and the difference between <strong>block- and inline-level elements</strong></li>
 <li>Which text-based elements best represent the content of a page</li>
 <li>The HTML5 structural elements and how to define the <strong>structure and organization</strong> of our content and page</li>
 <li>How to use <strong>hyperlinks</strong> to navigate between web pages or websites</li>
 </ul>
 ]]></content>
     <summary type="html"><![CDATA[<h1 id="Lesson_2:_Getting_to_Know_HTML"><a href="http://learn.shayhowe.com/html-css/getting-to-know-html/" target="_blank" rel="external">Lesson 2: Getting to Know HTML</a></h1>
+<p><strong>Contents</strong></p>
+<ul>
+<li>What semantics are and why they are important</li>
+<li><code>&lt;div</code>&gt;s and <code>&lt;spans</code>&gt;s, and the difference between block- and inline-level elements</li>
+<li>Which text-based elements best represent the content of a page</li>
+<li>The HTML5 structural elements and how to define the structure and organization of our content and page</li>
+<li>How to use hyperlinks to navigate between web pages or websites</li>
+</ul>
 ]]></summary>
     
       <category term="HTML" scheme="http://baoxiehao.com/tags/HTML/"/>
@@ -803,8 +913,18 @@ By nature <span class="operator">the</span> anchor <span class="keyword">element
     <link href="http://baoxiehao.com/2015/01/27/Learn%20to%20Code%20HTML%20&%20CSS%201/"/>
     <id>http://baoxiehao.com/2015/01/27/Learn to Code HTML & CSS 1/</id>
     <published>2015-01-27T06:14:00.000Z</published>
-    <updated>2015-02-06T14:28:23.000Z</updated>
+    <updated>2015-02-08T08:01:18.000Z</updated>
     <content type="html"><![CDATA[<h1 id="Lesson_1:_Building_Your_First_Web_Page"><a href="http://learn.shayhowe.com/html-css/building-your-first-web-page/" target="_blank" rel="external">Lesson 1: Building Your First Web Page</a></h1>
+<p><strong>Contents</strong></p>
+<ul>
+<li>The difference between HTML and CSS</li>
+<li>Getting acquainted with HTML elements, tags, and attributes</li>
+<li>Setting up the structure of your first web page</li>
+<li>Getting acquainted with CSS selectors, properties, and values</li>
+<li>Working with CSS selectors</li>
+<li>Referencing CSS in your HTML</li>
+<li>The value of CSS resets</li>
+</ul>
 <a id="more"></a>
 
 <h2 id="What_Are_HTML_&amp;_CSS?">What Are HTML &amp; CSS?</h2>
@@ -901,6 +1021,16 @@ As previously mentioned, different browsers render elements <span class="operato
 </ul>
 ]]></content>
     <summary type="html"><![CDATA[<h1 id="Lesson_1:_Building_Your_First_Web_Page"><a href="http://learn.shayhowe.com/html-css/building-your-first-web-page/" target="_blank" rel="external">Lesson 1: Building Your First Web Page</a></h1>
+<p><strong>Contents</strong></p>
+<ul>
+<li>The difference between HTML and CSS</li>
+<li>Getting acquainted with HTML elements, tags, and attributes</li>
+<li>Setting up the structure of your first web page</li>
+<li>Getting acquainted with CSS selectors, properties, and values</li>
+<li>Working with CSS selectors</li>
+<li>Referencing CSS in your HTML</li>
+<li>The value of CSS resets</li>
+</ul>
 ]]></summary>
     
       <category term="HTML" scheme="http://baoxiehao.com/tags/HTML/"/>
@@ -916,14 +1046,23 @@ As previously mentioned, different browsers render elements <span class="operato
     <link href="http://baoxiehao.com/2015/01/01/%E5%A5%BD%E6%96%87%E8%81%9A%E6%B2%99%E6%88%90%E5%A1%94/"/>
     <id>http://baoxiehao.com/2015/01/01/好文聚沙成塔/</id>
     <published>2015-01-01T12:42:44.000Z</published>
-    <updated>2015-02-03T06:43:11.000Z</updated>
+    <updated>2015-02-07T16:15:55.000Z</updated>
     <content type="html"><![CDATA[<p>分享那些值得记录的好文章</p>
 <a id="more"></a>
 
 <h1 id="技术类">技术类</h1>
 <p><a href="http://get.jobdeer.com/744.get" target="_blank" rel="external">如何写好技术简历 —— 实例、模板及工具</a><br><a href="http://fabiensanglard.net/git_code_review/index.php" target="_blank" rel="external">Git源码赏析三篇（综述、由来、结构）</a><br><a href="http://blog.jobbole.com/66227/" target="_blank" rel="external">jQuery之父：每天都写点代码</a><br><a href="http://codecondo.com/coding-challenges/" target="_blank" rel="external">14个帮你锻炼脑思维的代码编程挑战网站</a><br><a href="http://overapi.com/" target="_blank" rel="external">在线API查询大全</a></p>
 <h2 id="Web">Web</h2>
-<p><a href="http://learn.shayhowe.com/html-css/" target="_blank" rel="external">Learn to Code HTML &amp; CSS</a><br><a href="http://leaverou.github.io/prefixfree/" target="_blank" rel="external">-prefix-free Break free from CSS prefix hell</a><br><a href="http://www.cnblogs.com/lhb25/" target="_blank" rel="external">梦想天空</a><br><a href="http://www.cnblogs.com/lhb25/p/node-js-tutorials-for-beginners.html" target="_blank" rel="external">最佳的 Node.js 学习教程和资料书籍</a><br><a href="http://fex.baidu.com/blog/2014/05/build-performance-monitor-in-7-days/" target="_blank" rel="external">7天打造前端性能监控系统</a></p>
+<h3 id="HTML_&amp;_CSS">HTML &amp; CSS</h3>
+<p><a href="http://learn.shayhowe.com/html-css/" target="_blank" rel="external">Learn to Code HTML &amp; CSS</a><br><a href="http://leaverou.github.io/prefixfree/" target="_blank" rel="external">-prefix-free Break free from CSS prefix hell</a></p>
+<h3 id="JavaScript">JavaScript</h3>
+<p><a href="http://www.crimx.com//2014/05/15/how-to-learn-javascript-properly/" target="_blank" rel="external">译文：如何正确学习JavaScript</a><br><a href="http://javascriptissexy.com/javascript-objects-in-detail/" target="_blank" rel="external">JavaScript 对象详解</a><br><a href="http://javascriptissexy.com/understand-javascript-closures-with-ease/" target="_blank" rel="external">轻松掌握 JavaScript 闭包</a><br><a href="http://javascriptissexy.com/javascript-variable-scope-and-hoisting-explained/" target="_blank" rel="external">JavaScript 变量作用域与提升解释</a></p>
+<h3 id="Node-js">Node.js</h3>
+<p><a href="http://stackoverflow.com/questions/2353818/how-do-i-get-started-with-node-js" target="_blank" rel="external">How Do I Get Started with Node.js</a><br><a href="http://www.nodebeginner.org/index-zh-cn.html" target="_blank" rel="external">Node入门</a><br><a href="https://github.com/maxogden/art-of-node/#the-art-of-node" target="_blank" rel="external">The Art of Node</a><br><a href="http://nodeguide.com" target="_blank" rel="external">Felix’s Node.js Guide</a><br><a href="http://howtonode.org/express-mongodb" target="_blank" rel="external">Build a blog with Node.js, express and MongoDB</a><br><a href="http://www.crimx.com/2014/05/22/learn-node-js-completely-and-with-confidence/" target="_blank" rel="external">译文：不侧漏精通 Node.js</a><br><a href="http://nqdeng.github.io/7-days-nodejs/" target="_blank" rel="external">七天学会NodeJS</a><br><a href="http://www.cnblogs.com/lhb25/p/node-js-tutorials-for-beginners.html" target="_blank" rel="external">最佳的 Node.js 学习教程和资料书籍</a></p>
+<h3 id="Others">Others</h3>
+<p><a href="http://fex.baidu.com/blog/2014/05/build-performance-monitor-in-7-days/" target="_blank" rel="external">7天打造前端性能监控系统</a></p>
+<h3 id="Blogs">Blogs</h3>
+<p><a href="http://www.cnblogs.com/lhb25/" target="_blank" rel="external">梦想天空</a></p>
 <h2 id="Lisp">Lisp</h2>
 <p><a href="http://www.quicklisp.org/beta/" target="_blank" rel="external">Quicklisp</a><br><a href="http://8arrow.org/caveman/" target="_blank" rel="external">Caveman 2: The real web framework</a></p>
 <h2 id="Erlang">Erlang</h2>
