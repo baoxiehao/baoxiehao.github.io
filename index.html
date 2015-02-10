@@ -126,6 +126,81 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 	
 	<!-- display as entry -->
 		<h3 class="title">
+			<a href="/2015/02/09/Learn to Code HTML & CSS 11/" >Learn to Code HTML &amp; CSS 11</a>
+			<span class="date"> 2015 2月 9 </span>
+		</h3>
+	
+
+
+			<div class="entry">
+  <div class="row">
+  
+	<div class="col-md-12">
+	  
+	
+	  <h1 id="Lesson_11:_Organizing_Data_with_Tables"><a href="http://learn.shayhowe.com/html-css/organizing-data-with-tables/" target="_blank" rel="external">Lesson 11: Organizing Data with Tables</a></h1>
+<p><strong>Contents</strong></p>
+<ul>
+<li>The best ways to semantically create tables</li>
+<li>How to make individual table cells span multiple columns or rows</li>
+<li>The structural elements that make up tables</li>
+<li>Different ways to style borders on a table, and how different border properties affect a table’s appearance</li>
+<li>How to vertically align text within a table</li>
+</ul>
+<p>HTML tables were created to provide a straightforward way to mark up structured tabular data and to display that data in a form that is easy for users to read and digest.</p>
+<h2 id="Creating_a_Table">Creating a Table</h2>
+<p>Tables are made up of data that is contained within columns and rows, and HTML supplies several different elements for defining and structuring these items. At a minimum a table must consist of <code>&lt;table</code>&gt;, <code>&lt;tr</code>&gt; (table row), and <code>&lt;td</code>&gt; (table data) elements. For greater structure and additional semantic value, tables may include the <code>&lt;th</code>&gt; (table header) ele- ment and a few other elements as well. When all of these elements are working together, they produce a solid table.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">table</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">tr</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">td</span>&gt;</span>Don&#8217;t Make Me Think by Steve Krug<span class="tag">&lt;/<span class="title">td</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">td</span>&gt;</span>In Stock<span class="tag">&lt;/<span class="title">td</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">td</span>&gt;</span>1<span class="tag">&lt;/<span class="title">td</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">td</span>&gt;</span>$30.02<span class="tag">&lt;/<span class="title">td</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="title">tr</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">tr</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">td</span>&gt;</span>A Project Guide to UX Design by Russ Unger &#38; Carolyn Chandler<span class="tag">&lt;/<span class="title">td</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">td</span>&gt;</span>In Stock<span class="tag">&lt;/<span class="title">td</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">td</span>&gt;</span>2<span class="tag">&lt;/<span class="title">td</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">td</span>&gt;</span>$52.94 ($26.47 &#215; 2)<span class="tag">&lt;/<span class="title">td</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="title">tr</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">tr</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">td</span>&gt;</span>Introducing HTML5 by Bruce Lawson &#38; Remy Sharp<span class="tag">&lt;/<span class="title">td</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">td</span>&gt;</span>Out of Stock<span class="tag">&lt;/<span class="title">td</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">td</span>&gt;</span>1<span class="tag">&lt;/<span class="title">td</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">td</span>&gt;</span>$22.23<span class="tag">&lt;/<span class="title">td</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="title">tr</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">tr</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">td</span>&gt;</span>Bulletproof Web Design by Dan Cederholm<span class="tag">&lt;/<span class="title">td</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">td</span>&gt;</span>In Stock<span class="tag">&lt;/<span class="title">td</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">td</span>&gt;</span>1<span class="tag">&lt;/<span class="title">td</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">td</span>&gt;</span>$30.17<span class="tag">&lt;/<span class="title">td</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="title">tr</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">table</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<h3 id="Table_Header">Table Header</h3>
+<p>Table headers may be used within both columns and rows; the data within a table determines where the headers are appropriate. The scope attribute helps to identify exactly what content a table header relates to. The <strong>scope</strong> attribute indicates with the values <strong>col</strong>, <strong>row</strong>, <strong>colgroup</strong>, and <strong>rowgroup</strong> whether a table header applies to a row or column.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">table</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">tr</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">th</span> <span class="attribute">scope</span>=<span class="value">"col"</span>&gt;</span>Item<span class="tag">&lt;/<span class="title">th</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">th</span> <span class="attribute">scope</span>=<span class="value">"col"</span>&gt;</span>Availability<span class="tag">&lt;/<span class="title">th</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">th</span> <span class="attribute">scope</span>=<span class="value">"col"</span>&gt;</span>Qty<span class="tag">&lt;/<span class="title">th</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">th</span> <span class="attribute">scope</span>=<span class="value">"col"</span>&gt;</span>Price<span class="tag">&lt;/<span class="title">th</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="title">tr</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">tr</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">td</span>&gt;</span>Don&#8217;t Make Me Think by Steve Krug<span class="tag">&lt;/<span class="title">td</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">td</span>&gt;</span>In Stock<span class="tag">&lt;/<span class="title">td</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">td</span>&gt;</span>1<span class="tag">&lt;/<span class="title">td</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">td</span>&gt;</span>$30.02<span class="tag">&lt;/<span class="title">td</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="title">tr</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">tr</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">td</span>&gt;</span>A Project Guide to UX Design by Russ Unger &#38; Carolyn Chandler<span class="tag">&lt;/<span class="title">td</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">td</span>&gt;</span>In Stock<span class="tag">&lt;/<span class="title">td</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">td</span>&gt;</span>2<span class="tag">&lt;/<span class="title">td</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">td</span>&gt;</span>$52.94 ($26.47 &#215; 2)<span class="tag">&lt;/<span class="title">td</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="title">tr</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">table</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<h2 id="Table_Structure">Table Structure</h2>
+<p>Knowing how to build a table and arrange data is extremely powerful; however, there are a few additional elements to help us <a href="http://www.456bereastreet.com/archive/200410/bring_on_the_tables/" target="_blank" rel="external">organize the data</a> and structure of a table. These elements include <code>&lt;caption</code>&gt;, <code>&lt;thead</code>&gt;, <code>&lt;tbody</code>&gt;, and <code>&lt;tfoot</code>&gt;.</p>
+<h3 id="Table_Caption">Table Caption</h3>
+<p>The <code>&lt;caption</code>&gt; element provides a caption or title for a table. A caption will help users identify what the table pertains to and what data they can expect to find within it. The <code>&lt;caption</code>&gt; element must come immediately after the opening <code>&lt;table</code>&gt; tag, and it is positioned at the top of a table by default.</p>
+<h3 id="Table_Head,_Body,_&amp;_Foot">Table Head, Body, &amp; Foot</h3>
+<p>The content within tables can be broken up into multiple groups, including a head, a body, and a foot. The <code>&lt;thead</code>&gt; (table head), <code>&lt;tbody</code>&gt; (table body), and <code>&lt;tfoot</code>&gt; (table foot) elements help to structurally organize tables.</p>
+<p>The table head element, <code>&lt;thead</code>&gt;, wraps the heading row or rows of a table to denote the head. The table head should be placed at the top of a table, after any <code>&lt;caption</code>&gt; element and before any <code>&lt;tbody</code>&gt; element.</p>
+<p>After the table head may come either the <code>&lt;tbody</code>&gt; or <code>&lt;tfoot</code>&gt; elements. Originally the <code>&lt;tfoot</code>&gt; element had to come immediately after the <code>&lt;thead</code>&gt; element, but HTML5 has provided leeway here. These elements may now occur in any order so long as they are never parent elements of one another. The <code>&lt;tbody</code>&gt; element should contain the primary data within a table, while the <code>&lt;tfoot</code>&gt; element contains data that outlines the contents of a table.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">table</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">caption</span>&gt;</span>Design and Front-End Development Books<span class="tag">&lt;/<span class="title">caption</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">thead</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">tr</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="title">th</span> <span class="attribute">scope</span>=<span class="value">"col"</span>&gt;</span>Item<span class="tag">&lt;/<span class="title">th</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="title">th</span> <span class="attribute">scope</span>=<span class="value">"col"</span>&gt;</span>Availability<span class="tag">&lt;/<span class="title">th</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="title">th</span> <span class="attribute">scope</span>=<span class="value">"col"</span>&gt;</span>Qty<span class="tag">&lt;/<span class="title">th</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="title">th</span> <span class="attribute">scope</span>=<span class="value">"col"</span>&gt;</span>Price<span class="tag">&lt;/<span class="title">th</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="title">tr</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="title">thead</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">tbody</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">tr</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="title">td</span>&gt;</span>Don&#8217;t Make Me Think by Steve Krug<span class="tag">&lt;/<span class="title">td</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="title">td</span>&gt;</span>In Stock<span class="tag">&lt;/<span class="title">td</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="title">td</span>&gt;</span>1<span class="tag">&lt;/<span class="title">td</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="title">td</span>&gt;</span>$30.02<span class="tag">&lt;/<span class="title">td</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="title">tr</span>&gt;</span></div><div class="line">    ...</div><div class="line">  <span class="tag">&lt;/<span class="title">tbody</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">tfoot</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">tr</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="title">td</span>&gt;</span>Subtotal<span class="tag">&lt;/<span class="title">td</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="title">td</span>&gt;</span><span class="tag">&lt;/<span class="title">td</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="title">td</span>&gt;</span><span class="tag">&lt;/<span class="title">td</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="title">td</span>&gt;</span>$135.36<span class="tag">&lt;/<span class="title">td</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="title">tr</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">tr</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="title">td</span>&gt;</span>Tax<span class="tag">&lt;/<span class="title">td</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="title">td</span>&gt;</span><span class="tag">&lt;/<span class="title">td</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="title">td</span>&gt;</span><span class="tag">&lt;/<span class="title">td</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="title">td</span>&gt;</span>$13.54<span class="tag">&lt;/<span class="title">td</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="title">tr</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">tr</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="title">td</span>&gt;</span>Total<span class="tag">&lt;/<span class="title">td</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="title">td</span>&gt;</span><span class="tag">&lt;/<span class="title">td</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="title">td</span>&gt;</span><span class="tag">&lt;/<span class="title">td</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="title">td</span>&gt;</span>$148.90<span class="tag">&lt;/<span class="title">td</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="title">tr</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="title">tfoot</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">table</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<h3 id="Combining_Multiple_Cells">Combining Multiple Cells</h3>
+<p>Often, two or more cells need to be combined into one without breaking the overall row and column layout. Perhaps two cells next to each other contain the same data, there’s an empty cell, or the cells should be combined for styling purposes. In these cases we can use the <strong>colspan</strong> and <strong>rowspan</strong> attributes. These two attributes work on either the <code>&lt;td</code>&gt; or <code>&lt;th</code>&gt; elements.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">table</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">caption</span>&gt;</span>Design and Front-End Development Books<span class="tag">&lt;/<span class="title">caption</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">thead</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">tr</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="title">th</span> <span class="attribute">scope</span>=<span class="value">"col"</span> <span class="attribute">colspan</span>=<span class="value">"2"</span>&gt;</span>Item<span class="tag">&lt;/<span class="title">th</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="title">th</span> <span class="attribute">scope</span>=<span class="value">"col"</span>&gt;</span>Qty<span class="tag">&lt;/<span class="title">th</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="title">th</span> <span class="attribute">scope</span>=<span class="value">"col"</span>&gt;</span>Price<span class="tag">&lt;/<span class="title">th</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="title">tr</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="title">thead</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">tbody</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">tr</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="title">td</span>&gt;</span>Don&#8217;t Make Me Think by Steve Krug<span class="tag">&lt;/<span class="title">td</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="title">td</span>&gt;</span>In Stock<span class="tag">&lt;/<span class="title">td</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="title">td</span>&gt;</span>1<span class="tag">&lt;/<span class="title">td</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="title">td</span>&gt;</span>$30.02<span class="tag">&lt;/<span class="title">td</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="title">tr</span>&gt;</span></div><div class="line">    ...</div><div class="line">  <span class="tag">&lt;/<span class="title">tbody</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">tfoot</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">tr</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="title">td</span> <span class="attribute">colspan</span>=<span class="value">"3"</span>&gt;</span>Subtotal<span class="tag">&lt;/<span class="title">td</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="title">td</span>&gt;</span>$135.36<span class="tag">&lt;/<span class="title">td</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="title">tr</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">tr</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="title">td</span> <span class="attribute">colspan</span>=<span class="value">"3"</span>&gt;</span>Tax<span class="tag">&lt;/<span class="title">td</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="title">td</span>&gt;</span>$13.54<span class="tag">&lt;/<span class="title">td</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="title">tr</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">tr</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="title">td</span> <span class="attribute">colspan</span>=<span class="value">"3"</span>&gt;</span>Total<span class="tag">&lt;/<span class="title">td</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="title">td</span>&gt;</span>$148.90<span class="tag">&lt;/<span class="title">td</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="title">tr</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="title">tfoot</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">table</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<h2 id="Table_Borders">Table Borders</h2>
+<p>Effective use of borders can help make tables more comprehensible. Borders around a table or individual cells can make a large impact when a user is trying to interpret data and quickly scan for information. When styling table borders with CSS there are two properties that will quickly come in handy: <strong>border-collapse</strong> and <strong>border-spacing</strong>.</p>
+<h3 id="Border_Collapse_Property">Border Collapse Property</h3>
+<p>The border-collapse property determines a table’s border model. There are three values for the border-collapse property: <strong>collapse</strong>, <strong>separate</strong>, and <strong>inherit</strong>. By default, the border-collapse property value is separate, meaning that all of the different borders will stack up next to one another, as described above. The collapse property, on the other hand, condenses the borders into one, choosing the table cell as the primary border.</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">table</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">border-collapse</span>:<span class="value"> collapse</span></span>;</div><div class="line"><span class="rule">}</span></div><div class="line"><span class="tag">th</span>,</div><div class="line"><span class="tag">td</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">border</span>:<span class="value"> <span class="number">1px</span> solid <span class="hexcolor">#cecfd5</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">10px</span> <span class="number">15px</span></span></span>;</div><div class="line"><span class="rule">}</span></div></pre></td></tr></table></figure>
+
+<h3 id="Border_Spacing_Property">Border Spacing Property</h3>
+<p>As the border-collapse property with the separate value allows borders to be stacked up against one another, the border-spacing property can determine how much space, if any, appears between the borders. The border-spacing property works only when the border-collapse property value is <strong>separate</strong>, its default value.</p>
+<p>For example, a table with a 1-pixel border around the entire table and a 1-pixel border around each cell will have a 2-pixel border all around every cell because the borders stack up next to one another. Adding in a border-spacing value of 4 pixels separates the borders by 4 pixels.</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="tag">table</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">border-collapse</span>:<span class="value"> separate</span></span>;</div><div class="line">  <span class="rule"><span class="attribute">border-spacing</span>:<span class="value"> <span class="number">4px</span></span></span>;</div><div class="line"><span class="rule">}</span></div><div class="line"><span class="tag">table</span>,</div><div class="line"><span class="tag">th</span>,</div><div class="line"><span class="tag">td</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">border</span>:<span class="value"> <span class="number">1px</span> solid <span class="hexcolor">#cecfd5</span></span></span>;</div><div class="line"><span class="rule">}</span></div><div class="line"><span class="tag">th</span>,</div><div class="line"><span class="tag">td</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">10px</span> <span class="number">15px</span></span></span>;</div><div class="line"><span class="rule">}</span></div></pre></td></tr></table></figure>
+
+<p>Additionally, the border-spacing property may accept two length values: the first value for horizontal spacing and the second value for vertical spacing. The declaration border-spacing: 5px 10px;, for example, will place 5 pixels of horizontal spacing between borders and 10 pixels of vertical spacing between borders.</p>
+<h3 id="Adding_Borders_to_Rows">Adding Borders to Rows</h3>
+<p>Adding borders to a table can be tricky at times, particularly when putting borders between rows. Within a table, borders cannot be applied to <code>&lt;tr</code>&gt; elements or table structural elements, so when we want to put a border between rows some thought is required.</p>
+<p>We’ll begin by making sure the table’s border-collapse property value is set to collapse, and then we’ll add a bottom border to each table cell, regardless of whether it’s a <code>&lt;th</code>&gt; or <code>&lt;td</code>&gt; element. If we wish, we can remove the bottom border from the cells within the last row of the table by using the :last-child pseudo-class selector to select the last <code>&lt;tr</code>&gt; element within the table and target the <code>&lt;td</code>&gt; elements within that row. Additionally, if a table is using the structural elements, we’ll want to make sure to prequalify the last row of the table as being within the <code>&lt;tfoot</code>&gt; element.</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="tag">table</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">border-collapse</span>:<span class="value"> collapse</span></span>;</div><div class="line"><span class="rule">}</span></div><div class="line"><span class="tag">th</span>,</div><div class="line"><span class="tag">td</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">border-bottom</span>:<span class="value"> <span class="number">1px</span> solid <span class="hexcolor">#cecfd5</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">10px</span> <span class="number">15px</span></span></span>;</div><div class="line"><span class="rule">}</span></div><div class="line"><span class="tag">tfoot</span> <span class="tag">tr</span><span class="pseudo">:last-child</span> <span class="tag">td</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">border-bottom</span>:<span class="value"> <span class="number">0</span></span></span>;</div><div class="line"><span class="rule">}</span></div></pre></td></tr></table></figure>
+
+
+	
+	</div>
+	
+  
+</div>
+	<a type="button" href="/2015/02/09/Learn to Code HTML & CSS 11/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->
+		<h3 class="title">
 			<a href="/2015/02/08/Learn to Code HTML & CSS 10/" >Learn to Code HTML &amp; CSS 10</a>
 			<span class="date"> 2015 2月 8 </span>
 		</h3>
@@ -438,43 +513,6 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 </div>
 
 		
-			
-	
-	<!-- display as entry -->
-		<h3 class="title">
-			<a href="/2015/01/27/Learn to Code HTML & CSS 01/" >Learn to Code HTML &amp; CSS 01</a>
-			<span class="date"> 2015 1月 27 </span>
-		</h3>
-	
-
-
-			<div class="entry">
-  <div class="row">
-  
-	<div class="col-md-12">
-	  
-	
-	  <h1 id="Lesson_1:_Building_Your_First_Web_Page"><a href="http://learn.shayhowe.com/html-css/building-your-first-web-page/" target="_blank" rel="external">Lesson 1: Building Your First Web Page</a></h1>
-<p><strong>Contents</strong></p>
-<ul>
-<li>The difference between HTML and CSS</li>
-<li>Getting acquainted with HTML elements, tags, and attributes</li>
-<li>Setting up the structure of your first web page</li>
-<li>Getting acquainted with CSS selectors, properties, and values</li>
-<li>Working with CSS selectors</li>
-<li>Referencing CSS in your HTML</li>
-<li>The value of CSS resets</li>
-</ul>
-
-	
-	</div>
-	
-  
-</div>
-	<a type="button" href="/2015/01/27/Learn to Code HTML & CSS 01/#more" class="btn btn-default more">阅读此文</a>
-</div>
-
-		
 
 		</div>
 
@@ -525,7 +563,7 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 		
 			<li><a href="/categories/工具/">工具<span>2</span></a></li>
 		
-			<li><a href="/categories/技术/">技术<span>13</span></a></li>
+			<li><a href="/categories/技术/">技术<span>14</span></a></li>
 		
 			<li><a href="/categories/操作系统/">操作系统<span>1</span></a></li>
 		
@@ -538,21 +576,21 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/Geek/">Geek<span>2</span></a></li>
-		
 			<li><a href="/tags/Hexo/">Hexo<span>2</span></a></li>
-		
-			<li><a href="/tags/Alfred/">Alfred<span>1</span></a></li>
 		
 			<li><a href="/tags/Python/">Python<span>1</span></a></li>
 		
-			<li><a href="/tags/CSS/">CSS<span>10</span></a></li>
+			<li><a href="/tags/Alfred/">Alfred<span>1</span></a></li>
+		
+			<li><a href="/tags/Geek/">Geek<span>2</span></a></li>
+		
+			<li><a href="/tags/CSS/">CSS<span>11</span></a></li>
 		
 			<li><a href="/tags/Mac/">Mac<span>1</span></a></li>
 		
-			<li><a href="/tags/Android/">Android<span>3</span></a></li>
+			<li><a href="/tags/HTML/">HTML<span>11</span></a></li>
 		
-			<li><a href="/tags/HTML/">HTML<span>10</span></a></li>
+			<li><a href="/tags/Android/">Android<span>3</span></a></li>
 		
 		 
 		</ul>
@@ -564,6 +602,10 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 <div class="widget">
   <h4>最新文章</h4>
   <ul class="entry list-unstyled">
+    
+      <li>
+        <a href="/2015/02/09/Learn to Code HTML &amp; CSS 11/" ><i class="fa fa-file-o"></i>Learn to Code HTML &amp; CSS 11</a>
+      </li>
     
       <li>
         <a href="/2015/02/08/Learn to Code HTML &amp; CSS 10/" ><i class="fa fa-file-o"></i>Learn to Code HTML &amp; CSS 10</a>
@@ -579,10 +621,6 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
     
       <li>
         <a href="/2015/02/02/Learn to Code HTML &amp; CSS 07/" ><i class="fa fa-file-o"></i>Learn to Code HTML &amp; CSS 07</a>
-      </li>
-    
-      <li>
-        <a href="/2015/02/01/Learn to Code HTML &amp; CSS 06/" ><i class="fa fa-file-o"></i>Learn to Code HTML &amp; CSS 06</a>
       </li>
     
   </ul>
