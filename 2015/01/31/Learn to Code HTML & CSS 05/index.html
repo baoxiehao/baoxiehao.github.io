@@ -1,0 +1,396 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Learn to Code HTML &amp; CSS 05 | 浩然也空的博客</title>
+  <meta name="author" content="浩然也空">
+  
+  <meta name="description" content="每周一篇文章，每年一次总结。">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Learn to Code HTML &amp; CSS 05"/>
+  <meta property="og:site_name" content="浩然也空的博客"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  
+    <link rel="alternative" href="/atom.xml" title="浩然也空的博客" type="application/atom+xml">
+  
+  
+    <link href="/favicon.png" rel="icon">
+  
+
+  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', '[object Object]']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+
+ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+  
+
+</head>
+
+ <body>
+  <nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+	  <a class="navbar-brand" href="/">浩然也空的博客</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="所有归档">
+			  <i class="fa fa-archive"></i>归档
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="所有分类">
+			  <i class="fa fa-folder"></i>分类
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="所有标签">
+			  <i class="fa fa-tags"></i>标签
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/gallery" title="那些照片">
+			  <i class="fa fa-user"></i>画廊
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="我的足迹">
+			  <i class="fa fa-user"></i>关于
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+  	<div class="content">
+    	 
+
+
+	
+		<div class="page-header">		
+			<h1> Learn to Code HTML &amp; CSS 05</h1>
+		</div>		
+	
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div class="col-md-9">
+	
+
+			
+
+	<!-- content -->
+	<div class="mypage">		
+	    <h1 id="Lesson_5:_Positioning_Content"><a href="http://learn.shayhowe.com/html-css/positioning-content/" target="_blank" rel="external">Lesson 5: Positioning Content</a></h1>
+<p><strong>Contents</strong></p>
+<ul>
+<li>What floats are and how to use them to position content</li>
+<li>How to clear and contain floated elements</li>
+<li>How to position content with inline-block elements</li>
+<li>How to remove the white space between inline-block elements</li>
+<li>How to uniquely position content with relatively and absolutely positioned elements</li>
+</ul>
+<a id="more"></a>
+
+<p>One of the best things about CSS is that it gives us the ability to position content and elements on a page in nearly any imaginable way, bringing structure to our designs and helping make content more digestible.</p>
+<p>There are a few different types of positioning within CSS, and each has its own application. In this chapter we’re going to take a look at a few different use cases—creating reusable layouts and uniquely positioning one-off elements—and describe a few ways to go about each.</p>
+<h2 id="Positioning_with_Floats">Positioning with Floats</h2>
+<p>One way to position elements on a page is with the float property. The float property is pretty versatile and can be used in a number of different ways.</p>
+<p>Essentially, the float property allows us to take an element, remove it from the normal flow of a page, and <a href="http://www.smashingmagazine.com/2007/05/01/css-float-theory-things-you-should-know/" target="_blank" rel="external">position it</a> to the left or right of its parent element. All other elements on the page will then flow around the floated element. An <img> element floated to the side of a few paragraphs of text, for example, will allow the paragraphs to wrap around the image as necessary.</p>
+<p>The float property accepts a few values; the two most popular values are <strong>left</strong> and <strong>right</strong>, which allow elements to be floated to the left or right of their parent element.</p>
+<p>For reference, when an element is floated, it will float all the way to the edge of its parent element. If there isn’t a parent element, the floated element will then float all the way to the edge of the page.</p>
+<p>When we float an element, we take it out of the normal flow of the HTML document. This causes the width of that element to default to the width of the content within it. Sometimes, such as when we’re creating columns for a reusable layout, this behavior is not desired. It can be corrected by adding a fixed <strong>width</strong> property value to each column. Additionally, to prevent floated elements from touching one another, causing the content of one to sit directly next to the content of the other, we can use the <strong>margin</strong> property to create space between elements.</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="tag">section</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">float</span>:<span class="value"> left</span></span>;</div><div class="line">  <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">0</span> <span class="number">1.5%</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">63%</span></span></span>;</div><div class="line"><span class="rule">}</span></div><div class="line"><span class="tag">aside</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">float</span>:<span class="value"> right</span></span>;</div><div class="line">  <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">0</span> <span class="number">1.5%</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">30%</span></span></span>;</div><div class="line"><span class="rule">}</span></div></pre></td></tr></table></figure>
+
+<p>To position three <code>&lt;section</code>&gt; elements in a three-column row, instead of floating one column to the left and one column to the right, we’ll float all three <code>&lt;section</code>&gt; elements to the left. We’ll also need to adjust the width of the <code>&lt;section</code>&gt; elements to account for the additional columns and to get them to sit one next to the other.</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">section</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">float</span>:<span class="value"> left</span></span>;</div><div class="line">  <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">0</span> <span class="number">1.5%</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">30%</span></span></span>;</div><div class="line"><span class="rule">}</span></div></pre></td></tr></table></figure>
+
+<pre><code>Floats May <span class="operator"><span class="keyword">Change</span> an Element’s Display <span class="keyword">Value</span>
+
+<span class="keyword">When</span> floating an element, it <span class="keyword">is</span> also important <span class="keyword">to</span> recognize that an element <span class="keyword">is</span> removed <span class="keyword">from</span> the normal flow <span class="keyword">of</span> a page, <span class="keyword">and</span> that may <span class="keyword">change</span> an element’s <span class="keyword">default</span> display <span class="keyword">value</span>. The <span class="built_in">float</span> property relies <span class="keyword">on</span> an element <span class="keyword">having</span> a display <span class="keyword">value</span> <span class="keyword">of</span> block, <span class="keyword">and</span> may <span class="keyword">alter</span> an element’s <span class="keyword">default</span> display <span class="keyword">value</span> <span class="keyword">if</span> it <span class="keyword">is</span> <span class="keyword">not</span> already displayed <span class="keyword">as</span> a block-<span class="keyword">level</span> element.</span>
+</code></pre><h3 id="Clearing_&amp;_Containing_Floats">Clearing &amp; Containing Floats</h3>
+<p>The float property was originally designed to allow content to wrap around images. An image could be floated, and all of the content surrounding that image could then naturally flow around it. Although this works great for images, the float property was never actually intended to be used for layout and positioning purposes, and thus it comes with a few pitfalls.</p>
+<ul>
+<li>Occasionally the proper styles will not render on an element that it is sitting next to or is a parent element of a floated element. When an element is floated, it is taken out of the normal flow of the page, and, as a result, <strong>the styles of elements around that floated element can be negatively impacted</strong>. Often margin and padding property values aren’t interpreted correctly, causing them to blend into the floated element; other properties can be affected, too.</li>
+<li>Sometimes unwanted content begins to wrap around a floated element. Removing an element from the flow of the document allows <strong>all the elements around the floated element to wrap and consume any available space around the floated element</strong>, which is often undesired.</li>
+</ul>
+<h4 id="Clearing_Floats">Clearing Floats</h4>
+<p>To prevent content from wrapping around floated elements, we need to clear, or contain, those floats and return the page to its normal flow.</p>
+<p>Clearing floats is accomplished using the clear property, which accepts a few different values: the most commonly used values being <strong>left</strong>, <strong>right</strong>, and <strong>both</strong>. The left value will clear left floats, while the right value will clear right floats. The both value, however, will clear both left and right floats and is often the most ideal value.</p>
+<p>It is important that this clear be applied to an element appearing <strong>after</strong> the floated elements, <strong>not before</strong>, to return the page to its normal flow.</p>
+<h4 id="Containing_Floats">Containing Floats</h4>
+<p>Rather than clearing floats, another option is to contain the floats. The outcomes of containing floats versus those of clearing them are nearly the same; however, containing floats does help to ensure that all of our styles will be rendered properly.</p>
+<p>To contain floats, the floated elements must <strong>reside within a parent</strong> element. The parent element will act as a container, leaving the flow of the document completely normal outside of it. The CSS for that parent element, represented by the group class below, is shown here:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="class">.group</span><span class="pseudo">:before</span>,</div><div class="line"><span class="class">.group</span><span class="pseudo">:after</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">content</span>:<span class="value"> <span class="string">""</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">display</span>:<span class="value"> table</span></span>;</div><div class="line"><span class="rule">}</span></div><div class="line"><span class="class">.group</span><span class="pseudo">:after</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">clear</span>:<span class="value"> both</span></span>;</div><div class="line"><span class="rule">}</span></div><div class="line"><span class="class">.group</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">clear</span>:<span class="value"> both</span></span>;</div><div class="line">  <span class="rule">*<span class="attribute">zoom</span>:<span class="value"> <span class="number">1</span></span></span>;</div><div class="line"><span class="rule">}</span></div></pre></td></tr></table></figure>
+
+<p>There’s quite a bit going on here, but essentially what the CSS is doing is clearing any floated elements within the element with the class of group and returning the flow of the document back to normal.</p>
+<p>More specifically, the :before and :after pseudo-elements, as mentioned in the Lesson 4 exercise, are dynamically generated elements above and below the element with the class of group. Those elements do not include any content and are displayed as table-level elements, much like block-level elements. The dynamically generated element after the element with the class of group is clearing the floats within the element with the class of group, much like the clear from before. And lastly, the element with the class of group itself also clears any floats that may appear above it, in case a left or right float may exist. It also includes a little trickery to get older browsers to play nicely.</p>
+<p>It is more code than the clear: both; declaration alone, but it can prove to be quite useful.</p>
+<h1 id="Positioning_with_Inline-Block">Positioning with Inline-Block</h1>
+<p>In addition to using floats, another way we can position content is by using the display property in conjunction with the <strong>inline-block</strong> value. The inline-block method, as we’ll discuss, is primarily helpful for laying out pages or for placing elements next to one another within a line.</p>
+<p>Recall that the inline-block value for the display property will display elements within a line while allowing them to accept all box model properties, including <strong>height</strong>, <strong>width</strong>, <strong>padding</strong>, <strong>border</strong>, and <strong>margin</strong>. Using inline-block elements allows us to take full advantage of the box model without having to worry about clearing any floats.</p>
+<p>Let’s take a look at our three-column example from before. We’ll start by keeping our HTML just as it is:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">header</span>&gt;</span>...<span class="tag">&lt;/<span class="title">header</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="title">section</span>&gt;</span>...<span class="tag">&lt;/<span class="title">section</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="title">section</span>&gt;</span>...<span class="tag">&lt;/<span class="title">section</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="title">section</span>&gt;</span>...<span class="tag">&lt;/<span class="title">section</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="title">footer</span>&gt;</span>...<span class="tag">&lt;/<span class="title">footer</span>&gt;</span></div></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">section</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">display</span>:<span class="value"> inline-block</span></span>;</div><div class="line">  <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">0</span> <span class="number">1.5%</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">30%</span></span></span>;</div><div class="line"><span class="rule">}</span></div></pre></td></tr></table></figure>
+
+<p>Unfortunately, this code alone doesn’t quite do the trick, and the last <code>&lt;section</code>&gt; element is pushed to a new row. Remember, because inline-block elements are displayed on the same line as one another, they include a single <strong>space</strong> between them. </p>
+<h3 id="Removing_Spaces_Between_Inline-Block_Elements">Removing Spaces Between Inline-Block Elements</h3>
+<p>There are a number of ways to remove the space between inline-block elements, and some are more complex than others. We are going to focus on two of the easiest ways, both of which happen inside HTML.</p>
+<ul>
+<li>The first solution is to put each new <code>&lt;section</code>&gt; element’s opening tag on the same line as the previous <code>&lt;section</code>&gt; element’s closing tag.</li>
+<li>Another way to remove the white space between inline-block elements is to open an HTML comment directly after an inline-block element’s closing tag. Then, close the HTML comment immediately before the next inline-block element’s opening tag.</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">header</span>&gt;</span>...<span class="tag">&lt;/<span class="title">header</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="title">section</span>&gt;</span></div><div class="line">  ...</div><div class="line"><span class="tag">&lt;/<span class="title">section</span>&gt;</span><span class="tag">&lt;<span class="title">section</span>&gt;</span></div><div class="line">  ...</div><div class="line"><span class="tag">&lt;/<span class="title">section</span>&gt;</span><span class="tag">&lt;<span class="title">section</span>&gt;</span></div><div class="line">  ...</div><div class="line"><span class="tag">&lt;/<span class="title">section</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="title">footer</span>&gt;</span>...<span class="tag">&lt;/<span class="title">footer</span>&gt;</span></div></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">header</span>&gt;</span>...<span class="tag">&lt;/<span class="title">header</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="title">section</span>&gt;</span></div><div class="line">  ...</div><div class="line"><span class="tag">&lt;/<span class="title">section</span>&gt;</span><span class="comment">&lt;!--</span></div><div class="line">--&gt;<span class="tag">&lt;<span class="title">section</span>&gt;</span></div><div class="line">  ...</div><div class="line"><span class="tag">&lt;/<span class="title">section</span>&gt;</span><span class="comment">&lt;!--</span></div><div class="line">--&gt;<span class="tag">&lt;<span class="title">section</span>&gt;</span></div><div class="line">  ...</div><div class="line"> <span class="tag">&lt;/<span class="title">section</span>&gt;</span></div><div class="line"> <span class="tag">&lt;<span class="title">footer</span>&gt;</span>...<span class="tag">&lt;/<span class="title">footer</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<p>Neither of these options is perfect, but they are helpful. I tend to favor using comments for better organization, but which option you choose is entirely up to you.</p>
+<h2 id="Creating_Reusable_Layouts">Creating Reusable Layouts</h2>
+<p>When building a website, it is always best to write modular styles that may be reused elsewhere, and <strong>reusable layouts</strong> are high on the list of reusable code. Layouts can be created using either floats or inline-block elements, but which works best and why?</p>
+<p>Whether it’s better to use floats or inline-block elements to lay out the structure of a page is open to debate. <strong>My approach is to use inline-block elements to create the grid—or layout—of a page and to then use floats when I want content to wrap around a given element (as floats were intended to do with images)</strong>. Generally, I also find inline-block elements easier to work with.</p>
+<p>That said, use whatever works best for you. If you are comfortable with one approach over the other, then go for it.</p>
+<p>Currently there are new CSS specifications in the works—specifically <strong>flex- and grid- based properties</strong>—that will help address how to best lay out pages. Keep an eye out for these methods as they begin to surface.</p>
+<h2 id="Uniquely_Positioning_Elements">Uniquely Positioning Elements</h2>
+<p>Every now and then we’ll want to precisely position an element, but floats or inline-block elements won’t do the trick. <strong>Floats</strong>, which remove an element from the flow of a page, often produce unwanted results as surrounding elements flow around the floated element. <strong>Inline-block</strong> elements, unless we’re creating columns, can be fairly awkward to get into the proper position. For these situations we can use the position property in connection with box offset properties.</p>
+<p>The position property identifies how an element is positioned on a page and whether or not it will appear within the normal flow of a document. This is used in conjunction with the box offset properties—top, right, bottom, and left—which identify exactly where an element will be positioned by moving elements in a number of different directions.</p>
+<p>By default every element has a position value of <strong>static</strong>, which means that it exists in the normal flow of a document and it doesn’t accept any box offset properties. The static value is most commonly overwritten with a <strong>relative</strong> or <strong>absolute</strong> value, which we’ll examine next.</p>
+<h3 id="Relative_Positioning">Relative Positioning</h3>
+<p>The relative value for the position property allows elements to appear within the normal flow a page, leaving space for an element as intended while not allowing other elements to flow around it; however, it also allows an element’s display position to be modified with the box offset properties.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">div</span>&gt;</span>...<span class="tag">&lt;/<span class="title">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"offset"</span>&gt;</span>...<span class="tag">&lt;/<span class="title">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="title">div</span>&gt;</span>...<span class="tag">&lt;/<span class="title">div</span>&gt;</span></div></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">div</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">100px</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">100px</span></span></span>;</div><div class="line"><span class="rule">}</span></div><div class="line"><span class="class">.offset</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">left</span>:<span class="value"> <span class="number">20px</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">position</span>:<span class="value"> relative</span></span>;</div><div class="line">  <span class="rule"><span class="attribute">top</span>:<span class="value"> <span class="number">20px</span></span></span>;</div><div class="line"><span class="rule">}</span></div></pre></td></tr></table></figure>
+
+<h3 id="Absolute_Positioning">Absolute Positioning</h3>
+<p>The absolute value for the position property is different from the relative value in that an element with a position value of absolute will not appear within the normal flow of a document, and the original space and position of the absolutely positioned element will not be preserved. Additionally, absolutely positioned elements are moved in relation to their closest relatively positioned parent element.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">section</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"offset"</span>&gt;</span>...<span class="tag">&lt;/<span class="title">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">section</span>&gt;</span></div></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">section</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">position</span>:<span class="value"> relative</span></span>;</div><div class="line"><span class="rule">}</span></div><div class="line"><span class="tag">div</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">position</span>:<span class="value"> absolute</span></span>;</div><div class="line">  <span class="rule"><span class="attribute">right</span>:<span class="value"> <span class="number">20px</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">top</span>:<span class="value"> <span class="number">20px</span></span></span>;</div><div class="line"><span class="rule">}</span></div></pre></td></tr></table></figure>
+
+<p>With relatively positioned elements, the box offset properties identify in which direction an element would be moved in relation to <strong>itself</strong>. With absolutely positioned elements, the box offset properties identify in which direction an element will be moved in relation to its <strong>closest relatively positioned parent element</strong>.</p>
+<h2 id="Summary">Summary</h2>
+<p>Learning how to position content within HTML and CSS is a huge step toward mastering the two languages. Add to this the box model, and we’re well on our way to becoming front-end developers.</p>
+<p>To review, within this lesson we covered the following:</p>
+<ul>
+<li>What <strong>floats</strong> are and how to use them to position content</li>
+<li>How to <strong>clear</strong> and <strong>contain</strong> floated elements</li>
+<li>How to <strong>position</strong> content with inline-block elements</li>
+<li>How to remove the white space between inline-block elements</li>
+<li>How to uniquely position content with relatively and absolutely positioned elements</li>
+</ul>
+	  
+	</div>
+
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+				
+    	<li class="prev"><a href="/2015/02/01/Learn to Code HTML & CSS 06/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+  		
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
+
+		
+		   <li class="next"><a href="/2015/01/30/Learn to Code HTML & CSS 04/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
+</ul>
+</div>
+
+    </center>
+	</div>
+	
+	<!-- comment -->
+	
+<section id="comment">
+  <h2 class="title">留言</h2>
+
+  
+</section>
+
+	
+	</div> <!-- col-md-9/col-md-12 -->
+	
+	
+		<div class="col-md-3"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2015 1月 31 
+	</div>
+	
+
+	<!-- categories -->
+    
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
+          
+  <li>
+    <li><a href="/categories/技术/">技术<span>14</span></a></li>
+  </li>
+
+    </ul>
+	</div>
+	
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/HTML/">HTML<span>11</span></a></li> <li><a href="/tags/CSS/">CSS<span>11</span></a></li>
+    </ul>
+	</div>
+		
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	   <a data-toggle="collapse" data-target="#toc"><i class="fa fa-bars"></i></a>
+	   <div id="toc" class="toc collapse in">
+			<ol class="toc-article"><li class="toc-article-item toc-article-level-1"><a class="toc-article-link" href="#Lesson_5:_Positioning_Content"><span class="toc-article-text">Lesson 5: Positioning Content</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Positioning_with_Floats"><span class="toc-article-text">Positioning with Floats</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Clearing_&_Containing_Floats"><span class="toc-article-text">Clearing & Containing Floats</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#Clearing_Floats"><span class="toc-article-text">Clearing Floats</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#Containing_Floats"><span class="toc-article-text">Containing Floats</span></a></li></ol></li></ol></li></ol></li><li class="toc-article-item toc-article-level-1"><a class="toc-article-link" href="#Positioning_with_Inline-Block"><span class="toc-article-text">Positioning with Inline-Block</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Removing_Spaces_Between_Inline-Block_Elements"><span class="toc-article-text">Removing Spaces Between Inline-Block Elements</span></a></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Creating_Reusable_Layouts"><span class="toc-article-text">Creating Reusable Layouts</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Uniquely_Positioning_Elements"><span class="toc-article-text">Uniquely Positioning Elements</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Relative_Positioning"><span class="toc-article-text">Relative Positioning</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Absolute_Positioning"><span class="toc-article-text">Absolute Positioning</span></a></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Summary"><span class="toc-article-text">Summary</span></a></li></ol></li></ol>
+		</div>
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	
+
+</div><!-- row -->
+
+
+<!-- Duoshuo Comment BEGIN -->
+<div class="ds-thread" data-title="Learn to Code HTML &amp; CSS 05" data-url="http://baoxiehao.com/2015/01/31/Learn to Code HTML & CSS 05/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"baoxiehao"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+<!-- Duoshuo Comment END -->
+
+
+	</div>
+  </div>
+  <div class="container-narrow">
+  <footer> <p>
+  &copy; 2015 浩然也空
+  
+      with help from <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+</p> </footer>
+  <!-- Duoshuo Comment BEGIN -->
+<div class="ds-thread" data-title="Learn to Code HTML &amp; CSS 05" data-url="http://baoxiehao.com/2015/01/31/Learn to Code HTML & CSS 05/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"baoxiehao"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+<!-- Duoshuo Comment END -->
+
+</div> <!-- container-narrow -->
+  
+<a id="gotop" href="#">
+  <span>▲</span>
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-51276891-1', 'baoxiehao.com');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+   </html>
