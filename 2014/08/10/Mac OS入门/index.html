@@ -158,7 +158,9 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 
 <p>【2】<a href="iterm2.com">iTerm2</a> —— 比系统自带Terminal强大太多。</p>
 <p>iTerm2的终端配色可以参考<a href="http://jishu.zol.com.cn/14274.html" target="_blank" rel="external">在 Mac OS X 终端里使用 Solarized 配色方案</a>。</p>
-<p>另外，还有神奇的<a href="https://github.com/nojhan/liquidprompt" target="_blank" rel="external"><strong>liquidprompt</strong></a>也不容错过。</p>
+<p>另外，还有神奇的<a href="https://github.com/nojhan/liquidprompt" target="_blank" rel="external"><strong>liquidprompt</strong></a>也不容错过。配置也很简单，在~/.bash_profile中添加：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Only load Liquid Prompt in interactive shells, not from a script or from     scp</span></div><div class="line">[[ $- = *i* ]] && <span class="built_in">source</span> ~/Develop/liquidprompt/liquidprompt</div></pre></td></tr></table></figure>
+
 <p>【3】配置Sublime Text 3</p>
 <p>下载<a href="https://sublime.wbond.net/Package%20Control.sublime-package" target="_blank" rel="external">Package Control.sublime-package</a>，然后选择菜单栏<strong>Sublime Text——Preferences——Browse Packages</strong>，将下载文件放入刚打开的文件夹中。重启后就可以选择菜单栏<strong>Tools——Command Palette</strong>（或者快捷键<strong>Shift+Command+P</strong>），输入<strong>Install Package</strong>进行插件安装。</p>
 <p>另外，为了可以在命令行中直接调用Sumlime打开文件，可以在『~/.bash_profile』中添加：</p>
