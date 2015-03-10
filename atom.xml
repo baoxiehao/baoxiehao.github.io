@@ -4,7 +4,7 @@
   <subtitle><![CDATA[淡静良觉之地]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://baoxiehao.com/"/>
-  <updated>2015-03-10T13:30:12.489Z</updated>
+  <updated>2015-03-10T13:32:13.549Z</updated>
   <id>http://baoxiehao.com/</id>
   
   <author>
@@ -1654,7 +1654,7 @@ As previously mentioned, different browsers render elements <span class="operato
     <link href="http://baoxiehao.com/2014/08/10/Mac%20OS%E5%85%A5%E9%97%A8/"/>
     <id>http://baoxiehao.com/2014/08/10/Mac OS入门/</id>
     <published>2014-08-10T03:20:26.000Z</published>
-    <updated>2015-03-07T16:20:14.000Z</updated>
+    <updated>2015-03-10T13:31:56.000Z</updated>
     <content type="html"><![CDATA[<p>8月5号晚上下单2014新款13.3寸 Macbook Pro Retina（MGX72），8月8号到手，卖家包装非常不给力，幸好只是包装的一角挤压了，本本无恙。想来刚接触新的系统一定是非常不习惯的，虽然Windows系统用起来也不是很爽，但是毕竟用久了，一些常用的工具需要快速找到替代品。于是，就有了这篇关于Mac入门的文章，主要介绍系统基础工具以及一些进阶神器，边用边写，慢慢更新吧。</p>
 <a id="more"></a>
 
@@ -1680,29 +1680,59 @@ As previously mentioned, different browsers render elements <span class="operato
 </ol>
 <h2 id="Mac开发工具">Mac开发工具</h2>
 <p>用Mac做开发的话，首先不可少的一定是命令行工具，其次才是其他的开发软件或者套件。</p>
-<p>【1】<strong>brew</strong> —— 和<strong>Ubuntu</strong>的<strong>apt-get</strong>一样，自动搜索安装应用，简单方便。</p>
+<h3 id="brew">brew</h3>
+<p>和<strong>Ubuntu</strong>的<strong>apt-get</strong>一样，自动搜索安装应用，简单方便。</p>
 <p>安装：</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl -LsSf http://github.com/mxcl/homebrew/tarball/master | <span class="built_in">sudo</span> tar xvz -C/usr/local --strip <span class="number">1</span></div></pre></td></tr></table></figure>
 
 <p>使用：</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ brew install wget</div><div class="line">$ brew uninstall wget</div><div class="line">$ brew search wget</div></pre></td></tr></table></figure>
 
-<p>【2】<a href="iterm2.com">iTerm2</a> —— 比系统自带Terminal强大太多。</p>
+<h3 id="iTerm2"><a href="iterm2.com">iTerm2</a></h3>
+<p>比系统自带Terminal强大太多。</p>
 <p>iTerm2的终端配色可以参考<a href="http://jishu.zol.com.cn/14274.html" target="_blank" rel="external">在 Mac OS X 终端里使用 Solarized 配色方案</a>。</p>
-<p>另外，还有神奇的<a href="https://github.com/nojhan/liquidprompt" target="_blank" rel="external"><strong>liquidprompt</strong></a>也不容错过。配置也很简单，在~/.bash_profile中添加：</p>
+<h3 id="liquidprompt"><a href="https://github.com/nojhan/liquidprompt" target="_blank" rel="external">liquidprompt</a></h3>
+<p>配置方法是在~/.bash_profile中添加：</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Only load Liquid Prompt in interactive shells, not from a script or from     scp</span></div><div class="line">[[ $- = *i* ]] && <span class="built_in">source</span> ~/Develop/liquidprompt/liquidprompt</div></pre></td></tr></table></figure>
 
-<p>【3】配置Sublime Text 3</p>
+<h3 id="zsh">zsh</h3>
+<p>下载.oh-my-zsh，配置.zshrc，设置默认的shell：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh</div><div class="line">cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc</div><div class="line">chsh <span class="operator">-s</span> /bin/zsh</div></pre></td></tr></table></figure>
+
+<p>然后记得将“~/.bash_profile”中的自定义配置复制到“~/.zshrc”中。</p>
+<h3 id="配置Sublime_Text_3">配置Sublime Text 3</h3>
 <p>下载<a href="https://sublime.wbond.net/Package%20Control.sublime-package" target="_blank" rel="external">Package Control.sublime-package</a>，然后选择菜单栏<strong>Sublime Text——Preferences——Browse Packages</strong>，将下载文件放入刚打开的文件夹中。重启后就可以选择菜单栏<strong>Tools——Command Palette</strong>（或者快捷键<strong>Shift+Command+P</strong>），输入<strong>Install Package</strong>进行插件安装。</p>
 <p>另外，为了可以在命令行中直接调用Sumlime打开文件，可以在『~/.bash_profile』中添加：</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">alias subl=<span class="string">'open -a "Sublime Text"'</span></div></pre></td></tr></table></figure>
 
-<p>【4】升级Python3</p>
+<h3 id="KeyRemap4MacBook">KeyRemap4MacBook</h3>
+<p>改键利器，包括2个软件：<a href="https://pqrs.org/osx/karabiner/index.html.en" target="_blank" rel="external">Karabiner</a>和<a href="https://pqrs.org/osx/karabiner/seil.html.en" target="_blank" rel="external">Seil</a>，后者用于修改<strong>CapsLock</strong>。</p>
+<h3 id="Dash">Dash</h3>
+<p><a href="http://kapeli.com/dash" target="_blank" rel="external">Dash</a>为开发人员提供了几乎所有语言的离线API查询，结合Alfred更是所向披靡。安装之后可以在“Integration”页面迅速地集成到适配应用中去。</p>
+<h3 id="升级Python3">升级Python3</h3>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="shebang">#!/bin/sh</span></div><div class="line"></div><div class="line">[ <span class="variable">$#</span> <span class="operator">-ne</span> <span class="number">1</span> ] && { <span class="built_in">echo</span> <span class="variable">$0</span> <span class="string">' python_version'</span>; <span class="keyword">exit</span>; }</div><div class="line"></div><div class="line">PYVERSION=<span class="variable">$1</span></div><div class="line"></div><div class="line">PYPATH=/System/Library/Frameworks/Python.framework/Versions/<span class="variable">${PYVERSION}</span></div><div class="line">PYCURR=/System/Library/Frameworks/Python.framework/Versions/Current</div><div class="line"><span class="built_in">sudo</span> mv /Library/Frameworks/Python.framework/Versions/<span class="variable">${PYVERSION}</span> /System/Library/Frameworks/Python.framework/Versions/</div><div class="line"><span class="built_in">sudo</span> chown -R root:wheel <span class="variable">${PYPATH}</span></div><div class="line"><span class="built_in">sudo</span> rm <span class="variable">${PYCURR}</span></div><div class="line"><span class="built_in">sudo</span> ln <span class="operator">-s</span> <span class="variable">${PYPATH}</span> <span class="variable">${PYCURR}</span></div><div class="line"><span class="built_in">sudo</span> rm /usr/bin/{pydoc,python,pythonw,python-config}</div><div class="line"><span class="built_in">sudo</span> ln <span class="operator">-s</span> <span class="variable">${PYPATH}</span>/bin/pydoc<span class="variable">${PYVERSION}</span> /usr/bin/pydoc</div><div class="line"><span class="built_in">sudo</span> ln <span class="operator">-s</span> <span class="variable">${PYPATH}</span>/bin/python<span class="variable">${PYVERSION}</span> /usr/bin/python</div><div class="line"><span class="built_in">sudo</span> ln <span class="operator">-s</span> <span class="variable">${PYPATH}</span>/bin/pythonw<span class="variable">${PYVERSION}</span> /usr/bin/pythonw</div><div class="line"><span class="built_in">sudo</span> ln <span class="operator">-s</span> <span class="variable">${PYPATH}</span>/bin/python<span class="variable">${PYVERSION}</span>m-config /usr/bin/python-config</div><div class="line"></div><div class="line"><span class="built_in">echo</span> <span class="string">"export PATH=/System/Library/Frameworks/Python.framework/Versions/<span class="variable">${PYVERSION}</span>/bin"</span><span class="string">':${PATH}'</span> &gt;&gt; ~/.bash_profile</div></pre></td></tr></table></figure>
 
 <p>安装<strong>requests</strong>和<strong>BeautifulSoup</strong>：</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">sudo</span> pip install requests</div><div class="line">$ <span class="built_in">sudo</span> pip install BeautifulSoup4</div></pre></td></tr></table></figure>
 
+<h3 id="设置Ubuntu共享">设置Ubuntu共享</h3>
+<ol>
+<li>安装samba </li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">sudo</span> apt-get install samba smbfs</div></pre></td></tr></table></figure>
+
+<ol>
+<li>设置samba密码 </li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">sudo</span> touch /etc/samba/smbpasswd </div><div class="line"><span class="built_in">sudo</span> smbpasswd <span class="operator">-a</span> yourname      <span class="comment">#yourname 表示你的用户名</span></div></pre></td></tr></table></figure>
+
+<p>然后按照提示设置输入密码 </p>
+<ol>
+<li>任意选择你想要共享的文件夹，右键选择“Properties”，然后点击“Share”； </li>
+<li>输入共享名，一般情况下可以跟文件夹同名，如果下面第三步出错请换个名字试试； </li>
+<li>选中第一个选项 “share this fold” ，第二个也可以选上，第三个建议不要选；  </li>
+<li>在Mac中开启Finder，选择“前往—连接服务器”，然后输入“smb://your-ip-addr”，确认之后就可以在“/Volumes/”目录下看到Ubuntu共享的目录了。</li>
+</ol>
 ]]></content>
     <summary type="html"><![CDATA[<p>8月5号晚上下单2014新款13.3寸 Macbook Pro Retina（MGX72），8月8号到手，卖家包装非常不给力，幸好只是包装的一角挤压了，本本无恙。想来刚接触新的系统一定是非常不习惯的，虽然Windows系统用起来也不是很爽，但是毕竟用久了，一些常用的工具需要快速找到替代品。于是，就有了这篇关于Mac入门的文章，主要介绍系统基础工具以及一些进阶神器，边用边写，慢慢更新吧。</p>
 ]]></summary>
