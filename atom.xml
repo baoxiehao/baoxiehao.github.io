@@ -4,7 +4,7 @@
   <subtitle><![CDATA[淡静良觉之地]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://baoxiehao.com/"/>
-  <updated>2015-03-10T13:36:22.710Z</updated>
+  <updated>2015-03-15T00:15:27.618Z</updated>
   <id>http://baoxiehao.com/</id>
   
   <author>
@@ -15,12 +15,83 @@
   <generator uri="http://zespia.tw/hexo/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[Mac Vim终极指南]]></title>
+    <title><![CDATA[Mac OS 开发环境]]></title>
+    <link href="http://baoxiehao.com/2015/03/15/Mac%20OS%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"/>
+    <id>http://baoxiehao.com/2015/03/15/Mac OS开发环境/</id>
+    <published>2015-03-14T23:48:39.000Z</published>
+    <updated>2015-03-15T00:15:15.000Z</updated>
+    <content type="html"><![CDATA[<p>最早使用的系统是Windows，它的特点就是大众化、上手快，后来因为需要Android开发，用上了Ubuntu，它的特点就是应用包安装实在简单，一个“sudo apt-get install”命令搞定。现在，用上了Mac，才知道界面和命令系统完美结合的酸爽。界面的优美易用性无需多言，本文就来看看如何选择开发工具，搭建最趁手的Mac开发环境。</p>
+<a id="more"></a>
+
+<h1 id="命令行工具">命令行工具</h1>
+<h2 id="brew">brew</h2>
+<p>和<strong>Ubuntu</strong>的<strong>apt-get</strong>一样，自动搜索安装应用，简单方便。</p>
+<p>安装：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl -LsSf http://github.com/mxcl/homebrew/tarball/master | <span class="built_in">sudo</span> tar xvz -C/usr/local --strip <span class="number">1</span></div></pre></td></tr></table></figure>
+
+<p>使用：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ brew install wget</div><div class="line">$ brew uninstall wget</div><div class="line">$ brew search wget</div></pre></td></tr></table></figure>
+
+<h2 id="iTerm2">iTerm2</h2>
+<p><a href="iterm">iTerm2</a>比系统自带Terminal强大太多，其终端配色可以参考<a href="http://jishu.zol.com.cn/14274.html" target="_blank" rel="external">在 Mac OS X 终端里使用 Solarized 配色方案</a>。</p>
+<h2 id="liquidprompt">liquidprompt</h2>
+<p><a href="https://github.com/nojhan/liquidprompt" target="_blank" rel="external">liquidprompt</a>配置方法是在~/.bash_profile中添加：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Only load Liquid Prompt in interactive shells, not from a script or from     scp</span></div><div class="line">[[ $- = *i* ]] && <span class="built_in">source</span> ~/Develop/liquidprompt/liquidprompt</div></pre></td></tr></table></figure>
+
+<h2 id="zsh">zsh</h2>
+<p>下载.oh-my-zsh，配置.zshrc，设置默认的shell：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh</div><div class="line">cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc</div><div class="line">chsh <span class="operator">-s</span> /bin/zsh</div></pre></td></tr></table></figure>
+
+<p>然后记得将之前“~/.bash_profile”中的自定义配置（如果有的话）复制到“~/.zshrc”中。</p>
+<h2 id="升级Python3">升级Python3</h2>
+<p>下载<a href="https://www.python.org/downloads/release/python-341/" target="_blank" rel="external">Python3</a>，然后：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="shebang">#!/bin/sh</span></div><div class="line"></div><div class="line">[ <span class="variable">$#</span> <span class="operator">-ne</span> <span class="number">1</span> ] && { <span class="built_in">echo</span> <span class="variable">$0</span> <span class="string">' python_version'</span>; <span class="keyword">exit</span>; }</div><div class="line"></div><div class="line">PYVERSION=<span class="variable">$1</span></div><div class="line"></div><div class="line">PYPATH=/System/Library/Frameworks/Python.framework/Versions/<span class="variable">${PYVERSION}</span></div><div class="line">PYCURR=/System/Library/Frameworks/Python.framework/Versions/Current</div><div class="line"><span class="built_in">sudo</span> mv /Library/Frameworks/Python.framework/Versions/<span class="variable">${PYVERSION}</span> /System/Library/Frameworks/Python.framework/Versions/</div><div class="line"><span class="built_in">sudo</span> chown -R root:wheel <span class="variable">${PYPATH}</span></div><div class="line"><span class="built_in">sudo</span> rm <span class="variable">${PYCURR}</span></div><div class="line"><span class="built_in">sudo</span> ln <span class="operator">-s</span> <span class="variable">${PYPATH}</span> <span class="variable">${PYCURR}</span></div><div class="line"><span class="built_in">sudo</span> rm /usr/bin/{pydoc,python,pythonw,python-config}</div><div class="line"><span class="built_in">sudo</span> ln <span class="operator">-s</span> <span class="variable">${PYPATH}</span>/bin/pydoc<span class="variable">${PYVERSION}</span> /usr/bin/pydoc</div><div class="line"><span class="built_in">sudo</span> ln <span class="operator">-s</span> <span class="variable">${PYPATH}</span>/bin/python<span class="variable">${PYVERSION}</span> /usr/bin/python</div><div class="line"><span class="built_in">sudo</span> ln <span class="operator">-s</span> <span class="variable">${PYPATH}</span>/bin/pythonw<span class="variable">${PYVERSION}</span> /usr/bin/pythonw</div><div class="line"><span class="built_in">sudo</span> ln <span class="operator">-s</span> <span class="variable">${PYPATH}</span>/bin/python<span class="variable">${PYVERSION}</span>m-config /usr/bin/python-config</div><div class="line"></div><div class="line"><span class="built_in">echo</span> <span class="string">"export PATH=/System/Library/Frameworks/Python.framework/Versions/<span class="variable">${PYVERSION}</span>/bin"</span><span class="string">':${PATH}'</span> &gt;&gt; ~/.bash_profile</div></pre></td></tr></table></figure>
+
+<p>安装<strong>requests</strong>和<strong>BeautifulSoup</strong>：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">sudo</span> pip install requests</div><div class="line">$ <span class="built_in">sudo</span> pip install BeautifulSoup4</div></pre></td></tr></table></figure>
+
+<h1 id="应用工具">应用工具</h1>
+<h2 id="Sublime_Text_3">Sublime Text 3</h2>
+<p>下载[Package Control.sublime-package][sublime-pc]，然后选择菜单栏<strong>Sublime Text——Preferences——Browse Packages</strong>，将下载文件放入刚打开的文件夹中。重启后就可以选择菜单栏<strong>Tools——Command Palette</strong>（或者快捷键<strong>Shift+Command+P</strong>），输入<strong>Install Package</strong>进行插件安装。</p>
+<p>另外，为了可以在命令行中直接调用Sublime打开文件，可以在“~/.bash_profile”中添加：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">alias subl=<span class="string">'open -a "Sublime Text"'</span></div></pre></td></tr></table></figure>
+
+<h2 id="KeyRemap4MacBook">KeyRemap4MacBook</h2>
+<p>改键利器，包括2个软件：<a href="https://pqrs.org/osx/karabiner/index.html.en" target="_blank" rel="external">Karabiner</a>和<a href="https://pqrs.org/osx/karabiner/seil.html.en" target="_blank" rel="external">Seil</a>，后者用于修改<strong>CapsLock</strong>。具体改键介绍文章可以参考<a href="http://www.appinn.com/keyremap4macbook/" target="_blank" rel="external">KeyRemap4MacBook – 轻松修改按键映射</a></p>
+<h2 id="Dash">Dash</h2>
+<p><a href="http://kapeli.com/dash" target="_blank" rel="external">Dash</a>为开发人员提供了几乎所有语言的离线API查询，结合Alfred更是所向披靡。安装之后可以在“Integration”页面迅速地集成到适配应用中去。</p>
+<h1 id="联机工具">联机工具</h1>
+<h2 id="设置Ubuntu共享">设置Ubuntu共享</h2>
+<h3 id="Ubuntu端">Ubuntu端</h3>
+<p>【1】安装samba </p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">sudo</span> apt-get install samba smbfs</div></pre></td></tr></table></figure>
+
+<p>【2】设置samba密码 </p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">sudo</span> touch /etc/samba/smbpasswd </div><div class="line"><span class="built_in">sudo</span> smbpasswd <span class="operator">-a</span> yourname      <span class="comment">#yourname 表示你的用户名</span></div></pre></td></tr></table></figure>
+
+<p>然后按照提示设置输入密码 </p>
+<p>【3】任意选择你想要共享的文件夹，右键选择“Properties”，然后点击“Share”；<br>【4】输入共享名，一般情况下可以跟文件夹同名，如果下面第三步出错请换个名字试试；<br>【5】选中第一个选项 “share this fold” ，第二个也可以选上，第三个建议不要选；  </p>
+<h3 id="Mac端">Mac端</h3>
+<p>【1】开启Finder，选择“前往—连接服务器”；<br>【2】输入“smb://your-ip-addr”，确认之后就可以在“/Volumes/”目录下看到Ubuntu共享的目录了。</p>
+]]></content>
+    <summary type="html"><![CDATA[<p>最早使用的系统是Windows，它的特点就是大众化、上手快，后来因为需要Android开发，用上了Ubuntu，它的特点就是应用包安装实在简单，一个“sudo apt-get install”命令搞定。现在，用上了Mac，才知道界面和命令系统完美结合的酸爽。界面的优美易用性无需多言，本文就来看看如何选择开发工具，搭建最趁手的Mac开发环境。</p>
+]]></summary>
+    
+      <category term="Mac" scheme="http://baoxiehao.com/tags/Mac/"/>
+    
+      <category term="开发环境" scheme="http://baoxiehao.com/tags/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"/>
+    
+      <category term="技术" scheme="http://baoxiehao.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Mac Vim 终极指南]]></title>
     <link href="http://baoxiehao.com/2015/03/01/Mac%20Vim%E7%BB%88%E6%9E%81%E6%8C%87%E5%8D%97/"/>
     <id>http://baoxiehao.com/2015/03/01/Mac Vim终极指南/</id>
     <published>2015-03-01T12:49:49.000Z</published>
-    <updated>2015-03-07T02:43:28.000Z</updated>
-    <content type="html"><![CDATA[<p>如果你在用Vim，如果你还没听说Vundle、UltiSnips或者YouCompleteMe，那么你一定不要错过这篇文章。</p>
+    <updated>2015-03-15T00:14:44.000Z</updated>
+    <content type="html"><![CDATA[<p>如果你在用<strong>Vim</strong>，如果你还没听说<strong>Vundle</strong>、<strong>UltiSnips</strong>或者<strong>YouCompleteMe</strong>，那么你一定不要错过这篇文章。</p>
 <a id="more"></a>
 
 <h2 id="安装Vim_7-4">安装Vim 7.4</h2>
@@ -68,12 +139,14 @@
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> ./install.sh --clang-completer ~/.vim/bundle/YouCompleteMe</div><div class="line">git submodule update --init --recursive</div><div class="line">./install.sh --clang-completer</div></pre></td></tr></table></figure>
 
 ]]></content>
-    <summary type="html"><![CDATA[<p>如果你在用Vim，如果你还没听说Vundle、UltiSnips或者YouCompleteMe，那么你一定不要错过这篇文章。</p>
+    <summary type="html"><![CDATA[<p>如果你在用<strong>Vim</strong>，如果你还没听说<strong>Vundle</strong>、<strong>UltiSnips</strong>或者<strong>YouCompleteMe</strong>，那么你一定不要错过这篇文章。</p>
 ]]></summary>
     
       <category term="Mac" scheme="http://baoxiehao.com/tags/Mac/"/>
     
-      <category term="工具" scheme="http://baoxiehao.com/categories/%E5%B7%A5%E5%85%B7/"/>
+      <category term="Vim" scheme="http://baoxiehao.com/tags/Vim/"/>
+    
+      <category term="技术" scheme="http://baoxiehao.com/categories/%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   
@@ -1654,29 +1727,27 @@ As previously mentioned, different browsers render elements <span class="operato
     <link href="http://baoxiehao.com/2014/08/10/Mac%20OS%E5%85%A5%E9%97%A8/"/>
     <id>http://baoxiehao.com/2014/08/10/Mac OS入门/</id>
     <published>2014-08-10T03:20:26.000Z</published>
-    <updated>2015-03-10T13:36:14.000Z</updated>
+    <updated>2015-03-15T00:15:12.000Z</updated>
     <content type="html"><![CDATA[<p>8月5号晚上下单2014新款13.3寸 Macbook Pro Retina（MGX72），8月8号到手，卖家包装非常不给力，幸好只是包装的一角挤压了，本本无恙。想来刚接触新的系统一定是非常不习惯的，虽然Windows系统用起来也不是很爽，但是毕竟用久了，一些常用的工具需要快速找到替代品。于是，就有了这篇关于Mac入门的文章，主要介绍系统基础工具以及一些进阶神器，边用边写，慢慢更新吧。</p>
 <a id="more"></a>
 
-<h2 id="Mac装机必备">Mac装机必备</h2>
+<h1 id="Mac装机必备">Mac装机必备</h1>
 <p>刚到手Mac的时候，就连输入法的切换键都不知道，切换输入中英文是相当的痛苦。于是，想想还是先把装机必备的一些东东先搞定吧，另外稍微熟悉下系统操作。以下罗列的不一定全是需要安装的软件，也可能是系统自带的一些工具。</p>
-<ol>
-<li><p>系统偏好设置 —— 触控板：熟悉系统基本多点触控操作，系统自带了每个操作对应的手势视频，相当酷炫和便利。</p>
-</li>
-<li><p>安装配置Jitouch：扩展更多的多点触控手势，比如浏览器中的上下标签切换，当前标签关闭，窗口最大化以及当前应用关闭等常用操作，不过每个人的配置不同，这里就先不贴出自用的配置。</p>
-</li>
-<li><p>百度输入法：系统自带的输入法相当不习惯，不能逗号切换下一页的词语选择，也不能一键切换中英文，更关键的是，手机上一直用百度输入法，实在好用，Mac上也有百度输入法，不用没有理由。只是，已发现一个小bug是在QQ聊天窗口中输入文字的时候，当前行的文本有可能会上下跃动。</p>
-</li>
-<li><p>LilyView：超好用的图片浏览器，自带的iPhoto不错，只是所有的图片都是要先导入（要复制占空间啊有木有）才方便浏览，而系统自带的图片查看器也实在用不习惯。LilyView在安装的时候会提示你是否要设置为默认图片浏览器，直接确认并勾选图片格式即可。在浏览的时候，可以双指左右滑动切换上下张图片，还可以双击图片进入全屏浏览模式，而且可以手势缩放和移动，非常给力。</p>
-</li>
-<li><p>Sublime Text 3：编辑神器，没有之一。</p>
-</li>
-<li><p>Alfred：比系统自带Spotlight更为强大的系统工具，可以快速打开应用，快速搜索文件名称（甚至文件内容），快速执行网络搜索等，而在付费版中，还有更高级的工作流功能。</p>
-</li>
-<li><p>XtraFinder：Finder增强工具，标签式浏览文件，<strong>Command + U</strong>进入双栏模式，移动复制超级方便。</p>
-</li>
-</ol>
-<h2 id="Safari插件">Safari插件</h2>
+<h2 id="系统偏好">系统偏好</h2>
+<p>触控板：熟悉系统基本多点触控操作，系统自带了每个操作对应的手势视频，相当酷炫和便利。</p>
+<h2 id="配置Jitouch">配置Jitouch</h2>
+<p>扩展更多的多点触控手势，比如浏览器中的上下标签切换，当前标签关闭，窗口最大化以及当前应用关闭等常用操作，不过每个人的配置不同，这里就先不贴出自用的配置。</p>
+<h2 id="百度输入法">百度输入法</h2>
+<p>系统自带的输入法相当不习惯，不能逗号切换下一页的词语选择，也不能一键切换中英文，更关键的是，手机上一直用百度输入法，实在好用，Mac上也有百度输入法，不用没有理由。只是，已发现一个小bug是在QQ聊天窗口中输入文字的时候，当前行的文本有可能会上下跃动。</p>
+<h2 id="LilyView">LilyView</h2>
+<p>超好用的图片浏览器，自带的iPhoto不错，只是所有的图片都是要先导入（要复制占空间啊有木有）才方便浏览，而系统自带的图片查看器也实在用不习惯。LilyView在安装的时候会提示你是否要设置为默认图片浏览器，直接确认并勾选图片格式即可。在浏览的时候，可以双指左右滑动切换上下张图片，还可以双击图片进入全屏浏览模式，而且可以手势缩放和移动，非常给力。</p>
+<h2 id="Sublime_Text_3">Sublime Text 3</h2>
+<p>编辑神器，没有之一。</p>
+<h2 id="Alfred">Alfred</h2>
+<p>比系统自带Spotlight更为强大的系统工具，可以快速打开应用，快速搜索文件名称（甚至文件内容），快速执行网络搜索等，而在付费版中，还有更高级的工作流功能。</p>
+<h2 id="XtraFinder">XtraFinder</h2>
+<p>Finder增强工具，标签式浏览文件，<strong>Command + U</strong>进入双栏模式，移动复制超级方便。</p>
+<h1 id="Safari插件">Safari插件</h1>
 <ol>
 <li><a href="http://opnir.com/261/safari-multifunction-plugin-glims" target="_blank" rel="external">多功能插件 Glims</a></li>
 <li><a href="http://irising.me/2012/09/15375/#more-15375" target="_blank" rel="external">自动Html5视频播放 ClickToPluginForChina</a></li>
@@ -1685,52 +1756,6 @@ As previously mentioned, different browsers render elements <span class="operato
 <li><a href="https://getpocket.com/safari/" target="_blank" rel="external">稍后阅读 Pocket</a></li>
 <li><a href="https://adblockplus.org/zh_CN/safari" target="_blank" rel="external">广告拦截 Adblock Plus</a></li>
 </ol>
-<h2 id="Mac开发工具">Mac开发工具</h2>
-<p>用Mac做开发的话，首先不可少的一定是命令行工具，其次才是其他的开发软件或者套件。</p>
-<h3 id="brew">brew</h3>
-<p>和<strong>Ubuntu</strong>的<strong>apt-get</strong>一样，自动搜索安装应用，简单方便。</p>
-<p>安装：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl -LsSf http://github.com/mxcl/homebrew/tarball/master | <span class="built_in">sudo</span> tar xvz -C/usr/local --strip <span class="number">1</span></div></pre></td></tr></table></figure>
-
-<p>使用：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ brew install wget</div><div class="line">$ brew uninstall wget</div><div class="line">$ brew search wget</div></pre></td></tr></table></figure>
-
-<h3 id="iTerm2">iTerm2</h3>
-<p><a href="iterm">iTerm2</a>比系统自带Terminal强大太多。</p>
-<p>iTerm2的终端配色可以参考<a href="http://jishu.zol.com.cn/14274.html" target="_blank" rel="external">在 Mac OS X 终端里使用 Solarized 配色方案</a>。</p>
-<h3 id="liquidprompt">liquidprompt</h3>
-<p><a href="https://github.com/nojhan/liquidprompt" target="_blank" rel="external">liquidprompt</a>配置方法是在~/.bash_profile中添加：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Only load Liquid Prompt in interactive shells, not from a script or from     scp</span></div><div class="line">[[ $- = *i* ]] && <span class="built_in">source</span> ~/Develop/liquidprompt/liquidprompt</div></pre></td></tr></table></figure>
-
-<h3 id="zsh">zsh</h3>
-<p>下载.oh-my-zsh，配置.zshrc，设置默认的shell：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh</div><div class="line">cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc</div><div class="line">chsh <span class="operator">-s</span> /bin/zsh</div></pre></td></tr></table></figure>
-
-<p>然后记得将“~/.bash_profile”中的自定义配置复制到“~/.zshrc”中。</p>
-<h3 id="配置Sublime_Text_3">配置Sublime Text 3</h3>
-<p>下载<a href="https://sublime.wbond.net/Package%20Control.sublime-package" target="_blank" rel="external">Package Control.sublime-package</a>，然后选择菜单栏<strong>Sublime Text——Preferences——Browse Packages</strong>，将下载文件放入刚打开的文件夹中。重启后就可以选择菜单栏<strong>Tools——Command Palette</strong>（或者快捷键<strong>Shift+Command+P</strong>），输入<strong>Install Package</strong>进行插件安装。</p>
-<p>另外，为了可以在命令行中直接调用Sumlime打开文件，可以在『~/.bash_profile』中添加：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">alias subl=<span class="string">'open -a "Sublime Text"'</span></div></pre></td></tr></table></figure>
-
-<h3 id="KeyRemap4MacBook">KeyRemap4MacBook</h3>
-<p>改键利器，包括2个软件：<a href="https://pqrs.org/osx/karabiner/index.html.en" target="_blank" rel="external">Karabiner</a>和<a href="https://pqrs.org/osx/karabiner/seil.html.en" target="_blank" rel="external">Seil</a>，后者用于修改<strong>CapsLock</strong>。</p>
-<h3 id="Dash">Dash</h3>
-<p><a href="http://kapeli.com/dash" target="_blank" rel="external">Dash</a>为开发人员提供了几乎所有语言的离线API查询，结合Alfred更是所向披靡。安装之后可以在“Integration”页面迅速地集成到适配应用中去。</p>
-<h3 id="升级Python3">升级Python3</h3>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="shebang">#!/bin/sh</span></div><div class="line"></div><div class="line">[ <span class="variable">$#</span> <span class="operator">-ne</span> <span class="number">1</span> ] && { <span class="built_in">echo</span> <span class="variable">$0</span> <span class="string">' python_version'</span>; <span class="keyword">exit</span>; }</div><div class="line"></div><div class="line">PYVERSION=<span class="variable">$1</span></div><div class="line"></div><div class="line">PYPATH=/System/Library/Frameworks/Python.framework/Versions/<span class="variable">${PYVERSION}</span></div><div class="line">PYCURR=/System/Library/Frameworks/Python.framework/Versions/Current</div><div class="line"><span class="built_in">sudo</span> mv /Library/Frameworks/Python.framework/Versions/<span class="variable">${PYVERSION}</span> /System/Library/Frameworks/Python.framework/Versions/</div><div class="line"><span class="built_in">sudo</span> chown -R root:wheel <span class="variable">${PYPATH}</span></div><div class="line"><span class="built_in">sudo</span> rm <span class="variable">${PYCURR}</span></div><div class="line"><span class="built_in">sudo</span> ln <span class="operator">-s</span> <span class="variable">${PYPATH}</span> <span class="variable">${PYCURR}</span></div><div class="line"><span class="built_in">sudo</span> rm /usr/bin/{pydoc,python,pythonw,python-config}</div><div class="line"><span class="built_in">sudo</span> ln <span class="operator">-s</span> <span class="variable">${PYPATH}</span>/bin/pydoc<span class="variable">${PYVERSION}</span> /usr/bin/pydoc</div><div class="line"><span class="built_in">sudo</span> ln <span class="operator">-s</span> <span class="variable">${PYPATH}</span>/bin/python<span class="variable">${PYVERSION}</span> /usr/bin/python</div><div class="line"><span class="built_in">sudo</span> ln <span class="operator">-s</span> <span class="variable">${PYPATH}</span>/bin/pythonw<span class="variable">${PYVERSION}</span> /usr/bin/pythonw</div><div class="line"><span class="built_in">sudo</span> ln <span class="operator">-s</span> <span class="variable">${PYPATH}</span>/bin/python<span class="variable">${PYVERSION}</span>m-config /usr/bin/python-config</div><div class="line"></div><div class="line"><span class="built_in">echo</span> <span class="string">"export PATH=/System/Library/Frameworks/Python.framework/Versions/<span class="variable">${PYVERSION}</span>/bin"</span><span class="string">':${PATH}'</span> &gt;&gt; ~/.bash_profile</div></pre></td></tr></table></figure>
-
-<p>安装<strong>requests</strong>和<strong>BeautifulSoup</strong>：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">sudo</span> pip install requests</div><div class="line">$ <span class="built_in">sudo</span> pip install BeautifulSoup4</div></pre></td></tr></table></figure>
-
-<h3 id="设置Ubuntu共享">设置Ubuntu共享</h3>
-<p>【1】安装samba </p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">sudo</span> apt-get install samba smbfs</div></pre></td></tr></table></figure>
-
-<p>【2】设置samba密码 </p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">sudo</span> touch /etc/samba/smbpasswd </div><div class="line"><span class="built_in">sudo</span> smbpasswd <span class="operator">-a</span> yourname      <span class="comment">#yourname 表示你的用户名</span></div></pre></td></tr></table></figure>
-
-<p>然后按照提示设置输入密码 </p>
-<p>【3】任意选择你想要共享的文件夹，右键选择“Properties”，然后点击“Share”；<br>【4】输入共享名，一般情况下可以跟文件夹同名，如果下面第三步出错请换个名字试试；<br>【5】选中第一个选项 “share this fold” ，第二个也可以选上，第三个建议不要选；<br>【6】在Mac中开启Finder，选择“前往—连接服务器”，然后输入“smb://your-ip-addr”，确认之后就可以在“/Volumes/”目录下看到Ubuntu共享的目录了。</p>
 ]]></content>
     <summary type="html"><![CDATA[<p>8月5号晚上下单2014新款13.3寸 Macbook Pro Retina（MGX72），8月8号到手，卖家包装非常不给力，幸好只是包装的一角挤压了，本本无恙。想来刚接触新的系统一定是非常不习惯的，虽然Windows系统用起来也不是很爽，但是毕竟用久了，一些常用的工具需要快速找到替代品。于是，就有了这篇关于Mac入门的文章，主要介绍系统基础工具以及一些进阶神器，边用边写，慢慢更新吧。</p>
 ]]></summary>
@@ -1991,59 +2016,6 @@ As previously mentioned, different browsers render elements <span class="operato
       <category term="Hexo" scheme="http://baoxiehao.com/tags/Hexo/"/>
     
       <category term="博客" scheme="http://baoxiehao.com/categories/%E5%8D%9A%E5%AE%A2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Android EasyAdapter]]></title>
-    <link href="http://baoxiehao.com/2014/05/16/Android-Easyadapter/"/>
-    <id>http://baoxiehao.com/2014/05/16/Android-Easyadapter/</id>
-    <published>2014-05-16T11:55:23.000Z</published>
-    <updated>2014-05-23T10:51:24.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="EasyAdapter的安装">EasyAdapter的安装</h2>
-<hr>
-<p><strong>[1]</strong> <a href="#1"><strong>Github地址</strong></a> 和 <a href="#2"><strong>Jar包下载地址</strong></a>。</p>
-<p><strong>[2]</strong> 如果在源码编译中引用<strong>jar包</strong>需要在项目的<strong>Android.mk</strong>中添加：</p>
-<figure class="highlight mk"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="constant">LOCAL_STATIC_JAVA_LIBRARIES</span> += easy-adapter</div><div class="line"><span class="constant">LOCAL_PREBUILT_STATIC_JAVA_LIBRARIES</span> += easy-adapter:libs/easyadapter-1.0.1.jar</div></pre></td></tr></table></figure>
-
-<p><strong>[3]</strong> 如果使用了代码混淆，一定要在proguard.flags文件中去掉对easy-adapter代码包的混淆：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">-keep <span class="keyword">public</span> <span class="keyword">class</span> uk.co.ribot.easyadapter.** {</div><div class="line">    <span class="keyword">public</span> <span class="keyword">protected</span> *;</div><div class="line">}</div></pre></td></tr></table></figure>
-
-<a id="more"></a>
-
-<p><br></p>
-<h2 id="EasyAdapter的使用">EasyAdapter的使用</h2>
-<hr>
-<h3 id="使用EasyAdapter之前">使用EasyAdapter之前</h3>
-<p>自定义一个BaseAdapter，包含了下面繁琐的模板代码：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">TopicDetailAdapter</span> <span class="keyword">extends</span> <span class="title">BaseAdapter</span> </span>{</div><div class="line">    <span class="annotation">@Override</span></div><div class="line">    <span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getCount</span>() {</div><div class="line">        <span class="keyword">return</span> mEventList != <span class="keyword">null</span> ? mEventList.size() : <span class="number">0</span>;</div><div class="line">    }</div><div class="line">    <span class="annotation">@Override</span></div><div class="line">    <span class="keyword">public</span> Object <span class="title">getItem</span>(<span class="keyword">int</span> position) {</div><div class="line">        <span class="keyword">return</span> mEventList.get(position);</div><div class="line">    }</div><div class="line">    <span class="annotation">@Override</span></div><div class="line">    <span class="keyword">public</span> <span class="keyword">long</span> <span class="title">getItemId</span>(<span class="keyword">int</span> position) {</div><div class="line">        <span class="keyword">return</span> position;</div><div class="line">    }</div><div class="line">    <span class="annotation">@Override</span></div><div class="line">    <span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isEnabled</span>(<span class="keyword">int</span> position) {</div><div class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">    }</div><div class="line">    <span class="annotation">@Override</span></div><div class="line">    <span class="keyword">public</span> View <span class="title">getView</span>(<span class="keyword">int</span> position, View convertView, ViewGroup parent) {</div><div class="line">        ViewHolder holder = <span class="keyword">null</span>;</div><div class="line">        <span class="keyword">if</span> (convertView == <span class="keyword">null</span>) {</div><div class="line">            convertView = LayoutInflater.from(mActivity).inflate(</div><div class="line">                    R.layout.event_online_item, <span class="keyword">null</span>);</div><div class="line">            holder = <span class="keyword">new</span> ViewHolder(convertView);</div><div class="line">            convertView.setTag(holder);</div><div class="line">        } <span class="keyword">else</span> {</div><div class="line">            holder = (ViewHolder) convertView.getTag();</div><div class="line">        }</div><div class="line">        <span class="keyword">final</span> EventSchema event = mEventList.get(position);</div><div class="line">        holder.mHeaderText.setText(R.string.topic_event_list_header_label);</div><div class="line">        holder.mHeaderText.setVisibility(position == <span class="number">0</span> ? View.VISIBLE : View.GONE);</div><div class="line">        holder.mPrimaryText.setText(event.title);</div><div class="line">        holder.mSecondaryText.setText(MonthUtils.getEventTimeString(mActivity, event,</div><div class="line">                Time.getCurrentTimezone()));</div><div class="line">        String url = event.getEventIconUrl();</div><div class="line">        <span class="keyword">if</span> (!TextUtils.isEmpty(url)) {</div><div class="line">            holder.mOnlineImage.setVisibility(View.VISIBLE);</div><div class="line">            holder.mOnlineImage.setImageUrl(url, R.drawable.loading, R.drawable.loading);</div><div class="line">        } <span class="keyword">else</span> {</div><div class="line">            holder.mOnlineImage.setVisibility(View.GONE);</div><div class="line">        }</div><div class="line">        <span class="keyword">return</span> convertView;</div><div class="line">    }</div><div class="line">    <span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">ViewHolder</span> </span>{</div><div class="line">        <span class="keyword">public</span> TextView mHeaderText;</div><div class="line">        <span class="keyword">public</span> ViewGroup mRowGroup;</div><div class="line">        <span class="keyword">public</span> TextView mPrimaryText;</div><div class="line">        <span class="keyword">public</span> TextView mSecondaryText;</div><div class="line">        <span class="keyword">public</span> OnlineImageView mOnlineImage;</div><div class="line">        <span class="keyword">public</span> <span class="title">ViewHolder</span>(View view) {</div><div class="line">            mHeaderText = (TextView) view.findViewById(R.id.header);</div><div class="line">            mRowGroup = (ViewGroup) view.findViewById(R.id.row);</div><div class="line">            mPrimaryText = (TextView) view.findViewById(R.id.primary);</div><div class="line">            mSecondaryText = (TextView) view.findViewById(R.id.secondary);</div><div class="line">            mOnlineImage = (OnlineImageView) view.findViewById(R.id.online_image);</div><div class="line">        }</div><div class="line">    }</div><div class="line">}</div></pre></td></tr></table></figure>
-
-<p>利用自定义的BaseAdapter继承类填充List数据：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">getListView().setAdapter(<span class="keyword">new</span> TopicDetailAdapter());</div></pre></td></tr></table></figure>
-
-<p><br></p>
-<h3 id="使用EasyAdapter之后">使用EasyAdapter之后</h3>
-<p>继承自ItemViewHolder<t>关联数据和视图：</t></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TopicItemViewHolder</span> <span class="keyword">extends</span> <span class="title">ItemViewHolder</span>&lt;<span class="title">EventSchema</span>&gt; </span>{</div><div class="line">    <span class="annotation">@ViewId</span>(R.id.header)</div><div class="line">    TextView mHeaderText;</div><div class="line">    <span class="annotation">@ViewId</span>(R.id.row)</div><div class="line">    ViewGroup mRowGroup;</div><div class="line">    <span class="annotation">@ViewId</span>(R.id.primary)</div><div class="line">    TextView mPrimaryText;</div><div class="line">    <span class="annotation">@ViewId</span>(R.id.secondary)</div><div class="line">    TextView mSecondaryText;</div><div class="line">    <span class="annotation">@ViewId</span>(R.id.online_image)</div><div class="line">    OnlineImageView mOnlineImage;</div><div class="line">    <span class="keyword">public</span> <span class="title">TopicItemViewHolder</span>(View view) {</div><div class="line">        <span class="keyword">super</span>(view);</div><div class="line">    }</div><div class="line">    <span class="annotation">@Override</span></div><div class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onSetValues</span>(EventSchema event, PositionInfo posInfo) {</div><div class="line">        mHeaderText.setText(R.string.topic_event_list_header_label);</div><div class="line">        mHeaderText.setVisibility(posInfo.isFirst() ? View.VISIBLE : View.GONE);</div><div class="line">        mPrimaryText.setText(event.title);</div><div class="line">        mSecondaryText.setText(MonthUtils.getEventTimeString(getContext(), event,</div><div class="line">                Time.getCurrentTimezone()));</div><div class="line">        String url = event.getEventIconUrl();</div><div class="line">        <span class="keyword">if</span> (!TextUtils.isEmpty(url)) {</div><div class="line">            mOnlineImage.setVisibility(View.VISIBLE);</div><div class="line">            mOnlineImage.setImageUrl(url, R.drawable.loading, R.drawable.loading);</div><div class="line">        } <span class="keyword">else</span> {</div><div class="line">            mOnlineImage.setVisibility(View.GONE);</div><div class="line">        }</div><div class="line">    }</div><div class="line">}</div></pre></td></tr></table></figure>
-
-<p>利用EasyAdapter<t>模板类直接填充List数据：</t></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">getListView().setAdapter(<span class="keyword">new</span> EasyAdapter&lt;EventSchema&gt;(getContext(), TopicItemViewHolder.class, mEventList);</div></pre></td></tr></table></figure>
-
-]]></content>
-    <summary type="html"><![CDATA[<h2 id="EasyAdapter的安装">EasyAdapter的安装</h2>
-<hr>
-<p><strong>[1]</strong> <a href="#1"><strong>Github地址</strong></a> 和 <a href="#2"><strong>Jar包下载地址</strong></a>。</p>
-<p><strong>[2]</strong> 如果在源码编译中引用<strong>jar包</strong>需要在项目的<strong>Android.mk</strong>中添加：</p>
-<figure class="highlight mk"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="constant">LOCAL_STATIC_JAVA_LIBRARIES</span> += easy-adapter</div><div class="line"><span class="constant">LOCAL_PREBUILT_STATIC_JAVA_LIBRARIES</span> += easy-adapter:libs/easyadapter-1.0.1.jar</div></pre></td></tr></table></figure>
-
-<p><strong>[3]</strong> 如果使用了代码混淆，一定要在proguard.flags文件中去掉对easy-adapter代码包的混淆：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">-keep <span class="keyword">public</span> <span class="keyword">class</span> uk.co.ribot.easyadapter.** {</div><div class="line">    <span class="keyword">public</span> <span class="keyword">protected</span> *;</div><div class="line">}</div></pre></td></tr></table></figure>
-
-]]></summary>
-    
-      <category term="Android" scheme="http://baoxiehao.com/tags/Android/"/>
-    
-      <category term="技术" scheme="http://baoxiehao.com/categories/%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   

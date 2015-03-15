@@ -124,6 +124,41 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 	
 	<!-- display as entry -->
 		<h3 class="title">
+			<a href="/2014/05/16/Android-Easyadapter/" >Android EasyAdapter</a>
+			<span class="date"> 2014 5月 16 </span>
+		</h3>
+	
+
+
+	  <div class="entry">
+  <div class="row">
+  
+	<div class="col-md-12">
+	  
+	
+	  <h2 id="EasyAdapter的安装">EasyAdapter的安装</h2>
+<hr>
+<p><strong>[1]</strong> <a href="#1"><strong>Github地址</strong></a> 和 <a href="#2"><strong>Jar包下载地址</strong></a>。</p>
+<p><strong>[2]</strong> 如果在源码编译中引用<strong>jar包</strong>需要在项目的<strong>Android.mk</strong>中添加：</p>
+<figure class="highlight mk"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="constant">LOCAL_STATIC_JAVA_LIBRARIES</span> += easy-adapter</div><div class="line"><span class="constant">LOCAL_PREBUILT_STATIC_JAVA_LIBRARIES</span> += easy-adapter:libs/easyadapter-1.0.1.jar</div></pre></td></tr></table></figure>
+
+<p><strong>[3]</strong> 如果使用了代码混淆，一定要在proguard.flags文件中去掉对easy-adapter代码包的混淆：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">-keep <span class="keyword">public</span> <span class="keyword">class</span> uk.co.ribot.easyadapter.** {</div><div class="line">    <span class="keyword">public</span> <span class="keyword">protected</span> *;</div><div class="line">}</div></pre></td></tr></table></figure>
+
+
+	
+	</div>
+	
+  
+</div>
+	<a type="button" href="/2014/05/16/Android-Easyadapter/#more" class="btn btn-default more">阅读此文</a>
+</div>
+	  
+	  
+	  
+	
+	<!-- display as entry -->
+		<h3 class="title">
 			<a href="/2014/05/13/Hexo博客首文/" >Hexo博客首文</a>
 			<span class="date"> 2014 5月 13 </span>
 		</h3>
@@ -198,9 +233,9 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 		
 			<li><a href="/categories/博客/">博客<span>2</span></a></li>
 		
-			<li><a href="/categories/工具/">工具<span>3</span></a></li>
+			<li><a href="/categories/工具/">工具<span>2</span></a></li>
 		
-			<li><a href="/categories/技术/">技术<span>14</span></a></li>
+			<li><a href="/categories/技术/">技术<span>16</span></a></li>
 		
 			<li><a href="/categories/操作系统/">操作系统<span>1</span></a></li>
 		
@@ -213,21 +248,25 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/Hexo/">Hexo<span>2</span></a></li>
+			<li><a href="/tags/Vim/">Vim<span>1</span></a></li>
 		
-			<li><a href="/tags/Android/">Android<span>3</span></a></li>
+			<li><a href="/tags/开发环境/">开发环境<span>1</span></a></li>
 		
-			<li><a href="/tags/CSS/">CSS<span>11</span></a></li>
-		
-			<li><a href="/tags/Geek/">Geek<span>2</span></a></li>
-		
-			<li><a href="/tags/Alfred/">Alfred<span>1</span></a></li>
-		
-			<li><a href="/tags/Mac/">Mac<span>2</span></a></li>
+			<li><a href="/tags/HTML/">HTML<span>11</span></a></li>
 		
 			<li><a href="/tags/Python/">Python<span>1</span></a></li>
 		
-			<li><a href="/tags/HTML/">HTML<span>11</span></a></li>
+			<li><a href="/tags/Geek/">Geek<span>2</span></a></li>
+		
+			<li><a href="/tags/Mac/">Mac<span>3</span></a></li>
+		
+			<li><a href="/tags/Hexo/">Hexo<span>2</span></a></li>
+		
+			<li><a href="/tags/Alfred/">Alfred<span>1</span></a></li>
+		
+			<li><a href="/tags/CSS/">CSS<span>11</span></a></li>
+		
+			<li><a href="/tags/Android/">Android<span>3</span></a></li>
 		
 		 
 		</ul>
@@ -241,7 +280,11 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
   <ul class="entry list-unstyled">
     
       <li>
-        <a href="/2015/03/01/Mac Vim终极指南/" ><i class="fa fa-file-o"></i>Mac Vim终极指南</a>
+        <a href="/2015/03/15/Mac OS开发环境/" ><i class="fa fa-file-o"></i>Mac OS 开发环境</a>
+      </li>
+    
+      <li>
+        <a href="/2015/03/01/Mac Vim终极指南/" ><i class="fa fa-file-o"></i>Mac Vim 终极指南</a>
       </li>
     
       <li>
@@ -254,10 +297,6 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
     
       <li>
         <a href="/2015/02/08/Learn to Code HTML &amp; CSS 09/" ><i class="fa fa-file-o"></i>Learn to Code HTML &amp; CSS 09</a>
-      </li>
-    
-      <li>
-        <a href="/2015/02/03/Learn to Code HTML &amp; CSS 08/" ><i class="fa fa-file-o"></i>Learn to Code HTML &amp; CSS 08</a>
       </li>
     
   </ul>
