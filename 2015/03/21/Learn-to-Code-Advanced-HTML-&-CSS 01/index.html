@@ -1,0 +1,366 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Learn to Code Advanced HTML &amp; CSS 01 | 浩然也空的博客</title>
+  <meta name="author" content="浩然也空">
+  
+  <meta name="description" content="每周一篇文章，每年一次总结。">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Learn to Code Advanced HTML &amp; CSS 01"/>
+  <meta property="og:site_name" content="浩然也空的博客"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  
+    <link rel="alternative" href="/atom.xml" title="浩然也空的博客" type="application/atom+xml">
+  
+  
+    <link href="/favicon.png" rel="icon">
+  
+
+  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', '[object Object]']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+
+ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+  
+
+</head>
+
+ <body>
+  <nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+	  <a class="navbar-brand" href="/">浩然也空的博客</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="所有归档">
+			  <i class="fa fa-archive"></i>归档
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="所有分类">
+			  <i class="fa fa-folder"></i>分类
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="所有标签">
+			  <i class="fa fa-tags"></i>标签
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/gallery" title="那些照片">
+			  <i class="fa fa-user"></i>画廊
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="我的足迹">
+			  <i class="fa fa-user"></i>关于
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+  	<div class="content">
+    	 
+
+
+	
+		<div class="page-header">		
+			<h1> Learn to Code Advanced HTML &amp; CSS 01</h1>
+		</div>		
+	
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div class="col-md-9">
+	
+
+			
+
+	<!-- content -->
+	<div class="mypage">		
+	    <h1 id="Lesson_1:_Performance_&amp;_Organization"><a href="http://learn.shayhowe.com/advanced-html-css/performance-organization/" target="_blank" rel="external">Lesson 1: Performance &amp; Organization</a></h1>
+<p><strong>Contents</strong></p>
+<ul>
+<li>Strategy &amp; Structure</li>
+<li>Performance Driven Selectors</li>
+<li>Reusable Code</li>
+<li>Minify &amp; Compress Files</li>
+<li>Cache Common Files</li>
+</ul>
+<a id="more"></a>
+
+<p>The organization and architecture of a code base can greatly affect not only the speed of development, but also the speed at which pages render. Both of which can be sizeable concerns not only for developers but also users.</p>
+<h2 id="Strategy_&amp;_Structure">Strategy &amp; Structure</h2>
+<p>The first part to improving a website’s performance and organization revolves around identifying a good strategy and structure for developing the code base. Specifically, building a strong directory architecture, outlining design patterns, and finding ways to reuse common code.</p>
+<h3 id="Style_Architecture">Style Architecture</h3>
+<p>One practice includes separating styles based on intent, which includes creating directories for common base styles, user interface components, and business logic modules.</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="preprocessor"># Base</span></div><div class="line">  – normalize.css</div><div class="line">  – layout.css</div><div class="line">  – typography.css</div><div class="line"></div><div class="line"><span class="preprocessor"># Components</span></div><div class="line">  – alerts.css</div><div class="line">  – buttons.css</div><div class="line">  – forms.css</div><div class="line">  – list.css</div><div class="line">  – nav.css</div><div class="line">  – tables.css</div><div class="line"></div><div class="line"><span class="preprocessor"># Modules</span></div><div class="line">  – aside.css</div><div class="line">  – footer.css</div><div class="line">  – header.css</div></pre></td></tr></table></figure>
+
+<h3 id="Object_Oriented_CSS">Object Oriented CSS</h3>
+<p>The <a href="http://oocss.org/" target="_blank" rel="external">Object Oriented CSS</a> methodology was pioneered by Nicole Sullivan in her work with writing styles for larger websites. Object Oriented CSS identifies two principles that will help build scalable websites with a strong architecture and a reasonable amount of code. These two principles include:</p>
+<ul>
+<li>Separate structure from skin</li>
+<li>Separate content from container</li>
+</ul>
+<p>Overall <strong>separating structure from skin</strong> includes abstracting the layout of an element away from the theme of a website. <strong>Separating content from the container</strong> involves removing the dependency of a parent element nesting children elements.</p>
+<h3 id="Scalable_&amp;_Modular_Architecture_for_CSS">Scalable &amp; Modular Architecture for CSS</h3>
+<p>Along the same line of Object Oriented CSS is the <a href="http://smacss.com/" target="_blank" rel="external">Scalable and Modular Architecture for CSS</a> methodology developed by Jonathan Snook. The Scalable and Modular Architecture for CSS promotes breaking up styles into five core categories, including:</p>
+<ul>
+<li>Base</li>
+<li>Layout</li>
+<li>Module</li>
+<li>State</li>
+<li>Theme</li>
+</ul>
+<h2 id="Performance_Driven_Selectors">Performance Driven Selectors</h2>
+<p>How elements are selected within CSS affects performance, including how fast a page renders as well as how practical and modular the styles are in the overall site architecture.</p>
+<h3 id="Keep_Selectors_Short">Keep Selectors Short</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">/* <span class="type">Bad</span> */</div><div class="line">header nav ul li a <span class="decorator">{...}</span></div><div class="line"></div><div class="line">/* <span class="type">Good</span> */</div><div class="line">.primary-link <span class="decorator">{...}</span></div><div class="line"></div><div class="line">/* <span class="type">Bad</span> */</div><div class="line">button strong span <span class="decorator">{...}</span></div><div class="line">button strong span .callout <span class="decorator">{...}</span></div><div class="line"></div><div class="line">/* <span class="type">Good</span> */</div><div class="line">button span <span class="decorator">{...}</span></div><div class="line">button .callout <span class="decorator">{...}</span></div></pre></td></tr></table></figure>
+
+<h3 id="Favor_Classes">Favor Classes</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">/* <span class="type">Bad</span> */</div><div class="line"><span class="comment">#container header nav {...}</span></div><div class="line"></div><div class="line">/* <span class="type">Good</span> */</div><div class="line">.primary-nav <span class="decorator">{...}</span></div><div class="line"></div><div class="line">/* <span class="type">Bad</span> */</div><div class="line">article.feat-post <span class="decorator">{...}</span></div><div class="line"></div><div class="line">/* <span class="type">Good</span> */</div><div class="line">.feat-post <span class="decorator">{...}</span></div></pre></td></tr></table></figure>
+
+<h2 id="Reusable_Code">Reusable Code</h2>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* Bad */</span></div><div class="line"><span class="class">.news</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">background</span>:<span class="value"> <span class="hexcolor">#eee</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">border-radius</span>:<span class="value"> <span class="number">5px</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">box-shadow</span>:<span class="value"> inset <span class="number">0</span> <span class="number">1px</span> <span class="number">2px</span> <span class="function">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, .<span class="number">25</span>)</span></span>;</div><div class="line"><span class="rule">}</span></div><div class="line"><span class="class">.social</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">background</span>:<span class="value"> <span class="hexcolor">#eee</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">border-radius</span>:<span class="value"> <span class="number">5px</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">box-shadow</span>:<span class="value"> inset <span class="number">0</span> <span class="number">1px</span> <span class="number">2px</span> <span class="function">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, .<span class="number">25</span>)</span></span>;</div><div class="line"><span class="rule">}</span></div><div class="line"></div><div class="line"><span class="comment">/* Good */</span></div><div class="line"><span class="class">.news</span>,</div><div class="line"><span class="class">.social</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">background</span>:<span class="value"> <span class="hexcolor">#eee</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">border-radius</span>:<span class="value"> <span class="number">5px</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">box-shadow</span>:<span class="value"> inset <span class="number">0</span> <span class="number">1px</span> <span class="number">2px</span> <span class="function">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, .<span class="number">25</span>)</span></span>;</div><div class="line"><span class="rule">}</span></div><div class="line"></div><div class="line"><span class="comment">/* Even Better */</span></div><div class="line"><span class="class">.modal</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">background</span>:<span class="value"> <span class="hexcolor">#eee</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">border-radius</span>:<span class="value"> <span class="number">5px</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">box-shadow</span>:<span class="value"> inset <span class="number">0</span> <span class="number">1px</span> <span class="number">2px</span> <span class="function">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, .<span class="number">25</span>)</span></span>;</div><div class="line"><span class="rule">}</span></div></pre></td></tr></table></figure>
+
+<h2 id="Minify_&amp;_Compress_Files">Minify &amp; Compress Files</h2>
+<p>Simply removing duplicate and unnecessary code is the best way to cut down on file size, however there are additional ways. One way includes <a href="http://www.hanselman.com/blog/TheImportanceAndEaseOfMinifyingYourCSSAndJavaScriptAndOptimizingPNGsForYourBlogOrWebsite.aspx" target="_blank" rel="external">minifying</a> and compressing files, such as HTML, CSS, and JavaScript files. Additionally, images may be compressed, removing any unnecessary comments and color profiles.</p>
+<h3 id="gzip_Compression">gzip Compression</h3>
+<p>Setting up gzip is fairly painless, and the <a href="http://html5boilerplate.com/" target="_blank" rel="external">HTML5 Boilerplate</a> has done a great job of getting this going.</p>
+<h3 id="Measuring_Compression">Measuring Compression</h3>
+<p>Within the Google Chrome web browser the web inspector gives a plethora of data around performance, particularly within the Network tab. Additionally, there are a few websites that help identify if gzip compression is enabled.</p>
+<h3 id="Image_Compression">Image Compression</h3>
+<p>There are a handful of tools to help compress images, two of the best are <a href="http://imageoptim.com/" target="_blank" rel="external">ImageOptim</a> for Mac and <a href="http://pnggauntlet.com/" target="_blank" rel="external">PNGGauntlet</a> for Windows. Both of these services compress the most commonly used image formats, specifically JPG and PNG files.</p>
+<p>It should also be noted, setting an image’s dimensions in HTML by way of the height and width attributes does help render the page quicker, setting aside the appropriate space for the image. Understand, these attributes are to only be used to identify the exact image dimensions and not to shrink an image. Using a larger image, then scaling it down with the height and width attributes is bad practice as it loads more data than necessary.</p>
+<h2 id="Reduce_HTTP_Requests">Reduce HTTP Requests</h2>
+<p>Next to file size, the number of HTTP requests a website makes is one of the largest performance pitfalls. Each time a request is made to the server the page load time increases. Some request have to finish before others can start, and too many request can bloat the server.</p>
+<h3 id="Combine_Like_Files">Combine Like Files</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- Bad --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="title">link</span> <span class="attribute">href</span>=<span class="value">"css/reset.css"</span> <span class="attribute">rel</span>=<span class="value">"stylesheet"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="title">link</span> <span class="attribute">href</span>=<span class="value">"css/base.css"</span> <span class="attribute">rel</span>=<span class="value">"stylesheet"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="title">link</span> <span class="attribute">href</span>=<span class="value">"css/site.css"</span> <span class="attribute">rel</span>=<span class="value">"stylesheet"</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- Good --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="title">link</span> <span class="attribute">href</span>=<span class="value">"css/styles.css"</span> <span class="attribute">rel</span>=<span class="value">"stylesheet"</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<p>In general, the CSS for a web page should be loaded at the <strong>beginning</strong> of the document within the head, while the JavaScript for a web page should be loaded at the <strong>end</strong>, just before the closing body tag. The reason for these unique placements is because CSS can be loaded while the rest of the website is being loaded as well. JavaScript, on the other hand, can only render one file at a time, thus prohibiting anything else from loading. One caveat here is when JavaScript files are asynchronously loaded after the page itself is done rendering. Another caveat is when JavaScript is needed in helping render the page, as such the case with the HTML5 shiv.</p>
+<h3 id="Image_Sprites">Image Sprites</h3>
+<p>The practice of spriting images within CSS includes using one background image across multiple elements. The goal here is to cut down the number of HTTP requests made by using multiple background images.</p>
+<p>To create a sprite take a handful of background images, ones that are commonly used, and arrange them into one single image. Then using CSS add the sprite as a background image to an element, and use the background-position property to display the correct background image.</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">ul</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span><span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"bold"</span>&gt;</span>Bold Text<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span><span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"italic"</span>&gt;</span>Italicize Text<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span><span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"underline"</span>&gt;</span>Underline Text<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span><span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"size"</span>&gt;</span>Size Text<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span><span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"bullet"</span>&gt;</span>Bullet Text<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span><span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"number"</span>&gt;</span>Number Text<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span><span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"quote"</span>&gt;</span>Quote Text<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span><span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"left"</span>&gt;</span>Left Align Text<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span><span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"center"</span>&gt;</span>Center Align Text<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span><span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"right"</span>&gt;</span>Right Align Text<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">ul</span>&gt;</span></div></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div></pre></td><td class="code"><pre><div class="line"><span class="tag">ul</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">0</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">0</span></span></span>;</div><div class="line"><span class="rule">}</span></div><div class="line"><span class="tag">li</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">float</span>:<span class="value"> left</span></span>;</div><div class="line">  <span class="rule"><span class="attribute">list-style</span>:<span class="value"> none</span></span>;</div><div class="line">  <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">2px</span></span></span>;</div><div class="line"><span class="rule">}</span></div><div class="line"><span class="tag">li</span> <span class="tag">a</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">background</span>:<span class="value"> <span class="function">linear-gradient</span>(<span class="hexcolor">#fff</span>, <span class="hexcolor">#eee</span>)</span></span>;</div><div class="line">  <span class="rule"><span class="attribute">border</span>:<span class="value"> <span class="number">1px</span> solid <span class="hexcolor">#ccc</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">border-radius</span>:<span class="value"> <span class="number">3px</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">display</span>:<span class="value"> block</span></span>;</div><div class="line">  <span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">3px</span></span></span>;</div><div class="line"><span class="rule">}</span></div><div class="line"><span class="tag">li</span> <span class="tag">a</span><span class="pseudo">:hover</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">border-color</span>:<span class="value"> <span class="hexcolor">#999</span></span></span>;</div><div class="line"><span class="rule">}</span></div><div class="line"><span class="tag">li</span> <span class="tag">span</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">background</span>:<span class="value"> <span class="function">url</span>(<span class="string">"sprite.png"</span>) <span class="number">0</span> <span class="number">0</span> no-repeat</span></span>;</div><div class="line">  <span class="rule"><span class="attribute">color</span>:<span class="value"> transparent</span></span>;</div><div class="line">  <span class="rule"><span class="attribute">display</span>:<span class="value"> block</span></span>;</div><div class="line">  <span class="rule"><span class="attribute">font</span>:<span class="value"> <span class="number">0</span>/<span class="number">0</span> a</span></span>;</div><div class="line">  <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">16px</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">16px</span></span></span>;</div><div class="line"><span class="rule">}</span></div><div class="line"><span class="class">.italic</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">background-position</span>:<span class="value"> -<span class="number">16px</span> <span class="number">0</span></span></span>;</div><div class="line"><span class="rule">}</span></div><div class="line"><span class="class">.underline</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">background-position</span>:<span class="value"> -<span class="number">32px</span> <span class="number">0</span></span></span>;</div><div class="line"><span class="rule">}</span></div><div class="line"><span class="class">.size</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">background-position</span>:<span class="value"> -<span class="number">48px</span> <span class="number">0</span></span></span>;</div><div class="line"><span class="rule">}</span></div><div class="line"><span class="class">.bullet</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">background-position</span>:<span class="value"> -<span class="number">64px</span> <span class="number">0</span></span></span>;</div><div class="line"><span class="rule">}</span></div><div class="line"><span class="class">.number</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">background-position</span>:<span class="value"> -<span class="number">80px</span> <span class="number">0</span></span></span>;</div><div class="line"><span class="rule">}</span></div><div class="line"><span class="class">.quote</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">background-position</span>:<span class="value"> -<span class="number">96px</span> <span class="number">0</span></span></span>;</div><div class="line"><span class="rule">}</span></div><div class="line"><span class="class">.left</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">background-position</span>:<span class="value"> -<span class="number">112px</span> <span class="number">0</span></span></span>;</div><div class="line"><span class="rule">}</span></div><div class="line"><span class="class">.center</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">background-position</span>:<span class="value"> -<span class="number">128px</span> <span class="number">0</span></span></span>;</div><div class="line"><span class="rule">}</span></div><div class="line"><span class="class">.right</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">background-position</span>:<span class="value"> -<span class="number">144px</span> <span class="number">0</span></span></span>;</div><div class="line"><span class="rule">}</span></div></pre></td></tr></table></figure>
+
+<h3 id="Image_Data_URI">Image Data URI</h3>
+<h2 id="Cache_Common_Files">Cache Common Files</h2>
+<p>As with gzipping files, setting the expires headers for caching files can be set within the .htaccess file. And again, the HTML5 Boilerplate is one step ahead of us. In their .htaccess file there is a section earmarked for <a href="https://github.com/h5bp/html5-boilerplate/blob/master/.htaccess#L192" target="_blank" rel="external">expires headers</a>.</p>
+<p>Images, videos, web fonts, and common media types are often cached for a month, while CSS and JavaScript files are often cached for a year. Should the CSS, or any other file, change more often than once each year the file name will need to be changed, preferably versioned, in order to be loaded. Alternatively, the expires headers can be changed to a smaller period of time.</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ExpiresByType <span class="type">text</span>/css <span class="string">"access plus 1 year"</span></div><div class="line">ExpiresByType <span class="type">application</span>/javascript <span class="string">"access plus 1 year"</span></div></pre></td></tr></table></figure>
+
+	  
+	</div>
+
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+		
+          <li class="prev disabled"><a><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+        
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
+
+		
+		   <li class="next"><a href="/2015/03/17/Learn to Code HTML & CSS 12/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
+</ul>
+</div>
+
+    </center>
+	</div>
+	
+	<!-- comment -->
+	
+<section id="comment">
+  <h2 class="title">留言</h2>
+
+  
+</section>
+
+	
+	</div> <!-- col-md-9/col-md-12 -->
+	
+	
+		<div class="col-md-3"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2015 3月 21 
+	</div>
+	
+
+	<!-- categories -->
+    
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
+          
+  <li>
+    <li><a href="/categories/技术/">技术<span>18</span></a></li>
+  </li>
+
+    </ul>
+	</div>
+	
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/HTML/">HTML<span>13</span></a></li> <li><a href="/tags/CSS/">CSS<span>13</span></a></li>
+    </ul>
+	</div>
+		
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	   <a data-toggle="collapse" data-target="#toc"><i class="fa fa-bars"></i></a>
+	   <div id="toc" class="toc collapse in">
+			<ol class="toc-article"><li class="toc-article-item toc-article-level-1"><a class="toc-article-link" href="#Lesson_1:_Performance_&_Organization"><span class="toc-article-text">Lesson 1: Performance & Organization</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Strategy_&_Structure"><span class="toc-article-text">Strategy & Structure</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Style_Architecture"><span class="toc-article-text">Style Architecture</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Object_Oriented_CSS"><span class="toc-article-text">Object Oriented CSS</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Scalable_&_Modular_Architecture_for_CSS"><span class="toc-article-text">Scalable & Modular Architecture for CSS</span></a></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Performance_Driven_Selectors"><span class="toc-article-text">Performance Driven Selectors</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Keep_Selectors_Short"><span class="toc-article-text">Keep Selectors Short</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Favor_Classes"><span class="toc-article-text">Favor Classes</span></a></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Reusable_Code"><span class="toc-article-text">Reusable Code</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Minify_&_Compress_Files"><span class="toc-article-text">Minify & Compress Files</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#gzip_Compression"><span class="toc-article-text">gzip Compression</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Measuring_Compression"><span class="toc-article-text">Measuring Compression</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Image_Compression"><span class="toc-article-text">Image Compression</span></a></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Reduce_HTTP_Requests"><span class="toc-article-text">Reduce HTTP Requests</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Combine_Like_Files"><span class="toc-article-text">Combine Like Files</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Image_Sprites"><span class="toc-article-text">Image Sprites</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#Image_Data_URI"><span class="toc-article-text">Image Data URI</span></a></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Cache_Common_Files"><span class="toc-article-text">Cache Common Files</span></a></li></ol></li></ol>
+		</div>
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	
+
+</div><!-- row -->
+
+
+<!-- Duoshuo Comment BEGIN -->
+<div class="ds-thread" data-title="Learn to Code Advanced HTML &amp; CSS 01" data-url="http://baoxiehao.com/2015/03/21/Learn-to-Code-Advanced-HTML-&-CSS 01/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"baoxiehao"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+<!-- Duoshuo Comment END -->
+
+
+	</div>
+  </div>
+  <div class="container-narrow">
+  <footer> <p>
+  &copy; 2015 浩然也空
+  
+      with help from <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+</p> </footer>
+  <!-- Duoshuo Comment BEGIN -->
+<div class="ds-thread" data-title="Learn to Code Advanced HTML &amp; CSS 01" data-url="http://baoxiehao.com/2015/03/21/Learn-to-Code-Advanced-HTML-&-CSS 01/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"baoxiehao"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+<!-- Duoshuo Comment END -->
+
+</div> <!-- container-narrow -->
+  
+<a id="gotop" href="#">
+  <span>▲</span>
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-51276891-1', 'baoxiehao.com');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+   </html>

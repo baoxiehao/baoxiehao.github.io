@@ -4,7 +4,7 @@
   <subtitle><![CDATA[淡静良觉之地]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://baoxiehao.com/"/>
-  <updated>2015-03-15T01:27:42.415Z</updated>
+  <updated>2015-03-21T13:58:23.860Z</updated>
   <id>http://baoxiehao.com/</id>
   
   <author>
@@ -13,6 +13,167 @@
   </author>
   
   <generator uri="http://zespia.tw/hexo/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Learn to Code Advanced HTML & CSS 01]]></title>
+    <link href="http://baoxiehao.com/2015/03/21/Learn-to-Code-Advanced-HTML-&-CSS%2001/"/>
+    <id>http://baoxiehao.com/2015/03/21/Learn-to-Code-Advanced-HTML-&-CSS 01/</id>
+    <published>2015-03-21T03:03:51.000Z</published>
+    <updated>2015-03-21T13:58:03.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="Lesson_1:_Performance_&amp;_Organization"><a href="http://learn.shayhowe.com/advanced-html-css/performance-organization/" target="_blank" rel="external">Lesson 1: Performance &amp; Organization</a></h1>
+<p><strong>Contents</strong></p>
+<ul>
+<li>Strategy &amp; Structure</li>
+<li>Performance Driven Selectors</li>
+<li>Reusable Code</li>
+<li>Minify &amp; Compress Files</li>
+<li>Cache Common Files</li>
+</ul>
+<a id="more"></a>
+
+<p>The organization and architecture of a code base can greatly affect not only the speed of development, but also the speed at which pages render. Both of which can be sizeable concerns not only for developers but also users.</p>
+<h2 id="Strategy_&amp;_Structure">Strategy &amp; Structure</h2>
+<p>The first part to improving a website’s performance and organization revolves around identifying a good strategy and structure for developing the code base. Specifically, building a strong directory architecture, outlining design patterns, and finding ways to reuse common code.</p>
+<h3 id="Style_Architecture">Style Architecture</h3>
+<p>One practice includes separating styles based on intent, which includes creating directories for common base styles, user interface components, and business logic modules.</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="preprocessor"># Base</span></div><div class="line">  – normalize.css</div><div class="line">  – layout.css</div><div class="line">  – typography.css</div><div class="line"></div><div class="line"><span class="preprocessor"># Components</span></div><div class="line">  – alerts.css</div><div class="line">  – buttons.css</div><div class="line">  – forms.css</div><div class="line">  – list.css</div><div class="line">  – nav.css</div><div class="line">  – tables.css</div><div class="line"></div><div class="line"><span class="preprocessor"># Modules</span></div><div class="line">  – aside.css</div><div class="line">  – footer.css</div><div class="line">  – header.css</div></pre></td></tr></table></figure>
+
+<h3 id="Object_Oriented_CSS">Object Oriented CSS</h3>
+<p>The <a href="http://oocss.org/" target="_blank" rel="external">Object Oriented CSS</a> methodology was pioneered by Nicole Sullivan in her work with writing styles for larger websites. Object Oriented CSS identifies two principles that will help build scalable websites with a strong architecture and a reasonable amount of code. These two principles include:</p>
+<ul>
+<li>Separate structure from skin</li>
+<li>Separate content from container</li>
+</ul>
+<p>Overall <strong>separating structure from skin</strong> includes abstracting the layout of an element away from the theme of a website. <strong>Separating content from the container</strong> involves removing the dependency of a parent element nesting children elements.</p>
+<h3 id="Scalable_&amp;_Modular_Architecture_for_CSS">Scalable &amp; Modular Architecture for CSS</h3>
+<p>Along the same line of Object Oriented CSS is the <a href="http://smacss.com/" target="_blank" rel="external">Scalable and Modular Architecture for CSS</a> methodology developed by Jonathan Snook. The Scalable and Modular Architecture for CSS promotes breaking up styles into five core categories, including:</p>
+<ul>
+<li>Base</li>
+<li>Layout</li>
+<li>Module</li>
+<li>State</li>
+<li>Theme</li>
+</ul>
+<h2 id="Performance_Driven_Selectors">Performance Driven Selectors</h2>
+<p>How elements are selected within CSS affects performance, including how fast a page renders as well as how practical and modular the styles are in the overall site architecture.</p>
+<h3 id="Keep_Selectors_Short">Keep Selectors Short</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">/* <span class="type">Bad</span> */</div><div class="line">header nav ul li a <span class="decorator">{...}</span></div><div class="line"></div><div class="line">/* <span class="type">Good</span> */</div><div class="line">.primary-link <span class="decorator">{...}</span></div><div class="line"></div><div class="line">/* <span class="type">Bad</span> */</div><div class="line">button strong span <span class="decorator">{...}</span></div><div class="line">button strong span .callout <span class="decorator">{...}</span></div><div class="line"></div><div class="line">/* <span class="type">Good</span> */</div><div class="line">button span <span class="decorator">{...}</span></div><div class="line">button .callout <span class="decorator">{...}</span></div></pre></td></tr></table></figure>
+
+<h3 id="Favor_Classes">Favor Classes</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">/* <span class="type">Bad</span> */</div><div class="line"><span class="comment">#container header nav {...}</span></div><div class="line"></div><div class="line">/* <span class="type">Good</span> */</div><div class="line">.primary-nav <span class="decorator">{...}</span></div><div class="line"></div><div class="line">/* <span class="type">Bad</span> */</div><div class="line">article.feat-post <span class="decorator">{...}</span></div><div class="line"></div><div class="line">/* <span class="type">Good</span> */</div><div class="line">.feat-post <span class="decorator">{...}</span></div></pre></td></tr></table></figure>
+
+<h2 id="Reusable_Code">Reusable Code</h2>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* Bad */</span></div><div class="line"><span class="class">.news</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">background</span>:<span class="value"> <span class="hexcolor">#eee</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">border-radius</span>:<span class="value"> <span class="number">5px</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">box-shadow</span>:<span class="value"> inset <span class="number">0</span> <span class="number">1px</span> <span class="number">2px</span> <span class="function">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, .<span class="number">25</span>)</span></span>;</div><div class="line"><span class="rule">}</span></div><div class="line"><span class="class">.social</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">background</span>:<span class="value"> <span class="hexcolor">#eee</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">border-radius</span>:<span class="value"> <span class="number">5px</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">box-shadow</span>:<span class="value"> inset <span class="number">0</span> <span class="number">1px</span> <span class="number">2px</span> <span class="function">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, .<span class="number">25</span>)</span></span>;</div><div class="line"><span class="rule">}</span></div><div class="line"></div><div class="line"><span class="comment">/* Good */</span></div><div class="line"><span class="class">.news</span>,</div><div class="line"><span class="class">.social</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">background</span>:<span class="value"> <span class="hexcolor">#eee</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">border-radius</span>:<span class="value"> <span class="number">5px</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">box-shadow</span>:<span class="value"> inset <span class="number">0</span> <span class="number">1px</span> <span class="number">2px</span> <span class="function">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, .<span class="number">25</span>)</span></span>;</div><div class="line"><span class="rule">}</span></div><div class="line"></div><div class="line"><span class="comment">/* Even Better */</span></div><div class="line"><span class="class">.modal</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">background</span>:<span class="value"> <span class="hexcolor">#eee</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">border-radius</span>:<span class="value"> <span class="number">5px</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">box-shadow</span>:<span class="value"> inset <span class="number">0</span> <span class="number">1px</span> <span class="number">2px</span> <span class="function">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, .<span class="number">25</span>)</span></span>;</div><div class="line"><span class="rule">}</span></div></pre></td></tr></table></figure>
+
+<h2 id="Minify_&amp;_Compress_Files">Minify &amp; Compress Files</h2>
+<p>Simply removing duplicate and unnecessary code is the best way to cut down on file size, however there are additional ways. One way includes <a href="http://www.hanselman.com/blog/TheImportanceAndEaseOfMinifyingYourCSSAndJavaScriptAndOptimizingPNGsForYourBlogOrWebsite.aspx" target="_blank" rel="external">minifying</a> and compressing files, such as HTML, CSS, and JavaScript files. Additionally, images may be compressed, removing any unnecessary comments and color profiles.</p>
+<h3 id="gzip_Compression">gzip Compression</h3>
+<p>Setting up gzip is fairly painless, and the <a href="http://html5boilerplate.com/" target="_blank" rel="external">HTML5 Boilerplate</a> has done a great job of getting this going.</p>
+<h3 id="Measuring_Compression">Measuring Compression</h3>
+<p>Within the Google Chrome web browser the web inspector gives a plethora of data around performance, particularly within the Network tab. Additionally, there are a few websites that help identify if gzip compression is enabled.</p>
+<h3 id="Image_Compression">Image Compression</h3>
+<p>There are a handful of tools to help compress images, two of the best are <a href="http://imageoptim.com/" target="_blank" rel="external">ImageOptim</a> for Mac and <a href="http://pnggauntlet.com/" target="_blank" rel="external">PNGGauntlet</a> for Windows. Both of these services compress the most commonly used image formats, specifically JPG and PNG files.</p>
+<p>It should also be noted, setting an image’s dimensions in HTML by way of the height and width attributes does help render the page quicker, setting aside the appropriate space for the image. Understand, these attributes are to only be used to identify the exact image dimensions and not to shrink an image. Using a larger image, then scaling it down with the height and width attributes is bad practice as it loads more data than necessary.</p>
+<h2 id="Reduce_HTTP_Requests">Reduce HTTP Requests</h2>
+<p>Next to file size, the number of HTTP requests a website makes is one of the largest performance pitfalls. Each time a request is made to the server the page load time increases. Some request have to finish before others can start, and too many request can bloat the server.</p>
+<h3 id="Combine_Like_Files">Combine Like Files</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- Bad --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="title">link</span> <span class="attribute">href</span>=<span class="value">"css/reset.css"</span> <span class="attribute">rel</span>=<span class="value">"stylesheet"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="title">link</span> <span class="attribute">href</span>=<span class="value">"css/base.css"</span> <span class="attribute">rel</span>=<span class="value">"stylesheet"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="title">link</span> <span class="attribute">href</span>=<span class="value">"css/site.css"</span> <span class="attribute">rel</span>=<span class="value">"stylesheet"</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- Good --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="title">link</span> <span class="attribute">href</span>=<span class="value">"css/styles.css"</span> <span class="attribute">rel</span>=<span class="value">"stylesheet"</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<p>In general, the CSS for a web page should be loaded at the <strong>beginning</strong> of the document within the head, while the JavaScript for a web page should be loaded at the <strong>end</strong>, just before the closing body tag. The reason for these unique placements is because CSS can be loaded while the rest of the website is being loaded as well. JavaScript, on the other hand, can only render one file at a time, thus prohibiting anything else from loading. One caveat here is when JavaScript files are asynchronously loaded after the page itself is done rendering. Another caveat is when JavaScript is needed in helping render the page, as such the case with the HTML5 shiv.</p>
+<h3 id="Image_Sprites">Image Sprites</h3>
+<p>The practice of spriting images within CSS includes using one background image across multiple elements. The goal here is to cut down the number of HTTP requests made by using multiple background images.</p>
+<p>To create a sprite take a handful of background images, ones that are commonly used, and arrange them into one single image. Then using CSS add the sprite as a background image to an element, and use the background-position property to display the correct background image.</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">ul</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span><span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"bold"</span>&gt;</span>Bold Text<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span><span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"italic"</span>&gt;</span>Italicize Text<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span><span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"underline"</span>&gt;</span>Underline Text<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span><span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"size"</span>&gt;</span>Size Text<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span><span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"bullet"</span>&gt;</span>Bullet Text<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span><span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"number"</span>&gt;</span>Number Text<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span><span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"quote"</span>&gt;</span>Quote Text<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span><span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"left"</span>&gt;</span>Left Align Text<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span><span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"center"</span>&gt;</span>Center Align Text<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span><span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"right"</span>&gt;</span>Right Align Text<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">ul</span>&gt;</span></div></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div></pre></td><td class="code"><pre><div class="line"><span class="tag">ul</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">0</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">0</span></span></span>;</div><div class="line"><span class="rule">}</span></div><div class="line"><span class="tag">li</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">float</span>:<span class="value"> left</span></span>;</div><div class="line">  <span class="rule"><span class="attribute">list-style</span>:<span class="value"> none</span></span>;</div><div class="line">  <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">2px</span></span></span>;</div><div class="line"><span class="rule">}</span></div><div class="line"><span class="tag">li</span> <span class="tag">a</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">background</span>:<span class="value"> <span class="function">linear-gradient</span>(<span class="hexcolor">#fff</span>, <span class="hexcolor">#eee</span>)</span></span>;</div><div class="line">  <span class="rule"><span class="attribute">border</span>:<span class="value"> <span class="number">1px</span> solid <span class="hexcolor">#ccc</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">border-radius</span>:<span class="value"> <span class="number">3px</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">display</span>:<span class="value"> block</span></span>;</div><div class="line">  <span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">3px</span></span></span>;</div><div class="line"><span class="rule">}</span></div><div class="line"><span class="tag">li</span> <span class="tag">a</span><span class="pseudo">:hover</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">border-color</span>:<span class="value"> <span class="hexcolor">#999</span></span></span>;</div><div class="line"><span class="rule">}</span></div><div class="line"><span class="tag">li</span> <span class="tag">span</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">background</span>:<span class="value"> <span class="function">url</span>(<span class="string">"sprite.png"</span>) <span class="number">0</span> <span class="number">0</span> no-repeat</span></span>;</div><div class="line">  <span class="rule"><span class="attribute">color</span>:<span class="value"> transparent</span></span>;</div><div class="line">  <span class="rule"><span class="attribute">display</span>:<span class="value"> block</span></span>;</div><div class="line">  <span class="rule"><span class="attribute">font</span>:<span class="value"> <span class="number">0</span>/<span class="number">0</span> a</span></span>;</div><div class="line">  <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">16px</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">16px</span></span></span>;</div><div class="line"><span class="rule">}</span></div><div class="line"><span class="class">.italic</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">background-position</span>:<span class="value"> -<span class="number">16px</span> <span class="number">0</span></span></span>;</div><div class="line"><span class="rule">}</span></div><div class="line"><span class="class">.underline</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">background-position</span>:<span class="value"> -<span class="number">32px</span> <span class="number">0</span></span></span>;</div><div class="line"><span class="rule">}</span></div><div class="line"><span class="class">.size</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">background-position</span>:<span class="value"> -<span class="number">48px</span> <span class="number">0</span></span></span>;</div><div class="line"><span class="rule">}</span></div><div class="line"><span class="class">.bullet</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">background-position</span>:<span class="value"> -<span class="number">64px</span> <span class="number">0</span></span></span>;</div><div class="line"><span class="rule">}</span></div><div class="line"><span class="class">.number</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">background-position</span>:<span class="value"> -<span class="number">80px</span> <span class="number">0</span></span></span>;</div><div class="line"><span class="rule">}</span></div><div class="line"><span class="class">.quote</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">background-position</span>:<span class="value"> -<span class="number">96px</span> <span class="number">0</span></span></span>;</div><div class="line"><span class="rule">}</span></div><div class="line"><span class="class">.left</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">background-position</span>:<span class="value"> -<span class="number">112px</span> <span class="number">0</span></span></span>;</div><div class="line"><span class="rule">}</span></div><div class="line"><span class="class">.center</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">background-position</span>:<span class="value"> -<span class="number">128px</span> <span class="number">0</span></span></span>;</div><div class="line"><span class="rule">}</span></div><div class="line"><span class="class">.right</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">background-position</span>:<span class="value"> -<span class="number">144px</span> <span class="number">0</span></span></span>;</div><div class="line"><span class="rule">}</span></div></pre></td></tr></table></figure>
+
+<h3 id="Image_Data_URI">Image Data URI</h3>
+<h2 id="Cache_Common_Files">Cache Common Files</h2>
+<p>As with gzipping files, setting the expires headers for caching files can be set within the .htaccess file. And again, the HTML5 Boilerplate is one step ahead of us. In their .htaccess file there is a section earmarked for <a href="https://github.com/h5bp/html5-boilerplate/blob/master/.htaccess#L192" target="_blank" rel="external">expires headers</a>.</p>
+<p>Images, videos, web fonts, and common media types are often cached for a month, while CSS and JavaScript files are often cached for a year. Should the CSS, or any other file, change more often than once each year the file name will need to be changed, preferably versioned, in order to be loaded. Alternatively, the expires headers can be changed to a smaller period of time.</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ExpiresByType <span class="type">text</span>/css <span class="string">"access plus 1 year"</span></div><div class="line">ExpiresByType <span class="type">application</span>/javascript <span class="string">"access plus 1 year"</span></div></pre></td></tr></table></figure>
+
+]]></content>
+    <summary type="html"><![CDATA[<h1 id="Lesson_1:_Performance_&amp;_Organization"><a href="http://learn.shayhowe.com/advanced-html-css/performance-organization/" target="_blank" rel="external">Lesson 1: Performance &amp; Organization</a></h1>
+<p><strong>Contents</strong></p>
+<ul>
+<li>Strategy &amp; Structure</li>
+<li>Performance Driven Selectors</li>
+<li>Reusable Code</li>
+<li>Minify &amp; Compress Files</li>
+<li>Cache Common Files</li>
+</ul>
+]]></summary>
+    
+      <category term="HTML" scheme="http://baoxiehao.com/tags/HTML/"/>
+    
+      <category term="CSS" scheme="http://baoxiehao.com/tags/CSS/"/>
+    
+      <category term="技术" scheme="http://baoxiehao.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Learn to Code HTML & CSS 12]]></title>
+    <link href="http://baoxiehao.com/2015/03/17/Learn%20to%20Code%20HTML%20&%20CSS%2012/"/>
+    <id>http://baoxiehao.com/2015/03/17/Learn to Code HTML & CSS 12/</id>
+    <published>2015-03-17T12:15:43.000Z</published>
+    <updated>2015-03-21T13:57:27.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="Lesson_12:_Writing_Your_Best_Code"><a href="http://learn.shayhowe.com/html-css/writing-your-best-code/" target="_blank" rel="external">Lesson 12: Writing Your Best Code</a></h1>
+<p><strong>Contents</strong></p>
+<ul>
+<li>Be well organized, so that it is easy to read, edit, and maintain</li>
+<li>Be modular and flexible, allowing us to reuse code and patterns as necessary</li>
+<li>Look as if one person wrote it, even if several people contributed</li>
+</ul>
+<a id="more"></a>
+
+<h2 id="HTML_Coding_Practices">HTML Coding Practices</h2>
+<ul>
+<li>Write Standards-Compliant Markup</li>
+<li>Make Use of Semantic Elements</li>
+<li>Use the Proper Document Structure</li>
+<li>Keep the Syntax Organized</li>
+<li>Use Practical ID &amp; Class Values</li>
+<li>Use the Alternative Text Attribute on Images</li>
+<li>Separate Content from Style</li>
+<li>Avoid a Case of “Divitis”</li>
+<li>Continually Refactor Code</li>
+</ul>
+<h2 id="CSS_Coding_Practices">CSS Coding Practices</h2>
+<ul>
+<li>Organize Code with Comments</li>
+<li>Write CSS Using Multiple Lines &amp; Spaces</li>
+<li>Use Proper Class Names</li>
+<li>Build Proficient Selectors</li>
+<li>Use Specific Classes When Necessary</li>
+<li>Use Shorthand Properties &amp; Values</li>
+<li>Use Shorthand Hexadecimal Color Values</li>
+<li>Drop Units from Zero Values</li>
+<li>Group &amp; Align Vendor Prefixes</li>
+<li>Modularize Styles for Reuse</li>
+</ul>
+<h2 id="Additional_Resources_&amp;_Links">Additional Resources &amp; Links</h2>
+<p><a href="http://learn.shayhowe.com/html-css/writing-your-best-code/#additional-resources" target="_blank" rel="external">Resource Links</a></p>
+]]></content>
+    <summary type="html"><![CDATA[<h1 id="Lesson_12:_Writing_Your_Best_Code"><a href="http://learn.shayhowe.com/html-css/writing-your-best-code/" target="_blank" rel="external">Lesson 12: Writing Your Best Code</a></h1>
+<p><strong>Contents</strong></p>
+<ul>
+<li>Be well organized, so that it is easy to read, edit, and maintain</li>
+<li>Be modular and flexible, allowing us to reuse code and patterns as necessary</li>
+<li>Look as if one person wrote it, even if several people contributed</li>
+</ul>
+]]></summary>
+    
+      <category term="HTML" scheme="http://baoxiehao.com/tags/HTML/"/>
+    
+      <category term="CSS" scheme="http://baoxiehao.com/tags/CSS/"/>
+    
+      <category term="技术" scheme="http://baoxiehao.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Mac OS 开发环境]]></title>
@@ -90,7 +251,7 @@
     <link href="http://baoxiehao.com/2015/03/01/Mac%20Vim%E7%BB%88%E6%9E%81%E6%8C%87%E5%8D%97/"/>
     <id>http://baoxiehao.com/2015/03/01/Mac Vim终极指南/</id>
     <published>2015-03-01T12:49:49.000Z</published>
-    <updated>2015-03-15T00:47:33.000Z</updated>
+    <updated>2015-03-15T01:29:00.000Z</updated>
     <content type="html"><![CDATA[<p>如果你在用<strong>Vim</strong>，如果你还没听说<strong>Vundle</strong>、<strong>UltiSnips</strong>或者<strong>YouCompleteMe</strong>，那么你一定不要错过这篇文章。</p>
 <a id="more"></a>
 
@@ -444,7 +605,7 @@
     <link href="http://baoxiehao.com/2015/02/08/Learn%20to%20Code%20HTML%20&%20CSS%2009/"/>
     <id>http://baoxiehao.com/2015/02/08/Learn to Code HTML & CSS 09/</id>
     <published>2015-02-08T10:14:24.000Z</published>
-    <updated>2015-02-08T12:28:45.000Z</updated>
+    <updated>2015-03-18T04:54:15.000Z</updated>
     <content type="html"><![CDATA[<h1 id="Lesson_9:_Adding_Media"><a href="http://learn.shayhowe.com/html-css/adding-media/" target="_blank" rel="external">Lesson 9: Adding Media</a></h1>
 <p><strong>Contents</strong></p>
 <ul>
@@ -1814,212 +1975,6 @@ As previously mentioned, different browsers render elements <span class="operato
       <category term="Android" scheme="http://baoxiehao.com/tags/Android/"/>
     
       <category term="技术" scheme="http://baoxiehao.com/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Android DrawerLayout]]></title>
-    <link href="http://baoxiehao.com/2014/05/23/Android-Drawerlayout/"/>
-    <id>http://baoxiehao.com/2014/05/23/Android-Drawerlayout/</id>
-    <published>2014-05-23T10:49:20.000Z</published>
-    <updated>2014-05-24T12:12:06.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="前言">前言</h2>
-<hr>
-<p>在<strong>2013 google IO</strong>当天，Android团队更新了<a href="https://github.com/danielesegato/android-support-library-archive" target="_blank" rel="external"><strong>Android Support Library</strong></a>，在新版本<strong>V13</strong>中新加入了几个比较重要的功能：</p>
-<ul>
-<li>添加<strong>DrawerLayout</strong>控件，支持创建<strong>Navigation Drawer</strong>模式。可以设置从左边划出菜单或者右边，也可以左右菜单同时存在。</li>
-<li>添加<strong>SlidingPaneLayout</strong>控件来支持各种屏幕上的摘要、详情界面模式。比如<strong>Gmail</strong>邮件列表和单个邮件详情界面。当在手机上显示的时候，邮件列表和详情界面分别为两个界面；当在平板上显示的时候，则为一个界面。</li>
-<li>添加<strong>ActionBarDrawerToggle</strong>工具类，方便把<strong>DrawerLayout</strong>和<strong>ActionBar</strong>功能结合起来。</li>
-</ul>
-<a id="more"></a>
-
-<p><br><br></p>
-<h2 id="DrawerLayout">DrawerLayout</h2>
-<hr>
-<h3 id="创建DrawerLayout">创建DrawerLayout</h3>
-<p>在需要抽屉菜单的界面，用<strong>DrawerLayout</strong>作为界面根控件。在<strong>DrawerLayout</strong>里第一个View为当前界面主内容；第二个和第三个View为抽屉菜单内容。如果当前界面只需要一个抽屉菜单，则第三个View可以省略。</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">android.support.v4.widget.DrawerLayout</span></span></div><div class="line">    <span class="attribute">xmlns:android</span>=<span class="value">"http://schemas.android.com/apk/res/android"</span></div><div class="line">    <span class="attribute">android:id</span>=<span class="value">"@+id/drawer_layout"</span></div><div class="line">    <span class="attribute">android:layout_width</span>=<span class="value">"match_parent"</span></div><div class="line">    <span class="attribute">android:layout_height</span>=<span class="value">"match_parent"</span>&gt;</div><div class="line">    <span class="comment">&lt;!-- The main content view --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">FrameLayout</span></span></div><div class="line">        <span class="attribute">android:id</span>=<span class="value">"@+id/content_frame"</span></div><div class="line">        <span class="attribute">android:layout_width</span>=<span class="value">"match_parent"</span></div><div class="line">        <span class="attribute">android:layout_height</span>=<span class="value">"match_parent"</span> /&gt;</div><div class="line">    <span class="comment">&lt;!-- The navigation drawer --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">ScrollView</span> <span class="attribute">android:id</span>=<span class="value">"@+id/left_drawer"</span></span></div><div class="line">        <span class="attribute">android:layout_width</span>=<span class="value">"240dp"</span></div><div class="line">        <span class="attribute">android:layout_height</span>=<span class="value">"match_parent"</span></div><div class="line">        <span class="attribute">android:layout_gravity</span>=<span class="value">"start"</span> /&gt;</div><div class="line"><span class="tag">&lt;/<span class="title">android.support.v4.widget.DrawerLayout</span>&gt;</span></div></pre></td></tr></table></figure>
-
-<p>注意：</p>
-<ol>
-<li>界面主内容的View必须是<strong>DrawerLayout</strong>的第一个子View，原因在于XML布局文件中的View顺序为Android系统中的z-ordering顺序，而抽屉必须出现在内容之上。</li>
-<li>界面主内容的View宽度和高度要设置为和<strong>DrawerLayout</strong>一样，原因在于当抽屉菜单不可见的时候，界面内容代表整个界面UI。</li>
-<li>抽屉菜单（上面的<strong>ScrollView</strong>）必须使用<strong>android:layout_gravity=”start”</strong>（当在LTR语言运行时菜单出现在左侧，而RTL语言运行时菜单出现在右侧)。</li>
-<li>抽屉菜单的宽度应该不超过屏幕宽度，这样用户可以在菜单打开的时候看到部分内容界面。</li>
-</ol>
-<p><br><br></p>
-<h3 id="初始化DrawerLayout">初始化DrawerLayout</h3>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">initDrawLayout</span>() {</div><div class="line">    mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);</div><div class="line">    mDrawerLayout.setDrawerListener(<span class="keyword">new</span> DrawerListener() {</div><div class="line">        <span class="annotation">@Override</span></div><div class="line">        <span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onDrawerClosed</span>(View view) {</div><div class="line">        }</div><div class="line"></div><div class="line">        <span class="annotation">@Override</span></div><div class="line">        <span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onDrawerOpened</span>(View view) {</div><div class="line">        }</div><div class="line"></div><div class="line">        <span class="annotation">@Override</span></div><div class="line">        <span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onDrawerSlide</span>(View view, <span class="keyword">float</span> slideOffset) {</div><div class="line">        }</div><div class="line"></div><div class="line">        <span class="annotation">@Override</span></div><div class="line">        <span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onDrawerStateChanged</span>(<span class="keyword">int</span> state) {</div><div class="line">        }</div><div class="line">    });</div><div class="line">}</div></pre></td></tr></table></figure>
-
-<p><br><br></p>
-<h3 id="开关DrawerLayout">开关DrawerLayout</h3>
-<p>在用<strong>DrawerLayout</strong>实现侧滑菜单后，一般情况下就不需要额外显示菜单了，也就是可以把原先的菜单响应事件处理为显示侧滑菜单。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="annotation">@Override</span></div><div class="line"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">onPrepareOptionsMenu</span>(Menu menu) {</div><div class="line">    <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">}</div><div class="line"></div><div class="line"><span class="annotation">@Override</span></div><div class="line"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">onKeyUp</span>(<span class="keyword">int</span> keyCode, KeyEvent event) {</div><div class="line">    <span class="keyword">if</span> (KeyEvent.KEYCODE_MENU == keyCode && !event.isLongPress()) {</div><div class="line">        toggleDrawerLayout();</div><div class="line">    }</div><div class="line">    <span class="keyword">return</span> <span class="keyword">super</span>.onKeyUp(keyCode, event);</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">toggleDrawerLayout</span>() {</div><div class="line">    <span class="keyword">if</span> (mDrawerLayout != <span class="keyword">null</span>) {</div><div class="line">        <span class="keyword">if</span> (mDrawerLayout.isDrawerOpen(Gravity.START)) {</div><div class="line">            mDrawerLayout.closeDrawers();</div><div class="line">        } <span class="keyword">else</span> {</div><div class="line">            mDrawerLayout.openDrawer(Gravity.START);</div><div class="line">        }</div><div class="line">    }</div><div class="line">}</div></pre></td></tr></table></figure>
-
-<p><br><br></p>
-<h3 id="响应DrawerLayout点击">响应DrawerLayout点击</h3>
-<p>因为<strong>DrawerLayout</strong>中可以放置任意的View，所以响应事件就参照原有的<strong>findViewById</strong>加上<strong>setOnClickListener</strong>即可。当然，如果闲<strong>findViewById</strong>太繁琐，那么可以看看<a href="http://baoxiehao.com/2014/05/16/android%20easyadapter/" target="_blank" rel="external"><strong>Android EasyAdapter</strong></a>是否符合你的胃口。</p>
-<p><br><br></p>
-<h2 id="注意事项">注意事项</h2>
-<hr>
-<p><strong>[1]</strong> 如果在源码编译中引用<strong>jar包</strong>需要在项目的<strong>Android.mk</strong>中添加：</p>
-<figure class="highlight mk"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="constant">LOCAL_STATIC_JAVA_LIBRARIES</span> += android-support-v13</div><div class="line"><span class="constant">LOCAL_PREBUILT_STATIC_JAVA_LIBRARIES</span> += android-support-v13:libs/android-support-v13.jar</div></pre></td></tr></table></figure>
-
-<p><strong>[2]</strong> 如果使用了代码混淆，并且编译提示android support相关的warning的话，要在proguard.flags文件中添加：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">-dontwarn android.support.<span class="keyword">*</span><span class="keyword">*</span></div></pre></td></tr></table></figure>
-
-]]></content>
-    <summary type="html"><![CDATA[<h2 id="前言">前言</h2>
-<hr>
-<p>在<strong>2013 google IO</strong>当天，Android团队更新了<a href="https://github.com/danielesegato/android-support-library-archive" target="_blank" rel="external"><strong>Android Support Library</strong></a>，在新版本<strong>V13</strong>中新加入了几个比较重要的功能：</p>
-<ul>
-<li>添加<strong>DrawerLayout</strong>控件，支持创建<strong>Navigation Drawer</strong>模式。可以设置从左边划出菜单或者右边，也可以左右菜单同时存在。</li>
-<li>添加<strong>SlidingPaneLayout</strong>控件来支持各种屏幕上的摘要、详情界面模式。比如<strong>Gmail</strong>邮件列表和单个邮件详情界面。当在手机上显示的时候，邮件列表和详情界面分别为两个界面；当在平板上显示的时候，则为一个界面。</li>
-<li>添加<strong>ActionBarDrawerToggle</strong>工具类，方便把<strong>DrawerLayout</strong>和<strong>ActionBar</strong>功能结合起来。</li>
-</ul>
-]]></summary>
-    
-      <category term="Android" scheme="http://baoxiehao.com/tags/Android/"/>
-    
-      <category term="技术" scheme="http://baoxiehao.com/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Hexo博客优化]]></title>
-    <link href="http://baoxiehao.com/2014/05/17/Hexo%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96/"/>
-    <id>http://baoxiehao.com/2014/05/17/Hexo博客优化/</id>
-    <published>2014-05-17T02:06:30.000Z</published>
-    <updated>2014-08-24T13:05:31.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="MarkDown编辑器">MarkDown编辑器</h2>
-<hr>
-<p>最低要求：所见所得，云端同步。</p>
-<ul>
-<li><a href="https://www.zybuluo.com/" target="_blank" rel="external"><strong>Cmd Markdown编辑器</strong></a> —— 本来期待很高，也非常好用，但是反复提示邮箱没有验证，暂时放弃了。</li>
-<li><a href="https://stackedit.io/" target="_blank" rel="external"><strong>StackEdit</strong></a> —— 功能基本符合，可以用Google Drive同步，只是预览效果和Hexo最终效果还是有差异，比如代码段的效果，可能是Hexo的代码效果还没配置好。</li>
-<li><a href="http://dillinger.io/" target="_blank" rel="external"><strong>Dillinger</strong></a> —— 暂未使用，但是目测还不错，不过貌似网络访问速度比较缓慢。</li>
-<li><a href="http://maxiang.info/" target="_blank" rel="external"><strong>马克印象</strong></a> —— Evernote官方出品，值得一试。</li>
-</ul>
-<a id="more"></a>
-
-<p><br><br></p>
-<h2 id="优化内容">优化内容</h2>
-<hr>
-<h3 id="Freemind主题"><strong>Freemind主题</strong></h3>
-<p><strong>[1]</strong> <a href="https://github.com/wzpan/hexo-theme-freemind/" target="_blank" rel="external"><strong>下载主题</strong></a>，在<strong>hexo</strong>根目录打开<strong>Git Bash</strong>：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ git clone https://github.com/wzpan/hexo-theme-freemind.git themes/freemind</div><div class="line">$ npm install hexo-tag-bootstrap --save</div></pre></td></tr></table></figure>
-
-<p><strong>[2]</strong> <strong>应用主题</strong>，编辑根目录<strong>_config.yml</strong>文件：</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">theme</span>: <span class="string">freemind</span></div></pre></td></tr></table></figure>
-
-<p><strong>[3]</strong> 配置<strong>导航菜单</strong></p>
-<p>编辑主题下的<strong>_config.yml</strong>文件（其中的<strong>icon</strong>可以在<a href="http://fortawesome.github.io/Font-Awesome/icons/" target="_blank" rel="external"><strong>Font Awesome Icons</strong></a>上找到）：</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">menu:</div><div class="line">  -<span class="ruby"> <span class="symbol">title:</span> 归档</span></div><div class="line">    url: archives</div><div class="line">    intro: 文章归档</div><div class="line">    icon: fa fa-archive</div><div class="line">  -<span class="ruby"> <span class="symbol">title:</span> 分类</span></div><div class="line">    url: categories</div><div class="line">    intro: 文章分类</div><div class="line">    icon: fa fa-folder</div><div class="line">  -<span class="ruby"> <span class="symbol">title:</span> 标签</span></div><div class="line">    url: tags</div><div class="line">    intro: 所有标签</div><div class="line">    icon: fa fa-tags</div><div class="line">  -<span class="ruby"> <span class="symbol">title:</span> 关于</span></div><div class="line">    url: about</div><div class="line">    intro: 我的足迹</div><div class="line">    icon: fa fa-user</div></pre></td></tr></table></figure>
-
-<p>生成对应的导航页面（<strong>freemind</strong>主题默认已经有<strong>archives</strong>页面，还差<strong>categories</strong>、<strong>tags</strong>和<strong>about</strong>页面）：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo new page <span class="string">"categorires"</span></div><div class="line">hexo new page <span class="string">"tags"</span></div><div class="line">hexo new page <span class="string">"about"</span></div></pre></td></tr></table></figure>
-
-<p>在<strong>hexo\source\</strong>下会生成对应的<strong>categories</strong>、<strong>tags</strong>和<strong>about</strong>目录，编辑里面的<strong>index.md</strong>文件对应各个页面的实际内容：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">title: 分类</div><div class="line">layout: categories</div><div class="line"><span class="header">date: 2014-05-17 23:21:34</span></div><div class="line">---</div></pre></td></tr></table></figure>
-
-
-
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">title: 标签</div><div class="line">layout: tags</div><div class="line"><span class="header">date: 2014-05-17 23:22:55</span></div><div class="line">---</div></pre></td></tr></table></figure>
-
-
-
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">title: 关于我</div><div class="line">layout: about</div><div class="line"><span class="header">date: 2014-05-17 10:37:46</span></div><div class="line">---</div></pre></td></tr></table></figure>
-
-<p><strong>[4]</strong> 更多<strong>文章属性</strong></p>
-<ul>
-<li><strong>description</strong> - 在文章顶部显示内容介绍</li>
-<li><strong>feature</strong> - 在文章列表页面显示概要图片</li>
-<li><strong>toc</strong> - 在文章起始处显示文章内容目录</li>
-</ul>
-<p>例如：</p>
-<figure class="highlight md"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">title: Tag Plugins</div><div class="line">date: 2014-03-16 10:17:16</div><div class="line">tags: plugins</div><div class="line">categories: Docs</div><div class="line">description: Introduce tag plugins in freemind.</div><div class="line">feature: images/tag-plugins/plugins.jpg</div><div class="line">toc: true</div></pre></td></tr></table></figure>
-
-<p><strong>[5]</strong> 配置图片大小</p>
-<p>默认图片大小是自适应的，有可能会很大，造成页面显示不美观，可以在<strong>/themes/freemind/source/css/style.css</strong>中找到<strong>img</strong>节增加最大宽度限制：</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">img</span> <span class="rules">{</span></div><div class="line">  <span class="rule"><span class="attribute">max-width</span>:<span class="value"> <span class="number">97.5%</span></span></span>;</div><div class="line">  <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">15px</span> auto</span></span>;</div><div class="line">  <span class="rule"><span class="attribute">display</span>:<span class="value"> block</span></span>;</div><div class="line">  <span class="rule"><span class="attribute">width</span>:<span class="value"> auto</span></span>;</div><div class="line">  <span class="rule"><span class="attribute">height</span>:<span class="value"> auto</span></span>;</div><div class="line">  <span class="rule"><span class="attribute">max-width</span>:<span class="value"> <span class="number">60%</span></span></span>;</div><div class="line"><span class="rule">}</span></div></pre></td></tr></table></figure>
-
-<p><br><br></p>
-<h3 id="页面结构">页面结构</h3>
-<p><strong>[1]</strong> <strong>主页文章显示摘要</strong></p>
-<p>编辑<strong>md文件</strong>的时候，在要作为摘要的文字后面添加<strong>&lt;!—more—&gt;</strong>即可。</p>
-<p><strong>[2]</strong> 安装<strong>sitemap</strong>和<strong>rss</strong>：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ npm <span class="operator"><span class="keyword">install</span> hexo-generator-sitemap <span class="comment">--save</span></span></div><div class="line">$ npm <span class="keyword">install</span> hexo-generator-feed <span class="comment">--save</span></div></pre></td></tr></table></figure>
-
-<p>激活配置：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Plugins:</div><div class="line">  -<span class="ruby"> hexo-generator-feed</span></div><div class="line">  -<span class="ruby"> hexo-generator-sitemap</span></div></pre></td></tr></table></figure>
-
-<p><br><br></p>
-<h3 id="网站插件">网站插件</h3>
-<p><strong>[1]</strong> <strong>Hexo插件</strong> <a href="https://github.com/hexojs/hexo-livereload" target="_blank" rel="external"><strong>Live Reload</strong></a></p>
-<p><strong>Hexo</strong>允许在发布之前在<a href="http://localhost:4000" target="_blank" rel="external">本地浏览器</a>进行调试预览，但是如果每次修改都需要反复执行“<strong>$ hexo g &amp;&amp; hexo s</strong>”估计也很崩溃。<strong>Live Reload</strong>给力的地方在于它会自动完成上述步骤，要预览的时候直接<strong>F5</strong>刷新浏览器即可看到修改后的网页效果。当然，如果有时候修改后无法刷新出来的话，那就“<strong>$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</strong>”重新来过。</p>
-<p><strong>[2]</strong> <strong>流量分析</strong> <a href="http://www.google.com/analytics/" target="_blank" rel="external"><strong>Google Analytics</strong></a></p>
-<p>注册<strong>Google Analytics</strong>账号后，获取<strong>跟踪ID</strong>和<strong>跟踪代码</strong>。</p>
-<p>在主题的<strong>_config.yml</strong>中添加获得的<strong>跟踪ID</strong>：</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">google_analytics:</div><div class="line">  enable: <span class="literal">true</span></div><div class="line">  <span class="keyword">id</span>: UA-<span class="number">51276891</span>-<span class="number">1</span></div><div class="line">  site: baoxiehao<span class="variable">.com</span></div></pre></td></tr></table></figure>
-
-<p>在主题<strong>/layout/_partial/after_footer.ejs</strong>的最后添加获得的<strong>跟踪代码</strong>。</p>
-<p><strong>[3]</strong>  <strong>流量分析</strong> <a href="http://tongji.baidu.com" target="_blank" rel="external"><strong>百度统计</strong></a></p>
-<p>虽然有了<strong>Google Analytics</strong>，但是时不时地被墙总是一件让人很惆怅的事情。于是，还是加下百度统计吧。</p>
-<p>首先，在主题的<strong>_config.yml</strong>文件中添加：</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">baidu_tongji</span>: <span class="string">true</span></div></pre></td></tr></table></figure>
-
-<p>然后，在主题的<strong>/layout/_partial/</strong>目录下新建文件<strong>baidu_tongji.ejs</strong>：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="vbscript">&lt;% <span class="keyword">if</span> (theme.baidu_tongji){ %&gt;</span></div><div class="line">#你的百度统计代码</div><div class="line"><span class="vbscript">&lt;% } %&gt;</span></div></pre></td></tr></table></figure>
-
-<p>最后，在主题的<strong>/layout/_partial/head.ejs</strong>文件末尾添加：</p>
-<figure class="highlight ejs"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="variable">%-</span> partial(<span class="string">'baidu_tongji'</span>) <span class="variable">%&gt;</span></div></pre></td></tr></table></figure>
-
-<p><strong>[4]</strong> <strong>社会化评论</strong> <a href="http://duoshuo.com/" target="_blank" rel="external"><strong>多说</strong></a></p>
-<p>首先上多说官网注册账号，然后在主题<strong>/layout/_partial/</strong>下新建文件<a href="http://jimliu.net/2013/09/08/%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/" target="_blank" rel="external"><strong>duoshuo.ejs</strong></a>，内容如下：</p>
-<figure class="highlight ejs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- Duoshuo Comment BEGIN --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ds-thread"</span> <span class="attribute">data-title</span>=<span class="value">"&lt;%= item.title %&gt;"</span> <span class="attribute">data-url</span>=<span class="value">"&lt;%- item.permalink %&gt;"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span></div><div class="line"><span class="keyword">var</span> duoshuoQuery = {short_name:<span class="string">"your-duoshuo-name"</span>};</div><div class="line">(<span class="function"><span class="keyword">function</span><span class="params">()</span> </span>{</div><div class="line">    <span class="keyword">var</span> ds = <span class="built_in">document</span>.createElement(<span class="string">'script'</span>);</div><div class="line">    ds.type = <span class="string">'text/javascript'</span>;ds.async = <span class="literal">true</span>;</div><div class="line">    ds.src = <span class="string">'http://static.duoshuo.com/embed.js'</span>;</div><div class="line">    ds.charset = <span class="string">'UTF-8'</span>;</div><div class="line">    (<span class="built_in">document</span>.getElementsByTagName(<span class="string">'head'</span>)[<span class="number">0</span>]</div><div class="line">    || <span class="built_in">document</span>.getElementsByTagName(<span class="string">'body'</span>)[<span class="number">0</span>]).appendChild(ds);</div><div class="line">})();</div><div class="line"><span class="tag">&lt;/<span class="title">script</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- Duoshuo Comment END --&gt;</span></div></pre></td></tr></table></figure>
-
-<p>基本上就是在多说网站上拿到的通用代码，在第二行上加入了<strong>data-title</strong>和<strong>data-url</strong>，用来给多说传一些参数。<br><strong>data-url</strong>这个参数可以让多个域名上的文章评论共享，只要同一篇文章的<strong>data-url</strong>固定就可以。例如<strong>blog.baoxiehao.com</strong>和<strong>baoxiehao.com</strong>上文章的<strong>data-url</strong>都是<strong><a href="http://baoxiehao.com/xxx" target="_blank" rel="external">http://baoxiehao.com/xxx</a></strong>，这样两个域名就可以共享评论了。一定要<strong>注意</strong>第四行的<strong>your-duoshuo_name</strong>是自己多说代码独有的，不要照抄。</p>
-<p>接下来在layout/post.ejs下面，加入一行：</p>
-<figure class="highlight ejs"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;%- <span class="keyword">partial</span>(<span class="string">'_partial/duoshuo'</span>, {item: page, index: <span class="keyword">false</span>}) %&gt;</div></pre></td></tr></table></figure>
-
-<p>就能在文章页面看到评论框了。</p>
-<p>如果想在其他页面，例如<strong>关于页面</strong>也看到评论的话，对<strong>layout/page.ejs</strong>如法炮制即可。<br>而如果想在博客首页底部也看到评论的话，编辑<strong>freemind/layout/layout.ejs</strong>，在<strong>_partial/after_footer</strong>之前添加<strong>duoshuo</strong>代码（但是，这样有个问题是文章页面会有2个评论框，还没更好的方法，所以暂时先不加首页评论了）：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">  <span class="vbscript">&lt;%- partial(<span class="comment">'_partial/duoshuo', {item: page, index: false}) %&gt;</span></span></div><div class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span> <span class="comment">&lt;!-- container-narrow --&gt;</span></div><div class="line">  <span class="vbscript">&lt;%- partial(<span class="comment">'_partial/after_footer') %&gt;</span></span></div></pre></td></tr></table></figure>
-
-<p><strong>[5]</strong> <a href="https://github.com/gyk001/hexo-qiniu-sync" target="_blank" rel="external"><strong>七牛同步</strong></a></p>
-<p>印象中<strong>Github Pages</strong>是有100M左右的空间大小限制的，如果有更多的图片需要同步，建议选择可以外链的<strong>七牛同步</strong>。在官网注册账号后，新建一个图片空间，然后下载<a href="http://docs.qiniutek.com/v3/tools/qrsync/" target="_blank" rel="external"><strong>qrsync</strong></a>同步本地的图片到七牛，需要时直接在<strong>md文件</strong>中引用。</p>
-<p>新建配置文件（比如名为<strong>conf.json</strong>）：</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">{</div><div class="line">  "<span class="attribute">access_key</span>": <span class="value"><span class="string">"Please apply your access key here"</span></span>,</div><div class="line">  "<span class="attribute">secret_key</span>": <span class="value"><span class="string">"Dont send your secret key to anyone"</span></span>,</div><div class="line">  "<span class="attribute">bucket</span>": <span class="value"><span class="string">"Bucket name on qiniu resource storage"</span></span>,</div><div class="line">  "<span class="attribute">sync_dir</span>": <span class="value"><span class="string">"Local directory to upload"</span></span>,</div><div class="line">  "<span class="attribute">debug_level</span>": <span class="value"><span class="number">1</span></span></div><div class="line">}</div></pre></td></tr></table></figure>
-
-<p>同步命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ qrsync.exe /path/to/your-conf.json</div></pre></td></tr></table></figure>
-
-<p><strong>[6]</strong> <a href="http://open.weibo.com/widgets?cat=wb" target="_blank" rel="external"><strong>新浪微博挂件</strong></a></p>
-<p>在主题<strong>/layout/_widget/</strong>下新建文件<strong>weibo.ejs</strong>，文件内容就是生成的微博挂件代码。然后在主题的<strong>_config.yml</strong>文件中添加配置：</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">widget<span class="variable">s:</span></div><div class="line">  - weibo</div></pre></td></tr></table></figure>
-
-<p><br><br></p>
-<h3 id="FAQ">FAQ</h3>
-<ol>
-<li>主题的样式无法应用 —— 尝试执行命令<strong>$ hexo clean</strong>后重新部署。</li>
-<li>部署后显示中文乱码 —— 尝试将出现乱码的md文件用<strong>UTF-8</strong>重新编码后保存，然后执行<strong>$ hexo clean</strong>重新部署。</li>
-<li>升级<strong>Hexo</strong>后执行<strong>$ hexo s</strong>提示<strong>HexoError</strong>错误 —— 修改<strong>themes/freemind/languages/default.yml</strong>中包含空格的配置项，重新用双引号包裹包含空格的配置值就可以啦。</li>
-</ol>
-]]></content>
-    <summary type="html"><![CDATA[<h2 id="MarkDown编辑器">MarkDown编辑器</h2>
-<hr>
-<p>最低要求：所见所得，云端同步。</p>
-<ul>
-<li><a href="https://www.zybuluo.com/" target="_blank" rel="external"><strong>Cmd Markdown编辑器</strong></a> —— 本来期待很高，也非常好用，但是反复提示邮箱没有验证，暂时放弃了。</li>
-<li><a href="https://stackedit.io/" target="_blank" rel="external"><strong>StackEdit</strong></a> —— 功能基本符合，可以用Google Drive同步，只是预览效果和Hexo最终效果还是有差异，比如代码段的效果，可能是Hexo的代码效果还没配置好。</li>
-<li><a href="http://dillinger.io/" target="_blank" rel="external"><strong>Dillinger</strong></a> —— 暂未使用，但是目测还不错，不过貌似网络访问速度比较缓慢。</li>
-<li><a href="http://maxiang.info/" target="_blank" rel="external"><strong>马克印象</strong></a> —— Evernote官方出品，值得一试。</li>
-</ul>
-]]></summary>
-    
-      <category term="Hexo" scheme="http://baoxiehao.com/tags/Hexo/"/>
-    
-      <category term="博客" scheme="http://baoxiehao.com/categories/%E5%8D%9A%E5%AE%A2/"/>
     
   </entry>
   
